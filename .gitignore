@@ -3,3 +3,9 @@
 
 # JetBrains IDE files
 .idea
+
+# Place to store files that are large, contain sensitive information, or otherwise shouldn't creep into the repository
+wkg/
+
+# Tilecache
+cache/
