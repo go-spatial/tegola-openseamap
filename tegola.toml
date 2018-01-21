@@ -3,7 +3,7 @@ port = ":8080"
 
 [cache]
 type="file"
-basepath="/tmp/tegola-cache-test"
+basepath="cache"
 
 #	Open Street Maps (OSM)
 [[providers]]
