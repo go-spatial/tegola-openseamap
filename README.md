@@ -5,8 +5,8 @@ This repo houses instructions and configuration files to aid with standing up a 
 
 ## Repo config files
 
-- imposm3.json - an [imposm3](https://github.com/omniscale/imposm3) mapping file for the OSM PBF file.
-- tegola.toml - a [tegola](https://github.com/terranodo/tegola) configuration file for the OSM import produced by imposm3.
+- seamark.json - an [imposm3](https://github.com/omniscale/imposm3) mapping file for the OSM PBF file.
+- seamark.toml - a [tegola](https://github.com/terranodo/tegola) configuration file for the OSM import produced by imposm3.
 
 ## Dependencies
 
