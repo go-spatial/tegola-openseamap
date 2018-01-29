@@ -7,6 +7,7 @@ This repo houses instructions and configuration files to aid with standing up a 
 
 - seamark.json - an [imposm3](https://github.com/omniscale/imposm3) mapping file for the OSM PBF file.
 - seamark.toml - a [tegola](https://github.com/terranodo/tegola) configuration file for the OSM import produced by imposm3.
+- mapbox.json - a [Mapbox GL JS Style sheet](https://www.mapbox.com/mapbox-gl-js/style-spec) with seamark extensions
 
 ## Dependencies
 
@@ -14,6 +15,13 @@ This repo houses instructions and configuration files to aid with standing up a 
 - imposm3 ([download binaries for linux](https://imposm.org/static/rel/) or [see the Go Go Go section](http://erictheise.com/blog/2017/11/13/hello-tegola#go-go-go) for a homebrew-ish OS X installation)
 - tegola ([download](https://github.com/terranodo/tegola/releases))
 - [gdal](http://www.gdal.org/) - required for Natural Earth import
+
+## Creating the osm_seamap database
+
+```
+imposm3 import -connection postgis://user:password@host:port/osm_seamark -mapping seamark.json -read path/to/your-planet.osm.pbf -write
+imposm3 import -connection postgis://user:password@host:port/osm_seamark -mapping seamark.json -deployproduction
+```
 
 ## Resources
 
