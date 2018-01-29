@@ -5,13 +5,45 @@ port = ":8080"
 type="file"
 basepath="cache"
 
-#	Open Street Maps (OSM)
+#	OSM seamark objects
 [[providers]]
-name = "osm"
+name = "seamark"
 type = "postgis"
 host = ""
 port = 5432
-database = "osm"
+database = "osm_seamark"
+user = ""
+password = ""
+
+	# Seamark Beacon Cardinal
+	[[providers.layers]]
+	name = "beacon_cardinal"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, colour FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
+
+	# Seamark Points
+	[[providers.layers]]
+	name = "points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type FROM osm_seamarks WHERE geometry && !BBOX!"
+
+	# Seamark Buoy Cardinal
+	[[providers.layers]]
+	name = "buoy_cardinal"
+   	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
+
+
+#	OSM land polygons and simplified land polygons
+[[providers]]
+name = "lp"
+type = "postgis"
+host = ""
+port = 5432
+database = "osm_land_polygons"
 user = ""
 password = ""
 
@@ -27,6 +59,17 @@ password = ""
 	geometry_fieldname = "geometry"
 	id_fieldname = "fid"
 	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM land_polygons WHERE wkb_geometry && !BBOX!"
+
+#	Open Street Maps (OSM)
+[[providers]]
+name = "osm"
+type = "postgis"
+host = ""
+port = 5432
+database = "italy_2018_01_25"
+user = "tegola"
+password = ""
+max_connections = 500
 
 	# Water
 	[[providers.layers]]
@@ -251,44 +294,44 @@ password = ""
 [[maps]]
 name = "osm"
 attribution = "Open Street Map" # map attribution
-center = [-76.275329586789, 39.153492567373, 8.0] # optional center value. part of the TileJSON spec
+center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part of the TileJSON spec
 
-	# Country Lines 
+	# Country Lines
 	[[maps.layers]]
-	name = "country_lines"
+	name = "admin_boundaries_0-2"
 	provider_layer = "ne.admin_boundaries_0-2"
 	min_zoom = 0
 	max_zoom = 2
 
 	[[maps.layers]]
-	name = "country_lines"
+	name = "admin_boundaries_3-4"
 	provider_layer = "ne.admin_boundaries_3-4"
 	min_zoom = 3
 	max_zoom = 4
 
 	[[maps.layers]]
-	name = "country_lines"
+	name = "admin_boundaries_5-6"
 	provider_layer = "ne.admin_boundaries_5-6"
 	min_zoom = 5
 	max_zoom = 10
 
 	[[maps.layers]]
-	name = "country_lines_disputed"
+	name = "admin_boundaries_disputed_3-4"
 	provider_layer = "ne.admin_boundaries_disputed_3-4"
 	min_zoom = 3
 	max_zoom = 4
 
 	[[maps.layers]]
-	name = "country_lines_disputed"
+	name = "admin_boundaries_disputed_5-6"
 	provider_layer = "ne.admin_boundaries_disputed_5-6"
 	min_zoom = 5
 	max_zoom = 6
 
 	[[maps.layers]]
-	name = "country_label_points"
+	name = "admin_label_points_3-20"
 	provider_layer = "ne.admin_label_points_3-20"
 	min_zoom = 3
-	max_zoom = 20 
+	max_zoom = 20
 
 	# Country Polygons
 	[[maps.layers]]
@@ -298,120 +341,133 @@ center = [-76.275329586789, 39.153492567373, 8.0] # optional center value. part 
 	max_zoom = 10
 
 	[[maps.layers]]
-	name = "admin_lines"
+	name = "admin_boundaries_11-12"
 	provider_layer = "osm.admin_boundaries_11-12"
 	min_zoom = 11
 	max_zoom = 12
 
 	[[maps.layers]]
-	name = "admin_lines"
+	name = "admin_boundaries_13-20"
 	provider_layer = "osm.admin_boundaries_13-20"
 	min_zoom = 13
 	max_zoom = 20
 
 	[[maps.layers]]
-	name = "state_label_points"
+	name = "admin_label_points_5-20"
 	provider_layer = "ne.admin_label_points_5-20"
+	min_zoom = 5
+	max_zoom = 20
+
+	# State Polygons
+	[[maps.layers]]
+	name = "admin_states_provinces_lines_3-4"
+	provider_layer = "ne.admin_states_provinces_lines_3-4"
+	min_zoom = 3
+	max_zoom = 4
+
+	[[maps.layers]]
+	name = "admin_states_provinces_lines_5-20"
+	provider_layer = "ne.admin_states_provinces_lines_5-6"
 	min_zoom = 5
 	max_zoom = 20
 
 	# Land
 	[[maps.layers]]
-	name = "land"
-	provider_layer = "osm.land_0-9"
+	name = "land_0-9"
+	provider_layer = "lp.land_0-9"
 	min_zoom = 0
 	max_zoom = 9
 
 	[[maps.layers]]
-	name = "land"
-	provider_layer = "osm.land_10-20"
+	name = "land_10-20"
+	provider_layer = "lp.land_10-20"
 	min_zoom = 10
 	max_zoom = 20
 
-	# Land Use    
+	# Land Use
 	[[maps.layers]]
-	name = "landuse_areas"
+	name = "landusages_gen0"
 	provider_layer = "osm.landuse_areas_gen0"
 	min_zoom = 3
 	max_zoom = 9
 
 	[[maps.layers]]
-	name = "landuse_areas"
+	name = "landusages_gen1"
 	provider_layer = "osm.landuse_areas_gen1"
 	min_zoom = 10
 	max_zoom = 12
 
 	[[maps.layers]]
-	name = "landuse_areas"
+	name = "landusages"
 	provider_layer = "osm.landuse_areas"
 	min_zoom = 13
 	max_zoom = 20
 
 	# Water Areas
 	[[maps.layers]]
-	name = "water_areas"
+	name = "waterareas_gen0"
 	provider_layer = "osm.water_areas_gen0"
 	min_zoom = 3
 	max_zoom = 9
 
 	[[maps.layers]]
-	name = "water_areas"
+	name = "waterareas_gen1"
 	provider_layer = "osm.water_areas_gen1"
 	min_zoom = 10
 	max_zoom = 12
 
 	[[maps.layers]]
-	name = "water_areas"
+	name = "waterareas"
 	provider_layer = "osm.water_areas"
 	min_zoom = 13
 	max_zoom = 20
 
 	# Water Lines
 	[[maps.layers]]
-	name = "water_lines"
+	name = "waterways_gen0"
 	provider_layer = "osm.water_lines_gen0"
 	min_zoom = 8
 	max_zoom = 12
 
 	[[maps.layers]]
-	name = "water_lines"
+	name = "waterways_gen1"
 	provider_layer = "osm.water_lines_gen1"
 	min_zoom = 13
 	max_zoom = 14
 
 	[[maps.layers]]
-	name = "water_lines"
+	name = "waterways"
 	provider_layer = "osm.water_lines"
 	min_zoom = 15
 	max_zoom = 20
 
 	# Transport Lines (Roads, Rail, Aviation)
 	[[maps.layers]]
-	name = "transport_lines"
+	name = "roads_gen0"
 	provider_layer = "osm.transport_lines_gen0"
-	min_zoom = 4 
+	min_zoom = 4
 	max_zoom = 8
 
 	[[maps.layers]]
-	name = "transport_lines"
+	name = "roads_gen1"
 	provider_layer = "osm.transport_lines_gen1"
 	min_zoom = 9
 	max_zoom = 10
 
 	[[maps.layers]]
-	name = "transport_lines"
+	name = "roads_11-12"
 	provider_layer = "osm.transport_lines_11-12"
 	min_zoom = 11
 	max_zoom = 12
 
 	[[maps.layers]]
-	name = "transport_lines"
+	name = "roads_13"
 	provider_layer = "osm.transport_lines_13"
 	min_zoom = 13
 	max_zoom = 13
 
 	[[maps.layers]]
-	name = "transport_lines"
+	name = "roads_14-20"
 	provider_layer = "osm.transport_lines_14-20"
 	min_zoom = 14
 	max_zoom = 20
@@ -423,7 +479,7 @@ center = [-76.275329586789, 39.153492567373, 8.0] # optional center value. part 
 	min_zoom = 12
 	max_zoom = 20
 
-	# Transport Points 
+	# Transport Points
 	[[maps.layers]]
 	name = "transport_points"
 	provider_layer = "osm.transport_points"
@@ -444,7 +500,7 @@ center = [-76.275329586789, 39.153492567373, 8.0] # optional center value. part 
 	min_zoom = 14
 	max_zoom = 20
 
-	# Other Points 
+	# Other Points
 	[[maps.layers]]
 	name = "other_points"
 	provider_layer = "osm.other_points"
@@ -458,16 +514,35 @@ center = [-76.275329586789, 39.153492567373, 8.0] # optional center value. part 
 	min_zoom = 14
 	max_zoom = 20
 
-	# Other Areas 
+	# Other Areas
 	[[maps.layers]]
 	name = "other_areas"
 	provider_layer = "osm.other_areas"
-	min_zoom = 6 
+	min_zoom = 6
 	max_zoom = 20
 
-	# Buildings   
+	# Buildings
 	[[maps.layers]]
 	name = "buildings"
 	provider_layer = "osm.buildings"
 	min_zoom = 14
+	max_zoom = 20
+
+	# Seamark Objects
+	[[maps.layers]]
+	name = "seamark_beacon_cardinal"
+	provider_layer = "seamark.beacon_cardinal"
+	min_zoom = 2
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_points"
+	provider_layer = "seamark.points"
+	min_zoom = 2
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_buoy_cardinal"
+	provider_layer = "seamark.buoy_cardinal"
+	min_zoom = 2
 	max_zoom = 20
