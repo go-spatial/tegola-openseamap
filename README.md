@@ -27,11 +27,12 @@ imposm3 import -connection postgis://user:password@host:port/osm_seamark -mappin
 
 * [OpenSeaMap](http://openseamap.org/index.php?id=openseamap&L=1)
 * Seamarks
+  * [Seamark tagging schema](https://wiki.openstreetmap.org/wiki/Seamark_tagging_schema)
   * [Seamark Tag Values](https://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Tag_Values)
   * [Seamark Objects](https://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Objects)
+  * [Seamark Object usage](https://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Object_Usage)
   * [Seamark Attributes](https://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Attributes)
   * [INT-1 Cross Reference](https://wiki.openstreetmap.org/wiki/Seamarks/INT-1_Cross_Reference)
-  * [Seamark tag usage](https://taginfo.openstreetmap.org/search?q=seamark) (from taginfo)
   * [Seamark Colours](https://wiki.openstreetmap.org/wiki/Seamarks/Colours)
   
 * [Symbology](https://github.com/OpenSeaMap/renderer/tree/master/searender/symbols)
