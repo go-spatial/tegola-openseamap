@@ -32,6 +32,7 @@ imposm3 import -connection postgis://user:password@host:port/osm_seamark -mappin
   * [Seamark Attributes](https://wiki.openstreetmap.org/wiki/Seamarks/Seamark_Attributes)
   * [INT-1 Cross Reference](https://wiki.openstreetmap.org/wiki/Seamarks/INT-1_Cross_Reference)
   * [Seamark tag usage](https://taginfo.openstreetmap.org/search?q=seamark) (from taginfo)
+  * [Seamark Colours](https://wiki.openstreetmap.org/wiki/Seamarks/Colours)
   
 * [Symbology](https://github.com/OpenSeaMap/renderer/tree/master/searender/symbols)
 * [vectortiles-generator](https://github.com/OpenSeaMap/vectortiles-generator/blob/master/src/import-osm/mapping.yml) from OpenSeaMap project
