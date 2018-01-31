@@ -1,61 +1,2069 @@
+tags:
+  load_all: true
+  exclude:
+  - created_by
+  - source
+
 tables:
-  beacon_cardinal:
+  anchorage_points: # ACHARE: An area in which vessels anchor or may anchor.
     type: point
-    fields:
-    - name: osm_id
-      type: id
-    - name: geometry
-      type: geometry
-    - key: name
-      name: name
-      type: string
-    - key: seamark:beacon_cardinal:colour
-      name: colour
-      type: string
+    mapping:
+      seamark:type:
+      - anchorage
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:anchorage:category", name: category, type: string}
+    - {key: "seamark:anchorage:restriction", name: restriction, type: string}
+    - {key: "seamark:anchorage:danger_class", name: danger_class, type: string}
+  anchorage_areas: # ACHARE: An area in which vessels anchor or may anchor.
+    type: polygon
+    mapping:
+        seamark:type:
+        - anchorage
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:anchorage:category", name: category, type: string}
+    - {key: "seamark:anchorage:restriction", name: restriction, type: string}
+    - {key: "seamark:anchorage:danger_class", name: danger_class, type: string}
+
+  anchor_berth_points: # ACHBRT: A designated area of water where a single vessel, sea plane, etc... may anchor.
+    type: point
+    mapping:
+      seamark:type:
+      - anchor_berth
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:anchor_berth:category", name: category, type: string}
+    - {key: "seamark:anchor_berth:radius", name: radius, type: string}
+    - {key: "seamark:anchor_berth:danger_class", name: danger_class, type: string}
+  anchor_berth_areas: # ACHBRT: A designated area of water where a single vessel, sea plane, etc... may anchor.
+    type: polygon
+    mapping:
+      seamark:type:
+      - anchor_berth
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:anchor_berth:category", name: category, type: string}
+    - {key: "seamark:anchor_berth:radius", name: radius, type: string}
+    - {key: "seamark:anchor_berth:danger_class", name: danger_class, type: string}
+
+  beacon_cardinal: # BCNCAR: A beacon used in conjunction with the compass to indicate where the mariner may find the best navigable water.
+    type: point
     mapping:
       seamark:type:
       - beacon_cardinal
-  seamarks:
-    type: point
-    mapping:
-      seamark:type: [__any__]
-    fields:
-      - name: osm_id
-        type: id
-      - name: geometry
-        type: geometry
-      - name: type
-        type: mapping_value
-      - key: seamark:name
-        name: name
-        type: string
-  buoy_cardinal:
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:beacon_cardinal:category", name: category, type: string}
+    - {key: "seamark:beacon_cardinal:colour", name: colour, type: string}
+    - {key: "seamark:beacon_cardinal:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:beacon_cardinal:construction", name: construction, type: string}
+    - {key: "seamark:beacon_cardinal:elevation", name: elevation, type: string}
+    - {key: "seamark:beacon_cardinal:height", name: height, type: string}
+    - {key: "seamark:beacon_cardinal:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:beacon_cardinal:shape", name: shape, type: string}
+
+  beacon_isolated_danger: # BCNISD: A beacon that is moored on or above an isolated danger of limited extent, which has navigable water all around it.
     type: point
     mapping:
       seamark:type:
-        - buoy_cardinal
-    fields:
-      - name: osm_id
-        type: id
-      - name: geometry
-        type: geometry
-      - name: type
-        type: mapping_value
-      - key: seamark:name
-        name: name
-        type: string
-      - key: seamark:buoy_cardinal:category
-        name: category
-        type: string
-      - key: seamark:buoy_cardinal:colour
-        name: colour
-        type: string
-      - key: seamark:buoy_cardinal:colour_pattern
-        name: colour_pattern
-        type: string
-      - key: seamark:buoy_cardinal:reflectivity
-        name: reflectivity
-        type: string
-      - key: seamark:buoy_cardinal:shape
-        name: shape
-        type: string
+      - beacon_isolated_danger
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:beacon_isolated_danger:colour", name: colour, type: string}
+    - {key: "seamark:beacon_isolated_danger:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:beacon_isolated_danger:construction", name: construction, type: string}
+    - {key: "seamark:beacon_isolated_danger:elevation", name: elevation, type: string}
+    - {key: "seamark:beacon_isolated_danger:height", name: height, type: string}
+    - {key: "seamark:beacon_isolated_danger:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:beacon_isolated_danger:shape", name: shape, type: string}
+
+  beacon_lateral: # BCNLAT: A beacon used to indicate the port or starboard hand side of the route to be followed.
+    type: point
+    mapping:
+      seamark:type:
+      - beacon_lateral
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:beacon_lateral:category", name: category, type: string}
+    - {key: "seamark:beacon_lateral:colour", name: colour, type: string}
+    - {key: "seamark:beacon_lateral:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:beacon_lateral:construction", name: construction, type: string}
+    - {key: "seamark:beacon_lateral:elevation", name: elevation, type: string}
+    - {key: "seamark:beacon_lateral:height", name: height, type: string}
+    - {key: "seamark:beacon_lateral:impact", name: impact, type: string}
+    - {key: "seamark:beacon_lateral:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:beacon_lateral:shape", name: shape, type: string}
+    - {key: "seamark:beacon_lateral:system", name: system, type: string}
+
+  beacon_safe_water: # BCNSAW: A beacon used to indicate that there is navigable water around the mark.
+    type: point
+    mapping:
+      seamark:type:
+      - beacon_safe_water
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:beacon_safe_water:colour", name: colour, type: string}
+    - {key: "seamark:beacon_safe_water:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:beacon_safe_water:construction", name: construction, type: string}
+    - {key: "seamark:beacon_safe_water:elevation", name: elevation, type: string}
+    - {key: "seamark:beacon_safe_water:height", name: height, type: string}
+    - {key: "seamark:beacon_safe_water:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:beacon_safe_water:shape", name: shape, type: string}
+
+  beacon_special_purpose: # BCNSPP: A beacon primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners.
+    type: point
+    mapping:
+      seamark:type:
+      - beacon_special_purpose
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:beacon_special_purpose:category", name: category, type: string}
+    - {key: "seamark:beacon_special_purpose:colour", name: colour, type: string}
+    - {key: "seamark:beacon_special_purpose:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:beacon_special_purpose:construction", name: construction, type: string}
+    - {key: "seamark:beacon_special_purpose:elevation", name: elevation, type: string}
+    - {key: "seamark:beacon_special_purpose:height", name: height, type: string}
+    - {key: "seamark:beacon_special_purpose:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:beacon_special_purpose:shape", name: shape, type: string}
+
+  berth_points: # BERTHS: A named or numbered place where a vessel is moored at a wharf.
+    type: point
+    mapping:
+      seamark:type:
+      - berth
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:berth:minimum_depth", name: minimum_depth, type: string}
+    - {key: "seamark:berth:danger_class", name: danger_class, type: string}
+  berth_lines: # BERTHS: A named or numbered place where a vessel is moored at a wharf.
+    type: linestring
+    mapping:
+      seamark:type:
+      - berth
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:berth:minimum_depth", name: minimum_depth, type: string}
+    - {key: "seamark:berth:danger_class", name: danger_class, type: string}
+  berth_areas: # BERTHS: A named or numbered place where a vessel is moored at a wharf.
+    type: polygon
+    mapping:
+      seamark:type:
+      - berth
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:berth:minimum_depth", name: minimum_depth, type: string}
+    - {key: "seamark:berth:danger_class", name: danger_class, type: string}
+
+
+  bridge_points: # BRIDGE: A structure erected over a body of water, railroad, etc. to provide a roadway for vehicles, pedestrians or to carry utility services.
+    type: point
+    mapping:
+      seamark:type:
+      - bridge
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:bridge:category", name: category, type: string}
+    - {key: "seamark:bridge:colour", name: colour, type: string}
+    - {key: "seamark:bridge:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:bridge:condition", name: condition, type: string}
+    - {key: "seamark:bridge:clearance", name: clearance, type: string}
+    - {key: "seamark:bridge:construction", name: construction, type: string}
+    - {key: "seamark:bridge:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:bridge:visibility", name: visibility, type: string}
+    - {key: "seamark:bridge:vertical_clearance", name: vertical_clearance, type: string}
+    - {key: "seamark:bridge:vertical_clearance_closed", name: vertical_clearance_closed, type: string}
+    - {key: "seamark:bridge:vertical_clearance_open", name: vertical_clearance_open, type: string}
+  bridge_lines: # BRIDGE: A structure erected over a body of water, railroad, etc. to provide a roadway for vehicles, pedestrians or to carry utility services.
+    type: linestring
+    mapping:
+      seamark:type:
+      - bridge
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:bridge:category", name: category, type: string}
+    - {key: "seamark:bridge:colour", name: colour, type: string}
+    - {key: "seamark:bridge:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:bridge:condition", name: condition, type: string}
+    - {key: "seamark:bridge:clearance", name: clearance, type: string}
+    - {key: "seamark:bridge:construction", name: construction, type: string}
+    - {key: "seamark:bridge:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:bridge:visibility", name: visibility, type: string}
+    - {key: "seamark:bridge:vertical_clearance", name: vertical_clearance, type: string}
+    - {key: "seamark:bridge:vertical_clearance_closed", name: vertical_clearance_closed, type: string}
+    - {key: "seamark:bridge:vertical_clearance_open", name: vertical_clearance_open, type: string}
+  bridge_areas: # BRIDGE: A structure erected over a body of water, railroad, etc. to provide a roadway for vehicles, pedestrians or to carry utility services.
+    type: polygon
+    mapping:
+      seamark:type:
+      - bridge
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:bridge:category", name: category, type: string}
+    - {key: "seamark:bridge:colour", name: colour, type: string}
+    - {key: "seamark:bridge:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:bridge:condition", name: condition, type: string}
+    - {key: "seamark:bridge:clearance", name: clearance, type: string}
+    - {key: "seamark:bridge:construction", name: construction, type: string}
+    - {key: "seamark:bridge:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:bridge:visibility", name: visibility, type: string}
+    - {key: "seamark:bridge:vertical_clearance", name: vertical_clearance, type: string}
+    - {key: "seamark:bridge:vertical_clearance_closed", name: vertical_clearance_closed, type: string}
+    - {key: "seamark:bridge:vertical_clearance_open", name: vertical_clearance_open, type: string}
+
+  bunker_station_points: # bunsta: A station, at which a ship is able to bunker fuel, water or ballast
+    type: point
+    mapping:
+      seamark:type:
+      - bunker_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:bunker_station:category", name: category, type: string}
+  bunker_station_areas: # bunsta: A station, at which a ship is able to bunker fuel, water or ballast
+    type: polygon
+    mapping:
+      seamark:type:
+      - bunker_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:bunker_station:category", name: category, type: string}
+
+  building_points: # BUISGL: A relatively permanent structure, roofed and usually walled. It is designed for some particular use which it may be important to indicate.
+    type: point
+    mapping:
+      seamark:type:
+      - building
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:building:colour", name: colour, type: string}
+    - {key: "seamark:building:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:building:construction", name: construction, type: string}
+    - {key: "seamark:building:elevation", name: elevation, type: string}
+    - {key: "seamark:building:function", name: function, type: string}
+    - {key: "seamark:building:height", name: height, type: string}
+    - {key: "seamark:building:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:building:shape", name: shape, type: string}
+    - {key: "seamark:building:visibility", name: visibility, type: string}
+  building_areas: # BUISGL: A relatively permanent structure, roofed and usually walled. It is designed for some particular use which it may be important to indicate.
+    type: polygon
+    mapping:
+      seamark:type:
+      - building
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:building:colour", name: colour, type: string}
+    - {key: "seamark:building:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:building:construction", name: construction, type: string}
+    - {key: "seamark:building:elevation", name: elevation, type: string}
+    - {key: "seamark:building:function", name: function, type: string}
+    - {key: "seamark:building:height", name: height, type: string}
+    - {key: "seamark:building:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:building:shape", name: shape, type: string}
+    - {key: "seamark:building:visibility", name: visibility, type: string}
+
+  buoy_cardinal: # BOYCAR: A buoy used in conjunction with the compass to indicate where the mariner may find the best navigable water.
+    type: point
+    mapping:
+      seamark:type:
+      - buoy_cardinal
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:buoy_cardinal:category", name: category, type: string}
+    - {key: "seamark:buoy_cardinal:colour", name: colour, type: string}
+    - {key: "seamark:buoy_cardinal:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:buoy_cardinal:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:buoy_cardinal:shape", name: shape, type: string}
+
+  buoy_installation: # BOYINB: A buoy used for loading tankers with gas or oil.
+    type: point
+    mapping:
+      seamark:type:
+      - buoy_installation
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:buoy_installation:category", name: category, type: string}
+    - {key: "seamark:buoy_installation:colour", name: colour, type: string}
+    - {key: "seamark:buoy_installation:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:buoy_installation:reflectivity", name: reflectivity, type: string}
+
+  buoy_isolated_danger: # BOYISD: A buoy that is moored on or above an isolated danger of limited extent, which has navigable water all around it.
+    type: point
+    mapping:
+      seamark:type:
+      - buoy_isolated_danger
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:buoy_isolated_danger:colour", name: colour, type: string}
+    - {key: "seamark:buoy_isolated_danger:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:buoy_isolated_danger:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:buoy_isolated_danger:shape", name: shape, type: string}
+
+  buoy_lateral: # BOYLAT: A buoy used to indicate the port or starboard hand side of the route to be followed.
+    type: point
+    mapping:
+      seamark:type:
+      - buoy_lateral
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:buoy_lateral:category", name: category, type: string}
+    - {key: "seamark:buoy_lateral:colour", name: colour, type: string}
+    - {key: "seamark:buoy_lateral:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:buoy_lateral:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:buoy_lateral:shape", name: shape, type: string}
+    - {key: "seamark:buoy_lateral:system", name: system, type: string}
+
+  buoy_safe_water: # BOYSAW: A buoy used to indicate that there is navigable water around the mark.
+    type: point
+    mapping:
+      seamark:type:
+      - buoy_safe_water
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:buoy_safe_water:colour", name: colour, type: string}
+    - {key: "seamark:buoy_safe_water:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:buoy_safe_water:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:buoy_safe_water:shape", name: shape, type: string}
+
+  buoy_special_purpose: # BOYSPP: A buoy primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners.
+    type: point
+    mapping:
+      seamark:type:
+      - buoy_special_purpose
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:buoy_special_purpose:category", name: category, type: string}
+    - {key: "seamark:buoy_special_purpose:colour", name: colour, type: string}
+    - {key: "seamark:buoy_special_purpose:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:buoy_special_purpose:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:buoy_special_purpose:shape", name: shape, type: string}
+
+  cable_area: # CBLARE: An area which contains one or more submarine cables.
+    type: polygon
+    mapping:
+      seamark:type:
+      - cable_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:cable_area:category", name: category, type: string}
+    - {key: "seamark:cable_area:restriction", name: restriction, type: string}
+
+  cable_overhead: # CBLOHD: An overhead cable is an assembly of wires or fibres, or a wire rope or chain, which is supported by structures such as poles or pylons and passing over or nearby navigable waters.
+    type: linestring
+    mapping:
+      seamark:type:
+      - cable_overhead
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:cable_overhead:category", name: category, type: string}
+    - {key: "seamark:cable_overhead:vertical_clearance", name: vertical_clearance, type: string}
+    - {key: "seamark:cable_overhead:clearance_height_safe", name: clearance_height_safe, type: string}
+
+
+  cable_submarine: # CBLSUB: An assembly of wires or fibres, or a wire rope or chain which has been laid underwater or buried beneath the seabed.
+    type: linestring
+    mapping:
+      seamark:type:
+      - cable_submarine
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:cable_submarine:category", name: category, type: string}
+    - {key: "seamark:cable_submarine:depth_buried", name: depth_buried, type: string}
+
+  causeway_lines: # CAUSWY: A raised way across low or wet ground or water.
+    type: linestring
+    mapping:
+      seamark:type:
+      - causeway
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:causeway:water_level", name: water_level, type: string}
+  causeway_areas: # CAUSWY: A raised way across low or wet ground or water.
+    type: polygon
+    mapping:
+      seamark:type:
+      - causeway
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:causeway:water_level", name: water_level, type: string}
+
+  checkpoint_points: # CHKPNT: An official place to register, declare or check goods and people.
+    type: point
+    mapping:
+      seamark:type:
+      - checkpoint
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:checkpoint:category", name: category, type: string}
+  checkpoint_areas: # CHKPNT: An official place to register, declare or check goods and people.
+    type: polygon
+    mapping:
+      seamark:type:
+      - checkpoint
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:checkpoint:category", name: category, type: string}
+
+  coastguard_station_points: # CGUSTA: Watch keeping stations at which a watch is kept either continuously, or at certain times only.
+    type: point
+    mapping:
+      seamark:type:
+      - coastguard_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+  coastguard_station_areas: # CGUSTA: Watch keeping stations at which a watch is kept either continuously, or at certain times only.
+    type: polygon
+    mapping:
+      seamark:type:
+      - coastguard_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  communication_area: # comare: Indicates the coverage of an area, in which a vessel has to report or may request information.
+    type: polygon
+    mapping:
+      seamark:type:
+      - communication_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  control_point: # CTRPNT: A point on the ground where position (horizontal and vertical) is used as a base for a dependent survey. Also referred to as a control station.
+    type: point
+    mapping:
+      seamark:type:
+      - control_point
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:control_point:category", name: category, type: string}
+
+  daymark: # DAYMAR: The identifying characteristics of an aid to navigation which serve to facilitate its recognition against a daylight viewing background.
+    type: point
+    mapping:
+      seamark:type:
+      - daymark
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:daymark:category", name: category, type: string}
+    - {key: "seamark:daymark:colour", name: colour, type: string}
+    - {key: "seamark:daymark:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:daymark:shape", name: shape, type: string}
+
+  distance_mark: # DISMAR: A distance mark indicates the distance measured from an origin and consists of either a solid visible structure or a distinct location without special installation.
+    type: point
+    mapping:
+      seamark:type:
+      - distance_mark
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:distance_mark:category", name: category, type: string}
+    - {key: "seamark:distance_mark:distance", name: distance, type: string}
+    - {key: "seamark:distance_mark:units", name: units, type: string}
+
+  dredged_area: # DRGARE: An area of the bottom of a body of water which has been deepened by dredging.
+    type: polygon
+    mapping:
+      seamark:type:
+      - dredged_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  exceptional_structure_points: # excnst: An exceptional navigational construction like aqueduct, lift-lock, etc.
+    type: point
+    mapping:
+      seamark:type:
+      - exceptional_structure
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:exceptional_structure:category", name: category, type: string}
+  exceptional_structure_lines: # excnst: An exceptional navigational construction like aqueduct, lift-lock, etc.
+    type: linestring
+    mapping:
+      seamark:type:
+      - exceptional_structure
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:exceptional_structure:category", name: category, type: string}
+  exceptional_structure_areas: # excnst: An exceptional navigational construction like aqueduct, lift-lock, etc.
+    type: polygon
+    mapping:
+      seamark:type:
+      - exceptional_structure
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:exceptional_structure:category", name: category, type: string}
+
+  fairway: # FAIRWY: That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies.
+    type: polygon
+    mapping:
+      seamark:type:
+      - fairway
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:fairway:restriction", name: restriction, type: string}
+
+  ferry_route: # FERYRT: A route in a body of water where a ferry crosses from one shoreline to another.
+    type: linestring
+    mapping:
+      seamark:type:
+      - ferry_route
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:ferry_route:category", name: category, type: string}
+
+  wall: # FNCLNE: A natural or man-made barrier used as an enclosure or boundary or for protection.
+    type: linestring
+    mapping:
+      seamark:type:
+      - wall
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:wall:category", name: category, type: string}
+
+  fog_signal: # FOGSIG: A warning signal transmitted by a vessel, or aid to navigation, during periods of low visibility.
+    type: point
+    mapping:
+      seamark:type:
+      - fog_signal
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:fog_signal:category", name: category, type: string}
+    - {key: "seamark:fog_signal:frequency", name: frequency, type: string}
+    - {key: "seamark:fog_signal:generation", name: generation, type: string}
+    - {key: "seamark:fog_signal:group", name: group, type: string}
+    - {key: "seamark:fog_signal:period", name: period, type: string}
+    - {key: "seamark:fog_signal:range", name: range, type: string}
+    - {key: "seamark:fog_signal:sequence", name: sequence, type: string}
+
+  fortified_structure_points: # FORSTC: A structure for the military defence of a site.
+    type: point
+    mapping:
+      seamark:type:
+      - fortified_structure
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:fortified_structure:category", name: category, type: string}
+  fortified_structure_areas: # FORSTC: A structure for the military defence of a site.
+    type: polygon
+    mapping:
+      seamark:type:
+      - fortified_structure
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:fortified_structure:category", name: category, type: string}
+
+  fishing_facility_points: # FSHFAC: A structure in shallow water for fishing purposes which can be an obstruction to ships in general.
+    type: point
+    mapping:
+      seamark:type:
+      - fishing_facility
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:fishing_facility:category", name: category, type: string}
+  fishing_facility_lines: # FSHFAC: A structure in shallow water for fishing purposes which can be an obstruction to ships in general.
+    type: linestring
+    mapping:
+      seamark:type:
+      - fishing_facility
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:fishing_facility:category", name: category, type: string}
+  fishing_facility_areas: # FSHFAC: A structure in shallow water for fishing purposes which can be an obstruction to ships in general.
+    type: polygon
+    mapping:
+      seamark:type:
+      - fishing_facility
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:fishing_facility:category", name: category, type: string}
+
+  gate_points: # GATCON: A structure that may be swung, drawn, or lowered to block an entrance or passageway.
+    type: point
+    mapping:
+      seamark:type:
+      - gate
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:gate:category", name: category, type: string}
+  gate_lines: # GATCON: A structure that may be swung, drawn, or lowered to block an entrance or passageway.
+    type: linestring
+    mapping:
+      seamark:type:
+      - gate
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:gate:category", name: category, type: string}
+  gate_areas: # GATCON: A structure that may be swung, drawn, or lowered to block an entrance or passageway.
+    type: polygon
+    mapping:
+      seamark:type:
+      - gate
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:gate:category", name: category, type: string}
+
+  gridiron_points: # GRIDRN: A structure in the intertidal zone serving as a support for vessels at low stages of the tide to permit work on the exposed portion of the vessel's hull.
+    type: point
+    mapping:
+      seamark:type:
+      - gridiron
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:gridiron:water_level", name: water_level, type: string}
+  gridiron_areas: # GRIDRN: A structure in the intertidal zone serving as a support for vessels at low stages of the tide to permit work on the exposed portion of the vessel's hull.
+    type: polygon
+    mapping:
+      seamark:type:
+      - gridiron
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:gridiron:water_level", name: water_level, type: string}
+
+  harbour_basin: # hrbbsn: An enclosed area of water surrounded by quay walls constructed to provide means for the transfer of cargos from and to ships.
+    type: polygon
+    mapping:
+      seamark:type:
+      - harbour_basin
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  harbour_points: # HRBFAC: A natural or artificially improved body of water providing protection for vessels, and providing anchoring and docking facilities.
+    type: point
+    mapping:
+      seamark:type:
+      - harbour
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:harbour:category", name: category, type: string}
+  harbour_areas: # HRBFAC: A natural or artificially improved body of water providing protection for vessels, and providing anchoring and docking facilities.
+    type: polygon
+    mapping:
+      seamark:type:
+      - harbour
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:harbour:category", name: category, type: string}
+
+  hulk_points: # HULKES: A permanently moored ship.
+    type: point
+    mapping:
+      seamark:type:
+      - hulk
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:hulk:category", name: category, type: string}
+  hulk_areas: # HULKES: A permanently moored ship.
+    type: polygon
+    mapping:
+      seamark:type:
+      - hulk
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:hulk:category", name: category, type: string}
+
+  inshore_traffic_zone_points: # ISTZNE: A routeing measure comprising a designated area between the landward boundary of a traffic separation scheme and the adjacent coast, to be used in accordance with the provisions of the International Regulations for Preventing Collisions at Sea.
+    type: point
+    mapping:
+      seamark:type:
+      - inshore_traffic_zone
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:inshore_traffic_zone:restriction", name: restriction, type: string}
+  inshore_traffic_zone_lines: # ISTZNE: A routeing measure comprising a designated area between the landward boundary of a traffic separation scheme and the adjacent coast, to be used in accordance with the provisions of the International Regulations for Preventing Collisions at Sea.
+    type: linestring
+    mapping:
+      seamark:type:
+      - inshore_traffic_zone
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:inshore_traffic_zone:restriction", name: restriction, type: string}
+  inshore_traffic_zone_areas: # ISTZNE: A routeing measure comprising a designated area between the landward boundary of a traffic separation scheme and the adjacent coast, to be used in accordance with the provisions of the International Regulations for Preventing Collisions at Sea.
+    type: polygon
+    mapping:
+      seamark:type:
+      - inshore_traffic_zone
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:inshore_traffic_zone:restriction", name: restriction, type: string}
+
+  landmark_points: # LNDMRK: A prominent object at a fixed location which can be used in determining a location or a direction.
+    type: point
+    mapping:
+      seamark:type:
+      - landmark
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:landmark:category", name: category, type: string}
+    - {key: "seamark:landmark:colour", name: colour, type: string}
+    - {key: "seamark:landmark:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:landmark:construction", name: construction, type: string}
+    - {key: "seamark:landmark:elevation", name: elevation, type: string}
+    - {key: "seamark:landmark:function", name: function, type: string}
+    - {key: "seamark:landmark:height", name: height, type: string}
+    - {key: "seamark:landmark:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:landmark:visibility", name: visibility, type: string}
+  landmark_lines: # LNDMRK: A prominent object at a fixed location which can be used in determining a location or a direction.
+    type: linestring
+    mapping:
+      seamark:type:
+      - landmark
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:landmark:category", name: category, type: string}
+    - {key: "seamark:landmark:colour", name: colour, type: string}
+    - {key: "seamark:landmark:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:landmark:construction", name: construction, type: string}
+    - {key: "seamark:landmark:elevation", name: elevation, type: string}
+    - {key: "seamark:landmark:function", name: function, type: string}
+    - {key: "seamark:landmark:height", name: height, type: string}
+    - {key: "seamark:landmark:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:landmark:visibility", name: visibility, type: string}
+  landmark_areas: # LNDMRK: A prominent object at a fixed location which can be used in determining a location or a direction.
+    type: polygon
+    mapping:
+      seamark:type:
+      - landmark
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:landmark:category", name: category, type: string}
+    - {key: "seamark:landmark:colour", name: colour, type: string}
+    - {key: "seamark:landmark:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:landmark:construction", name: construction, type: string}
+    - {key: "seamark:landmark:elevation", name: elevation, type: string}
+    - {key: "seamark:landmark:function", name: function, type: string}
+    - {key: "seamark:landmark:height", name: height, type: string}
+    - {key: "seamark:landmark:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:landmark:visibility", name: visibility, type: string}
+
+  light_points: # LIGHTS: A luminous or lighted aid to navigation.
+    type: point
+    mapping:
+      seamark:type:
+      - light
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light:category", name: category, type: string}
+    - {key: "seamark:light:character", name: character, type: string}
+    - {key: "seamark:light:colour", name: colour, type: string}
+    - {key: "seamark:light:exhibition", name: exhibition, type: string}
+    - {key: "seamark:light:group", name: group, type: string}
+    - {key: "seamark:light:height", name: height, type: string}
+    - {key: "seamark:light:multiple", name: multiple, type: string}
+    - {key: "seamark:light:orientation", name: orientation, type: string}
+    - {key: "seamark:light:period", name: period, type: string}
+    - {key: "seamark:light:range", name: range, type: string}
+    - {key: "seamark:light:sector_start", name: sector_start, type: string}
+    - {key: "seamark:light:sector_end", name: sector_end, type: string}
+    - {key: "seamark:light:sequence", name: sequence, type: string}
+    - {key: "seamark:light:visibility", name: visibility, type: string}
+  light_areas: # LIGHTS: A luminous or lighted aid to navigation.
+    type: polygon
+    mapping:
+      seamark:type:
+      - light
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light:category", name: category, type: string}
+    - {key: "seamark:light:character", name: character, type: string}
+    - {key: "seamark:light:colour", name: colour, type: string}
+    - {key: "seamark:light:exhibition", name: exhibition, type: string}
+    - {key: "seamark:light:group", name: group, type: string}
+    - {key: "seamark:light:height", name: height, type: string}
+    - {key: "seamark:light:multiple", name: multiple, type: string}
+    - {key: "seamark:light:orientation", name: orientation, type: string}
+    - {key: "seamark:light:period", name: period, type: string}
+    - {key: "seamark:light:range", name: range, type: string}
+    - {key: "seamark:light:sector_start", name: sector_start, type: string}
+    - {key: "seamark:light:sector_end", name: sector_end, type: string}
+    - {key: "seamark:light:sequence", name: sequence, type: string}
+    - {key: "seamark:light:visibility", name: visibility, type: string}
+
+  light_major_points: # LIGHTS: A luminous or lighted aid to navigation.
+    type: point
+    mapping:
+      seamark:type:
+      - light_major
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light_major:category", name: category, type: string}
+    - {key: "seamark:light_major:character", name: character, type: string}
+    - {key: "seamark:light_major:colour", name: colour, type: string}
+    - {key: "seamark:light_major:exhibition", name: exhibition, type: string}
+    - {key: "seamark:light_major:group", name: group, type: string}
+    - {key: "seamark:light_major:height", name: height, type: string}
+    - {key: "seamark:light_major:multiple", name: multiple, type: string}
+    - {key: "seamark:light_major:orientation", name: orientation, type: string}
+    - {key: "seamark:light_major:period", name: period, type: string}
+    - {key: "seamark:light_major:range", name: range, type: string}
+    - {key: "seamark:light_major:sector_start", name: sector_start, type: string}
+    - {key: "seamark:light_major:sector_end", name: sector_end, type: string}
+    - {key: "seamark:light_major:sequence", name: sequence, type: string}
+    - {key: "seamark:light_major:visibility", name: visibility, type: string}
+  light_major_areas: # LIGHTS: A luminous or lighted aid to navigation.
+    type: polygon
+    mapping:
+      seamark:type:
+      - light_major
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light_major:category", name: category, type: string}
+    - {key: "seamark:light_major:character", name: character, type: string}
+    - {key: "seamark:light_major:colour", name: colour, type: string}
+    - {key: "seamark:light_major:exhibition", name: exhibition, type: string}
+    - {key: "seamark:light_major:group", name: group, type: string}
+    - {key: "seamark:light_major:height", name: height, type: string}
+    - {key: "seamark:light_major:multiple", name: multiple, type: string}
+    - {key: "seamark:light_major:orientation", name: orientation, type: string}
+    - {key: "seamark:light_major:period", name: period, type: string}
+    - {key: "seamark:light_major:range", name: range, type: string}
+    - {key: "seamark:light_major:sector_start", name: sector_start, type: string}
+    - {key: "seamark:light_major:sector_end", name: sector_end, type: string}
+    - {key: "seamark:light_major:sequence", name: sequence, type: string}
+    - {key: "seamark:light_major:visibility", name: visibility, type: string}
+
+  light_minor_points: # LIGHTS: A luminous or lighted aid to navigation.
+    type: point
+    mapping:
+      seamark:type:
+      - light_minor
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light_minor:category", name: category, type: string}
+    - {key: "seamark:light_minor:character", name: character, type: string}
+    - {key: "seamark:light_minor:colour", name: colour, type: string}
+    - {key: "seamark:light_minor:exhibition", name: exhibition, type: string}
+    - {key: "seamark:light_minor:group", name: group, type: string}
+    - {key: "seamark:light_minor:height", name: height, type: string}
+    - {key: "seamark:light_minor:multiple", name: multiple, type: string}
+    - {key: "seamark:light_minor:orientation", name: orientation, type: string}
+    - {key: "seamark:light_minor:period", name: period, type: string}
+    - {key: "seamark:light_minor:range", name: range, type: string}
+    - {key: "seamark:light_minor:sector_start", name: sector_start, type: string}
+    - {key: "seamark:light_minor:sector_end", name: sector_end, type: string}
+    - {key: "seamark:light_minor:sequence", name: sequence, type: string}
+    - {key: "seamark:light_minor:visibility", name: visibility, type: string}
+  light_minor_areas: # LIGHTS: A luminous or lighted aid to navigation.
+    type: polygon
+    mapping:
+      seamark:type:
+      - light_minor
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light_minor:category", name: category, type: string}
+    - {key: "seamark:light_minor:character", name: character, type: string}
+    - {key: "seamark:light_minor:colour", name: colour, type: string}
+    - {key: "seamark:light_minor:exhibition", name: exhibition, type: string}
+    - {key: "seamark:light_minor:group", name: group, type: string}
+    - {key: "seamark:light_minor:height", name: height, type: string}
+    - {key: "seamark:light_minor:multiple", name: multiple, type: string}
+    - {key: "seamark:light_minor:orientation", name: orientation, type: string}
+    - {key: "seamark:light_minor:period", name: period, type: string}
+    - {key: "seamark:light_minor:range", name: range, type: string}
+    - {key: "seamark:light_minor:sector_start", name: sector_start, type: string}
+    - {key: "seamark:light_minor:sector_end", name: sector_end, type: string}
+    - {key: "seamark:light_minor:sequence", name: sequence, type: string}
+    - {key: "seamark:light_minor:visibility", name: visibility, type: string}
+
+  light_float: # LITFLT: A boat-like structure used instead of a light buoy in waters where strong streams or currents are experienced, or when a greater elevation than that of a light buoy is necessary
+    type: point
+    mapping:
+      seamark:type:
+      - light_float
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light_float:colour", name: colour, type: string}
+    - {key: "seamark:light_float:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:light_float:reflectivity", name: reflectivity, type: string}
+
+  light_vessel: # LITVES: A distinctively marked vessel anchored or moored at a charted point, to serve as an aid to navigation.
+    type: point
+    mapping:
+      seamark:type:
+      - light_vessel
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:light_vessel:colour", name: colour, type: string}
+    - {key: "seamark:light_vessel:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:light_vessel:reflectivity", name: reflectivity, type: string}
+
+  lock_basin: # LOKBSN: A lock basin is a wet dock in a waterway, permitting a ship to pass from one level to another.
+    type: polygon
+    mapping:
+      seamark:type:
+      - lock_basin
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  marine_farm_points: # MARCUL: An assemblage of cages, nets, rafts and floats or posts where fish, including shellfish, are artificially cultivated.
+    type: point
+    mapping:
+      seamark:type:
+      - marine_farm
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:marine_farm:category", name: category, type: string}
+    - {key: "seamark:marine_farm:restriction", name: restriction, type: string}
+    - {key: "seamark:marine_farm:water_level", name: water_level, type: string}
+  marine_farm_lines: # MARCUL: An assemblage of cages, nets, rafts and floats or posts where fish, including shellfish, are artificially cultivated.
+    type: linestring
+    mapping:
+      seamark:type:
+      - marine_farm
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:marine_farm:category", name: category, type: string}
+    - {key: "seamark:marine_farm:restriction", name: restriction, type: string}
+    - {key: "seamark:marine_farm:water_level", name: water_level, type: string}
+  marine_farm_areas: # MARCUL: An assemblage of cages, nets, rafts and floats or posts where fish, including shellfish, are artificially cultivated.
+    type: polygon
+    mapping:
+      seamark:type:
+      - marine_farm
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:marine_farm:category", name: category, type: string}
+    - {key: "seamark:marine_farm:restriction", name: restriction, type: string}
+    - {key: "seamark:marine_farm:water_level", name: water_level, type: string}
+
+  military_area_points: # MIPARE: An area within which naval, military or aerial exercises are carried out. Also called an 'exercise area'.
+    type: point
+    mapping:
+      seamark:type:
+      - military_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:military_area:category", name: category, type: string}
+    - {key: "seamark:military_area:restriction", name: restriction, type: string}
+  military_area_areas: # MIPARE: An area within which naval, military or aerial exercises are carried out. Also called an 'exercise area'.
+    type: polygon
+    mapping:
+      seamark:type:
+      - military_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:military_area:category", name: category, type: string}
+    - {key: "seamark:military_area:restriction", name: restriction, type: string}
+
+  mooring_points: # MORFAC: The equipment or structure used to secure a vessel.
+    type: point
+    mapping:
+      seamark:type:
+      - mooring
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:mooring:category", name: category, type: string}
+    - {key: "seamark:mooring:colour", name: colour, type: string}
+    - {key: "seamark:mooring:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:mooring:construction", name: construction, type: string}
+    - {key: "seamark:mooring:height", name: height, type: string}
+    - {key: "seamark:mooring:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:mooring:shape", name: shape, type: string}
+    - {key: "seamark:mooring:visibility", name: visibility, type: string}
+    - {key: "seamark:mooring:water_level", name: water_level, type: string}
+  mooring_lines: # MORFAC: The equipment or structure used to secure a vessel.
+    type: linestring
+    mapping:
+      seamark:type:
+      - mooring
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:mooring:category", name: category, type: string}
+    - {key: "seamark:mooring:colour", name: colour, type: string}
+    - {key: "seamark:mooring:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:mooring:construction", name: construction, type: string}
+    - {key: "seamark:mooring:height", name: height, type: string}
+    - {key: "seamark:mooring:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:mooring:shape", name: shape, type: string}
+    - {key: "seamark:mooring:visibility", name: visibility, type: string}
+    - {key: "seamark:mooring:water_level", name: water_level, type: string}
+  mooring_areas: # MORFAC: The equipment or structure used to secure a vessel.
+    type: polygon
+    mapping:
+      seamark:type:
+      - mooring
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:mooring:category", name: category, type: string}
+    - {key: "seamark:mooring:colour", name: colour, type: string}
+    - {key: "seamark:mooring:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:mooring:construction", name: construction, type: string}
+    - {key: "seamark:mooring:height", name: height, type: string}
+    - {key: "seamark:mooring:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:mooring:shape", name: shape, type: string}
+    - {key: "seamark:mooring:visibility", name: visibility, type: string}
+    - {key: "seamark:mooring:water_level", name: water_level, type: string}
+
+  protected_area_points: # MPAARE: Any area of the intertidal or sub-tidal terrain, together with its overlying water and associated flora, fauna, historical and cultural features, which has been reserved by law or other effective means to protect part or all of the enclosed environment.
+    type: point
+    mapping:
+      seamark:type:
+      - protected_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+  protected_area_areas: # MPAARE: Any area of the intertidal or sub-tidal terrain, together with its overlying water and associated flora, fauna, historical and cultural features, which has been reserved by law or other effective means to protect part or all of the enclosed environment.
+    type: polygon
+    mapping:
+      seamark:type:
+      - protected_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  navigation_line: # NAVLNE: A straight line extending towards an area of navigational interest and generally generated by two navigational aids or one navigational aid and a bearing.
+    type: linestring
+    mapping:
+      seamark:type:
+      - navigation_line
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:navigation_line:category", name: category, type: string}
+    - {key: "seamark:navigation_line:orientation", name: orientation, type: string}
+
+  notice: # notmrk: A signboard used to indicate prohibitions, regulations, restrictions, recommendations and general information which apply to a waterway or a section of a waterway.
+    type: point
+    mapping:
+      seamark:type:
+      - notice
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:notice:addition", name: addition, type: string}
+    - {key: "seamark:notice:category", name: category, type: string}
+    - {key: "seamark:notice:condition", name: condition, type: string}
+    - {key: "seamark:notice:distance_min", name: distance_min, type: string}
+    - {key: "seamark:notice:distance_max", name: distance_max, type: string}
+    - {key: "seamark:notice:distance_up", name: distance_up, type: string}
+    - {key: "seamark:notice:distance_down", name: distance_down, type: string}
+    - {key: "seamark:notice:function", name: function, type: string}
+    - {key: "seamark:notice:impact", name: impact, type: string}
+    - {key: "seamark:notice:system", name: system, type: string}
+
+  obstruction_points: # OBSTRN: In marine navigation, anything that hinders or prevents movement, particularly anything that endangers or prevents passage of a vessel.
+    type: point
+    mapping:
+      seamark:type:
+      - obstruction
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:obstruction:category", name: category, type: string}
+    - {key: "seamark:obstruction:water_level", name: water_level, type: string}
+  obstruction_lines: # OBSTRN: In marine navigation, anything that hinders or prevents movement, particularly anything that endangers or prevents passage of a vessel.
+    type: linestring
+    mapping:
+      seamark:type:
+      - obstruction
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:obstruction:category", name: category, type: string}
+    - {key: "seamark:obstruction:water_level", name: water_level, type: string}
+  obstruction_areas: # OBSTRN: In marine navigation, anything that hinders or prevents movement, particularly anything that endangers or prevents passage of a vessel.
+    type: polygon
+    mapping:
+      seamark:type:
+      - obstruction
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:obstruction:category", name: category, type: string}
+    - {key: "seamark:obstruction:water_level", name: water_level, type: string}
+
+  oil_barrier: # OILBAR: A construction to dam oil flow on water.
+    type: linestring
+    mapping:
+      seamark:type:
+      - oil_barrier
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  platform_points: # OFSPLF: A permanent offshore structure, either fixed or floating, used in the production of oil or natural gas.
+    type: point
+    mapping:
+      seamark:type:
+      - platform
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:platform:category", name: category, type: string}
+    - {key: "seamark:platform:colour", name: colour, type: string}
+    - {key: "seamark:platform:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:platform:construction", name: construction, type: string}
+    - {key: "seamark:platform:condition", name: condition, type: string}
+    - {key: "seamark:platform:height", name: height, type: string}
+    - {key: "seamark:platform:product", name: product, type: string}
+    - {key: "seamark:platform:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:platform:visibility", name: visibility, type: string}
+  platform_areas: # OFSPLF: A permanent offshore structure, either fixed or floating, used in the production of oil or natural gas.
+    type: polygon
+    mapping:
+      seamark:type:
+      - platform
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:platform:category", name: category, type: string}
+    - {key: "seamark:platform:colour", name: colour, type: string}
+    - {key: "seamark:platform:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:platform:construction", name: construction, type: string}
+    - {key: "seamark:platform:condition", name: condition, type: string}
+    - {key: "seamark:platform:height", name: height, type: string}
+    - {key: "seamark:platform:product", name: product, type: string}
+    - {key: "seamark:platform:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:platform:visibility", name: visibility, type: string}
+
+  production_area: # OSPARE: An area at sea within which there are production facilities.
+    type: polygon
+    mapping:
+      seamark:type:
+      - production_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:production_area:category", name: category, type: string}
+    - {key: "seamark:production_area:condition", name: condition, type: string}
+    - {key: "seamark:production_area:height", name: height, type: string}
+    - {key: "seamark:production_area:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:production_area:restriction", name: restriction, type: string}
+    - {key: "seamark:production_area:visibility", name: visibility, type: string}
+
+  pilot_boarding: # PILBOP: The meeting place to which the pilot comes out.
+    type: point
+    mapping:
+      seamark:type:
+      - pilot_boarding
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:pilot_boarding:category", name: category, type: string}
+    - {key: "seamark:pilot_boarding:channel", name: channel, type: string}
+
+  pile: # PILPNT: A long heavy timber or section of steel, wood, concrete, etc. forced into the earth which may serve as a support, as for a pier, or a free standing pole within a marine environment.
+    type: point
+    mapping:
+      seamark:type:
+      - pile
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:pile:category", name: category, type: string}
+    - {key: "seamark:pile:colour", name: colour, type: string}
+    - {key: "seamark:pile:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:pile:condition", name: condition, type: string}
+    - {key: "seamark:pile:height", name: height, type: string}
+    - {key: "seamark:pile:visibility", name: visibility, type: string}
+
+  pipeline_area: # PIPARE: An area containing one or more pipelines.
+    type: polygon
+    mapping:
+      seamark:type:
+      - pipeline_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:pipeline_area:category", name: category, type: string}
+    - {key: "seamark:pipeline_area:condition", name: condition, type: string}
+    - {key: "seamark:pipeline_area:restriction", name: restriction, type: string}
+
+  pipeline_overhead: # PIPOHD: An overhead pipeline is a pipeline supported by pylons and passing over or nearby navigable waters.
+    type: linestring
+    mapping:
+      seamark:type:
+      - pipeline_overhead
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:pipeline_overhead:category", name: category, type: string}
+
+  pipeline_submarine: # PIPSOL: A pipeline lying on or buried under the seabed or the land.
+    type: linestring
+    mapping:
+      seamark:type:
+      - pipeline_submarine
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:pipeline_submarine:category", name: category, type: string}
+    - {key: "seamark:pipeline_submarine:condition", name: condition, type: string}
+    - {key: "seamark:pipeline_submarine:depth_buried", name: depth_buried, type: string}
+    - {key: "seamark:pipeline_submarine:product", name: product, type: string}
+
+  pontoon_lines: # PONTON: A floating structure, usually rectangular in shape which serves as landing, pier head or bridge support.
+    type: linestring
+    mapping:
+      seamark:type:
+      - pontoon
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+  pontoon_areas: # PONTON: A floating structure, usually rectangular in shape which serves as landing, pier head or bridge support.
+    type: polygon
+    mapping:
+      seamark:type:
+      - pontoon
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  precautionary_area_points: # PRCARE: A routeing measure comprising an area within defined limits where ships must navigate with particular caution and within which the direction of traffic flow may be recommended.
+    type: point
+    mapping:
+      seamark:type:
+      - precautionary_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:precautionary_area:restriction", name: restriction, type: string}
+  precautionary_area_areas: # PRCARE: A routeing measure comprising an area within defined limits where ships must navigate with particular caution and within which the direction of traffic flow may be recommended.
+    type: polygon
+    mapping:
+      seamark:type:
+      - precautionary_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:precautionary_area:restriction", name: restriction, type: string}
+
+  pylon_points: # PYLONS: A vertical construction consisting, for example, of a steel framework or pre-stressed concrete to carry cables, a bridge, etc.
+    type: point
+    mapping:
+      seamark:type:
+      - pylon
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:pylon:category", name: category, type: string}
+    - {key: "seamark:pylon:water_level", name: water_level, type: string}
+  pylon_areas: # PYLONS: A vertical construction consisting, for example, of a steel framework or pre-stressed concrete to carry cables, a bridge, etc.
+    type: polygon
+    mapping:
+      seamark:type:
+      - pylon
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:pylon:category", name: category, type: string}
+    - {key: "seamark:pylon:water_level", name: water_level, type: string}
+
+  radar_line: # RADLNE: A track along which ships may be guided by coastal radar stations in the event of bad visibility. Also known as a radar guided track.
+    type: linestring
+    mapping:
+      seamark:type:
+      - radar_line
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  radar_range: # RADRNG: Indicates the coverage of a sea area by a radar surveillance station. Inside this area a vessel may request shore-based radar assistance, particularly in poor visibility.
+    type: polygon
+    mapping:
+      seamark:type:
+      - radar_range
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  radar_reflector: # RADRFL: A device capable of, or intended for, reflecting radar signals.
+    type: point
+    mapping:
+      seamark:type:
+      - radar_reflector
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:radar_reflector:height", name: height, type: string}
+
+  radar_transponder: # RTPBCN: A transponder beacon transmitting a coded signal on radar frequency, permitting an interrogating craft to determine the bearing and range of the transponder. Also called racon.
+    type: point
+    mapping:
+      seamark:type:
+      - radar_transponder
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:radar_transponder:category", name: category, type: string}
+    - {key: "seamark:radar_transponder:group", name: group, type: string}
+    - {key: "seamark:radar_transponder:range", name: range, type: string}
+    - {key: "seamark:radar_transponder:sector_start", name: sector_start, type: string}
+    - {key: "seamark:radar_transponder:sector_end", name: sector_end, type: string}
+    - {key: "seamark:radar_transponder:sequence", name: sequence, type: string}
+    - {key: "seamark:radar_transponder:wavelength", name: wavelength, type: string}
+
+  radar_station: # RADSTA: A station with a transmitter emitting pulses of ultra-high frequency radio waves which are reflected by solid objects and are detected upon their return to the sending station.
+    type: point
+    mapping:
+      seamark:type:
+      - radar_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:radar_station:category", name: category, type: string}
+    - {key: "seamark:radar_station:channel", name: channel, type: string}
+    - {key: "seamark:radar_station:height", name: height, type: string}
+    - {key: "seamark:radar_station:range", name: range, type: string}
+
+  calling_in_point_points: # RDOCAL: On passing a radio calling-in point or crossing a defined line vessels are required to report on VHF to a Traffic Control Centre.
+    type: point
+    mapping:
+      seamark:type:
+      - calling-in_point
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:calling-in_point_lines:channel", name: channel, type: string}
+    - {key: "seamark:calling-in_point_lines:orientation", name: orientation, type: string}
+    - {key: "seamark:calling-in_point_lines:traffic_flow", name: traffic_flow, type: string}
+  calling-in_point_lines: # RDOCAL: On passing a radio calling-in point or crossing a defined line vessels are required to report on VHF to a Traffic Control Centre.
+    type: linestring
+    mapping:
+      seamark:type:
+      - calling-in_point
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:calling-in_point_lines:channel", name: channel, type: string}
+    - {key: "seamark:calling-in_point_lines:orientation", name: orientation, type: string}
+    - {key: "seamark:calling-in_point_lines:traffic_flow", name: traffic_flow, type: string}
+
+  radio_station: # RDOSTA: A place equipped to transmit radio waves.
+    type: point
+    mapping:
+      seamark:type:
+      - radio_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:radio_station:category", name: category, type: string}
+    - {key: "seamark:radio_station:callsign", name: callsign, type: string}
+    - {key: "seamark:radio_station:channel", name: channel, type: string}
+    - {key: "seamark:radio_station:frequency", name: frequency, type: string}
+
+  recommended_route_centreline: # RCRTCL: A recommended route centerline indicates the 'centerline' of a recommended route.
+    type: linestring
+    mapping:
+      seamark:type:
+      - recommended_route_centreline
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  recommended_track: # RECTRC: That portion of a 'navigation line' that a ship should use for navigation.
+    type: linestring
+    mapping:
+      seamark:type:
+      - recommended_track
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:recommended_track:traffic_flow", name: traffic_flow, type: string}
+    - {key: "seamark:recommended_track:orientation", name: orientation, type: string}
+
+  recommended_traffic_lane: # RCTLPT: Indicates the recommended traffic flow e.g., between two TSS, in the entrance areas of a TSS, beside a deep water route.
+    type: linestring
+    mapping:
+      seamark:type:
+      - recommended_traffic_lane
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:      - recommended_traffic_lane
+:orientation", name: orientation, type: string}
+
+  rescue_station_points: # RSCSTA: A place at which life saving equipment is held.
+    type: point
+    mapping:
+      seamark:type:
+      - rescue_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:rescue_station:category", name: category, type: string}
+  rescue_station_areas: # RSCSTA: A place at which life saving equipment is held.
+    type: polygon
+    mapping:
+      seamark:type:
+      - rescue_station
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: "seamark:rescue_station:category", name: category, type: string}
+
+  restricted_area: # RESARE: A specified area designated by an appropriate authority within which navigation is restricted in accordance with certain specified conditions.
+    type: polygon
+    mapping:
+      seamark:type:
+      - restricted_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:restricted_area:category", name: category, type: string}
+    - {key: "seamark:restricted_area:restriction", name: restriction, type: string}
+
+  retro_reflector: # RETRFL: A means of distinguishing unlighted marks at night. Retro-reflective material is secured to the mark in a particular pattern to reflect back light.
+    type: point
+    mapping:
+      seamark:type:
+      - retro_reflector
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  sand_waves_points: # SNDWAV: A large mobile wave-like sediment feature in shallow water and composed of sand. The wavelength may reach 100 metres, the amplitude may be up to 20 metres.
+    type: point
+    mapping:
+      seamark:type:
+      - sand_waves
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+  sand_waves_areas: # SNDWAV: A large mobile wave-like sediment feature in shallow water and composed of sand. The wavelength may reach 100 metres, the amplitude may be up to 20 metres.
+    type: polygon
+    mapping:
+      seamark:type:
+      - sand_waves
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  seabed_area_points: # SBDARE: An area of the sea where the nature of bottom is homogeneous. The nature of bottom includes the material of which it is composed and its physical characteristics.
+    type: point
+    mapping:
+      seamark:type:
+      - seabed_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:seabed_area:surface", name: surface, type: string}
+    - {key: "seamark:seabed_area:surface_qualification", name: surface_qualification, type: string}
+    - {key: "seamark:seabed_area:water_level", name: water_level, type: string}
+  seabed_area_lines: # SBDARE: An area of the sea where the nature of bottom is homogeneous. The nature of bottom includes the material of which it is composed and its physical characteristics.
+    type: linestring
+    mapping:
+      seamark:type:
+      - seabed_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:seabed_area:surface", name: surface, type: string}
+    - {key: "seamark:seabed_area:surface_qualification", name: surface_qualification, type: string}
+    - {key: "seamark:seabed_area:water_level", name: water_level, type: string}
+  seabed_area_areas: # SBDARE: An area of the sea where the nature of bottom is homogeneous. The nature of bottom includes the material of which it is composed and its physical characteristics.
+    type: polygon
+    mapping:
+      seamark:type:
+      - seabed_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:seabed_area:surface", name: surface, type: string}
+    - {key: "seamark:seabed_area:surface_qualification", name: surface_qualification, type: string}
+    - {key: "seamark:seabed_area:water_level", name: water_level, type: string}
+
+  sea_area_points: # SEAARE: A geographically defined part of the sea or other navigable waters. It may be specified within its limits by its proper name.
+    type: point
+    mapping:
+      seamark:type:
+      - sea_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:sea_area:category", name: category, type: string}
+  sea_area_areas: # SEAARE: A geographically defined part of the sea or other navigable waters. It may be specified within its limits by its proper name.
+    type: polygon
+    mapping:
+      seamark:type:
+      - sea_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:sea_area:category", name: category, type: string}
+
+  seaplane_landing_area_points: # SPLARE: A designated portion of water for the landing and take-off of sea-planes.
+    type: point
+    mapping:
+      seamark:type:
+      - seaplane_landing_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:seaplane_landing_area:restriction", name: restriction, type: string}
+  seaplane_landing_area_areas: # SPLARE: A designated portion of water for the landing and take-off of sea-planes.
+    type: polygon
+    mapping:
+      seamark:type:
+      - seaplane_landing_area
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:seaplane_landing_area:restriction", name: restriction, type: string}
+
+  shoreline_construction_points: # SLCONS: A fixed (not afloat) artificial structure between the water and the land, i.e. a man-made coastline.
+    type: point
+    mapping:
+      seamark:type:
+      - shoreline_construction
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:shoreline_construction:category", name: category, type: string}
+    - {key: "seamark:shoreline_construction:construction", name: construction, type: string}
+    - {key: "seamark:shoreline_construction:height", name: height, type: string}
+    - {key: "seamark:shoreline_construction:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:shoreline_construction:visibility", name: visibility, type: string}
+    - {key: "seamark:shoreline_construction:water_level", name: water_level, type: string}
+  shoreline_construction_lines: # SLCONS: A fixed (not afloat) artificial structure between the water and the land, i.e. a man-made coastline.
+    type: linestring
+    mapping:
+      seamark:type:
+      - shoreline_construction
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:shoreline_construction:category", name: category, type: string}
+    - {key: "seamark:shoreline_construction:construction", name: construction, type: string}
+    - {key: "seamark:shoreline_construction:height", name: height, type: string}
+    - {key: "seamark:shoreline_construction:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:shoreline_construction:visibility", name: visibility, type: string}
+    - {key: "seamark:shoreline_construction:water_level", name: water_level, type: string}
+  shoreline_construction_areas: # SLCONS: A fixed (not afloat) artificial structure between the water and the land, i.e. a man-made coastline.
+    type: polygon
+    mapping:
+      seamark:type:
+      - shoreline_construction
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:shoreline_construction:category", name: category, type: string}
+    - {key: "seamark:shoreline_construction:construction", name: construction, type: string}
+    - {key: "seamark:shoreline_construction:height", name: height, type: string}
+    - {key: "seamark:shoreline_construction:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:shoreline_construction:visibility", name: visibility, type: string}
+    - {key: "seamark:shoreline_construction:water_level", name: water_level, type: string}
+
+  signal_station_traffic: # SISTAT: Traffic signal stations regulate the movement of traffic.
+    type: point
+    mapping:
+      seamark:type:
+      - signal_station_traffic
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:signal_station_traffic:category", name: category, type: string}
+    - {key: "seamark:signal_station_traffic:channel", name: channel, type: string}
+
+  signal_station_warning: # SISTAW: A signal station is a place on shore from which signals are made to ships at sea.
+    type: point
+    mapping:
+      seamark:type:
+      - signal_station_warning
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:signal_station_warning:category", name: category, type: string}
+    - {key: "seamark:signal_station_warning:channel", name: channel, type: string}
+
+  small_craft_facility_points: # SMCFAC: A place at which a service generally of interest to small craft or pleasure boats is available.
+    type: point
+    mapping:
+      seamark:type:
+      - small_craft_facility
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:small_craft_facility:category", name: category, type: string}
+  small_craft_facility_lines: # SMCFAC: A place at which a service generally of interest to small craft or pleasure boats is available.
+    type: linestring
+    mapping:
+      seamark:type:
+      - small_craft_facility
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:small_craft_facility:category", name: category, type: string}
+  small_craft_facility_areas: # SMCFAC: A place at which a service generally of interest to small craft or pleasure boats is available.
+    type: polygon
+    mapping:
+      seamark:type:
+      - small_craft_facility
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:small_craft_facility:category", name: category, type: string}
+
+  spring: # SPRING: A natural issue of water or other substances from the earth. One on the bottom of the sea is called a 'submarine spring'.
+    type: point
+    mapping:
+      seamark:type:
+      - spring
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  submarine_transit_lane: # SUBTLN: An area where submarines may navigate under water or at the surface.
+    type: polygon
+    mapping:
+      seamark:type:
+      - submarine_transit_lane
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:submarine_transit_lane:restriction", name: restriction, type: string}
+
+  topmark: # TOPMAR: A characteristic shape secured at the top of a buoy or beacon to aid in its identification.
+    type: point
+    mapping:
+      seamark:type:
+      - topmark
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:topmark:colour", name: colour, type: string}
+    - {key: "seamark:topmark:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:topmark:shape", name: shape, type: string}
+
+  separation_boundary: # TSSBND: The outer limit of a traffic lane part or a traffic separation scheme roundabout.
+    type: linestring
+    mapping:
+      seamark:type:
+      - separation_boundary
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:separation_boundary:category", name: category, type: string}
+
+  separation_crossing: # TSSCRS: A defined area where traffic lanes cross.
+    type: polygon
+    mapping:
+      seamark:type:
+      - separation_crossing
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:separation_crossing:category", name: category, type: string}
+    - {key: "seamark:separation_crossing:restriction", name: restriction, type: string}
+
+  separation_lane: # TSSLPT: An area within defined limits in which one-way traffic flow is established
+    type: linestring
+    mapping:
+      seamark:type:
+      - separation_lane
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:separation_lane:category", name: category, type: string}
+    - {key: "seamark:separation_lane:restriction", name: restriction, type: string}
+
+  separation_line: # TSELNE: A line separating lanes in which ships are travelling in opposite or nearly opposite directions; or separating traffic lanes designated for particular classes of ships proceeding in the same direction
+    type: linestring
+    mapping:
+      seamark:type:
+      - separation_line
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:separation_line:category", name: category, type: string}
+    - {key: "seamark:separation_line:orientation", name: orientation, type: string}
+    - {key: "seamark:separation_line:restriction", name: restriction, type: string}
+
+  separation_roundabout: # TSSRON: A roundabout is a traffic separation scheme in which traffic moves in a counter-clockwise direction around a specified point or zone.
+    type: polygon
+    mapping:
+      seamark:type:
+      - separation_roundabout
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:separation_roundabout:category", name: category, type: string}
+    - {key: "seamark:separation_roundabout:restriction", name: restriction, type: string}
+
+  separation_zone: # TSSZNE: A zone separating the lanes in which ships are proceeding in opposite or nearly opposite directions; or separating traffic lanes designated for particular classes of ships proceeding in the same direction.
+    type: polygon
+    mapping:
+      seamark:type:
+      - separation_zone
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:separation_zone:category", name: category, type: string}
+    - {key: "seamark:separation_zone:restriction", name: restriction, type: string}
+
+  turning_basin_points: # trnbsn: An area of water or enlargement of a channel used for turning vessels.
+    type: point
+    mapping:
+      seamark:type:
+      - turning_basin
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+  turning_basin_areas: # trnbsn: An area of water or enlargement of a channel used for turning vessels.
+    type: polygon
+    mapping:
+      seamark:type:
+      - turning_basin
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  two_way_route: # TWRTPT: A two-way route part is an area of a two-way route within which traffic flow is generally along one bearing (and possibly its reciprocal).
+    type: linestring
+    mapping:
+      seamark:type:
+      - two-way_route
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+
+  rock: # UWTROC: A concreted mass of stony material or coral which dries, is awash or is below the water surface.
+    type: point
+    mapping:
+      seamark:type:
+      - rock
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:rock:surface", name: surface, type: string}
+    - {key: "seamark:rock:surface_qualification", name: surface_qualification, type: string}
+    - {key: "seamark:rock:water_level", name: water_level, type: string}
+
+  vegetation_points: # VEGATN: Collections of, or individual plants.
+    type: point
+    mapping:
+      seamark:type:
+      - vegetation
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:vegetation:category", name: category, type: string}
+  vegetation_lines: # VEGATN: Collections of, or individual plants.
+    type: linestring
+    mapping:
+      seamark:type:
+      - vegetation
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:vegetation:category", name: category, type: string}
+  vegetation_areas: # VEGATN: Collections of, or individual plants.
+    type: polygon
+    mapping:
+      seamark:type:
+      - vegetation
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:vegetation:category", name: category, type: string}
+
+  vehicle_transfer_points: # vehtrf: A place where vehicles can be loaded or unloaded from the inland vessel with onboard or on-shore facilities.
+    type: point
+    mapping:
+      seamark:type:
+      - vehicle_transfer
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:vehicle_transfer:category", name: category, type: string}
+  vehicle_transfer_areas: # vehtrf: A place where vehicles can be loaded or unloaded from the inland vessel with onboard or on-shore facilities.
+    type: polygon
+    mapping:
+      seamark:type:
+      - vehicle_transfer
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:vehicle_transfer:category", name: category, type: string}
+
+  water_turbulence_points: # WATTUR: The disturbance of water caused by the interaction of any combination of waves, currents, tidal streams, wind, shoal patches and obstructions.
+    type: point
+    mapping:
+      seamark:type:
+      - water_turbulence
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:water_turbulence:category", name: category, type: string}
+  water_turbulence_lines: # WATTUR: The disturbance of water caused by the interaction of any combination of waves, currents, tidal streams, wind, shoal patches and obstructions.
+    type: linestring
+    mapping:
+      seamark:type:
+      - water_turbulence
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:water_turbulence:category", name: category, type: string}
+  water_turbulence_areas: # WATTUR: The disturbance of water caused by the interaction of any combination of waves, currents, tidal streams, wind, shoal patches and obstructions.
+    type: polygon
+    mapping:
+      seamark:type:
+      - water_turbulence
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:water_turbulence:category", name: category, type: string}
+
+  waterway_gauge: # wtwgag: A waterway gauge is an instrument for measuring water levels
+    type: point
+    mapping:
+      seamark:type:
+      - waterway_gauge
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:waterway_gauge:category", name: category, type: string}
+
+  weed_points: # WEDKLP: Seaweed, any macroscopic marine alge or seagrass. Kelp is one of an order (laminariales) of usually large, blade-shaped or vine-like brown algae.
+    type: point
+    mapping:
+      seamark:type:
+      - weed
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:weed:category", name: category, type: string}
+  weed_areas: # WEDKLP: Seaweed, any macroscopic marine alge or seagrass. Kelp is one of an order (laminariales) of usually large, blade-shaped or vine-like brown algae.
+    type: polygon
+    mapping:
+      seamark:type:
+      - weed
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:weed:category", name: category, type: string}
+
+  wreck_points: # WRECKS: The ruined remains of a stranded or sunken vessel which has been rendered useless.
+    type: point
+    mapping:
+      seamark:type:
+      - wreck
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:wreck:category", name: category, type: string}
+    - {key: "seamark:wreck:depth", name: depth, type: string}
+    - {key: "seamark:wreck:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:wreck:visibility", name: visibility, type: string}
+    - {key: "seamark:wreck:water_level", name: water_level, type: string}
+  wreck_areas: # WRECKS: The ruined remains of a stranded or sunken vessel which has been rendered useless.
+    type: polygon
+    mapping:
+      seamark:type:
+      - wreck
+    columns:
+    - {name: osm_id, type: id}
+    - {name: geometry, type: geometry}
+    - {key: name, name: name, type: string}
+    - {key: "seamark:wreck:category", name: category, type: string}
+    - {key: "seamark:wreck:depth", name: depth, type: string}
+    - {key: "seamark:wreck:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:wreck:visibility", name: visibility, type: string}
+    - {key: "seamark:wreck:water_level", name: water_level, type: string}
