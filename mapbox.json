@@ -3225,7 +3225,7 @@
       }
     },
 
-	
+
 	{
       "id": "distance_mark",
       "type": "circle",
@@ -3394,8 +3394,16 @@
         [
           "!=",
           "category",
-          "fishing",
-		  "marina",
+          "fishing"
+        ],
+        [
+          "!=",
+          "category",
+		  "marina"
+        ],
+        [
+          "!=",
+          "category",
 		  "marina_no_facilities"
         ]
 	  ],
@@ -3409,16 +3417,24 @@
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "osm_harbour_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "category",
-          "fishing",
-		  "marina",
-		  "marina_no_facilities"
+          "fishing"
+        ],
+        [
+          "!=",
+          "category",
+          "marina"
+        ],
+        [
+          "!=",
+          "category",
+          "marina_no_facilities"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "F/F",
 		"icon-size": 0.2
@@ -3643,7 +3659,7 @@
 		"icon-size": 0.2
       }
     },
-	
+
 	{
       "id": "wreck_areas",
       "type": "symbol",
@@ -3977,8 +3993,16 @@
         [
           "!=",
           "restriction",
-          "no_entry",
-		  "no_anchoring",
+          "no_entry"
+        ],
+        [
+          "!=",
+          "restriction",
+		  "no_anchoring"
+        ],
+        [
+          "!=",
+          "restriction",
 		  "no_fishing"
         ]
       ],
@@ -4158,7 +4182,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "daymark_shape_colour",
       "type": "symbol",
@@ -4234,7 +4258,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "buoy_lateral_colour",
       "type": "symbol",
@@ -4316,7 +4340,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "beacon_lateral_colour",
       "type": "symbol",
@@ -4398,7 +4422,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "buoy_cardinal_colour",
       "type": "symbol",
@@ -4480,7 +4504,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "beacon_cardinal_colour",
       "type": "symbol",
@@ -4562,7 +4586,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "buoy_isolated_danger_colour",
       "type": "symbol",
@@ -4644,7 +4668,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "beacon_isolated_danger_colour",
       "type": "symbol",
@@ -4726,7 +4750,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "buoy_safe_water_colour",
       "type": "symbol",
@@ -4808,7 +4832,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "beacon_safe_water_colour",
       "type": "symbol",
@@ -4890,7 +4914,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "buoy_special_purpose_colour",
       "type": "symbol",
@@ -4972,7 +4996,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "beacon_special_purpose_colour",
       "type": "symbol",
@@ -5054,7 +5078,7 @@
 		]
       }
     },
-	
+
 	{
       "id": "notice_generic",
       "type": "symbol",
