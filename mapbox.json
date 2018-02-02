@@ -4281,12 +4281,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4308,12 +4308,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4335,12 +4335,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4363,12 +4363,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4390,12 +4390,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4417,12 +4417,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4445,12 +4445,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4472,12 +4472,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4499,12 +4499,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4527,12 +4527,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4554,12 +4554,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4581,12 +4581,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4609,12 +4609,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4636,12 +4636,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4663,12 +4663,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4691,12 +4691,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4718,12 +4718,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4745,12 +4745,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4773,12 +4773,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4800,12 +4800,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4827,12 +4827,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4855,12 +4855,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4882,12 +4882,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4909,12 +4909,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4937,12 +4937,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4964,12 +4964,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -4991,12 +4991,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -5019,12 +5019,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour}",
+        "icon-image": "Q/buoyant/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -5046,12 +5046,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/{colour_pattern}/{colour}",
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
@@ -5073,12 +5073,12 @@
 		[
 		  "in",
 		  "shape",
-		  "bouyant",
+		  "buoyant",
 		  "pile"
 		]
       ],
       "layout": {
-        "icon-image": "Q/bouyant/generic",
+        "icon-image": "Q/buoyant/generic",
 		"icon-size": 1,
 		"icon-offset": [
 			1,
