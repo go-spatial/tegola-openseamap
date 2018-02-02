@@ -3992,7 +3992,7 @@
       }
     },
 	{
-      "id": "restricted_area",
+      "id": "restricted_area2",
       "type": "fill",
       "source": "tegola-osm",
       "source-layer": "osm_restricted_area",
