@@ -3732,8 +3732,16 @@
         [
           "==",
           "category",
-          "dangerous",
-		  "mast_showing",
+          "dangerous"
+        ],
+        [
+          "==",
+          "category",
+		  "mast_showing"
+        ],
+        [
+          "==",
+          "category",
 		  "funnel_showing"
         ]
 	  ],
