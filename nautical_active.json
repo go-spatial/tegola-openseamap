@@ -268,27 +268,32 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_points",
+	  "minzoom": 11,
       "filter": [
         "all",
         [
-          "!=",
+          "!in",
           "category",
-          "fishing"
-        ],
-        [
-          "!=",
-          "category",
-          "marina"
-        ],
-        [
-          "!=",
-          "category",
-          "marina_no_facilities"
-        ]
+          "fishing",
+		  "marina",
+		  "marina_no_facilities"
+        ]        
       ],
       "layout": {
         "icon-image": "F/F",
-		"icon-size": 0.2
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.14
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-allow-overlap": true
       }
     },
 	{
@@ -392,6 +397,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -413,6 +419,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -431,6 +438,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -449,6 +457,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -467,6 +476,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -477,7 +487,7 @@
 	  ],
       "layout": {
         "icon-image": "K/K11",
-		"icon-size": 0.2
+		"icon-size": 0.15
       }
     },
 	{
@@ -571,7 +581,7 @@
 	  ],
       "layout": {
         "icon-image": "K/K28",
-		"icon-size": 1
+		"icon-size": 0.5
       }
     },
 	{
@@ -579,27 +589,34 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_points",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
-          "==",
+          "in",
           "category",
-          "dangerous"
-        ],
-        [
-          "==",
-          "category",
-		  "mast_showing"
-        ],
-        [
-          "==",
-          "category",
+          "dangerous",
+		  "mast_showing",
 		  "funnel_showing"
         ]
 	  ],
       "layout": {
         "icon-image": "K/K28",
-		"icon-size": 0.2
+		"icon-size": {
+          "stops": [
+            [
+              12,
+              0.15
+            ],
+			[ 15,
+			  0.25
+			],
+            [
+              18,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -625,6 +642,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_points",
+	  "minzoom": 13,
 	  "filter": [
         "all",
         [
@@ -668,12 +686,25 @@
     },
 	{
       "id": "pipeline_submarine",
-      "type": "symbol",
+      "type": "line",
       "source": "osm",
       "source-layer": "pipeline_submarine",
-      "layout": {
-        "icon-image": "L/L40",
-		"icon-size": 0.5
+	  "minzoom": 13,
+      "paint": {
+		"line-pattern": "L/Pipeline_horizontal",
+        "line-color": "rgba(0, 0, 0, 0)",
+        "line-width": {
+          "stops": [
+            [
+              13,
+              5
+            ],
+            [
+              18,
+              30
+            ]
+          ]
+        }
       }
     },
 	{
@@ -846,89 +877,13 @@
         "line-color": "#8b008b"
       }
     },
-	{
-      "id": "restricted_area2",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "restricted_area",
-	  "filter": [
-        "all",
-        [
-          "!=",
-          "restriction",
-          "no_entry"
-        ],
-        [
-          "!=",
-          "restriction",
-		  "no_anchoring"
-        ],
-        [
-          "!=",
-          "restriction",
-		  "no_fishing"
-        ]
-      ],
-      "paint": {
-		"fill-pattern": "N/N2.1"
-      }
-    },
-	{
-      "id": "restricted_area_no_entry",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "restricted_area",
-	  "filter": [
-        "all",
-        [
-          "==",
-          "restriction",
-          "no_entry"
-        ]
-      ],
-      "paint": {
-		"fill-pattern": "N/N2.2"
-      }
-    },
-	{
-      "id": "restricted_area_no_anchoring",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "restricted_area",
-	  "filter": [
-        "all",
-        [
-          "==",
-          "restriction",
-          "no_anchoring"
-        ]
-      ],
-      "paint": {
-		"fill-pattern": "N/N20"
-      }
-    },
-	{
-      "id": "restricted_area_no_fishing",
-      "type": "fill",
-      "source": "osm",
-      "source-layer": "restricted_area",
-	  "filter": [
-        "all",
-        [
-          "==",
-          "restriction",
-          "no_fishing"
-        ]
-      ],
-      "paint": {
-		"fill-pattern": "N/N21"
-      }
-    },
+	
 	{
       "id": "anchorage_areas",
       "type": "fill",
       "source": "osm",
       "source-layer": "anchorage_areas",
+	  "minzoom": 11,
 	  "filter": [
         "all",
         [
@@ -946,9 +901,25 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "anchorage_points",
+	  "minzoom": 11,
       "layout": {
         "icon-image": "N/N12",
-		"icon-size": 0.2
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.25
+            ],
+			[
+			  13,
+			  0.3
+			],
+            [
+              14,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -977,7 +948,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "light_minor_points",
-	  "min_zoom": 11,
+	  "minzoom": 11,
       "layout": {
         "icon-image": "P/P1.minor",
 		"icon-size": {
@@ -1008,7 +979,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "P/P10.1_{colour}",
+        "icon-image": "P/P10.1_{colour2}",
 		"icon-size": 1,
 		"icon-offset": [
 			-5,
@@ -1030,11 +1001,11 @@
         ],
 		[
 		  "has",
-		  "colour"
+		  "colour2"
 		]
       ],
       "layout": {
-        "icon-image": "P/P11_{colour}",
+        "icon-image": "P/P11_{colour2}",
 		"icon-size": 1,
 		"icon-offset": [
 			0,
@@ -1056,7 +1027,7 @@
         ],
 		[
 		  "!has",
-		  "colour"
+		  "colour2"
 		]
       ],
       "layout": {
@@ -1077,19 +1048,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1104,19 +1093,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1131,19 +1138,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1159,19 +1184,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1186,19 +1229,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1213,19 +1274,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1241,19 +1320,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1268,19 +1365,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1295,19 +1410,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1323,19 +1456,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1343,26 +1494,44 @@
       }
     },
 	{
-      "id": "beacon_lateral_cardinal_pattern",
+      "id": "beacon_bouyant_cardinal_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1377,26 +1546,85 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
 		]
       }
     },
-
+	{
+      "id": "beacon_cardinal_colour_colour_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_cardinal",
+	  "minzoom": 11,
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!=",
+		  "colour2",
+		  ""
+		],
+		[
+		  "==",
+		  "shape",
+		  ""
+		]
+      ],
+      "layout": {
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-allow-overlap": true		
+      }
+    },
+	
 	{
       "id": "buoy_isolated_danger_colour",
       "type": "symbol",
@@ -1405,19 +1633,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1432,19 +1678,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1459,19 +1723,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1487,19 +1769,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1514,19 +1814,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1541,19 +1859,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1569,19 +1905,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1596,19 +1950,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1623,19 +1995,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1651,19 +2041,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1678,19 +2086,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1705,19 +2131,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1733,19 +2177,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1760,19 +2222,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1787,19 +2267,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1815,19 +2313,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour_pattern"
+          "==",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
+		  "pile",
+		  ""
+		],
+		[
+		  "!=",
+		  "colour2",
+		  ""
 		]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1842,19 +2358,37 @@
 	  "filter": [
         "all",
         [
-          "has",
-          "colour_pattern"
+          "!=",
+          "colour_pattern2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
+		  "pile",
+		  ""
+		],
+		[
+		  "!=",
+		  "colour2",
+		  ""
 		]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
+        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1869,19 +2403,37 @@
 	  "filter": [
         "all",
         [
-          "!has",
-          "colour"
+          "==",
+          "colour2",
+		  ""
         ],
 		[
 		  "in",
 		  "shape",
 		  "buoyant",
-		  "pile"
-		]
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
 		"icon-offset": [
 			1,
 			-6
@@ -1971,10 +2523,23 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "pilot_boarding",
+	  "minzoom": 11,
       "layout": {
         "icon-image": "T/T1.1",
-		"icon-size": 0.1
-      }
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.15
+            ],
+            [
+              18,
+              0.2
+            ]
+          ]
+        }
+      },
+      "icon-allow-overlap": true
     },
 	{
       "id": "signal_station_warning",
@@ -2030,6 +2595,7 @@
       ],
       "layout": {
         "icon-image": "U/U1.1",
+		"icon-allow-overlap": true,
 		"icon-size": {
 		"stops": [
             [
@@ -2132,7 +2698,8 @@
           "category",
 		  "nautical_club",
 		  "restaurant",
-		  "slipway"
+		  "slipway",
+		  "showers;toilets"
         ]
       ],
       "layout": {
@@ -2281,7 +2848,11 @@
       ],
       "layout": {
         "icon-image": "U/U5",
-		"icon-size": 0.1
+		"icon-size": 1,
+		"icon-rotation-alignment": "auto",
+		"symbol-spacing": 1,
+		"symbol-placement": "line",
+		"icon-allow-overlap": true
       }
     },
 	{
@@ -2289,7 +2860,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
-	  "minzoom": 13,
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2300,10 +2871,257 @@
       ],
       "layout": {
         "icon-image": "U/Slipway",
-		"icon-size": 0.5
+		"icon-size": 0.5,
+		"icon-allow-overlap": true
       }
+    },
+	{
+      "id": "small_craft_facility_points_shower",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "small_craft_facility_points",
+	  "minzoom": 14,
+	  "filter": [
+        "all",
+        [
+          "==",
+          "category",
+		  "showers;toilets"
+        ]
+      ],
+      "layout": {
+        "icon-image": "U/Shower",
+		"icon-size": 0.4,
+		"icon-offset": [
+			34,
+			0
+		],
+		"icon-allow-overlap": true
+      }
+    },
+	{
+      "id": "small_craft_facility_points_toilet",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "small_craft_facility_points",
+	  "minzoom": 14,
+	  "filter": [
+        "all",
+        [
+          "==",
+          "category",
+		  "showers;toilets"
+        ]
+      ],
+      "layout": {
+        "icon-image": "U/Toilet",
+		"icon-size": 0.4,
+		"icon-offset": [
+			-34,
+			0
+		],
+		"icon-allow-overlap": true
+      }
+    },
+	{
+      "id": "restricted_area_outline",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "minzoom": 10,
+	  "paint": {
+        "line-color": "rgba(174, 177, 226, 1)",
+        "line-dasharray": [
+          3,
+          2
+        ],
+        "line-width": {
+          "stops": [
+            [
+              10,
+              0.7
+            ],
+            [
+              18,
+              4
+            ]
+          ]
+        }
+      }
+    },
+	{
+      "id": "restricted_area2",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "!in",
+          "restriction",
+          "no_entry",
+		  "no_anchoring",
+		  "no_fishing",
+		  "no_anchoring;no_fishing"
+        ]
+      ],
+      "layout": {
+		"icon-image": "N/N2.1",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 1,
+		"icon-size": 0.05
+		}
+    },
+	{
+      "id": "restricted_area_no_entry",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "restriction",
+          "no_entry"
+        ]
+      ],
+     "layout": {
+		"icon-image": "N/N2.2",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 1,
+		"icon-size": 0.05
+		}
+    },
+	{
+      "id": "restricted_area_no_anchoring",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "restriction",
+          "no_anchoring"
+        ]
+      ],
+      "layout": {
+		"icon-image": "N/N20",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 3,
+		"icon-size": 0.15
+		}
+    },
+	{
+      "id": "restricted_area_no_fishing",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "restriction",
+          "no_fishing"
+        ]
+      ],
+      "layout": {
+		"icon-image": "N/N21",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 3,
+		"icon-size": 0.15
+		}
+    },
+	{
+      "id": "restricted_area_no_anchoring_no_fishing1",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "restriction",
+          "no_anchoring;no_fishing"
+        ]
+      ],
+      "layout": {
+		"icon-image": "N/N20",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 3,
+		"icon-size": 0.15
+		}
+    },
+	{
+      "id": "restricted_area_no_anchoring_no_fishing2",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "restriction",
+          "no_anchoring;no_fishing"
+        ]
+      ],
+      "layout": {
+		"icon-image": "N/N21",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 3,
+		"icon-size": 0.15
+		}
+    },
+	{
+      "id": "restricted_area_no_anchoring_no_trawling1",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "restriction",
+          "no_anchoring;no_trawling"
+        ]
+      ],
+      "layout": {
+		"icon-image": "N/N20",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 5,
+		"icon-size": 0.4
+		}
+    },
+	{
+      "id": "restricted_area_no_anchoring_no_trawling2",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "restricted_area",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "restriction",
+          "no_anchoring;no_trawling"
+        ]
+      ],
+      "layout": {
+		"icon-image": "N/N2.1",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 5,
+		"icon-size": 0.4
+		}
     }
   ],
+  
   "id": "ciwf4zbsv007y2pmt2rspc1dc",
   "owner": ""
 }

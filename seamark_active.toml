@@ -45,31 +45,31 @@ max_connections = 500000
 	name = "beacon_cardinal"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, REPLACE(colour, ';', '_') as colour2, colour_pattern, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "beacon_isolated_danger"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, colour, colour_pattern, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_isolated_danger WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_isolated_danger WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "beacon_lateral"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, colour, colour_pattern, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_lateral WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_lateral WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "beacon_safe_water"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, colour, colour_pattern, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_safe_water WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_safe_water WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "beacon_special_purpose"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, colour, colour_pattern, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_special_purpose WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, construction, elevation, height, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_special_purpose WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "berth_areas"
@@ -111,31 +111,31 @@ max_connections = 500000
 	name = "buoy_cardinal"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, colour, colour_pattern, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "buoy_isolated_danger"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, colour, colour_pattern, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_isolated_danger WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_isolated_danger WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "buoy_lateral"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, colour, colour_pattern, reflectivity, shape, system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_lateral WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, reflectivity, shape, system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_lateral WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "buoy_safe_water"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, colour, colour_pattern, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_safe_water WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_safe_water WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "buoy_special_purpose"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, colour, colour_pattern, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_special_purpose WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, REPLACE(colour, ';', '_') as colour2, REPLACE(colour_pattern, ';', '_') as colour_pattern2, reflectivity, shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_special_purpose WHERE geometry && !BBOX!"
 	
 	[[providers.layers]]
 	name = "cable_overhead"
