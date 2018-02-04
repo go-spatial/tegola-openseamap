@@ -958,7 +958,18 @@
       "source-layer": "light_major_points",
       "layout": {
         "icon-image": "P/P1.major",
-		"icon-size": 1
+		"icon-size": {
+		"stops": [
+            [
+              8,
+              0.1
+            ],
+            [
+              18,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -966,9 +977,21 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "light_minor_points",
+	  "min_zoom": 11,
       "layout": {
         "icon-image": "P/P1.minor",
-		"icon-size": 0.5
+		"icon-size": {
+		"stops": [
+            [
+              11,
+              0.1
+            ],
+            [
+              18,
+              0.35
+            ]
+          ]
+        }
       }
     },
 	{
@@ -1996,6 +2019,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_points",
+	  "minzoom": 10,
 	  "filter": [
         "all",
         [
@@ -2006,7 +2030,18 @@
       ],
       "layout": {
         "icon-image": "U/U1.1",
-		"icon-size": 0.2
+		"icon-size": {
+		"stops": [
+            [
+              10,
+              0.1
+            ],
+            [
+              18,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -2254,6 +2289,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
+	  "minzoom": 13,
 	  "filter": [
         "all",
         [
@@ -2263,8 +2299,8 @@
         ]
       ],
       "layout": {
-        "icon-image": "U/U5",
-		"icon-size": 0.1
+        "icon-image": "U/Slipway",
+		"icon-size": 0.5
       }
     }
   ],
