@@ -230,10 +230,22 @@
       "type": "circle",
       "source": "osm",
       "source-layer": "mooring_points",
+	  "minzoom": 12,
       "paint": {
-        "circle-radius": 4,
-        "circle-color": "#000000"
-      }
+	    "circle-color": "#000000",
+        "circle-radius": {
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        }
+      }   
     },
 	{
       "id": "harbour_areas",
@@ -243,24 +255,28 @@
 	  "filter": [
         "all",
         [
-          "!=",
+          "!in",
           "category",
-          "fishing"
-        ],
-        [
-          "!=",
-          "category",
-		  "marina"
-        ],
-        [
-          "!=",
-          "category",
+          "fishing",
+		  "marina",
 		  "marina_no_facilities"
         ]
 	  ],
       "layout": {
         "icon-image": "F/F",
-		"icon-size": 0.2
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.14
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-allow-overlap": true
       }
     },
 	{
@@ -304,14 +320,28 @@
 	  "filter": [
         "all",
         [
-          "==",
+          "in",
           "category",
-          "fishing"
+          "fishing",
+		  ";fishing"
         ]
 	  ],
       "layout": {
         "icon-image": "F/F10",
-		"icon-size": 0.2
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.14
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-allow-overlap": true,
+		"icon-offset": [-150,0]
       }
     },
 	{
@@ -329,7 +359,20 @@
 	  ],
       "layout": {
         "icon-image": "F/F10",
-		"icon-size": 0.2
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.14
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-allow-overlap": true,
+		"icon-offset": [-150,0]
       }
     },
 	{
@@ -526,6 +569,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_areas",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -539,7 +583,21 @@
 	  ],
       "layout": {
         "icon-image": "K/K29",
-		"icon-size": 1
+		"icon-size": {
+          "stops": [
+            [
+              12,
+              0.15
+            ],
+			[ 15,
+			  0.25
+			],
+            [
+              18,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -547,7 +605,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_points",
-	  "minzoom": 13,
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -561,7 +619,21 @@
 	  ],
       "layout": {
         "icon-image": "K/K29",
-		"icon-size": 0.18
+		"icon-size": {
+          "stops": [
+            [
+              12,
+              0.15
+            ],
+			[ 15,
+			  0.25
+			],
+            [
+              18,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -569,6 +641,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_areas",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -581,7 +654,21 @@
 	  ],
       "layout": {
         "icon-image": "K/K28",
-		"icon-size": 0.5
+		"icon-size": {
+          "stops": [
+            [
+              12,
+              0.15
+            ],
+			[ 15,
+			  0.25
+			],
+            [
+              18,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -624,6 +711,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_areas",
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -634,7 +722,21 @@
 	  ],
       "layout": {
         "icon-image": "K/K24",
-		"icon-size": 1
+		"icon-size": {
+          "stops": [
+            [
+              12,
+              0.15
+            ],
+			[ 15,
+			  0.25
+			],
+            [
+              18,
+              0.4
+            ]
+          ]
+        }
       }
     },
 	{
@@ -642,7 +744,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_points",
-	  "minzoom": 13,
+	  "minzoom": 12,
 	  "filter": [
         "all",
         [
@@ -782,6 +884,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "separation_line",
+	  "minzoom": 6,
       "paint": {
         "line-width": {
           "stops": [
@@ -803,7 +906,7 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "separation_zone",
-	  "minzoom": 8,
+	  "minzoom": 6,
       "paint": {
         "fill-color": "rgba(181, 167, 234, 1)"
       }
@@ -862,11 +965,11 @@
           "stops": [
             [
               5,
-              0.5
+              0.3
             ],
             [
               20,
-              4
+              2
             ]
           ]
         },
@@ -877,25 +980,55 @@
         "line-color": "#8b008b"
       }
     },
-	
 	{
-      "id": "anchorage_areas",
-      "type": "fill",
+      "id": "anchorage_areas_outline",
+      "type": "line",
       "source": "osm",
       "source-layer": "anchorage_areas",
-	  "minzoom": 11,
+	  "minzoom": 10,
+	  "paint": {
+        "line-color": "rgba(174, 177, 226, 1)",
+        "line-dasharray": [
+          3,
+          2
+        ],
+        "line-width": {
+          "stops": [
+            [
+              10,
+              0.7
+            ],
+            [
+              18,
+              4
+            ]
+          ]
+        }
+      }
+    },
+	{
+      "id": "anchorage_areas_symbols",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "anchorage_areas",
 	  "filter": [
         "all",
         [
           "!=",
           "restriction",
-          "no_anchoring"
+		  "no_anchoring"
         ]
       ],
-      "paint": {
-		"fill-pattern": "N/N12"
-      }
+      "layout": {
+		"icon-image": "N/N12",
+		"icon-rotation-alignment": "viewport",
+		"symbol-placement": "line",
+		"symbol-spacing": 100,
+		"icon-size": 0.2
+		}
     },
+	
+	
 	{
       "id": "anchorage_points",
       "type": "symbol",
@@ -2440,6 +2573,1411 @@
 		]
       }
     },
+	
+	
+	{
+      "id": "buoy_shape_lateral_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_lateral",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_lateral_colour_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_lateral",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_lateral_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_lateral",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_lateral_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_lateral",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_lateral_colour_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_lateral",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_lateral_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_lateral",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+
+	{
+      "id": "buoy_shape_cardinal_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_cardinal",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_lateral_cardinal_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_cardinal",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_cardinal_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_cardinal",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+
+	{
+      "id": "beacon_shape_cardinal_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_cardinal",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_cardinal_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_cardinal",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_cardinal_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_cardinal",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_cardinal_colour_colour_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_cardinal",
+	  "minzoom": 11,
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!=",
+		  "colour2",
+		  ""
+		],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-allow-overlap": true		
+      }
+    },
+	
+	{
+      "id": "buoy_shape_isolated_danger_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_isolated_danger",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_isolated_danger_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_isolated_danger",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_isolated_danger_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_isolated_danger",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+
+	{
+      "id": "beacon_shape_isolated_danger_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_isolated_danger",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_isolated_danger_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_isolated_danger",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_isolated_danger_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_isolated_danger",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+
+	{
+      "id": "buoy_shape_safe_water_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_safe_water",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_safe_water_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_safe_water",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_safe_water_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_safe_water",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+
+	{
+      "id": "beacon_shape_safe_water_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_safe_water",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_safe_water_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_safe_water",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_safe_water_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_safe_water",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+
+	{
+      "id": "buoy_shape_special_purpose_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_special_purpose",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_special_purpose_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_special_purpose",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "!=",
+          "colour2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "buoy_shape_special_purpose_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "buoy_special_purpose",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+
+	{
+      "id": "beacon_shape_special_purpose_colour",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_special_purpose",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+		  "!=",
+		  "colour2",
+		  ""
+		]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_special_purpose_pattern",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_special_purpose",
+	  "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+		  "!=",
+		  "colour2",
+		  ""
+		]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	{
+      "id": "beacon_shape_special_purpose_generic",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "beacon_special_purpose",
+	  "filter": [
+        "all",
+        [
+          "==",
+          "colour2",
+		  ""
+        ],
+		[
+		  "!in",
+		  "shape",
+		  "buoyant",
+		  "pile",
+		  ""
+		],
+		[
+          "==",
+          "colour_pattern2",
+		  ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/{shape}/generic",
+		"icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+		"icon-offset": [
+			1,
+			-6
+		]
+      }
+    },
+	
+	
 
 	{
       "id": "notice_generic",
@@ -2651,6 +4189,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2671,6 +4210,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2691,6 +4231,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2712,6 +4253,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2730,6 +4272,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2748,6 +4291,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2766,6 +4310,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2784,6 +4329,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2802,6 +4348,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2820,6 +4367,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
@@ -2838,6 +4386,7 @@
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
+	  "minzoom": 14,
 	  "filter": [
         "all",
         [
