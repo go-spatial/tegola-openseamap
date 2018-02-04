@@ -45,7 +45,7 @@ imposm3 import -connection postgis://user:password@host:port/osm_seamark -mappin
 
 It can be desirable to use separate databases for a tegola installation. For example, even though you may have OpenStreetMap data for multiple metro or Geofabrik extracts, you'll likely only need one copy of the OSM land polygons and Natural Earth Data.
 
-Starting with `tegola v0.6.0`, environment variables can be used to configure database connection information. Copy `.env-example` to `.env` and customize away. A `Procfile` is included for those who use tools that recognize it, such as [foreman](https://github.com/ddollar/foreman)`, clones such as [node-foreman](https://github.com/strongloop/node-foreman) or Python's [honcho](https://github.com/nickstenning/honcho), or the [Heroku Command Line Interface](https://devcenter.heroku.com/articles/heroku-cli) which bundles it. You can start your server with an invocation such as
+Starting with `tegola v0.6.0`, environment variables can be used to configure database connection information. Copy `.env-example` to `.env` and customize away. A `Procfile` is included for those who use tools that recognize it, such as [foreman](https://github.com/ddollar/foreman), clones such as [node-foreman](https://github.com/strongloop/node-foreman) or Python's [honcho](https://github.com/nickstenning/honcho), or the [Heroku Command Line Interface](https://devcenter.heroku.com/articles/heroku-cli) which bundles it. You can start your server with an invocation such as
 
 ```bash
 heroku local tegola
