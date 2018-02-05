@@ -1402,7 +1402,7 @@ center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part 
 	[[maps.layers]]
 	name = "roads_gen1"
 	provider_layer = "osm.transport_lines_gen1"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 10
 
 	[[maps.layers]]
@@ -1483,971 +1483,971 @@ center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part 
 	[[maps.layers]]
 	name = "seamark_anchorage_points"
 	provider_layer = "seamark.anchorage_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_anchorage_areas"
 	provider_layer = "seamark.anchorage_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_anchor_berth_points"
 	provider_layer = "seamark.anchor_berth_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_anchor_berth_areas"
 	provider_layer = "seamark.anchor_berth_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_beacon_cardinal"
 	provider_layer = "seamark.beacon_cardinal"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_beacon_isolated_danger"
 	provider_layer = "seamark.beacon_isolated_danger"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_beacon_lateral"
 	provider_layer = "seamark.beacon_lateral"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_beacon_safe_water"
 	provider_layer = "seamark.beacon_safe_water"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_beacon_special_purpose"
 	provider_layer = "seamark.beacon_special_purpose"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_berth_points"
 	provider_layer = "seamark.berth_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_berth_lines"
 	provider_layer = "seamark.berth_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_berth_areas"
 	provider_layer = "seamark.berth_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_bridge_points"
 	provider_layer = "seamark.bridge_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_bridge_lines"
 	provider_layer = "seamark.bridge_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_bridge_areas"
 	provider_layer = "seamark.bridge_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_bunker_station_points"
 	provider_layer = "seamark.bunker_station_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_bunker_station_areas"
 	provider_layer = "seamark.bunker_station_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_building_points"
 	provider_layer = "seamark.building_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_building_areas"
 	provider_layer = "seamark.building_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_buoy_cardinal"
 	provider_layer = "seamark.buoy_cardinal"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_buoy_installation"
 	provider_layer = "seamark.buoy_installation"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_buoy_isolated_danger"
 	provider_layer = "seamark.buoy_isolated_danger"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_buoy_lateral"
 	provider_layer = "seamark.buoy_lateral"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_buoy_safe_water"
 	provider_layer = "seamark.buoy_safe_water"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_buoy_special_purpose"
 	provider_layer = "seamark.buoy_special_purpose"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_cable_area"
 	provider_layer = "seamark.cable_area"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_cable_overhead"
 	provider_layer = "seamark.cable_overhead"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_cable_submarine"
 	provider_layer = "seamark.cable_submarine"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_causeway_lines"
 	provider_layer = "seamark.causeway_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_causeway_areas"
 	provider_layer = "seamark.causeway_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_checkpoint_points"
 	provider_layer = "seamark.checkpoint_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_checkpoint_areas"
 	provider_layer = "seamark.checkpoint_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_coastguard_station_points"
 	provider_layer = "seamark.coastguard_station_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_coastguard_station_areas"
 	provider_layer = "seamark.coastguard_station_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_communication_area"
 	provider_layer = "seamark.communication_area"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_control_point"
 	provider_layer = "seamark.control_point"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_distance_mark"
 	provider_layer = "seamark.distance_mark"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_dredged_area"
 	provider_layer = "seamark.dredged_area"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_exceptional_structure_points"
 	provider_layer = "seamark.exceptional_structure_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_exceptional_structure_lines"
 	provider_layer = "seamark.exceptional_structure_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_exceptional_structure_areas"
 	provider_layer = "seamark.exceptional_structure_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_fairway"
 	provider_layer = "seamark.fairway"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_ferry_route"
 	provider_layer = "seamark.ferry_route"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_wall"
 	provider_layer = "seamark.wall"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_fog_signal"
 	provider_layer = "seamark.fog_signal"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_fortified_structure_points"
 	provider_layer = "seamark.fortified_structure_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_fortified_structure_areas"
 	provider_layer = "seamark.fortified_structure_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_fishing_facility_points"
 	provider_layer = "seamark.fishing_facility_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_fishing_facility_lines"
 	provider_layer = "seamark.fishing_facility_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_fishing_facility_areas"
 	provider_layer = "seamark.fishing_facility_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_gate_points"
 	provider_layer = "seamark.gate_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_gate_lines"
 	provider_layer = "seamark.gate_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_gate_areas"
 	provider_layer = "seamark.gate_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_gridiron_points"
 	provider_layer = "seamark.gridiron_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_gridiron_areas"
 	provider_layer = "seamark.gridiron_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_harbour_basin"
 	provider_layer = "seamark.harbour_basin"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_harbour_points"
 	provider_layer = "seamark.harbour_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_harbour_areas"
 	provider_layer = "seamark.harbour_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_hulk_points"
 	provider_layer = "seamark.hulk_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_hulk_areas"
 	provider_layer = "seamark.hulk_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_inshore_traffic_zone_points"
 	provider_layer = "seamark.inshore_traffic_zone_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_inshore_traffic_zone_lines"
 	provider_layer = "seamark.inshore_traffic_zone_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_inshore_traffic_zone_areas"
 	provider_layer = "seamark.inshore_traffic_zone_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_landmark_points"
 	provider_layer = "seamark.landmark_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_landmark_lines"
 	provider_layer = "seamark.landmark_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_landmark_areas"
 	provider_layer = "seamark.landmark_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_points"
 	provider_layer = "seamark.light_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_areas"
 	provider_layer = "seamark.light_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_major_points"
 	provider_layer = "seamark.light_major_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_major_areas"
 	provider_layer = "seamark.light_major_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_minor_points"
 	provider_layer = "seamark.light_minor_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_minor_areas"
 	provider_layer = "seamark.light_minor_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_float"
 	provider_layer = "seamark.light_float"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_light_vessel"
 	provider_layer = "seamark.light_vessel"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_lock_basin"
 	provider_layer = "seamark.lock_basin"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_marine_farm_points"
 	provider_layer = "seamark.marine_farm_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_marine_farm_lines"
 	provider_layer = "seamark.marine_farm_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_marine_farm_areas"
 	provider_layer = "seamark.marine_farm_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_military_area_points"
 	provider_layer = "seamark.military_area_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_military_area_areas"
 	provider_layer = "seamark.military_area_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_mooring_points"
 	provider_layer = "seamark.mooring_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_mooring_lines"
 	provider_layer = "seamark.mooring_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_mooring_areas"
 	provider_layer = "seamark.mooring_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_protected_area_points"
 	provider_layer = "seamark.protected_area_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_protected_area_areas"
 	provider_layer = "seamark.protected_area_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_navigation_line"
 	provider_layer = "seamark.navigation_line"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_notice"
 	provider_layer = "seamark.notice"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_obstruction_points"
 	provider_layer = "seamark.obstruction_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_obstruction_lines"
 	provider_layer = "seamark.obstruction_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_obstruction_areas"
 	provider_layer = "seamark.obstruction_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_oil_barrier"
 	provider_layer = "seamark.oil_barrier"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_platform_points"
 	provider_layer = "seamark.platform_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_platform_areas"
 	provider_layer = "seamark.platform_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_production_area"
 	provider_layer = "seamark.production_area"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pilot_boarding"
 	provider_layer = "seamark.pilot_boarding"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pile"
 	provider_layer = "seamark.pile"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pipeline_area"
 	provider_layer = "seamark.pipeline_area"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pipeline_overhead"
 	provider_layer = "seamark.pipeline_overhead"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pipeline_submarine"
 	provider_layer = "seamark.pipeline_submarine"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pontoon_lines"
 	provider_layer = "seamark.pontoon_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pontoon_areas"
 	provider_layer = "seamark.pontoon_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_precautionary_area_points"
 	provider_layer = "seamark.precautionary_area_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_precautionary_area_areas"
 	provider_layer = "seamark.precautionary_area_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pylon_points"
 	provider_layer = "seamark.pylon_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_pylon_areas"
 	provider_layer = "seamark.pylon_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_radar_line"
 	provider_layer = "seamark.radar_line"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_radar_range"
 	provider_layer = "seamark.radar_range"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_radar_reflector"
 	provider_layer = "seamark.radar_reflector"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_radar_transponder"
 	provider_layer = "seamark.radar_transponder"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_radar_station"
 	provider_layer = "seamark.radar_station"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_calling_in_point_points"
 	provider_layer = "seamark.calling_in_point_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_calling_in_point_lines"
 	provider_layer = "seamark.calling_in_point_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_radio_station"
 	provider_layer = "seamark.radio_station"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_recommended_route_centreline"
 	provider_layer = "seamark.recommended_route_centreline"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_recommended_track"
 	provider_layer = "seamark.recommended_track"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_recommended_traffic_lane"
 	provider_layer = "seamark.recommended_traffic_lane"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_rescue_station_points"
 	provider_layer = "seamark.rescue_station_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_rescue_station_areas"
 	provider_layer = "seamark.rescue_station_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_restricted_area"
 	provider_layer = "seamark.restricted_area"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_retro_reflector"
 	provider_layer = "seamark.retro_reflector"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_sand_waves_points"
 	provider_layer = "seamark.sand_waves_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_sand_waves_areas"
 	provider_layer = "seamark.sand_waves_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_seabed_area_points"
 	provider_layer = "seamark.seabed_area_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_seabed_area_lines"
 	provider_layer = "seamark.seabed_area_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_seabed_area_areas"
 	provider_layer = "seamark.seabed_area_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_sea_area_points"
 	provider_layer = "seamark.sea_area_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_sea_area_areas"
 	provider_layer = "seamark.sea_area_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_seaplane_landing_area_points"
 	provider_layer = "seamark.seaplane_landing_area_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_seaplane_landing_area_areas"
 	provider_layer = "seamark.seaplane_landing_area_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_shoreline_construction_points"
 	provider_layer = "seamark.shoreline_construction_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_shoreline_construction_lines"
 	provider_layer = "seamark.shoreline_construction_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_shoreline_construction_areas"
 	provider_layer = "seamark.shoreline_construction_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_signal_station_traffic"
 	provider_layer = "seamark.signal_station_traffic"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_signal_station_warning"
 	provider_layer = "seamark.signal_station_warning"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_small_craft_facility_points"
 	provider_layer = "seamark.small_craft_facility_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_small_craft_facility_lines"
 	provider_layer = "seamark.small_craft_facility_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_small_craft_facility_areas"
 	provider_layer = "seamark.small_craft_facility_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_spring"
 	provider_layer = "seamark.spring"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_submarine_transit_lane"
 	provider_layer = "seamark.submarine_transit_lane"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_separation_boundary"
 	provider_layer = "seamark.separation_boundary"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_separation_crossing"
 	provider_layer = "seamark.separation_crossing"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_separation_lane"
 	provider_layer = "seamark.separation_lane"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_separation_line"
 	provider_layer = "seamark.separation_line"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_separation_roundabout"
 	provider_layer = "seamark.separation_roundabout"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_separation_zone"
 	provider_layer = "seamark.separation_zone"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_turning_basin_points"
 	provider_layer = "seamark.turning_basin_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_turning_basin_areas"
 	provider_layer = "seamark.turning_basin_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_two_way_route"
 	provider_layer = "seamark.two_way_route"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_rock"
 	provider_layer = "seamark.rock"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_vegetation_points"
 	provider_layer = "seamark.vegetation_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_vegetation_lines"
 	provider_layer = "seamark.vegetation_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_vegetation_areas"
 	provider_layer = "seamark.vegetation_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_vehicle_transfer_points"
 	provider_layer = "seamark.vehicle_transfer_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_vehicle_transfer_areas"
 	provider_layer = "seamark.vehicle_transfer_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_water_turbulence_points"
 	provider_layer = "seamark.water_turbulence_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_water_turbulence_lines"
 	provider_layer = "seamark.water_turbulence_lines"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_water_turbulence_areas"
 	provider_layer = "seamark.water_turbulence_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_waterway_gauge"
 	provider_layer = "seamark.waterway_gauge"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_weed_points"
 	provider_layer = "seamark.weed_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_weed_areas"
 	provider_layer = "seamark.weed_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_wreck_points"
 	provider_layer = "seamark.wreck_points"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
 
 	[[maps.layers]]
 	name = "seamark_wreck_areas"
 	provider_layer = "seamark.wreck_areas"
-	min_zoom = 9
+	min_zoom = 7
 	max_zoom = 20
