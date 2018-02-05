@@ -15,977 +15,977 @@ database = "${SM_DB_NAME}"
 user = "${SM_DB_USER}"
 password = "${SM_DB_PASS}"
 
-    [[providers.layers]]
-    name = "anchorage_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "anchorage_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "anchor_berth_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, radius, danger_class FROM osm_anchor_berth_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "anchor_berth_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, radius, danger_class FROM osm_anchor_berth_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "beacon_cardinal"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "beacon_isolated_danger"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_isolated_danger WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "beacon_lateral"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, impact, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_lateral WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "beacon_safe_water"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_safe_water WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "beacon_special_purpose"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_special_purpose WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "berth_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, minimum_depth, danger_class FROM osm_berth_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "berth_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, minimum_depth, danger_class FROM osm_berth_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "berth_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, minimum_depth, danger_class FROM osm_berth_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "bridge_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "bridge_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "bridge_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "bunker_station_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_bunker_station_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "bunker_station_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_bunker_station_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "building_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "building_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "buoy_cardinal"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "buoy_installation"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_installation WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "buoy_isolated_danger"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_isolated_danger WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "buoy_lateral"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_lateral WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "buoy_safe_water"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_safe_water WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "buoy_special_purpose"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_special_purpose WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "cable_area"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_cable_area WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "cable_overhead"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, vertical_clearance, clearance_height_safe FROM osm_cable_overhead WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "cable_submarine"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, depth_buried FROM osm_cable_submarine WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "causeway_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_causeway_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "causeway_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_causeway_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "checkpoint_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_checkpoint_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "checkpoint_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_checkpoint_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "coastguard_station_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_coastguard_station_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "coastguard_station_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_coastguard_station_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "communication_area"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_communication_area WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "control_point"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_control_point WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "distance_mark"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, distance, units FROM osm_distance_mark WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "dredged_area"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_dredged_area WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "exceptional_structure_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_exceptional_structure_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "exceptional_structure_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_exceptional_structure_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "exceptional_structure_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_exceptional_structure_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "fairway"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_fairway WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "ferry_route"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_ferry_route WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "wall"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_wall WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "fog_signal"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, frequency, generation, signal_group, period, range, sequence FROM osm_fog_signal WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "fortified_structure_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fortified_structure_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "fortified_structure_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fortified_structure_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "fishing_facility_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fishing_facility_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "fishing_facility_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fishing_facility_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "fishing_facility_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fishing_facility_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "gate_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_gate_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "gate_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_gate_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "gate_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_gate_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "gridiron_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_gridiron_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "gridiron_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_gridiron_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "harbour_basin"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_harbour_basin WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "harbour_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_harbour_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "harbour_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_harbour_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "hulk_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_hulk_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "hulk_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_hulk_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "inshore_traffic_zone_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_inshore_traffic_zone_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "inshore_traffic_zone_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_inshore_traffic_zone_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "inshore_traffic_zone_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_inshore_traffic_zone_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "landmark_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "landmark_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "landmark_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_major_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_major_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_minor_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_minor_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_float"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity FROM osm_light_float WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "light_vessel"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity FROM osm_light_vessel WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "lock_basin"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_lock_basin WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "marine_farm_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, water_level FROM osm_marine_farm_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "marine_farm_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, water_level FROM osm_marine_farm_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "marine_farm_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, water_level FROM osm_marine_farm_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "military_area_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_military_area_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "military_area_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_military_area_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "mooring_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "mooring_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "mooring_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "protected_area_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_protected_area_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "protected_area_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_protected_area_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "navigation_line"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, orientation FROM osm_navigation_line WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "notice"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, addition, category, condition, distance_min, distance_max, distance_up, distance_down, function, impact, system FROM osm_notice WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "obstruction_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_obstruction_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "obstruction_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_obstruction_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "obstruction_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_obstruction_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "oil_barrier"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_oil_barrier WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "platform_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "platform_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "production_area"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, condition, height, reflectivity, restriction, visibility FROM osm_production_area WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pilot_boarding"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel FROM osm_pilot_boarding WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pile"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, height, visibility FROM osm_pile WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pipeline_area"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, condition, restriction FROM osm_pipeline_area WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pipeline_overhead"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_pipeline_overhead WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pipeline_submarine"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, condition, depth_buried, product FROM osm_pipeline_submarine WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pontoon_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_pontoon_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pontoon_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_pontoon_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "precautionary_area_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_precautionary_area_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "precautionary_area_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_precautionary_area_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pylon_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_pylon_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "pylon_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_pylon_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "radar_line"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_radar_line WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "radar_range"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_radar_range WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "radar_reflector"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, height FROM osm_radar_reflector WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "radar_transponder"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, signal_group, range, sector_start, sector_end, sequence, wavelength FROM osm_radar_transponder WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "radar_station"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel, height, range FROM osm_radar_station WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "calling_in_point_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, channel, orientation, traffic_flow FROM osm_calling_in_point_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "calling_in_point_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, channel, orientation, traffic_flow FROM osm_calling_in_point_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "radio_station"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, callsign, channel, frequency FROM osm_radio_station WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "recommended_route_centreline"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_recommended_route_centreline WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "recommended_track"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, traffic_flow, orientation FROM osm_recommended_track WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "recommended_traffic_lane"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, orientation FROM osm_recommended_traffic_lane WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "rescue_station_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_rescue_station_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "rescue_station_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_rescue_station_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "restricted_area"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_restricted_area WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "retro_reflector"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_retro_reflector WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "sand_waves_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_sand_waves_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "sand_waves_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_sand_waves_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "seabed_area_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_seabed_area_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "seabed_area_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_seabed_area_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "seabed_area_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_seabed_area_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "sea_area_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_sea_area_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "sea_area_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_sea_area_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "seaplane_landing_area_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, restriction FROM osm_seaplane_landing_area_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "seaplane_landing_area_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, restriction FROM osm_seaplane_landing_area_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "shoreline_construction_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, construction, height, reflectivity, visibility, water_level FROM osm_shoreline_construction_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "shoreline_construction_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, construction, height, reflectivity, visibility, water_level FROM osm_shoreline_construction_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "shoreline_construction_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, construction, height, reflectivity, visibility, water_level FROM osm_shoreline_construction_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "signal_station_traffic"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel FROM osm_signal_station_traffic WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "signal_station_warning"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel FROM osm_signal_station_warning WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "small_craft_facility_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_small_craft_facility_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "small_craft_facility_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_small_craft_facility_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "small_craft_facility_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_small_craft_facility_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "spring"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_spring WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "submarine_transit_lane"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, restriction FROM osm_submarine_transit_lane WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "separation_boundary"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_separation_boundary WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "separation_crossing"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_crossing WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "separation_lane"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_lane WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "separation_line"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, orientation, restriction FROM osm_separation_line WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "separation_roundabout"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_roundabout WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "separation_zone"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_zone WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "turning_basin_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_turning_basin_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "turning_basin_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_turning_basin_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "two_way_route"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_two_way_route WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "rock"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_rock WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "vegetation_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vegetation_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "vegetation_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vegetation_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "vegetation_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vegetation_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "vehicle_transfer_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vehicle_transfer_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "vehicle_transfer_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vehicle_transfer_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "water_turbulence_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_water_turbulence_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "water_turbulence_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_water_turbulence_lines WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "water_turbulence_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_water_turbulence_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "waterway_gauge"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_waterway_gauge WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "weed_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_weed_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "weed_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_weed_areas WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "wreck_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, depth, reflectivity, visibility, water_level FROM osm_wreck_points WHERE geometry && !BBOX!"
-
-    [[providers.layers]]
-    name = "wreck_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, depth, reflectivity, visibility, water_level FROM osm_wreck_areas WHERE geometry && !BBOX!"
+	[[providers.layers]]
+	name = "anchorage_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "anchorage_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "anchor_berth_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, radius, danger_class FROM osm_anchor_berth_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "anchor_berth_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, radius, danger_class FROM osm_anchor_berth_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "beacon_cardinal"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "beacon_isolated_danger"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_isolated_danger WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "beacon_lateral"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, impact, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_lateral WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "beacon_safe_water"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_safe_water WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "beacon_special_purpose"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_special_purpose WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "berth_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, minimum_depth, danger_class FROM osm_berth_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "berth_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, minimum_depth, danger_class FROM osm_berth_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "berth_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, minimum_depth, danger_class FROM osm_berth_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "bridge_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "bridge_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "bridge_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "bunker_station_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_bunker_station_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "bunker_station_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_bunker_station_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "building_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "building_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "buoy_cardinal"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "buoy_installation"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_installation WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "buoy_isolated_danger"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_isolated_danger WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "buoy_lateral"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_lateral WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "buoy_safe_water"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_safe_water WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "buoy_special_purpose"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_special_purpose WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "cable_area"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_cable_area WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "cable_overhead"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, vertical_clearance, clearance_height_safe FROM osm_cable_overhead WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "cable_submarine"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, depth_buried FROM osm_cable_submarine WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "causeway_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_causeway_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "causeway_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_causeway_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "checkpoint_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_checkpoint_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "checkpoint_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_checkpoint_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "coastguard_station_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_coastguard_station_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "coastguard_station_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_coastguard_station_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "communication_area"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_communication_area WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "control_point"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_control_point WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "distance_mark"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, distance, units FROM osm_distance_mark WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "dredged_area"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_dredged_area WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "exceptional_structure_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_exceptional_structure_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "exceptional_structure_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_exceptional_structure_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "exceptional_structure_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_exceptional_structure_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "fairway"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_fairway WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "ferry_route"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_ferry_route WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "wall"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_wall WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "fog_signal"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, frequency, generation, signal_group, period, range, sequence FROM osm_fog_signal WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "fortified_structure_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fortified_structure_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "fortified_structure_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fortified_structure_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "fishing_facility_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fishing_facility_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "fishing_facility_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fishing_facility_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "fishing_facility_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_fishing_facility_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "gate_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_gate_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "gate_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_gate_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "gate_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_gate_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "gridiron_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_gridiron_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "gridiron_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, water_level FROM osm_gridiron_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "harbour_basin"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_harbour_basin WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "harbour_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_harbour_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "harbour_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_harbour_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "hulk_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_hulk_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "hulk_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_hulk_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "inshore_traffic_zone_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_inshore_traffic_zone_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "inshore_traffic_zone_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_inshore_traffic_zone_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "inshore_traffic_zone_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_inshore_traffic_zone_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "landmark_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "landmark_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "landmark_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_major_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_major_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_minor_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_minor_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_float"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity FROM osm_light_float WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "light_vessel"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity FROM osm_light_vessel WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "lock_basin"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_lock_basin WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "marine_farm_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, water_level FROM osm_marine_farm_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "marine_farm_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, water_level FROM osm_marine_farm_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "marine_farm_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, water_level FROM osm_marine_farm_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "military_area_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_military_area_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "military_area_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_military_area_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "mooring_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "mooring_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "mooring_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "protected_area_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_protected_area_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "protected_area_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_protected_area_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "navigation_line"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, orientation FROM osm_navigation_line WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "notice"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, addition, category, condition, distance_min, distance_max, distance_up, distance_down, function, impact, system FROM osm_notice WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "obstruction_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_obstruction_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "obstruction_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_obstruction_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "obstruction_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_obstruction_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "oil_barrier"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_oil_barrier WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "platform_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "platform_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "production_area"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, condition, height, reflectivity, restriction, visibility FROM osm_production_area WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pilot_boarding"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel FROM osm_pilot_boarding WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pile"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, height, visibility FROM osm_pile WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pipeline_area"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, condition, restriction FROM osm_pipeline_area WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pipeline_overhead"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_pipeline_overhead WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pipeline_submarine"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, condition, depth_buried, product FROM osm_pipeline_submarine WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pontoon_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_pontoon_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pontoon_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_pontoon_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "precautionary_area_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_precautionary_area_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "precautionary_area_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, restriction FROM osm_precautionary_area_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pylon_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_pylon_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "pylon_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, water_level FROM osm_pylon_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "radar_line"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_radar_line WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "radar_range"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_radar_range WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "radar_reflector"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, height FROM osm_radar_reflector WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "radar_transponder"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, signal_group, range, sector_start, sector_end, sequence, wavelength FROM osm_radar_transponder WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "radar_station"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel, height, range FROM osm_radar_station WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "calling_in_point_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, channel, orientation, traffic_flow FROM osm_calling_in_point_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "calling_in_point_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, channel, orientation, traffic_flow FROM osm_calling_in_point_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "radio_station"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, callsign, channel, frequency FROM osm_radio_station WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "recommended_route_centreline"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_recommended_route_centreline WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "recommended_track"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, traffic_flow, orientation FROM osm_recommended_track WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "recommended_traffic_lane"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, orientation FROM osm_recommended_traffic_lane WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "rescue_station_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_rescue_station_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "rescue_station_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, category FROM osm_rescue_station_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "restricted_area"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_restricted_area WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "retro_reflector"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_retro_reflector WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "sand_waves_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_sand_waves_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "sand_waves_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_sand_waves_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "seabed_area_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_seabed_area_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "seabed_area_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_seabed_area_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "seabed_area_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_seabed_area_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "sea_area_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_sea_area_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "sea_area_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_sea_area_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "seaplane_landing_area_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, restriction FROM osm_seaplane_landing_area_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "seaplane_landing_area_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, restriction FROM osm_seaplane_landing_area_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "shoreline_construction_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, construction, height, reflectivity, visibility, water_level FROM osm_shoreline_construction_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "shoreline_construction_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, construction, height, reflectivity, visibility, water_level FROM osm_shoreline_construction_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "shoreline_construction_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, construction, height, reflectivity, visibility, water_level FROM osm_shoreline_construction_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "signal_station_traffic"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel FROM osm_signal_station_traffic WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "signal_station_warning"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, channel FROM osm_signal_station_warning WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "small_craft_facility_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_small_craft_facility_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "small_craft_facility_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_small_craft_facility_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "small_craft_facility_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_small_craft_facility_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "spring"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_spring WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "submarine_transit_lane"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, restriction FROM osm_submarine_transit_lane WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "separation_boundary"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_separation_boundary WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "separation_crossing"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_crossing WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "separation_lane"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_lane WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "separation_line"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, orientation, restriction FROM osm_separation_line WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "separation_roundabout"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_roundabout WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "separation_zone"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction FROM osm_separation_zone WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "turning_basin_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_turning_basin_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "turning_basin_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_turning_basin_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "two_way_route"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name FROM osm_two_way_route WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "rock"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, surface, surface_qualification, water_level FROM osm_rock WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "vegetation_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vegetation_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "vegetation_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vegetation_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "vegetation_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vegetation_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "vehicle_transfer_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vehicle_transfer_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "vehicle_transfer_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_vehicle_transfer_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "water_turbulence_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_water_turbulence_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "water_turbulence_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_water_turbulence_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "water_turbulence_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_water_turbulence_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "waterway_gauge"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_waterway_gauge WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "weed_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_weed_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "weed_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category FROM osm_weed_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "wreck_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, depth, reflectivity, visibility, water_level FROM osm_wreck_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "wreck_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, depth, reflectivity, visibility, water_level FROM osm_wreck_areas WHERE geometry && !BBOX!"
 
 
 # OSM land polygons and simplified land polygons
@@ -998,18 +998,18 @@ database = "${LP_DB_NAME}"
 user = "${LP_DB_USER}"
 password = "${LP_DB_PASS}"
 
-    # Land
-    [[providers.layers]]
-    name = "land_0-9"
-    geometry_fieldname = "geometry"
-    id_fieldname = "fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM simplified_land_polygons WHERE wkb_geometry && !BBOX!"
+	# Land
+	[[providers.layers]]
+	name = "land_0-9"
+	geometry_fieldname = "geometry"
+	id_fieldname = "fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM simplified_land_polygons WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "land_10-20"
-    geometry_fieldname = "geometry"
-    id_fieldname = "fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM land_polygons WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "land_10-20"
+	geometry_fieldname = "geometry"
+	id_fieldname = "fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM land_polygons WHERE wkb_geometry && !BBOX!"
 
 # Open Street Maps (OSM)
 [[providers]]
@@ -1022,155 +1022,155 @@ user = "${OSM_DB_USER}"
 password = "${OSM_DB_PASS}"
 max_connections = 500
 
-    # Water
-    [[providers.layers]]
-    name = "water_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, area, tags FROM osm_water_areas WHERE type IN ('water', 'pond', 'basin', 'canal', 'mill_pond', 'riverbank', 'dock') AND geometry && !BBOX!"
+	# Water
+	[[providers.layers]]
+	name = "water_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, area, tags FROM osm_water_areas WHERE type IN ('water', 'pond', 'basin', 'canal', 'mill_pond', 'riverbank', 'dock') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "water_areas_gen0"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, area, tags FROM osm_water_areas_gen0 WHERE type IN ('water', 'pond', 'basin', 'canal', 'mill_pond', 'riverbank') AND area > 10000 AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "water_areas_gen0"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, area, tags FROM osm_water_areas_gen0 WHERE type IN ('water', 'pond', 'basin', 'canal', 'mill_pond', 'riverbank') AND area > 10000 AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "water_areas_gen1"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, area, tags FROM osm_water_areas_gen1 WHERE type IN ('water', 'pond', 'basin', 'canal', 'mill_pond', 'riverbank') AND area > 1000 AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "water_areas_gen1"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, area, tags FROM osm_water_areas_gen1 WHERE type IN ('water', 'pond', 'basin', 'canal', 'mill_pond', 'riverbank') AND area > 1000 AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "water_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_water_lines WHERE type IN ('river', 'canal', 'stream', 'ditch', 'drain', 'dam') AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "water_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_water_lines WHERE type IN ('river', 'canal', 'stream', 'ditch', 'drain', 'dam') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "water_lines_gen0"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_water_lines WHERE type IN ('river', 'canal') AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "water_lines_gen0"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_water_lines WHERE type IN ('river', 'canal') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "water_lines_gen1"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_water_lines WHERE type IN ('river', 'canal', 'stream', 'ditch', 'drain', 'dam') AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "water_lines_gen1"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_water_lines WHERE type IN ('river', 'canal', 'stream', 'ditch', 'drain', 'dam') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_boundaries_11-12"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, admin_level, tags FROM osm_admin_areas WHERE admin_level IN (1,2,3,4,5,6,7,8) AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_boundaries_11-12"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, admin_level, tags FROM osm_admin_areas WHERE admin_level IN (1,2,3,4,5,6,7,8) AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_boundaries_13-20"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, admin_level, tags FROM osm_admin_areas WHERE admin_level IN (1,2,3,4,5,6,7,8,9,10) AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_boundaries_13-20"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, admin_level, tags FROM osm_admin_areas WHERE admin_level IN (1,2,3,4,5,6,7,8,9,10) AND geometry && !BBOX!"
 
-    # Land Use
-    [[providers.layers]]
-    name = "landuse_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, area, tags FROM osm_landuse_areas WHERE geometry && !BBOX!"
+	# Land Use
+	[[providers.layers]]
+	name = "landuse_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, area, tags FROM osm_landuse_areas WHERE geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "landuse_areas_gen0"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, area, tags FROM osm_landuse_areas_gen0 WHERE type IN ('forest','wood','nature reserve', 'military') AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "landuse_areas_gen0"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, area, tags FROM osm_landuse_areas_gen0 WHERE type IN ('forest','wood','nature reserve', 'military') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "landuse_areas_gen1"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, area, tags FROM osm_landuse_areas_gen1 WHERE geometry && !BBOX!"
+	[[providers.layers]]
+	name = "landuse_areas_gen1"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, area, tags FROM osm_landuse_areas_gen1 WHERE geometry && !BBOX!"
 
-    # Transport
-    [[providers.layers]]
-    name = "transport_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, tags, type FROM osm_transport_points WHERE geometry && !BBOX!"
+	# Transport
+	[[providers.layers]]
+	name = "transport_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, tags, type FROM osm_transport_points WHERE geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "transport_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_transport_areas WHERE geometry && !BBOX!"
+	[[providers.layers]]
+	name = "transport_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_transport_areas WHERE geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "transport_lines_gen1"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, ref, class, type, tags, tunnel, bridge FROM osm_transport_lines_gen1 WHERE type IN ('motorway', 'trunk', 'primary', 'primary_link', 'secondary', 'motorway_link', 'trunk_link') AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "transport_lines_gen1"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, ref, class, type, tags, tunnel, bridge FROM osm_transport_lines_gen1 WHERE type IN ('motorway', 'trunk', 'primary', 'primary_link', 'secondary', 'motorway_link', 'trunk_link') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "transport_lines_gen0"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, ref, class, type, tags, tunnel, bridge FROM osm_transport_lines_gen0 WHERE type IN ('motorway','trunk') AND  geometry && !BBOX!"
+	[[providers.layers]]
+	name = "transport_lines_gen0"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, ref, class, type, tags, tunnel, bridge FROM osm_transport_lines_gen0 WHERE type IN ('motorway','trunk') AND  geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "transport_lines_11-12"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, ref, class, type, tags, tunnel, bridge, access, service FROM osm_transport_lines WHERE type IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'rail', 'taxiway', 'runway', 'apron') AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "transport_lines_11-12"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, ref, class, type, tags, tunnel, bridge, access, service FROM osm_transport_lines WHERE type IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'rail', 'taxiway', 'runway', 'apron') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "transport_lines_13"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, ref, class, type, tags, tunnel, bridge, access, service FROM osm_transport_lines WHERE type IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'rail', 'residential', 'taxiway', 'runway', 'apron') AND geometry && !BBOX!"
+	[[providers.layers]]
+	name = "transport_lines_13"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, ref, class, type, tags, tunnel, bridge, access, service FROM osm_transport_lines WHERE type IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'rail', 'residential', 'taxiway', 'runway', 'apron') AND geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "transport_lines_14-20"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, ref, class, type, tags, tunnel, bridge, access, service FROM osm_transport_lines WHERE geometry && !BBOX!"
+	[[providers.layers]]
+	name = "transport_lines_14-20"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, ref, class, type, tags, tunnel, bridge, access, service FROM osm_transport_lines WHERE geometry && !BBOX!"
 
-    # Amenities
-    [[providers.layers]]
-    name = "amenity_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_amenity_areas WHERE geometry && !BBOX!"
+	# Amenities
+	[[providers.layers]]
+	name = "amenity_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_amenity_areas WHERE geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "amenity_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_amenity_points WHERE geometry && !BBOX!"
+	[[providers.layers]]
+	name = "amenity_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, type, tags FROM osm_amenity_points WHERE geometry && !BBOX!"
 
-    # Other (Man Made, Historic, Military, Power, Barrier etc)
-    [[providers.layers]]
-    name = "other_points"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_other_points WHERE geometry && !BBOX!"
+	# Other (Man Made, Historic, Military, Power, Barrier etc)
+	[[providers.layers]]
+	name = "other_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_other_points WHERE geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "other_lines"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_other_lines WHERE geometry && !BBOX!"
+	[[providers.layers]]
+	name = "other_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_other_lines WHERE geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "other_areas"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_other_areas WHERE geometry && !BBOX!"
+	[[providers.layers]]
+	name = "other_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, class, type, tags FROM osm_other_areas WHERE geometry && !BBOX!"
 
-    # Buildings
-    [[providers.layers]]
-    name = "buildings"
-    geometry_fieldname = "geometry"
-    id_fieldname = "osm_id"
-    sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, height, type, tags FROM osm_buildings WHERE geometry && !BBOX!"
+	# Buildings
+	[[providers.layers]]
+	name = "buildings"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, height, type, tags FROM osm_buildings WHERE geometry && !BBOX!"
 
 # Natural Earth
 [[providers]]
@@ -1182,1273 +1182,1272 @@ database = "${NE_DB_NAME}"
 user = "${NE_DB_USER}"
 password = "${NE_DB_PASS}"
 
-    [[providers.layers]]
-    name = "admin_boundaries_0-2"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name, name_alt FROM ne_110m_admin_0_boundary_lines_land WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_boundaries_0-2"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name, name_alt FROM ne_110m_admin_0_boundary_lines_land WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_countries_5-6"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, labelrank, name FROM ne_10m_admin_0_countries WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_countries_5-6"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, labelrank, name FROM ne_10m_admin_0_countries WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_boundaries_3-4"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_50m_admin_0_boundary_lines_land WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_boundaries_3-4"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_50m_admin_0_boundary_lines_land WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_boundaries_disputed_3-4"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_50m_admin_0_boundary_lines_disputed_areas WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_boundaries_disputed_3-4"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_50m_admin_0_boundary_lines_disputed_areas WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_states_provinces_lines_3-4"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name FROM ne_50m_admin_1_states_provinces_lines WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_states_provinces_lines_3-4"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name FROM ne_50m_admin_1_states_provinces_lines WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_boundaries_5-6"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_10m_admin_0_boundary_lines_land WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_boundaries_5-6"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_10m_admin_0_boundary_lines_land WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_boundaries_disputed_5-6"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_10m_admin_0_boundary_lines_disputed_areas WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_boundaries_disputed_5-6"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, featurecla, name FROM ne_10m_admin_0_boundary_lines_disputed_areas WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_states_provinces_lines_5-6"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name FROM ne_10m_admin_1_states_provinces_lines WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_states_provinces_lines_5-6"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name FROM ne_10m_admin_1_states_provinces_lines WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_label_points_3-20"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name FROM ne_50m_admin_1_states_provinces_lines WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_label_points_3-20"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name FROM ne_50m_admin_1_states_provinces_lines WHERE wkb_geometry && !BBOX!"
 
-    [[providers.layers]]
-    name = "admin_label_points_5-20"
-    geometry_fieldname = "geometry"
-    id_fieldname = "ogc_fid"
-    sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name, adm0_sr, datarank FROM ne_10m_admin_1_label_points WHERE wkb_geometry && !BBOX!"
+	[[providers.layers]]
+	name = "admin_label_points_5-20"
+	geometry_fieldname = "geometry"
+	id_fieldname = "ogc_fid"
+	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name, adm0_sr, datarank FROM ne_10m_admin_1_label_points WHERE wkb_geometry && !BBOX!"
 
 [[maps]]
 name = "osm"
 attribution = "Open Street Map" # map attribution
 center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part of the TileJSON spec
 
-    # Country Lines
-    [[maps.layers]]
-    name = "admin_boundaries_0-2"
-    provider_layer = "ne.admin_boundaries_0-2"
-    min_zoom = 0
-    max_zoom = 2
-
-    [[maps.layers]]
-    name = "admin_boundaries_3-4"
-    provider_layer = "ne.admin_boundaries_3-4"
-    min_zoom = 3
-    max_zoom = 4
-
-    [[maps.layers]]
-    name = "admin_boundaries_5-6"
-    provider_layer = "ne.admin_boundaries_5-6"
-    min_zoom = 5
-    max_zoom = 10
-
-    [[maps.layers]]
-    name = "admin_boundaries_disputed_3-4"
-    provider_layer = "ne.admin_boundaries_disputed_3-4"
-    min_zoom = 3
-    max_zoom = 4
-
-    [[maps.layers]]
-    name = "admin_boundaries_disputed_5-6"
-    provider_layer = "ne.admin_boundaries_disputed_5-6"
-    min_zoom = 5
-    max_zoom = 6
-
-    [[maps.layers]]
-    name = "admin_label_points_3-20"
-    provider_layer = "ne.admin_label_points_3-20"
-    min_zoom = 3
-    max_zoom = 20
-
-    # Country Polygons
-    [[maps.layers]]
-    name = "country_polygons"
-    provider_layer = "ne.admin_countries_5-6"
-    min_zoom = 5
-    max_zoom = 10
-
-    [[maps.layers]]
-    name = "admin_boundaries_11-12"
-    provider_layer = "osm.admin_boundaries_11-12"
-    min_zoom = 11
-    max_zoom = 12
-
-    [[maps.layers]]
-    name = "admin_boundaries_13-20"
-    provider_layer = "osm.admin_boundaries_13-20"
-    min_zoom = 13
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "admin_label_points_5-20"
-    provider_layer = "ne.admin_label_points_5-20"
-    min_zoom = 5
-    max_zoom = 20
-
-    # State Polygons
-    [[maps.layers]]
-    name = "admin_states_provinces_lines_3-4"
-    provider_layer = "ne.admin_states_provinces_lines_3-4"
-    min_zoom = 3
-    max_zoom = 4
-
-    [[maps.layers]]
-    name = "admin_states_provinces_lines_5-20"
-    provider_layer = "ne.admin_states_provinces_lines_5-6"
-    min_zoom = 5
-    max_zoom = 20
-
-    # Land
-    [[maps.layers]]
-    name = "land_0-9"
-    provider_layer = "lp.land_0-9"
-    min_zoom = 0
-    max_zoom = 9
-
-    [[maps.layers]]
-    name = "land_10-20"
-    provider_layer = "lp.land_10-20"
-    min_zoom = 10
-    max_zoom = 20
-
-    # Land Use
-    [[maps.layers]]
-    name = "landusages_gen0"
-    provider_layer = "osm.landuse_areas_gen0"
-    min_zoom = 3
-    max_zoom = 9
-
-    [[maps.layers]]
-    name = "landusages_gen1"
-    provider_layer = "osm.landuse_areas_gen1"
-    min_zoom = 10
-    max_zoom = 12
-
-    [[maps.layers]]
-    name = "landusages"
-    provider_layer = "osm.landuse_areas"
-    min_zoom = 13
-    max_zoom = 20
-
-    # Water Areas
-    [[maps.layers]]
-    name = "waterareas_gen0"
-    provider_layer = "osm.water_areas_gen0"
-    min_zoom = 3
-    max_zoom = 9
-
-    [[maps.layers]]
-    name = "waterareas_gen1"
-    provider_layer = "osm.water_areas_gen1"
-    min_zoom = 10
-    max_zoom = 12
-
-    [[maps.layers]]
-    name = "waterareas"
-    provider_layer = "osm.water_areas"
-    min_zoom = 13
-    max_zoom = 20
-
-    # Water Lines
-    [[maps.layers]]
-    name = "waterways_gen0"
-    provider_layer = "osm.water_lines_gen0"
-    min_zoom = 8
-    max_zoom = 12
-
-    [[maps.layers]]
-    name = "waterways_gen1"
-    provider_layer = "osm.water_lines_gen1"
-    min_zoom = 13
-    max_zoom = 14
-
-    [[maps.layers]]
-    name = "waterways"
-    provider_layer = "osm.water_lines"
-    min_zoom = 15
-    max_zoom = 20
-
-    # Transport Lines (Roads, Rail, Aviation)
-    [[maps.layers]]
-    name = "roads_gen0"
-    provider_layer = "osm.transport_lines_gen0"
-    min_zoom = 4
-    max_zoom = 8
-
-    [[maps.layers]]
-    name = "roads_gen1"
-    provider_layer = "osm.transport_lines_gen1"
-    min_zoom = 9
-    max_zoom = 10
-
-    [[maps.layers]]
-    name = "roads_11-12"
-    provider_layer = "osm.transport_lines_11-12"
-    min_zoom = 11
-    max_zoom = 12
-
-    [[maps.layers]]
-    name = "roads_13"
-    provider_layer = "osm.transport_lines_13"
-    min_zoom = 13
-    max_zoom = 13
-
-    [[maps.layers]]
-    name = "roads_14-20"
-    provider_layer = "osm.transport_lines_14-20"
-    min_zoom = 14
-    max_zoom = 20
-
-    # Transport Areas
-    [[maps.layers]]
-    name = "transport_areas"
-    provider_layer = "osm.transport_areas"
-    min_zoom = 12
-    max_zoom = 20
-
-    # Transport Points
-    [[maps.layers]]
-    name = "transport_points"
-    provider_layer = "osm.transport_points"
-    min_zoom = 14
-    max_zoom = 20
-
-    # Amenity Areas
-    [[maps.layers]]
-    name = "amenity_areas"
-    provider_layer = "osm.amenity_areas"
-    min_zoom = 14
-    max_zoom = 20
-
-    # Amenity Points
-    [[maps.layers]]
-    name = "amenity_points"
-    provider_layer = "osm.amenity_points"
-    min_zoom = 14
-    max_zoom = 20
-
-    # Other Points
-    [[maps.layers]]
-    name = "other_points"
-    provider_layer = "osm.other_points"
-    min_zoom = 14
-    max_zoom = 20
-
-    # Other Lines
-    [[maps.layers]]
-    name = "other_lines"
-    provider_layer = "osm.other_lines"
-    min_zoom = 14
-    max_zoom = 20
-
-    # Other Areas
-    [[maps.layers]]
-    name = "other_areas"
-    provider_layer = "osm.other_areas"
-    min_zoom = 6
-    max_zoom = 20
-
-    # Buildings
-    [[maps.layers]]
-    name = "buildings"
-    provider_layer = "osm.buildings"
-    min_zoom = 14
-    max_zoom = 20
-
-    # Seamark Objects
-    [[maps.layers]]
-    name = "seamark_anchorage_points"
-    provider_layer = "seamark.anchorage_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_anchorage_areas"
-    provider_layer = "seamark.anchorage_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_anchor_berth_points"
-    provider_layer = "seamark.anchor_berth_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_anchor_berth_areas"
-    provider_layer = "seamark.anchor_berth_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_beacon_cardinal"
-    provider_layer = "seamark.beacon_cardinal"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_beacon_isolated_danger"
-    provider_layer = "seamark.beacon_isolated_danger"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_beacon_lateral"
-    provider_layer = "seamark.beacon_lateral"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_beacon_safe_water"
-    provider_layer = "seamark.beacon_safe_water"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_beacon_special_purpose"
-    provider_layer = "seamark.beacon_special_purpose"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_berth_points"
-    provider_layer = "seamark.berth_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_berth_lines"
-    provider_layer = "seamark.berth_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_berth_areas"
-    provider_layer = "seamark.berth_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_bridge_points"
-    provider_layer = "seamark.bridge_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_bridge_lines"
-    provider_layer = "seamark.bridge_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_bridge_areas"
-    provider_layer = "seamark.bridge_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_bunker_station_points"
-    provider_layer = "seamark.bunker_station_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_bunker_station_areas"
-    provider_layer = "seamark.bunker_station_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_building_points"
-    provider_layer = "seamark.building_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_building_areas"
-    provider_layer = "seamark.building_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_buoy_cardinal"
-    provider_layer = "seamark.buoy_cardinal"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_buoy_installation"
-    provider_layer = "seamark.buoy_installation"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_buoy_isolated_danger"
-    provider_layer = "seamark.buoy_isolated_danger"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_buoy_lateral"
-    provider_layer = "seamark.buoy_lateral"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_buoy_safe_water"
-    provider_layer = "seamark.buoy_safe_water"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_buoy_special_purpose"
-    provider_layer = "seamark.buoy_special_purpose"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_cable_area"
-    provider_layer = "seamark.cable_area"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_cable_overhead"
-    provider_layer = "seamark.cable_overhead"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_cable_submarine"
-    provider_layer = "seamark.cable_submarine"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_causeway_lines"
-    provider_layer = "seamark.causeway_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_causeway_areas"
-    provider_layer = "seamark.causeway_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_checkpoint_points"
-    provider_layer = "seamark.checkpoint_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_checkpoint_areas"
-    provider_layer = "seamark.checkpoint_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_coastguard_station_points"
-    provider_layer = "seamark.coastguard_station_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_coastguard_station_areas"
-    provider_layer = "seamark.coastguard_station_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_communication_area"
-    provider_layer = "seamark.communication_area"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_control_point"
-    provider_layer = "seamark.control_point"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_distance_mark"
-    provider_layer = "seamark.distance_mark"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_dredged_area"
-    provider_layer = "seamark.dredged_area"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_exceptional_structure_points"
-    provider_layer = "seamark.exceptional_structure_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_exceptional_structure_lines"
-    provider_layer = "seamark.exceptional_structure_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_exceptional_structure_areas"
-    provider_layer = "seamark.exceptional_structure_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_fairway"
-    provider_layer = "seamark.fairway"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_ferry_route"
-    provider_layer = "seamark.ferry_route"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_wall"
-    provider_layer = "seamark.wall"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_fog_signal"
-    provider_layer = "seamark.fog_signal"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_fortified_structure_points"
-    provider_layer = "seamark.fortified_structure_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_fortified_structure_areas"
-    provider_layer = "seamark.fortified_structure_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_fishing_facility_points"
-    provider_layer = "seamark.fishing_facility_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_fishing_facility_lines"
-    provider_layer = "seamark.fishing_facility_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_fishing_facility_areas"
-    provider_layer = "seamark.fishing_facility_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_gate_points"
-    provider_layer = "seamark.gate_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_gate_lines"
-    provider_layer = "seamark.gate_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_gate_areas"
-    provider_layer = "seamark.gate_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_gridiron_points"
-    provider_layer = "seamark.gridiron_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_gridiron_areas"
-    provider_layer = "seamark.gridiron_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_harbour_basin"
-    provider_layer = "seamark.harbour_basin"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_harbour_points"
-    provider_layer = "seamark.harbour_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_harbour_areas"
-    provider_layer = "seamark.harbour_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_hulk_points"
-    provider_layer = "seamark.hulk_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_hulk_areas"
-    provider_layer = "seamark.hulk_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_inshore_traffic_zone_points"
-    provider_layer = "seamark.inshore_traffic_zone_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_inshore_traffic_zone_lines"
-    provider_layer = "seamark.inshore_traffic_zone_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_inshore_traffic_zone_areas"
-    provider_layer = "seamark.inshore_traffic_zone_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_landmark_points"
-    provider_layer = "seamark.landmark_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_landmark_lines"
-    provider_layer = "seamark.landmark_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_landmark_areas"
-    provider_layer = "seamark.landmark_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_points"
-    provider_layer = "seamark.light_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_areas"
-    provider_layer = "seamark.light_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_major_points"
-    provider_layer = "seamark.light_major_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_major_areas"
-    provider_layer = "seamark.light_major_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_minor_points"
-    provider_layer = "seamark.light_minor_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_minor_areas"
-    provider_layer = "seamark.light_minor_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_float"
-    provider_layer = "seamark.light_float"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_light_vessel"
-    provider_layer = "seamark.light_vessel"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_lock_basin"
-    provider_layer = "seamark.lock_basin"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_marine_farm_points"
-    provider_layer = "seamark.marine_farm_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_marine_farm_lines"
-    provider_layer = "seamark.marine_farm_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_marine_farm_areas"
-    provider_layer = "seamark.marine_farm_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_military_area_points"
-    provider_layer = "seamark.military_area_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_military_area_areas"
-    provider_layer = "seamark.military_area_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_mooring_points"
-    provider_layer = "seamark.mooring_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_mooring_lines"
-    provider_layer = "seamark.mooring_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_mooring_areas"
-    provider_layer = "seamark.mooring_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_protected_area_points"
-    provider_layer = "seamark.protected_area_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_protected_area_areas"
-    provider_layer = "seamark.protected_area_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_navigation_line"
-    provider_layer = "seamark.navigation_line"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_notice"
-    provider_layer = "seamark.notice"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_obstruction_points"
-    provider_layer = "seamark.obstruction_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_obstruction_lines"
-    provider_layer = "seamark.obstruction_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_obstruction_areas"
-    provider_layer = "seamark.obstruction_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_oil_barrier"
-    provider_layer = "seamark.oil_barrier"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_platform_points"
-    provider_layer = "seamark.platform_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_platform_areas"
-    provider_layer = "seamark.platform_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_production_area"
-    provider_layer = "seamark.production_area"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pilot_boarding"
-    provider_layer = "seamark.pilot_boarding"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pile"
-    provider_layer = "seamark.pile"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pipeline_area"
-    provider_layer = "seamark.pipeline_area"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pipeline_overhead"
-    provider_layer = "seamark.pipeline_overhead"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pipeline_submarine"
-    provider_layer = "seamark.pipeline_submarine"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pontoon_lines"
-    provider_layer = "seamark.pontoon_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pontoon_areas"
-    provider_layer = "seamark.pontoon_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_precautionary_area_points"
-    provider_layer = "seamark.precautionary_area_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_precautionary_area_areas"
-    provider_layer = "seamark.precautionary_area_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pylon_points"
-    provider_layer = "seamark.pylon_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_pylon_areas"
-    provider_layer = "seamark.pylon_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_radar_line"
-    provider_layer = "seamark.radar_line"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_radar_range"
-    provider_layer = "seamark.radar_range"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_radar_reflector"
-    provider_layer = "seamark.radar_reflector"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_radar_transponder"
-    provider_layer = "seamark.radar_transponder"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_radar_station"
-    provider_layer = "seamark.radar_station"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_calling_in_point_points"
-    provider_layer = "seamark.calling_in_point_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_calling_in_point_lines"
-    provider_layer = "seamark.calling_in_point_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_radio_station"
-    provider_layer = "seamark.radio_station"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_recommended_route_centreline"
-    provider_layer = "seamark.recommended_route_centreline"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_recommended_track"
-    provider_layer = "seamark.recommended_track"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_recommended_traffic_lane"
-    provider_layer = "seamark.recommended_traffic_lane"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_rescue_station_points"
-    provider_layer = "seamark.rescue_station_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_rescue_station_areas"
-    provider_layer = "seamark.rescue_station_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_restricted_area"
-    provider_layer = "seamark.restricted_area"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_retro_reflector"
-    provider_layer = "seamark.retro_reflector"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_sand_waves_points"
-    provider_layer = "seamark.sand_waves_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_sand_waves_areas"
-    provider_layer = "seamark.sand_waves_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_seabed_area_points"
-    provider_layer = "seamark.seabed_area_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_seabed_area_lines"
-    provider_layer = "seamark.seabed_area_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_seabed_area_areas"
-    provider_layer = "seamark.seabed_area_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_sea_area_points"
-    provider_layer = "seamark.sea_area_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_sea_area_areas"
-    provider_layer = "seamark.sea_area_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_seaplane_landing_area_points"
-    provider_layer = "seamark.seaplane_landing_area_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_seaplane_landing_area_areas"
-    provider_layer = "seamark.seaplane_landing_area_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_shoreline_construction_points"
-    provider_layer = "seamark.shoreline_construction_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_shoreline_construction_lines"
-    provider_layer = "seamark.shoreline_construction_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_shoreline_construction_areas"
-    provider_layer = "seamark.shoreline_construction_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_signal_station_traffic"
-    provider_layer = "seamark.signal_station_traffic"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_signal_station_warning"
-    provider_layer = "seamark.signal_station_warning"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_small_craft_facility_points"
-    provider_layer = "seamark.small_craft_facility_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_small_craft_facility_lines"
-    provider_layer = "seamark.small_craft_facility_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_small_craft_facility_areas"
-    provider_layer = "seamark.small_craft_facility_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_spring"
-    provider_layer = "seamark.spring"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_submarine_transit_lane"
-    provider_layer = "seamark.submarine_transit_lane"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_separation_boundary"
-    provider_layer = "seamark.separation_boundary"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_separation_crossing"
-    provider_layer = "seamark.separation_crossing"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_separation_lane"
-    provider_layer = "seamark.separation_lane"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_separation_line"
-    provider_layer = "seamark.separation_line"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_separation_roundabout"
-    provider_layer = "seamark.separation_roundabout"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_separation_zone"
-    provider_layer = "seamark.separation_zone"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_turning_basin_points"
-    provider_layer = "seamark.turning_basin_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_turning_basin_areas"
-    provider_layer = "seamark.turning_basin_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_two_way_route"
-    provider_layer = "seamark.two_way_route"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_rock"
-    provider_layer = "seamark.rock"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_vegetation_points"
-    provider_layer = "seamark.vegetation_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_vegetation_lines"
-    provider_layer = "seamark.vegetation_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_vegetation_areas"
-    provider_layer = "seamark.vegetation_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_vehicle_transfer_points"
-    provider_layer = "seamark.vehicle_transfer_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_vehicle_transfer_areas"
-    provider_layer = "seamark.vehicle_transfer_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_water_turbulence_points"
-    provider_layer = "seamark.water_turbulence_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_water_turbulence_lines"
-    provider_layer = "seamark.water_turbulence_lines"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_water_turbulence_areas"
-    provider_layer = "seamark.water_turbulence_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_waterway_gauge"
-    provider_layer = "seamark.waterway_gauge"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_weed_points"
-    provider_layer = "seamark.weed_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_weed_areas"
-    provider_layer = "seamark.weed_areas"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_wreck_points"
-    provider_layer = "seamark.wreck_points"
-    min_zoom = 9
-    max_zoom = 20
-
-    [[maps.layers]]
-    name = "seamark_wreck_areas"
-    provider_layer = "seamark.wreck_areas"
-    min_zoom = 9
-    max_zoom = 20
-
+	# Country Lines
+	[[maps.layers]]
+	name = "admin_boundaries_0-2"
+	provider_layer = "ne.admin_boundaries_0-2"
+	min_zoom = 0
+	max_zoom = 2
+
+	[[maps.layers]]
+	name = "admin_boundaries_3-4"
+	provider_layer = "ne.admin_boundaries_3-4"
+	min_zoom = 3
+	max_zoom = 4
+
+	[[maps.layers]]
+	name = "admin_boundaries_5-6"
+	provider_layer = "ne.admin_boundaries_5-6"
+	min_zoom = 5
+	max_zoom = 10
+
+	[[maps.layers]]
+	name = "admin_boundaries_disputed_3-4"
+	provider_layer = "ne.admin_boundaries_disputed_3-4"
+	min_zoom = 3
+	max_zoom = 4
+
+	[[maps.layers]]
+	name = "admin_boundaries_disputed_5-6"
+	provider_layer = "ne.admin_boundaries_disputed_5-6"
+	min_zoom = 5
+	max_zoom = 6
+
+	[[maps.layers]]
+	name = "admin_label_points_3-20"
+	provider_layer = "ne.admin_label_points_3-20"
+	min_zoom = 3
+	max_zoom = 20
+
+	# Country Polygons
+	[[maps.layers]]
+	name = "country_polygons"
+	provider_layer = "ne.admin_countries_5-6"
+	min_zoom = 5
+	max_zoom = 10
+
+	[[maps.layers]]
+	name = "admin_boundaries_11-12"
+	provider_layer = "osm.admin_boundaries_11-12"
+	min_zoom = 11
+	max_zoom = 12
+
+	[[maps.layers]]
+	name = "admin_boundaries_13-20"
+	provider_layer = "osm.admin_boundaries_13-20"
+	min_zoom = 13
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "admin_label_points_5-20"
+	provider_layer = "ne.admin_label_points_5-20"
+	min_zoom = 5
+	max_zoom = 20
+
+	# State Polygons
+	[[maps.layers]]
+	name = "admin_states_provinces_lines_3-4"
+	provider_layer = "ne.admin_states_provinces_lines_3-4"
+	min_zoom = 3
+	max_zoom = 4
+
+	[[maps.layers]]
+	name = "admin_states_provinces_lines_5-20"
+	provider_layer = "ne.admin_states_provinces_lines_5-6"
+	min_zoom = 5
+	max_zoom = 20
+
+	# Land
+	[[maps.layers]]
+	name = "land_0-9"
+	provider_layer = "lp.land_0-9"
+	min_zoom = 0
+	max_zoom = 9
+
+	[[maps.layers]]
+	name = "land_10-20"
+	provider_layer = "lp.land_10-20"
+	min_zoom = 10
+	max_zoom = 20
+
+	# Land Use
+	[[maps.layers]]
+	name = "landusages_gen0"
+	provider_layer = "osm.landuse_areas_gen0"
+	min_zoom = 3
+	max_zoom = 9
+
+	[[maps.layers]]
+	name = "landusages_gen1"
+	provider_layer = "osm.landuse_areas_gen1"
+	min_zoom = 10
+	max_zoom = 12
+
+	[[maps.layers]]
+	name = "landusages"
+	provider_layer = "osm.landuse_areas"
+	min_zoom = 13
+	max_zoom = 20
+
+	# Water Areas
+	[[maps.layers]]
+	name = "waterareas_gen0"
+	provider_layer = "osm.water_areas_gen0"
+	min_zoom = 3
+	max_zoom = 9
+
+	[[maps.layers]]
+	name = "waterareas_gen1"
+	provider_layer = "osm.water_areas_gen1"
+	min_zoom = 10
+	max_zoom = 12
+
+	[[maps.layers]]
+	name = "waterareas"
+	provider_layer = "osm.water_areas"
+	min_zoom = 13
+	max_zoom = 20
+
+	# Water Lines
+	[[maps.layers]]
+	name = "waterways_gen0"
+	provider_layer = "osm.water_lines_gen0"
+	min_zoom = 8
+	max_zoom = 12
+
+	[[maps.layers]]
+	name = "waterways_gen1"
+	provider_layer = "osm.water_lines_gen1"
+	min_zoom = 13
+	max_zoom = 14
+
+	[[maps.layers]]
+	name = "waterways"
+	provider_layer = "osm.water_lines"
+	min_zoom = 15
+	max_zoom = 20
+
+	# Transport Lines (Roads, Rail, Aviation)
+	[[maps.layers]]
+	name = "roads_gen0"
+	provider_layer = "osm.transport_lines_gen0"
+	min_zoom = 4
+	max_zoom = 8
+
+	[[maps.layers]]
+	name = "roads_gen1"
+	provider_layer = "osm.transport_lines_gen1"
+	min_zoom = 9
+	max_zoom = 10
+
+	[[maps.layers]]
+	name = "roads_11-12"
+	provider_layer = "osm.transport_lines_11-12"
+	min_zoom = 11
+	max_zoom = 12
+
+	[[maps.layers]]
+	name = "roads_13"
+	provider_layer = "osm.transport_lines_13"
+	min_zoom = 13
+	max_zoom = 13
+
+	[[maps.layers]]
+	name = "roads_14-20"
+	provider_layer = "osm.transport_lines_14-20"
+	min_zoom = 14
+	max_zoom = 20
+
+	# Transport Areas
+	[[maps.layers]]
+	name = "transport_areas"
+	provider_layer = "osm.transport_areas"
+	min_zoom = 12
+	max_zoom = 20
+
+	# Transport Points
+	[[maps.layers]]
+	name = "transport_points"
+	provider_layer = "osm.transport_points"
+	min_zoom = 14
+	max_zoom = 20
+
+	# Amenity Areas
+	[[maps.layers]]
+	name = "amenity_areas"
+	provider_layer = "osm.amenity_areas"
+	min_zoom = 14
+	max_zoom = 20
+
+	# Amenity Points
+	[[maps.layers]]
+	name = "amenity_points"
+	provider_layer = "osm.amenity_points"
+	min_zoom = 14
+	max_zoom = 20
+
+	# Other Points
+	[[maps.layers]]
+	name = "other_points"
+	provider_layer = "osm.other_points"
+	min_zoom = 14
+	max_zoom = 20
+
+	# Other Lines
+	[[maps.layers]]
+	name = "other_lines"
+	provider_layer = "osm.other_lines"
+	min_zoom = 14
+	max_zoom = 20
+
+	# Other Areas
+	[[maps.layers]]
+	name = "other_areas"
+	provider_layer = "osm.other_areas"
+	min_zoom = 6
+	max_zoom = 20
+
+	# Buildings
+	[[maps.layers]]
+	name = "buildings"
+	provider_layer = "osm.buildings"
+	min_zoom = 14
+	max_zoom = 20
+
+	# Seamark Objects
+	[[maps.layers]]
+	name = "seamark_anchorage_points"
+	provider_layer = "seamark.anchorage_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_anchorage_areas"
+	provider_layer = "seamark.anchorage_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_anchor_berth_points"
+	provider_layer = "seamark.anchor_berth_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_anchor_berth_areas"
+	provider_layer = "seamark.anchor_berth_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_beacon_cardinal"
+	provider_layer = "seamark.beacon_cardinal"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_beacon_isolated_danger"
+	provider_layer = "seamark.beacon_isolated_danger"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_beacon_lateral"
+	provider_layer = "seamark.beacon_lateral"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_beacon_safe_water"
+	provider_layer = "seamark.beacon_safe_water"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_beacon_special_purpose"
+	provider_layer = "seamark.beacon_special_purpose"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_berth_points"
+	provider_layer = "seamark.berth_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_berth_lines"
+	provider_layer = "seamark.berth_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_berth_areas"
+	provider_layer = "seamark.berth_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_bridge_points"
+	provider_layer = "seamark.bridge_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_bridge_lines"
+	provider_layer = "seamark.bridge_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_bridge_areas"
+	provider_layer = "seamark.bridge_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_bunker_station_points"
+	provider_layer = "seamark.bunker_station_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_bunker_station_areas"
+	provider_layer = "seamark.bunker_station_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_building_points"
+	provider_layer = "seamark.building_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_building_areas"
+	provider_layer = "seamark.building_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_buoy_cardinal"
+	provider_layer = "seamark.buoy_cardinal"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_buoy_installation"
+	provider_layer = "seamark.buoy_installation"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_buoy_isolated_danger"
+	provider_layer = "seamark.buoy_isolated_danger"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_buoy_lateral"
+	provider_layer = "seamark.buoy_lateral"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_buoy_safe_water"
+	provider_layer = "seamark.buoy_safe_water"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_buoy_special_purpose"
+	provider_layer = "seamark.buoy_special_purpose"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_cable_area"
+	provider_layer = "seamark.cable_area"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_cable_overhead"
+	provider_layer = "seamark.cable_overhead"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_cable_submarine"
+	provider_layer = "seamark.cable_submarine"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_causeway_lines"
+	provider_layer = "seamark.causeway_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_causeway_areas"
+	provider_layer = "seamark.causeway_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_checkpoint_points"
+	provider_layer = "seamark.checkpoint_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_checkpoint_areas"
+	provider_layer = "seamark.checkpoint_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_coastguard_station_points"
+	provider_layer = "seamark.coastguard_station_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_coastguard_station_areas"
+	provider_layer = "seamark.coastguard_station_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_communication_area"
+	provider_layer = "seamark.communication_area"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_control_point"
+	provider_layer = "seamark.control_point"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_distance_mark"
+	provider_layer = "seamark.distance_mark"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_dredged_area"
+	provider_layer = "seamark.dredged_area"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_exceptional_structure_points"
+	provider_layer = "seamark.exceptional_structure_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_exceptional_structure_lines"
+	provider_layer = "seamark.exceptional_structure_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_exceptional_structure_areas"
+	provider_layer = "seamark.exceptional_structure_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_fairway"
+	provider_layer = "seamark.fairway"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_ferry_route"
+	provider_layer = "seamark.ferry_route"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_wall"
+	provider_layer = "seamark.wall"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_fog_signal"
+	provider_layer = "seamark.fog_signal"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_fortified_structure_points"
+	provider_layer = "seamark.fortified_structure_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_fortified_structure_areas"
+	provider_layer = "seamark.fortified_structure_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_fishing_facility_points"
+	provider_layer = "seamark.fishing_facility_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_fishing_facility_lines"
+	provider_layer = "seamark.fishing_facility_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_fishing_facility_areas"
+	provider_layer = "seamark.fishing_facility_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_gate_points"
+	provider_layer = "seamark.gate_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_gate_lines"
+	provider_layer = "seamark.gate_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_gate_areas"
+	provider_layer = "seamark.gate_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_gridiron_points"
+	provider_layer = "seamark.gridiron_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_gridiron_areas"
+	provider_layer = "seamark.gridiron_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_harbour_basin"
+	provider_layer = "seamark.harbour_basin"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_harbour_points"
+	provider_layer = "seamark.harbour_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_harbour_areas"
+	provider_layer = "seamark.harbour_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_hulk_points"
+	provider_layer = "seamark.hulk_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_hulk_areas"
+	provider_layer = "seamark.hulk_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_inshore_traffic_zone_points"
+	provider_layer = "seamark.inshore_traffic_zone_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_inshore_traffic_zone_lines"
+	provider_layer = "seamark.inshore_traffic_zone_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_inshore_traffic_zone_areas"
+	provider_layer = "seamark.inshore_traffic_zone_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_landmark_points"
+	provider_layer = "seamark.landmark_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_landmark_lines"
+	provider_layer = "seamark.landmark_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_landmark_areas"
+	provider_layer = "seamark.landmark_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_points"
+	provider_layer = "seamark.light_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_areas"
+	provider_layer = "seamark.light_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_major_points"
+	provider_layer = "seamark.light_major_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_major_areas"
+	provider_layer = "seamark.light_major_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_minor_points"
+	provider_layer = "seamark.light_minor_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_minor_areas"
+	provider_layer = "seamark.light_minor_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_float"
+	provider_layer = "seamark.light_float"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_light_vessel"
+	provider_layer = "seamark.light_vessel"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_lock_basin"
+	provider_layer = "seamark.lock_basin"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_marine_farm_points"
+	provider_layer = "seamark.marine_farm_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_marine_farm_lines"
+	provider_layer = "seamark.marine_farm_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_marine_farm_areas"
+	provider_layer = "seamark.marine_farm_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_military_area_points"
+	provider_layer = "seamark.military_area_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_military_area_areas"
+	provider_layer = "seamark.military_area_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_mooring_points"
+	provider_layer = "seamark.mooring_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_mooring_lines"
+	provider_layer = "seamark.mooring_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_mooring_areas"
+	provider_layer = "seamark.mooring_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_protected_area_points"
+	provider_layer = "seamark.protected_area_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_protected_area_areas"
+	provider_layer = "seamark.protected_area_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_navigation_line"
+	provider_layer = "seamark.navigation_line"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_notice"
+	provider_layer = "seamark.notice"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_obstruction_points"
+	provider_layer = "seamark.obstruction_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_obstruction_lines"
+	provider_layer = "seamark.obstruction_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_obstruction_areas"
+	provider_layer = "seamark.obstruction_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_oil_barrier"
+	provider_layer = "seamark.oil_barrier"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_platform_points"
+	provider_layer = "seamark.platform_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_platform_areas"
+	provider_layer = "seamark.platform_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_production_area"
+	provider_layer = "seamark.production_area"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pilot_boarding"
+	provider_layer = "seamark.pilot_boarding"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pile"
+	provider_layer = "seamark.pile"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pipeline_area"
+	provider_layer = "seamark.pipeline_area"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pipeline_overhead"
+	provider_layer = "seamark.pipeline_overhead"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pipeline_submarine"
+	provider_layer = "seamark.pipeline_submarine"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pontoon_lines"
+	provider_layer = "seamark.pontoon_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pontoon_areas"
+	provider_layer = "seamark.pontoon_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_precautionary_area_points"
+	provider_layer = "seamark.precautionary_area_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_precautionary_area_areas"
+	provider_layer = "seamark.precautionary_area_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pylon_points"
+	provider_layer = "seamark.pylon_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_pylon_areas"
+	provider_layer = "seamark.pylon_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_radar_line"
+	provider_layer = "seamark.radar_line"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_radar_range"
+	provider_layer = "seamark.radar_range"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_radar_reflector"
+	provider_layer = "seamark.radar_reflector"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_radar_transponder"
+	provider_layer = "seamark.radar_transponder"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_radar_station"
+	provider_layer = "seamark.radar_station"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_calling_in_point_points"
+	provider_layer = "seamark.calling_in_point_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_calling_in_point_lines"
+	provider_layer = "seamark.calling_in_point_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_radio_station"
+	provider_layer = "seamark.radio_station"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_recommended_route_centreline"
+	provider_layer = "seamark.recommended_route_centreline"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_recommended_track"
+	provider_layer = "seamark.recommended_track"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_recommended_traffic_lane"
+	provider_layer = "seamark.recommended_traffic_lane"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_rescue_station_points"
+	provider_layer = "seamark.rescue_station_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_rescue_station_areas"
+	provider_layer = "seamark.rescue_station_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_restricted_area"
+	provider_layer = "seamark.restricted_area"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_retro_reflector"
+	provider_layer = "seamark.retro_reflector"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_sand_waves_points"
+	provider_layer = "seamark.sand_waves_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_sand_waves_areas"
+	provider_layer = "seamark.sand_waves_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_seabed_area_points"
+	provider_layer = "seamark.seabed_area_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_seabed_area_lines"
+	provider_layer = "seamark.seabed_area_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_seabed_area_areas"
+	provider_layer = "seamark.seabed_area_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_sea_area_points"
+	provider_layer = "seamark.sea_area_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_sea_area_areas"
+	provider_layer = "seamark.sea_area_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_seaplane_landing_area_points"
+	provider_layer = "seamark.seaplane_landing_area_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_seaplane_landing_area_areas"
+	provider_layer = "seamark.seaplane_landing_area_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_shoreline_construction_points"
+	provider_layer = "seamark.shoreline_construction_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_shoreline_construction_lines"
+	provider_layer = "seamark.shoreline_construction_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_shoreline_construction_areas"
+	provider_layer = "seamark.shoreline_construction_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_signal_station_traffic"
+	provider_layer = "seamark.signal_station_traffic"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_signal_station_warning"
+	provider_layer = "seamark.signal_station_warning"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_small_craft_facility_points"
+	provider_layer = "seamark.small_craft_facility_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_small_craft_facility_lines"
+	provider_layer = "seamark.small_craft_facility_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_small_craft_facility_areas"
+	provider_layer = "seamark.small_craft_facility_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_spring"
+	provider_layer = "seamark.spring"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_submarine_transit_lane"
+	provider_layer = "seamark.submarine_transit_lane"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_separation_boundary"
+	provider_layer = "seamark.separation_boundary"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_separation_crossing"
+	provider_layer = "seamark.separation_crossing"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_separation_lane"
+	provider_layer = "seamark.separation_lane"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_separation_line"
+	provider_layer = "seamark.separation_line"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_separation_roundabout"
+	provider_layer = "seamark.separation_roundabout"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_separation_zone"
+	provider_layer = "seamark.separation_zone"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_turning_basin_points"
+	provider_layer = "seamark.turning_basin_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_turning_basin_areas"
+	provider_layer = "seamark.turning_basin_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_two_way_route"
+	provider_layer = "seamark.two_way_route"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_rock"
+	provider_layer = "seamark.rock"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_vegetation_points"
+	provider_layer = "seamark.vegetation_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_vegetation_lines"
+	provider_layer = "seamark.vegetation_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_vegetation_areas"
+	provider_layer = "seamark.vegetation_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_vehicle_transfer_points"
+	provider_layer = "seamark.vehicle_transfer_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_vehicle_transfer_areas"
+	provider_layer = "seamark.vehicle_transfer_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_water_turbulence_points"
+	provider_layer = "seamark.water_turbulence_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_water_turbulence_lines"
+	provider_layer = "seamark.water_turbulence_lines"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_water_turbulence_areas"
+	provider_layer = "seamark.water_turbulence_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_waterway_gauge"
+	provider_layer = "seamark.waterway_gauge"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_weed_points"
+	provider_layer = "seamark.weed_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_weed_areas"
+	provider_layer = "seamark.weed_areas"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_wreck_points"
+	provider_layer = "seamark.wreck_points"
+	min_zoom = 9
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_wreck_areas"
+	provider_layer = "seamark.wreck_areas"
+	min_zoom = 9
+	max_zoom = 20
