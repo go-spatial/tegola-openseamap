@@ -5,7 +5,7 @@ port = ":8080"
 type="file"
 basepath="cache"
 
-# OSM seamark objects
+#	OSM seamark objects
 [[providers]]
 name = "seamark"
 type = "postgis"
@@ -14,18 +14,6 @@ port = $SM_DB_PORT
 database = "${SM_DB_NAME}"
 user = "${SM_DB_USER}"
 password = "${SM_DB_PASS}"
-
-	[[providers.layers]]
-	name = "anchorage_points"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_points WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "anchorage_areas"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "anchor_berth_points"
@@ -40,34 +28,46 @@ password = "${SM_DB_PASS}"
 	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, radius, danger_class FROM osm_anchor_berth_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
+	name = "anchorage_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "anchorage_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
 	name = "beacon_cardinal"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "beacon_isolated_danger"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_isolated_danger WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_isolated_danger WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "beacon_lateral"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, impact, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_lateral WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, impact, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_lateral WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "beacon_safe_water"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_safe_water WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_safe_water WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "beacon_special_purpose"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_special_purpose WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_special_purpose WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "berth_points"
@@ -91,19 +91,19 @@ password = "${SM_DB_PASS}"
 	name = "bridge_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "bridge_lines"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_lines WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_lines WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "bridge_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "bunker_station_points"
@@ -121,49 +121,49 @@ password = "${SM_DB_PASS}"
 	name = "building_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "building_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "buoy_cardinal"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "buoy_installation"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_installation WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_installation WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "buoy_isolated_danger"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_isolated_danger WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_isolated_danger WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "buoy_lateral"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_lateral WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_lateral WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "buoy_safe_water"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_safe_water WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_safe_water WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "buoy_special_purpose"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_special_purpose WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_special_purpose WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "cable_area"
@@ -397,67 +397,67 @@ password = "${SM_DB_PASS}"
 	name = "landmark_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "landmark_lines"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_lines WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_lines WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "landmark_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_major_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_major_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_minor_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_minor_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, replace(colour,';','_'), exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_float"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity FROM osm_light_float WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity FROM osm_light_float WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_vessel"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, replace(colour,';','_'), colour_pattern, reflectivity FROM osm_light_vessel WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity FROM osm_light_vessel WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "lock_basin"
@@ -499,19 +499,19 @@ password = "${SM_DB_PASS}"
 	name = "mooring_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "mooring_lines"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_lines WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_lines WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "mooring_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "protected_area_points"
@@ -565,13 +565,13 @@ password = "${SM_DB_PASS}"
 	name = "platform_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "platform_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, condition, height, product, reflectivity, visibility FROM osm_platform_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "production_area"
@@ -589,7 +589,7 @@ password = "${SM_DB_PASS}"
 	name = "pile"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, replace(colour,';','_'), colour_pattern, condition, height, visibility FROM osm_pile WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, condition, height, visibility FROM osm_pile WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "pipeline_area"
@@ -988,7 +988,7 @@ password = "${SM_DB_PASS}"
 	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, depth, reflectivity, visibility, water_level FROM osm_wreck_areas WHERE geometry && !BBOX!"
 
 
-# OSM land polygons and simplified land polygons
+#	OSM land polygons and simplified land polygons
 [[providers]]
 name = "lp"
 type = "postgis"
@@ -1011,7 +1011,7 @@ password = "${LP_DB_PASS}"
 	id_fieldname = "fid"
 	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM land_polygons WHERE wkb_geometry && !BBOX!"
 
-# Open Street Maps (OSM)
+#	Open Street Maps (OSM)
 [[providers]]
 name = "osm"
 type = "postgis"
@@ -1172,7 +1172,7 @@ max_connections = 500
 	id_fieldname = "osm_id"
 	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, name, height, type, tags FROM osm_buildings WHERE geometry && !BBOX!"
 
-# Natural Earth
+#	Natural Earth
 [[providers]]
 name = "ne"
 type = "postgis"
