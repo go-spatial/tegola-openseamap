@@ -19,11 +19,11 @@
   "sources": {
     "tegola-osm": {
       "type": "vector",
-      "url": "http://localhost:8080/capabilities/osm.json"
+      "url": "http://localhost:7070/capabilities/osm.json"
     }
   },
   "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
-  "sprite": "https://raw.githubusercontent.com/terranodo/tegola-openseamap/master/spritesheet/vector-seamap",
+  "sprite": "http://localhost:8081/spritesheet/vector-seamap",
   "layers": [
     {
       "id": "background",
@@ -4100,7 +4100,12 @@
       "id": "light_major",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_light_major_points",
+      "source-layer": "seamark_light_points",
+      "filter": [
+        "==",
+        "type",
+        "light_major"
+      ],
       "layout": {
         "icon-image": "P/P1.major",
 		"icon-size": 1
@@ -4110,7 +4115,12 @@
       "id": "light_minor",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_light_minor_points",
+      "source-layer": "seamark_light_points",
+      "filter": [
+        "==",
+        "type",
+        "light_minor"
+      ],
       "layout": {
         "icon-image": "P/P1.minor",
 		"icon-size": 1
@@ -4195,9 +4205,14 @@
       "id": "buoy_lateral_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_lateral",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_lateral"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4222,9 +4237,14 @@
       "id": "buoy_lateral_colour_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_lateral",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_lateral"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4249,9 +4269,14 @@
       "id": "buoy_lateral_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_lateral",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_lateral"
+        ],
         [
           "!has",
           "colour"
@@ -4277,9 +4302,14 @@
       "id": "beacon_lateral_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_lateral",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_lateral"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4304,9 +4334,14 @@
       "id": "beacon_lateral_colour_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_lateral",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_lateral"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4331,9 +4366,14 @@
       "id": "beacon_lateral_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_lateral",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_lateral"
+        ],
         [
           "!has",
           "colour"
@@ -4359,9 +4399,14 @@
       "id": "buoy_cardinal_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_cardinal",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_cardinal"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4386,9 +4431,14 @@
       "id": "buoy_lateral_cardinal_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_cardinal",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_cardinal"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4413,9 +4463,14 @@
       "id": "buoy_cardinal_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_cardinal",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_cardinal"
+        ],
         [
           "!has",
           "colour"
@@ -4441,9 +4496,14 @@
       "id": "beacon_cardinal_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_cardinal",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_cardinal"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4468,9 +4528,14 @@
       "id": "beacon_lateral_cardinal_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_cardinal",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_cardinal"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4495,9 +4560,14 @@
       "id": "beacon_cardinal_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_cardinal",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_cardinal"
+        ],
         [
           "!has",
           "colour"
@@ -4523,9 +4593,14 @@
       "id": "buoy_isolated_danger_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_isolated_danger",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_isolated_danger"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4550,9 +4625,14 @@
       "id": "buoy_isolated_danger_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_isolated_danger",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_isolated_danger"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4577,9 +4657,14 @@
       "id": "buoy_isolated_danger_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_isolated_danger",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_isolated_danger"
+        ],
         [
           "!has",
           "colour"
@@ -4605,9 +4690,14 @@
       "id": "beacon_isolated_danger_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_isolated_danger",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_isolated_danger"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4632,9 +4722,14 @@
       "id": "beacon_isolated_danger_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_isolated_danger",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_isolated_danger"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4659,9 +4754,14 @@
       "id": "beacon_isolated_danger_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_isolated_danger",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_isolated_danger"
+        ],
         [
           "!has",
           "colour"
@@ -4687,9 +4787,14 @@
       "id": "buoy_safe_water_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_safe_water",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_safe_water"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4714,9 +4819,14 @@
       "id": "buoy_safe_water_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_safe_water",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_safe_water"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4741,9 +4851,14 @@
       "id": "buoy_safe_water_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_safe_water",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_safe_water"
+        ],
         [
           "!has",
           "colour"
@@ -4769,9 +4884,14 @@
       "id": "beacon_safe_water_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_safe_water",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_safe_water"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4796,9 +4916,14 @@
       "id": "beacon_safe_water_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_safe_water",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_safe_water"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4823,9 +4948,14 @@
       "id": "beacon_safe_water_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_safe_water",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_safe_water"
+        ],
         [
           "!has",
           "colour"
@@ -4851,9 +4981,14 @@
       "id": "buoy_special_purpose_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_special_purpose",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_special_purpose"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4878,9 +5013,14 @@
       "id": "buoy_special_purpose_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_special_purpose",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_special_purpose"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4905,9 +5045,14 @@
       "id": "buoy_special_purpose_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_buoy_special_purpose",
+      "source-layer": "seamark_buoy",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "buoy_special_purpose"
+        ],
         [
           "!has",
           "colour"
@@ -4933,9 +5078,14 @@
       "id": "beacon_special_purpose_colour",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_special_purpose",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_special_purpose"
+        ],
         [
           "!has",
           "colour_pattern"
@@ -4956,13 +5106,18 @@
 		]
       }
     },
-	{
+    {
       "id": "beacon_special_purpose_pattern",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_special_purpose",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_special_purpose"
+        ],
         [
           "has",
           "colour_pattern"
@@ -4987,9 +5142,14 @@
       "id": "beacon_special_purpose_generic",
       "type": "symbol",
       "source": "tegola-osm",
-      "source-layer": "seamark_beacon_special_purpose",
+      "source-layer": "seamark_beacon",
 	  "filter": [
         "all",
+        [
+          "==",
+          "type",
+          "beacon_special_purpose"
+        ],
         [
           "!has",
           "colour"
