@@ -59,11 +59,15 @@ tables:
     - {key: "seamark:anchor_berth:radius", name: radius, type: string}
     - {key: "seamark:anchor_berth:danger_class", name: danger_class, type: string}
 
-  beacon_cardinal: # BCNCAR: A beacon used in conjunction with the compass to indicate where the mariner may find the best navigable water.
+  beacon:
     type: point
     mapping:
       seamark:type:
-      - beacon_cardinal
+      - beacon_cardinal # BCNCAR: A beacon used in conjunction with the compass to indicate where the mariner may find the best navigable water.
+      - beacon_isolated_danger # BCNISD: A beacon that is moored on or above an isolated danger of limited extent, which has navigable water all around it.
+      - beacon_lateral # BCNLAT: A beacon used to indicate the port or starboard hand side of the route to be followed.
+      - beacon_safe_water # BCNSAW: A beacon used to indicate that there is navigable water around the mark.
+      - beacon_special_purpose # BCNSPP: A beacon primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners.
     columns:
     - {name: osm_id, type: id}
     - {name: geometry, type: geometry}
@@ -77,114 +81,6 @@ tables:
     - {key: "seamark:beacon_cardinal:height", name: height, type: string}
     - {key: "seamark:beacon_cardinal:reflectivity", name: reflectivity, type: string}
     - {key: "seamark:beacon_cardinal:shape", name: shape, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  beacon_isolated_danger: # BCNISD: A beacon that is moored on or above an isolated danger of limited extent, which has navigable water all around it.
-    type: point
-    mapping:
-      seamark:type:
-      - beacon_isolated_danger
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:beacon_isolated_danger:colour", name: colour, type: string}
-    - {key: "seamark:beacon_isolated_danger:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:beacon_isolated_danger:construction", name: construction, type: string}
-    - {key: "seamark:beacon_isolated_danger:elevation", name: elevation, type: string}
-    - {key: "seamark:beacon_isolated_danger:height", name: height, type: string}
-    - {key: "seamark:beacon_isolated_danger:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:beacon_isolated_danger:shape", name: shape, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  beacon_lateral: # BCNLAT: A beacon used to indicate the port or starboard hand side of the route to be followed.
-    type: point
-    mapping:
-      seamark:type:
-      - beacon_lateral
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:beacon_lateral:category", name: category, type: string}
-    - {key: "seamark:beacon_lateral:colour", name: colour, type: string}
-    - {key: "seamark:beacon_lateral:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:beacon_lateral:construction", name: construction, type: string}
-    - {key: "seamark:beacon_lateral:elevation", name: elevation, type: string}
-    - {key: "seamark:beacon_lateral:height", name: height, type: string}
-    - {key: "seamark:beacon_lateral:impact", name: impact, type: string}
-    - {key: "seamark:beacon_lateral:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:beacon_lateral:shape", name: shape, type: string}
-    - {key: "seamark:beacon_lateral:system", name: system, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  beacon_safe_water: # BCNSAW: A beacon used to indicate that there is navigable water around the mark.
-    type: point
-    mapping:
-      seamark:type:
-      - beacon_safe_water
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:beacon_safe_water:colour", name: colour, type: string}
-    - {key: "seamark:beacon_safe_water:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:beacon_safe_water:construction", name: construction, type: string}
-    - {key: "seamark:beacon_safe_water:elevation", name: elevation, type: string}
-    - {key: "seamark:beacon_safe_water:height", name: height, type: string}
-    - {key: "seamark:beacon_safe_water:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:beacon_safe_water:shape", name: shape, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  beacon_special_purpose: # BCNSPP: A beacon primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners.
-    type: point
-    mapping:
-      seamark:type:
-      - beacon_special_purpose
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:beacon_special_purpose:category", name: category, type: string}
-    - {key: "seamark:beacon_special_purpose:colour", name: colour, type: string}
-    - {key: "seamark:beacon_special_purpose:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:beacon_special_purpose:construction", name: construction, type: string}
-    - {key: "seamark:beacon_special_purpose:elevation", name: elevation, type: string}
-    - {key: "seamark:beacon_special_purpose:height", name: height, type: string}
-    - {key: "seamark:beacon_special_purpose:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:beacon_special_purpose:shape", name: shape, type: string}
     - {key: "seamark:daymark:category", name: daymark_category, type: string}
     - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
     - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
@@ -355,11 +251,16 @@ tables:
     - {key: "seamark:building:shape", name: shape, type: string}
     - {key: "seamark:building:visibility", name: visibility, type: string}
 
-  buoy_cardinal: # BOYCAR: A buoy used in conjunction with the compass to indicate where the mariner may find the best navigable water.
+  buoy:
     type: point
     mapping:
       seamark:type:
-      - buoy_cardinal
+      - buoy_cardinal # BOYCAR: A buoy used in conjunction with the compass to indicate where the mariner may find the best navigable water.
+      - buoy_installation # BOYINB: A buoy used for loading tankers with gas or oil.
+      - buoy_isolated_danger # BOYISD: A buoy that is moored on or above an isolated danger of limited extent, which has navigable water all around it.
+      - buoy_lateral # BOYLAT: A buoy used to indicate the port or starboard hand side of the route to be followed.
+      - buoy_safe_water # BOYSAW: A buoy used to indicate that there is navigable water around the mark.
+      - buoy_special_purpose # BOYSPP: A buoy primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners.
     columns:
     - {name: osm_id, type: id}
     - {name: geometry, type: geometry}
@@ -370,124 +271,6 @@ tables:
     - {key: "seamark:buoy_cardinal:colour_pattern", name: colour_pattern, type: string}
     - {key: "seamark:buoy_cardinal:reflectivity", name: reflectivity, type: string}
     - {key: "seamark:buoy_cardinal:shape", name: shape, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  buoy_installation: # BOYINB: A buoy used for loading tankers with gas or oil.
-    type: point
-    mapping:
-      seamark:type:
-      - buoy_installation
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:buoy_installation:category", name: category, type: string}
-    - {key: "seamark:buoy_installation:colour", name: colour, type: string}
-    - {key: "seamark:buoy_installation:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:buoy_installation:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  buoy_isolated_danger: # BOYISD: A buoy that is moored on or above an isolated danger of limited extent, which has navigable water all around it.
-    type: point
-    mapping:
-      seamark:type:
-      - buoy_isolated_danger
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:buoy_isolated_danger:colour", name: colour, type: string}
-    - {key: "seamark:buoy_isolated_danger:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:buoy_isolated_danger:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:buoy_isolated_danger:shape", name: shape, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  buoy_lateral: # BOYLAT: A buoy used to indicate the port or starboard hand side of the route to be followed.
-    type: point
-    mapping:
-      seamark:type:
-      - buoy_lateral
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:buoy_lateral:category", name: category, type: string}
-    - {key: "seamark:buoy_lateral:colour", name: colour, type: string}
-    - {key: "seamark:buoy_lateral:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:buoy_lateral:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:buoy_lateral:shape", name: shape, type: string}
-    - {key: "seamark:buoy_lateral:system", name: system, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  buoy_safe_water: # BOYSAW: A buoy used to indicate that there is navigable water around the mark.
-    type: point
-    mapping:
-      seamark:type:
-      - buoy_safe_water
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:buoy_safe_water:colour", name: colour, type: string}
-    - {key: "seamark:buoy_safe_water:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:buoy_safe_water:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:buoy_safe_water:shape", name: shape, type: string}
-    - {key: "seamark:daymark:category", name: daymark_category, type: string}
-    - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
-    - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
-    - {key: "seamark:daymark:shape", name: daymark_shape, type: string}
-    - {key: "seamark:topmark:category", name: topmark_category, type: string}
-    - {key: "seamark:topmark:colour", name: topmark_colour, type: string}
-    - {key: "seamark:topmark:colour_pattern", name: topmark_colour_pattern, type: string}
-    - {key: "seamark:topmark:shape", name: topmark_shape, type: string}
-
-  buoy_special_purpose: # BOYSPP: A buoy primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners.
-    type: point
-    mapping:
-      seamark:type:
-      - buoy_special_purpose
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:buoy_special_purpose:category", name: category, type: string}
-    - {key: "seamark:buoy_special_purpose:colour", name: colour, type: string}
-    - {key: "seamark:buoy_special_purpose:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:buoy_special_purpose:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:buoy_special_purpose:shape", name: shape, type: string}
     - {key: "seamark:daymark:category", name: daymark_category, type: string}
     - {key: "seamark:daymark:colour", name: daymark_colour, type: string}
     - {key: "seamark:daymark:colour_pattern", name: daymark_colour_pattern, type: string}
@@ -980,7 +763,8 @@ tables:
     type: point
     mapping:
       seamark:type:
-      - light
+      - light_major
+      - light_minor
     columns:
     - {name: osm_id, type: id}
     - {name: geometry, type: geometry}
@@ -1000,11 +784,13 @@ tables:
     - {key: "seamark:light:sector_end", name: sector_end, type: string}
     - {key: "seamark:light:sequence", name: sequence, type: string}
     - {key: "seamark:light:visibility", name: visibility, type: string}
+    - {key: "seamark:light:#", name: sector, type: integer}
   light_areas: # LIGHTS: A luminous or lighted aid to navigation.
     type: polygon
     mapping:
       seamark:type:
-      - light
+      - light_major
+      - light_minor
     columns:
     - {name: osm_id, type: id}
     - {name: geometry, type: geometry}
@@ -1024,104 +810,7 @@ tables:
     - {key: "seamark:light:sector_end", name: sector_end, type: string}
     - {key: "seamark:light:sequence", name: sequence, type: string}
     - {key: "seamark:light:visibility", name: visibility, type: string}
-
-  light_major_points: # LIGHTS: A luminous or lighted aid to navigation.
-    type: point
-    mapping:
-      seamark:type:
-      - light_major
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:light_major:category", name: category, type: string}
-    - {key: "seamark:light_major:character", name: character, type: string}
-    - {key: "seamark:light_major:colour", name: colour, type: string}
-    - {key: "seamark:light_major:exhibition", name: exhibition, type: string}
-    - {key: "seamark:light_major:group", name: signal_group, type: string}
-    - {key: "seamark:light_major:height", name: height, type: string}
-    - {key: "seamark:light_major:multiple", name: multiple, type: string}
-    - {key: "seamark:light_major:orientation", name: orientation, type: string}
-    - {key: "seamark:light_major:period", name: period, type: string}
-    - {key: "seamark:light_major:range", name: range, type: string}
-    - {key: "seamark:light_major:sector_start", name: sector_start, type: string}
-    - {key: "seamark:light_major:sector_end", name: sector_end, type: string}
-    - {key: "seamark:light_major:sequence", name: sequence, type: string}
-    - {key: "seamark:light_major:visibility", name: visibility, type: string}
-  light_major_areas: # LIGHTS: A luminous or lighted aid to navigation.
-    type: polygon
-    mapping:
-      seamark:type:
-      - light_major
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:light_major:category", name: category, type: string}
-    - {key: "seamark:light_major:character", name: character, type: string}
-    - {key: "seamark:light_major:colour", name: colour, type: string}
-    - {key: "seamark:light_major:exhibition", name: exhibition, type: string}
-    - {key: "seamark:light_major:group", name: signal_group, type: string}
-    - {key: "seamark:light_major:height", name: height, type: string}
-    - {key: "seamark:light_major:multiple", name: multiple, type: string}
-    - {key: "seamark:light_major:orientation", name: orientation, type: string}
-    - {key: "seamark:light_major:period", name: period, type: string}
-    - {key: "seamark:light_major:range", name: range, type: string}
-    - {key: "seamark:light_major:sector_start", name: sector_start, type: string}
-    - {key: "seamark:light_major:sector_end", name: sector_end, type: string}
-    - {key: "seamark:light_major:sequence", name: sequence, type: string}
-    - {key: "seamark:light_major:visibility", name: visibility, type: string}
-
-  light_minor_points: # LIGHTS: A luminous or lighted aid to navigation.
-    type: point
-    mapping:
-      seamark:type:
-      - light_minor
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:light_minor:category", name: category, type: string}
-    - {key: "seamark:light_minor:character", name: character, type: string}
-    - {key: "seamark:light_minor:colour", name: colour, type: string}
-    - {key: "seamark:light_minor:exhibition", name: exhibition, type: string}
-    - {key: "seamark:light_minor:group", name: signal_group, type: string}
-    - {key: "seamark:light_minor:height", name: height, type: string}
-    - {key: "seamark:light_minor:multiple", name: multiple, type: string}
-    - {key: "seamark:light_minor:orientation", name: orientation, type: string}
-    - {key: "seamark:light_minor:period", name: period, type: string}
-    - {key: "seamark:light_minor:range", name: range, type: string}
-    - {key: "seamark:light_minor:sector_start", name: sector_start, type: string}
-    - {key: "seamark:light_minor:sector_end", name: sector_end, type: string}
-    - {key: "seamark:light_minor:sequence", name: sequence, type: string}
-    - {key: "seamark:light_minor:visibility", name: visibility, type: string}
-  light_minor_areas: # LIGHTS: A luminous or lighted aid to navigation.
-    type: polygon
-    mapping:
-      seamark:type:
-      - light_minor
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:light_minor:category", name: category, type: string}
-    - {key: "seamark:light_minor:character", name: character, type: string}
-    - {key: "seamark:light_minor:colour", name: colour, type: string}
-    - {key: "seamark:light_minor:exhibition", name: exhibition, type: string}
-    - {key: "seamark:light_minor:group", name: signal_group, type: string}
-    - {key: "seamark:light_minor:height", name: height, type: string}
-    - {key: "seamark:light_minor:multiple", name: multiple, type: string}
-    - {key: "seamark:light_minor:orientation", name: orientation, type: string}
-    - {key: "seamark:light_minor:period", name: period, type: string}
-    - {key: "seamark:light_minor:range", name: range, type: string}
-    - {key: "seamark:light_minor:sector_start", name: sector_start, type: string}
-    - {key: "seamark:light_minor:sector_end", name: sector_end, type: string}
-    - {key: "seamark:light_minor:sequence", name: sequence, type: string}
-    - {key: "seamark:light_minor:visibility", name: visibility, type: string}
+    - {key: "seamark:light:#", name: sector, type: integer}
 
   light_float: # LITFLT: A boat-like structure used instead of a light buoy in waters where strong streams or currents are experienced, or when a greater elevation than that of a light buoy is necessary
     type: point
@@ -1133,9 +822,9 @@ tables:
     - {name: geometry, type: geometry}
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
-    - {key: "seamark:light_float:colour", name: colour, type: string}
-    - {key: "seamark:light_float:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:light_float:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:light:colour", name: colour, type: string}
+    - {key: "seamark:light:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:light:reflectivity", name: reflectivity, type: string}
 
   light_vessel: # LITVES: A distinctively marked vessel anchored or moored at a charted point, to serve as an aid to navigation.
     type: point
@@ -1147,9 +836,9 @@ tables:
     - {name: geometry, type: geometry}
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
-    - {key: "seamark:light_vessel:colour", name: colour, type: string}
-    - {key: "seamark:light_vessel:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:light_vessel:reflectivity", name: reflectivity, type: string}
+    - {key: "seamark:light:colour", name: colour, type: string}
+    - {key: "seamark:light:colour_pattern", name: colour_pattern, type: string}
+    - {key: "seamark:light:reflectivity", name: reflectivity, type: string}
 
   lock_basin: # LOKBSN: A lock basin is a wet dock in a waterway, permitting a ship to pass from one level to another.
     type: polygon
