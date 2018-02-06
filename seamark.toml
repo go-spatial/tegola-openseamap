@@ -1,9 +1,9 @@
 [webserver]
-port = ":8080"
+port = ":${TEGOLA_PORT}"
 
 [cache]
 type="file"
-basepath="cache"
+basepath="${CACHE_BASEPATH}"
 
 #	OSM seamark objects
 [[providers]]
