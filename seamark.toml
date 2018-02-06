@@ -40,34 +40,10 @@ password = "${SM_DB_PASS}"
 	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, restriction, danger_class FROM osm_anchorage_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
-	name = "beacon_cardinal"
+	name = "beacon"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_cardinal WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "beacon_isolated_danger"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_isolated_danger WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "beacon_lateral"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, impact, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_lateral WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "beacon_safe_water"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_safe_water WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "beacon_special_purpose"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon_special_purpose WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_beacon WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "berth_points"
@@ -121,49 +97,19 @@ password = "${SM_DB_PASS}"
 	name = "building_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility FROM osm_building_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "building_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility FROM osm_building_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility FROM osm_building_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
-	name = "buoy_cardinal"
+	name = "buoy"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_cardinal WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "buoy_installation"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_installation WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "buoy_isolated_danger"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_isolated_danger WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "buoy_lateral"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), system, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_lateral WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "buoy_safe_water"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_safe_water WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "buoy_special_purpose"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g'), daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy_special_purpose WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, daymark_category, daymark_colour, daymark_colour_pattern, daymark_shape, topmark_category, topmark_colour, topmark_colour_pattern, topmark_shape FROM osm_buoy WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "cable_area"
@@ -424,30 +370,6 @@ password = "${SM_DB_PASS}"
 	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
-	name = "light_major_points"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_points WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "light_major_areas"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_major_areas WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "light_minor_points"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_points WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
-	name = "light_minor_areas"
-	geometry_fieldname = "geometry"
-	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sector_start, sector_end, sequence, visibility FROM osm_light_minor_areas WHERE geometry && !BBOX!"
-
-	[[providers.layers]]
 	name = "light_float"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
@@ -499,19 +421,19 @@ password = "${SM_DB_PASS}"
 	name = "mooring_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility, water_level FROM osm_mooring_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "mooring_lines"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_lines WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility, water_level FROM osm_mooring_lines WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "mooring_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g'), visibility, water_level FROM osm_mooring_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility, water_level FROM osm_mooring_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "protected_area_points"
@@ -1505,32 +1427,8 @@ center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part 
 	max_zoom = 20
 
 	[[maps.layers]]
-	name = "seamark_beacon_cardinal"
-	provider_layer = "seamark.beacon_cardinal"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_beacon_isolated_danger"
-	provider_layer = "seamark.beacon_isolated_danger"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_beacon_lateral"
-	provider_layer = "seamark.beacon_lateral"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_beacon_safe_water"
-	provider_layer = "seamark.beacon_safe_water"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_beacon_special_purpose"
-	provider_layer = "seamark.beacon_special_purpose"
+	name = "seamark_beacon"
+	provider_layer = "seamark.beacon"
 	min_zoom = 7
 	max_zoom = 20
 
@@ -1595,38 +1493,8 @@ center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part 
 	max_zoom = 20
 
 	[[maps.layers]]
-	name = "seamark_buoy_cardinal"
-	provider_layer = "seamark.buoy_cardinal"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_buoy_installation"
-	provider_layer = "seamark.buoy_installation"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_buoy_isolated_danger"
-	provider_layer = "seamark.buoy_isolated_danger"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_buoy_lateral"
-	provider_layer = "seamark.buoy_lateral"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_buoy_safe_water"
-	provider_layer = "seamark.buoy_safe_water"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_buoy_special_purpose"
-	provider_layer = "seamark.buoy_special_purpose"
+	name = "seamark_buoy"
+	provider_layer = "seamark.buoy"
 	min_zoom = 7
 	max_zoom = 20
 
@@ -1885,30 +1753,6 @@ center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part 
 	[[maps.layers]]
 	name = "seamark_light_areas"
 	provider_layer = "seamark.light_areas"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_light_major_points"
-	provider_layer = "seamark.light_major_points"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_light_major_areas"
-	provider_layer = "seamark.light_major_areas"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_light_minor_points"
-	provider_layer = "seamark.light_minor_points"
-	min_zoom = 7
-	max_zoom = 20
-
-	[[maps.layers]]
-	name = "seamark_light_minor_areas"
-	provider_layer = "seamark.light_minor_areas"
 	min_zoom = 7
 	max_zoom = 20
 
