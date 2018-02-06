@@ -3224,9 +3224,7 @@
         "line-color": "rgba(83, 112, 118, 1)"
       }
     },
-
-
-	{
+    {
       "id": "distance_mark",
       "type": "circle",
       "source": "tegola-osm",
@@ -3236,7 +3234,7 @@
         "circle-color": "#0000f7"
       }
     },
-	{
+    {
       "id": "distance_mark_not_installed",
       "type": "circle",
       "source": "tegola-osm",
@@ -3248,7 +3246,7 @@
           "category",
           "not_installed"
         ]
-	  ],
+      ],
       "paint": {
         "circle-radius": 5,
         "circle-color": "#0000f7",
@@ -3256,7 +3254,7 @@
         "circle-stroke-color": "#8b008b"
       }
     },
-	{
+    {
       "id": "pylon_areas",
       "type": "symbol",
       "source": "tegola-osm",
@@ -3265,7 +3263,7 @@
         "icon-image": "D/D26"
       }
     },
-	{
+    {
       "id": "pylon_points",
       "type": "symbol",
       "source": "tegola-osm",
@@ -3274,87 +3272,87 @@
         "icon-image": "D/D26"
       }
     },
-	{
+    {
       "id": "bridge_areas",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_bridge_areas",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "bridge_lines",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_bridge_lines",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "bridge_points",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_bridge_points",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "cable_overhead",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_cable_overhead",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "pipeline_overhead",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_pipeline_overhead",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "landmark_areas",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_landmark_areas",
       "layout": {
         "icon-image": "E_{category}_{function}",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "landmark_lines",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_landmark_lines",
       "layout": {
         "icon-image": "E_{category}_{function}",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "landmark_points",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_landmark_points",
       "layout": {
         "icon-image": "E_{category}_{function}",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "mooring_areas",
       "type": "circle",
       "source": "tegola-osm",
@@ -3364,7 +3362,7 @@
         "circle-color": "#000000"
       }
     },
-	{
+    {
       "id": "mooring_lines",
       "type": "circle",
       "source": "tegola-osm",
@@ -3374,7 +3372,7 @@
         "circle-color": "#000000"
       }
     },
-	{
+    {
       "id": "mooring_points",
       "type": "circle",
       "source": "tegola-osm",
@@ -3384,12 +3382,12 @@
         "circle-color": "#000000"
       }
     },
-	{
+    {
       "id": "harbour_areas",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_harbour_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
@@ -3399,20 +3397,20 @@
         [
           "!=",
           "category",
-		  "marina"
+          "marina"
         ],
         [
           "!=",
           "category",
-		  "marina_no_facilities"
+          "marina_no_facilities"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "F/F",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_points",
       "type": "symbol",
       "source": "tegola-osm",
@@ -3437,46 +3435,46 @@
       ],
       "layout": {
         "icon-image": "F/F",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_areas_fishing",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_harbour_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "fishing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "F/F10",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_points_fishing",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_harbour_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "fishing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "F/F10",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "berth_areas",
       "type": "circle",
       "source": "tegola-osm",
@@ -3486,7 +3484,7 @@
         "circle-color": "#f800e9"
       }
     },
-	{
+    {
       "id": "berth_lines",
       "type": "circle",
       "source": "tegola-osm",
@@ -3496,7 +3494,7 @@
         "circle-color": "#f800e9"
       }
     },
-	{
+    {
       "id": "berth_points",
       "type": "circle",
       "source": "tegola-osm",
@@ -3506,228 +3504,227 @@
         "circle-color": "#f800e9"
       }
     },
-	{
+    {
       "id": "obstruction_areas",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_obstruction_areas",
       "layout": {
         "icon-image": "K/K40",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "obstruction_lines",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_obstruction_lines",
       "layout": {
         "icon-image": "K/K40",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "obstruction_points",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_obstruction_points",
       "layout": {
         "icon-image": "K/K40",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "rock",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_rock",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!in",
           "water_level",
           "dry",
-		  "submerged",
-		  "awash",
-		  "covers"
+          "submerged",
+          "awash",
+          "covers"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K13_",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "rock_dry",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_rock",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "dry"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K10",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "rock_submerged",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_rock",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "submerged"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K13",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "rock_awash",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_rock",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "awash"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K12",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "rock_covers",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_rock",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "covers"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K11",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "marine_farm_areas",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_marine_farm_areas",
       "layout": {
         "icon-image": "K/K48.1_no_red",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "marine_farm_lines",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_marine_farm_lines",
       "layout": {
         "icon-image": "K/K48.1_no_red",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "marine_farm_points",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_marine_farm_points",
       "layout": {
         "icon-image": "K/K48.1_no_red",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-
-	{
+    {
       "id": "wreck_areas",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_wreck_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!in",
           "category",
           "dangerous",
-		  "mast_showing",
-		  "hull_showing",
-		  "funnel_showing"
+          "mast_showing",
+          "hull_showing",
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K29",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "wreck_points",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_wreck_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "dangerous",
-		  "mast_showing",
-		  "hull_showing",
-		  "funnel_showing"
+          "dangerous",
+          "mast_showing",
+          "hull_showing",
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K29",
-		"icon-size": 0.3
+        "icon-size": 0.3
       }
     },
-	{
+    {
       "id": "wreck_areas_dangerous",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_wreck_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "in",
           "category",
           "dangerous",
-		  "mast_showing",
-		  "funnel_showing"
+          "mast_showing",
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K28",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "wreck_points_dangerous",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_wreck_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -3737,94 +3734,94 @@
         [
           "==",
           "category",
-		  "mast_showing"
+          "mast_showing"
         ],
         [
           "==",
           "category",
-		  "funnel_showing"
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K28",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "wreck_areas_hull_showing",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_wreck_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "hull_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K24",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "wreck_points_hull_showing",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_wreck_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "hull_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K24",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "restricted_area",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "foul_ground"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K31",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "cable_submarine",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_cable_submarine",
       "layout": {
         "icon-image": "L/L31",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "pipeline_submarine",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_pipeline_submarine",
       "layout": {
         "icon-image": "L/L40",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "recommended_track",
       "type": "line",
       "source": "tegola-osm",
@@ -3845,7 +3842,7 @@
         "line-color": "rgba(0, 0, 0, 1)"
       }
     },
-	{
+    {
       "id": "navigation_line",
       "type": "line",
       "source": "tegola-osm",
@@ -3863,32 +3860,32 @@
             ]
           ]
         },
-		"line-dasharray": [
+        "line-dasharray": [
           8,
           6
         ],
         "line-color": "rgba(0, 0, 0, 1)"
       }
     },
-	{
+    {
       "id": "separation_lane",
       "type": "line",
       "source": "tegola-osm",
       "source-layer": "seamark_separation_lane",
       "paint": {
         "line-width": 1,
-		"line-pattern": "M/M10",
+        "line-pattern": "M/M10",
         "line-color": "rgba(0, 0, 0, 0)"
       }
     },
-	{
+    {
       "id": "recommended_traffic_lane",
       "type": "line",
       "source": "tegola-osm",
       "source-layer": "seamark_recommended_traffic_lane",
       "paint": {
         "line-width": 1,
-		"line-pattern": "M/M11",
+        "line-pattern": "M/M11",
         "line-color": "rgba(0, 0, 0, 0)"
       }
     },
@@ -3922,12 +3919,12 @@
         "fill-color": "rgba(248, 0, 233, 0.5)"
       }
     },
-	{
+    {
       "id": "calling_in_point_points",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_calling_in_point_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
@@ -3937,19 +3934,19 @@
       ],
       "layout": {
         "icon-image": "M/40.2",
-		"icon-rotate": {
-			"type": "identity",
-			"property": "orientation"
-		},
-		"icon-size": 0.2
+        "icon-rotate": {
+          "type": "identity",
+          "property": "orientation"
+        },
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "calling_in_point_points_one_way",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_calling_in_point_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -3959,14 +3956,14 @@
       ],
       "layout": {
         "icon-image": "M/40.1",
-		"icon-rotate": {
-			"type": "identity",
-			"property": "orientation"
-		},
-		"icon-size": 0.2
+        "icon-rotate": {
+          "type": "identity",
+          "property": "orientation"
+        },
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "ferry_route",
       "type": "line",
       "source": "tegola-osm",
@@ -3984,19 +3981,19 @@
             ]
           ]
         },
-		"line-dasharray": [
+        "line-dasharray": [
           5,
           8
         ],
         "line-color": "#8b008b"
       }
     },
-	{
+    {
       "id": "restricted_area2",
       "type": "fill",
       "source": "tegola-osm",
       "source-layer": "seamark_restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
@@ -4006,24 +4003,24 @@
         [
           "!=",
           "restriction",
-		  "no_anchoring"
+          "no_anchoring"
         ],
         [
           "!=",
           "restriction",
-		  "no_fishing"
+          "no_fishing"
         ]
       ],
       "paint": {
-		"fill-pattern": "N/N2.1"
+        "fill-pattern": "N/N2.1"
       }
     },
-	{
+    {
       "id": "restricted_area_no_entry",
       "type": "fill",
       "source": "tegola-osm",
       "source-layer": "seamark_restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4032,15 +4029,15 @@
         ]
       ],
       "paint": {
-		"fill-pattern": "N/N2.2"
+        "fill-pattern": "N/N2.2"
       }
     },
-	{
+    {
       "id": "restricted_area_no_anchoring",
       "type": "fill",
       "source": "tegola-osm",
       "source-layer": "seamark_restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4049,15 +4046,15 @@
         ]
       ],
       "paint": {
-		"fill-pattern": "N/N20"
+        "fill-pattern": "N/N20"
       }
     },
-	{
+    {
       "id": "restricted_area_no_fishing",
       "type": "fill",
       "source": "tegola-osm",
       "source-layer": "seamark_restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4066,15 +4063,15 @@
         ]
       ],
       "paint": {
-		"fill-pattern": "N/N21"
+        "fill-pattern": "N/N21"
       }
     },
-	{
+    {
       "id": "anchorage_areas",
       "type": "fill",
       "source": "tegola-osm",
       "source-layer": "seamark_anchorage_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
@@ -4083,20 +4080,20 @@
         ]
       ],
       "paint": {
-		"fill-pattern": "N/N12"
+        "fill-pattern": "N/N12"
       }
     },
-	{
+    {
       "id": "anchorage_points",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_anchorage_points",
       "layout": {
         "icon-image": "N/N12",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "light_major",
       "type": "symbol",
       "source": "tegola-osm",
@@ -4108,10 +4105,10 @@
       ],
       "layout": {
         "icon-image": "P/P1.major",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "light_minor",
       "type": "symbol",
       "source": "tegola-osm",
@@ -4123,15 +4120,15 @@
       ],
       "layout": {
         "icon-image": "P/P1.minor",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "lights",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_light_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
@@ -4141,72 +4138,71 @@
       ],
       "layout": {
         "icon-image": "P/P10.1_{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			-5,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          -5,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "spotlight",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_light_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "spotlight"
         ],
-		[
-		  "has",
-		  "colour"
-		]
+        [
+          "has",
+          "colour"
+        ]
       ],
       "layout": {
         "icon-image": "P/P11_{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			0,
-			0
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          0,
+          0
+        ]
       }
     },
-	{
+    {
       "id": "spotlight_no_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_light_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "spotlight"
         ],
-		[
-		  "!has",
-		  "colour"
-		]
+        [
+          "!has",
+          "colour"
+        ]
       ],
       "layout": {
         "icon-image": "P/P11_white",
-		"icon-size": 1,
-		"icon-offset": [
-			0,
-			0
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          0,
+          0
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_lateral_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4217,28 +4213,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_lateral_colour_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4249,28 +4245,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_lateral_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4281,29 +4277,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_lateral_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4314,28 +4309,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_lateral_colour_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4346,28 +4341,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_lateral_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4378,29 +4373,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_cardinal_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4411,28 +4405,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_lateral_cardinal_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4443,28 +4437,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_cardinal_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4475,29 +4469,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_cardinal_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4508,28 +4501,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_lateral_cardinal_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4540,28 +4533,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_cardinal_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4572,29 +4565,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_isolated_danger_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4605,28 +4597,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_isolated_danger_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4637,28 +4629,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_isolated_danger_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4669,29 +4661,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_isolated_danger_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4702,28 +4693,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_isolated_danger_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4734,28 +4725,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_isolated_danger_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4766,29 +4757,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_safe_water_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4799,28 +4789,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_safe_water_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4831,28 +4821,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_safe_water_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4863,29 +4853,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_safe_water_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4896,28 +4885,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_safe_water_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4928,28 +4917,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_safe_water_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4960,29 +4949,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_special_purpose_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4993,28 +4981,28 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_special_purpose_pattern",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -5025,28 +5013,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_special_purpose_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_buoy",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -5057,29 +5045,28 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_special_purpose_colour",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -5090,20 +5077,20 @@
           "!has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
     {
@@ -5111,7 +5098,7 @@
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -5122,28 +5109,28 @@
           "has",
           "colour_pattern"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_special_purpose_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_beacon",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -5154,422 +5141,421 @@
           "!has",
           "colour"
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile"
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile"
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": 1,
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "notice_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_notice",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!has",
           "category"
         ],
-		[
-		  "!has",
-		  "system"
-		]
+        [
+          "!has",
+          "system"
+        ]
       ],
       "layout": {
         "icon-image": "Q/Q126/generic",
-		"icon-size": 0.05
+        "icon-size": 0.05
       }
     },
-	{
+    {
       "id": "notice_category",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_notice",
-	  "filter": [
+      "filter": [
         "all",
         [
           "has",
           "category"
         ],
-		[
-		  "!has",
-		  "system"
-		]
+        [
+          "!has",
+          "system"
+        ]
       ],
       "layout": {
         "icon-image": "Q/Q126/generic/{category}",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "notice_system",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_notice",
-	  "filter": [
+      "filter": [
         "all",
         [
           "has",
           "category"
         ],
-		[
-		  "has",
-		  "system"
-		]
+        [
+          "has",
+          "system"
+        ]
       ],
       "layout": {
         "icon-image": "Q/Q126/{system}/{category}",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "fog_signal",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_fog_signal",
       "layout": {
         "icon-image": "R/R1",
-		"icon-size": 0.2,
-		"icon-offset": [
-			-10,
-			6
-		]
+        "icon-size": 0.2,
+        "icon-offset": [
+          -10,
+          6
+        ]
       }
     },
-	{
+    {
       "id": "pilot_boarding",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_pilot_boarding",
       "layout": {
         "icon-image": "T/T1.1",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "signal_station_warning",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_signal_station_warning",
       "layout": {
         "icon-image": "T/T20",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "signal_station_traffic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_signal_station_traffic",
       "layout": {
         "icon-image": "T/T20",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "harbour_areas_marina",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_harbour_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina"
+          "marina"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.1",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_points_marina",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_harbour_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina"
+          "marina"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.1",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_areas_marina_no_facilities",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_harbour_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina_no_facilities"
+          "marina_no_facilities"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.1",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_points_marina_no_facilities",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_harbour_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina_no_facilities"
+          "marina_no_facilities"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.2",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "nautical_club",
-		  "restaurant",
-		  "slipway"
+          "nautical_club",
+          "restaurant",
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U32",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_lines",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "nautical_club",
-		  "restaurant",
-		  "slipway"
+          "nautical_club",
+          "restaurant",
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U32",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_generic",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "nautical_club",
-		  "restaurant",
-		  "slipway"
+          "nautical_club",
+          "restaurant",
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U32",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_nautical_club",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "nautical_club"
+          "nautical_club"
         ]
       ],
       "layout": {
         "icon-image": "U/U4_br",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_nautical_club",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_lines",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "nautical_club"
+          "nautical_club"
         ]
       ],
       "layout": {
         "icon-image": "U/U4_br",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_nautical_club",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "nautical_club"
+          "nautical_club"
         ]
       ],
       "layout": {
         "icon-image": "U/U4_br",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_restaurant",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "restaurant"
+          "restaurant"
         ]
       ],
       "layout": {
         "icon-image": "U/U11",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_restaurant",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_lines",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "restaurant"
+          "restaurant"
         ]
       ],
       "layout": {
         "icon-image": "U/U11",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_restaurant",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "restaurant"
+          "restaurant"
         ]
       ],
       "layout": {
         "icon-image": "U/U11",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_slipway",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "slipway"
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U5",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_slipway",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_lines",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "slipway"
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U5",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_slipway",
       "type": "symbol",
       "source": "tegola-osm",
       "source-layer": "seamark_small_craft_facility_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "slipway"
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U5",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     }
   ],
