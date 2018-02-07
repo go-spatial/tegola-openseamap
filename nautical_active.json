@@ -26,14 +26,14 @@
   "sprite": "https://raw.githubusercontent.com/terranodo/tegola-openseamap/master/spritesheet/vector-seamap",
   "layers": [
     {
-	  "id": "background",
-	  "type": "background",
-	  "source": "osm",
-	  "source-layer": "ocean",
-	  "paint": {
-		"background-color": "rgba(164, 210, 221, 1)"
-	  }
-	},
+      "id": "background",
+      "type": "background",
+      "source": "osm",
+      "source-layer": "ocean",
+      "paint": {
+        "background-color": "rgba(164, 210, 221, 1)"
+      }
+    },
     {
       "id": "countries",
       "type": "fill",
@@ -43,7 +43,7 @@
         "fill-color": "rgba(235, 235, 235, 1)"
       }
     },
-	{
+    {
       "id": "boundary_lines_maritime",
       "type": "line",
       "source": "osm",
@@ -53,16 +53,16 @@
         "line-width": 1
       }
     },
-	{
+    {
       "id": "admin_1_lines",
       "type": "line",
       "source": "osm",
       "source-layer": "admin_1_lines",
-	  "minzoom": 2,
+      "minzoom": 2,
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
-		  "stops": [
+          "stops": [
             [
               1,
               0.7
@@ -72,12 +72,10 @@
               2
             ]
           ]
-		}  
+        }
       }
-    },		
-
-
-	{
+    },
+    {
       "id": "distance_mark",
       "type": "circle",
       "source": "osm",
@@ -87,7 +85,7 @@
         "circle-color": "#0000f7"
       }
     },
-	{
+    {
       "id": "distance_mark_not_installed",
       "type": "circle",
       "source": "osm",
@@ -99,7 +97,7 @@
           "category",
           "not_installed"
         ]
-	  ],
+      ],
       "paint": {
         "circle-radius": 5,
         "circle-color": "#0000f7",
@@ -107,7 +105,7 @@
         "circle-stroke-color": "#8b008b"
       }
     },
-	{
+    {
       "id": "pylon_areas",
       "type": "symbol",
       "source": "osm",
@@ -116,7 +114,7 @@
         "icon-image": "D/D26"
       }
     },
-	{
+    {
       "id": "pylon_points",
       "type": "symbol",
       "source": "osm",
@@ -125,87 +123,87 @@
         "icon-image": "D/D26"
       }
     },
-	{
+    {
       "id": "bridge_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "bridge_areas",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "bridge_lines",
       "type": "symbol",
       "source": "osm",
       "source-layer": "bridge_lines",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "bridge_points",
       "type": "symbol",
       "source": "osm",
       "source-layer": "bridge_points",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "cable_overhead",
       "type": "symbol",
       "source": "osm",
       "source-layer": "cable_overhead",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "pipeline_overhead",
       "type": "symbol",
       "source": "osm",
       "source-layer": "pipeline_overhead",
       "layout": {
         "icon-image": "D/D20",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "landmark_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landmark_areas",
       "layout": {
         "icon-image": "E_{category}_{function}",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "landmark_lines",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landmark_lines",
       "layout": {
         "icon-image": "E_{category}_{function}",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "landmark_points",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landmark_points",
       "layout": {
         "icon-image": "E_{category}_{function}",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "mooring_areas",
       "type": "circle",
       "source": "osm",
@@ -215,7 +213,7 @@
         "circle-color": "#000000"
       }
     },
-	{
+    {
       "id": "mooring_lines",
       "type": "circle",
       "source": "osm",
@@ -225,14 +223,14 @@
         "circle-color": "#000000"
       }
     },
-	{
+    {
       "id": "mooring_points",
       "type": "circle",
       "source": "osm",
       "source-layer": "mooring_points",
-	  "minzoom": 12,
+      "minzoom": 12,
       "paint": {
-	    "circle-color": "#000000",
+        "circle-color": "#000000",
         "circle-radius": {
           "stops": [
             [
@@ -245,59 +243,26 @@
             ]
           ]
         }
-      }   
+      }
     },
-	{
+    {
       "id": "harbour_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_areas",
-	  "filter": [
-        "all",
-        [
-          "!in",
-          "category",
-          "fishing",
-		  "marina",
-		  "marina_no_facilities"
-        ]
-	  ],
-      "layout": {
-        "icon-image": "F/F",
-		"icon-size": {
-          "stops": [
-            [
-              11,
-              0.14
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-		"icon-allow-overlap": true
-      }
-    },
-	{
-      "id": "harbour_points",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_points",
-	  "minzoom": 11,
       "filter": [
         "all",
         [
           "!in",
           "category",
           "fishing",
-		  "marina",
-		  "marina_no_facilities"
-        ]        
+          "marina",
+          "marina_no_facilities"
+        ]
       ],
       "layout": {
         "icon-image": "F/F",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -309,26 +274,59 @@
             ]
           ]
         },
-		"icon-allow-overlap": true
+        "icon-allow-overlap": true
       }
     },
-	{
+    {
+      "id": "harbour_points",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "harbour_points",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "!in",
+          "category",
+          "fishing",
+          "marina",
+          "marina_no_facilities"
+        ]
+      ],
+      "layout": {
+        "icon-image": "F/F",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.14
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-allow-overlap": true
+      }
+    },
+    {
       "id": "harbour_areas_fishing",
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "in",
           "category",
           "fishing",
-		  ";fishing"
+          ";fishing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "F/F10",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -340,26 +338,29 @@
             ]
           ]
         },
-		"icon-allow-overlap": true,
-		"icon-offset": [-150,0]
+        "icon-allow-overlap": true,
+        "icon-offset": [
+          -150,
+          0
+        ]
       }
     },
-	{
+    {
       "id": "harbour_points_fishing",
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "fishing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "F/F10",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -371,11 +372,14 @@
             ]
           ]
         },
-		"icon-allow-overlap": true,
-		"icon-offset": [-150,0]
+        "icon-allow-overlap": true,
+        "icon-offset": [
+          -150,
+          0
+        ]
       }
     },
-	{
+    {
       "id": "berth_areas",
       "type": "circle",
       "source": "osm",
@@ -385,7 +389,7 @@
         "circle-color": "#f800e9"
       }
     },
-	{
+    {
       "id": "berth_lines",
       "type": "circle",
       "source": "osm",
@@ -395,7 +399,7 @@
         "circle-color": "#f800e9"
       }
     },
-	{
+    {
       "id": "berth_points",
       "type": "circle",
       "source": "osm",
@@ -405,193 +409,193 @@
         "circle-color": "#f800e9"
       }
     },
-	{
+    {
       "id": "obstruction_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "obstruction_areas",
       "layout": {
         "icon-image": "K/K40",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "obstruction_lines",
       "type": "symbol",
       "source": "osm",
       "source-layer": "obstruction_lines",
       "layout": {
         "icon-image": "K/K40",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "obstruction_points",
       "type": "symbol",
       "source": "osm",
       "source-layer": "obstruction_points",
       "layout": {
         "icon-image": "K/K40",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "rock",
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "!in",
           "water_level",
           "dry",
-		  "submerged",
-		  "awash",
-		  "covers"
+          "submerged",
+          "awash",
+          "covers"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K13_",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "rock_dry",
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "dry"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K10",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "rock_submerged",
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "submerged"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K13",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "rock_awash",
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "awash"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K12",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "rock_covers",
       "type": "symbol",
       "source": "osm",
       "source-layer": "rock",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "==",
           "water_level",
           "covers"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K11",
-		"icon-size": 0.15
+        "icon-size": 0.15
       }
     },
-	{
+    {
       "id": "marine_farm_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "marine_farm_areas",
       "layout": {
         "icon-image": "K/K48.1_no_red",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "marine_farm_lines",
       "type": "symbol",
       "source": "osm",
       "source-layer": "marine_farm_lines",
       "layout": {
         "icon-image": "K/K48.1_no_red",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "marine_farm_points",
       "type": "symbol",
       "source": "osm",
       "source-layer": "marine_farm_points",
       "layout": {
         "icon-image": "K/K48.1_no_red",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-
-	{
+    {
       "id": "wreck_areas",
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_areas",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "!in",
           "category",
           "dangerous",
-		  "mast_showing",
-		  "hull_showing",
-		  "funnel_showing"
+          "mast_showing",
+          "hull_showing",
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K29",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               12,
               0.15
             ],
-			[ 15,
-			  0.25
-			],
+            [
+              15,
+              0.25
+            ],
             [
               18,
               0.4
@@ -600,34 +604,35 @@
         }
       }
     },
-	{
+    {
       "id": "wreck_points",
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_points",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "dangerous",
-		  "mast_showing",
-		  "hull_showing",
-		  "funnel_showing"
+          "dangerous",
+          "mast_showing",
+          "hull_showing",
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K29",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               12,
               0.15
             ],
-			[ 15,
-			  0.25
-			],
+            [
+              15,
+              0.25
+            ],
             [
               18,
               0.4
@@ -636,33 +641,34 @@
         }
       }
     },
-	{
+    {
       "id": "wreck_areas_dangerous",
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_areas",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "in",
           "category",
           "dangerous",
-		  "mast_showing",
-		  "funnel_showing"
+          "mast_showing",
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K28",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               12,
               0.15
             ],
-			[ 15,
-			  0.25
-			],
+            [
+              15,
+              0.25
+            ],
             [
               18,
               0.4
@@ -671,33 +677,34 @@
         }
       }
     },
-	{
+    {
       "id": "wreck_points_dangerous",
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_points",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "in",
           "category",
           "dangerous",
-		  "mast_showing",
-		  "funnel_showing"
+          "mast_showing",
+          "funnel_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K28",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               12,
               0.15
             ],
-			[ 15,
-			  0.25
-			],
+            [
+              15,
+              0.25
+            ],
             [
               18,
               0.4
@@ -706,31 +713,32 @@
         }
       }
     },
-	{
+    {
       "id": "wreck_areas_hull_showing",
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_areas",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "==",
           "category",
           "hull_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K24",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               12,
               0.15
             ],
-			[ 15,
-			  0.25
-			],
+            [
+              15,
+              0.25
+            ],
             [
               18,
               0.4
@@ -739,61 +747,61 @@
         }
       }
     },
-	{
+    {
       "id": "wreck_points_hull_showing",
       "type": "symbol",
       "source": "osm",
       "source-layer": "wreck_points",
-	  "minzoom": 12,
-	  "filter": [
+      "minzoom": 12,
+      "filter": [
         "all",
         [
           "==",
           "category",
           "hull_showing"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K24",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "restricted_area",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "foul_ground"
         ]
-	  ],
+      ],
       "layout": {
         "icon-image": "K/K31",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "cable_submarine",
       "type": "symbol",
       "source": "osm",
       "source-layer": "cable_submarine",
       "layout": {
         "icon-image": "L/L31",
-		"icon-size": 0.5
+        "icon-size": 0.5
       }
     },
-	{
+    {
       "id": "pipeline_submarine",
       "type": "line",
       "source": "osm",
       "source-layer": "pipeline_submarine",
-	  "minzoom": 13,
+      "minzoom": 13,
       "paint": {
-		"line-pattern": "L/Pipeline_horizontal",
+        "line-pattern": "L/Pipeline_horizontal",
         "line-color": "rgba(0, 0, 0, 0)",
         "line-width": {
           "stops": [
@@ -809,7 +817,7 @@
         }
       }
     },
-	{
+    {
       "id": "recommended_track",
       "type": "line",
       "source": "osm",
@@ -830,7 +838,7 @@
         "line-color": "rgba(0, 0, 0, 1)"
       }
     },
-	{
+    {
       "id": "navigation_line",
       "type": "line",
       "source": "osm",
@@ -848,34 +856,34 @@
             ]
           ]
         },
-		"line-dasharray": [
+        "line-dasharray": [
           8,
           6
         ],
         "line-color": "rgba(0, 0, 0, 1)"
       }
     },
-	{
+    {
       "id": "separation_lane",
       "type": "symbol",
       "source": "osm",
       "source-layer": "separation_lane",
       "layout": {
         "icon-image": "M/M10",
-		"icon-size": 0.6,
-		"icon-rotation-alignment": "auto",
-		"symbol-spacing": 1,
-		"symbol-placement": "line"
+        "icon-size": 0.6,
+        "icon-rotation-alignment": "auto",
+        "symbol-spacing": 1,
+        "symbol-placement": "line"
       }
     },
-	{
+    {
       "id": "recommended_traffic_lane",
       "type": "line",
       "source": "osm",
       "source-layer": "recommended_traffic_lane",
       "paint": {
         "line-width": 1,
-		"line-pattern": "M/M11",
+        "line-pattern": "M/M11",
         "line-color": "rgba(0, 0, 0, 0)"
       }
     },
@@ -884,7 +892,7 @@
       "type": "line",
       "source": "osm",
       "source-layer": "separation_line",
-	  "minzoom": 6,
+      "minzoom": 6,
       "paint": {
         "line-width": {
           "stops": [
@@ -906,17 +914,17 @@
       "type": "fill",
       "source": "osm",
       "source-layer": "separation_zone",
-	  "minzoom": 6,
+      "minzoom": 6,
       "paint": {
         "fill-color": "rgba(181, 167, 234, 1)"
       }
     },
-	{
+    {
       "id": "calling_in_point_points",
       "type": "symbol",
       "source": "osm",
       "source-layer": "calling_in_point_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
@@ -926,19 +934,19 @@
       ],
       "layout": {
         "icon-image": "M/40.2",
-		"icon-rotate": {
-			"type": "identity",
-			"property": "orientation"
-		},
-		"icon-size": 0.2
+        "icon-rotate": {
+          "type": "identity",
+          "property": "orientation"
+        },
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "calling_in_point_points_one_way",
       "type": "symbol",
       "source": "osm",
       "source-layer": "calling_in_point_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -948,14 +956,14 @@
       ],
       "layout": {
         "icon-image": "M/40.1",
-		"icon-rotate": {
-			"type": "identity",
-			"property": "orientation"
-		},
-		"icon-size": 0.2
+        "icon-rotate": {
+          "type": "identity",
+          "property": "orientation"
+        },
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "ferry_route",
       "type": "line",
       "source": "osm",
@@ -973,20 +981,20 @@
             ]
           ]
         },
-		"line-dasharray": [
+        "line-dasharray": [
           5,
           8
         ],
         "line-color": "#8b008b"
       }
     },
-	{
+    {
       "id": "anchorage_areas_outline",
       "type": "line",
       "source": "osm",
       "source-layer": "anchorage_areas",
-	  "minzoom": 10,
-	  "paint": {
+      "minzoom": 10,
+      "paint": {
         "line-color": "rgba(174, 177, 226, 1)",
         "line-dasharray": [
           3,
@@ -1006,47 +1014,45 @@
         }
       }
     },
-	{
+    {
       "id": "anchorage_areas_symbols",
       "type": "symbol",
       "source": "osm",
       "source-layer": "anchorage_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "restriction",
-		  "no_anchoring"
+          "no_anchoring"
         ]
       ],
       "layout": {
-		"icon-image": "N/N12",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 100,
-		"icon-size": 0.2
-		}
+        "icon-image": "N/N12",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 100,
+        "icon-size": 0.2
+      }
     },
-	
-	
-	{
+    {
       "id": "anchorage_points",
       "type": "symbol",
       "source": "osm",
       "source-layer": "anchorage_points",
-	  "minzoom": 11,
+      "minzoom": 11,
       "layout": {
         "icon-image": "N/N12",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
               0.25
             ],
-			[
-			  13,
-			  0.3
-			],
+            [
+              13,
+              0.3
+            ],
             [
               14,
               0.4
@@ -1055,15 +1061,15 @@
         }
       }
     },
-	{
+    {
       "id": "light_major",
       "type": "symbol",
       "source": "osm",
       "source-layer": "light_major_points",
       "layout": {
         "icon-image": "P/P1.major",
-		"icon-size": {
-		"stops": [
+        "icon-size": {
+          "stops": [
             [
               8,
               0.1
@@ -1076,16 +1082,16 @@
         }
       }
     },
-	{
+    {
       "id": "light_minor",
       "type": "symbol",
       "source": "osm",
       "source-layer": "light_minor_points",
-	  "minzoom": 11,
+      "minzoom": 11,
       "layout": {
         "icon-image": "P/P1.minor",
-		"icon-size": {
-		"stops": [
+        "icon-size": {
+          "stops": [
             [
               11,
               0.1
@@ -1098,12 +1104,12 @@
         }
       }
     },
-	{
+    {
       "id": "lights",
       "type": "symbol",
       "source": "osm",
       "source-layer": "light_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
@@ -1113,94 +1119,93 @@
       ],
       "layout": {
         "icon-image": "P/P10.1_{colour2}",
-		"icon-size": 1,
-		"icon-offset": [
-			-5,
-			-6
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          -5,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "spotlight",
       "type": "symbol",
       "source": "osm",
       "source-layer": "light_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "spotlight"
         ],
-		[
-		  "has",
-		  "colour2"
-		]
+        [
+          "has",
+          "colour2"
+        ]
       ],
       "layout": {
         "icon-image": "P/P11_{colour2}",
-		"icon-size": 1,
-		"icon-offset": [
-			0,
-			0
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          0,
+          0
+        ]
       }
     },
-	{
+    {
       "id": "spotlight_no_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "light_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
           "spotlight"
         ],
-		[
-		  "!has",
-		  "colour2"
-		]
+        [
+          "!has",
+          "colour2"
+        ]
       ],
       "layout": {
         "icon-image": "P/P11_white",
-		"icon-size": 1,
-		"icon-offset": [
-			0,
-			0
-		]
+        "icon-size": 1,
+        "icon-offset": [
+          0,
+          0
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_lateral_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1212,40 +1217,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_lateral_colour_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1257,40 +1262,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_lateral_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1302,41 +1307,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_lateral_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1348,40 +1352,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_lateral_colour_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1393,40 +1397,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_lateral_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1438,41 +1442,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_cardinal_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1484,40 +1487,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_lateral_cardinal_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1529,40 +1532,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_cardinal_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1574,41 +1577,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_cardinal_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1620,40 +1622,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_bouyant_cardinal_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1665,40 +1667,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_cardinal_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1710,39 +1712,39 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_cardinal_colour_colour_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "minzoom": 11,
-	  "filter": [
+      "minzoom": 11,
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!=",
-		  "colour2",
-		  ""
-		],
-		[
-		  "==",
-		  "shape",
-		  ""
-		]
+        [
+          "!=",
+          "colour2",
+          ""
+        ],
+        [
+          "==",
+          "shape",
+          ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1754,38 +1756,37 @@
             ]
           ]
         },
-		"icon-allow-overlap": true		
+        "icon-allow-overlap": true
       }
     },
-	
-	{
+    {
       "id": "buoy_isolated_danger_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1797,40 +1798,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_isolated_danger_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1842,40 +1843,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_isolated_danger_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1887,41 +1888,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_isolated_danger_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1933,40 +1933,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_isolated_danger_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -1978,40 +1978,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_isolated_danger_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2023,41 +2023,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_safe_water_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2069,40 +2068,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_safe_water_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2114,40 +2113,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_safe_water_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2159,41 +2158,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_safe_water_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2205,40 +2203,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_safe_water_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2250,40 +2248,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_safe_water_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2295,41 +2293,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_special_purpose_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2341,40 +2338,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_special_purpose_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2386,40 +2383,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_special_purpose_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2431,41 +2428,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_special_purpose_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
-		  "!=",
-		  "colour2",
-		  ""
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
+          "!=",
+          "colour2",
+          ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2477,40 +2473,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_special_purpose_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
-		  "!=",
-		  "colour2",
-		  ""
-		]
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
+          "!=",
+          "colour2",
+          ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2522,40 +2518,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_special_purpose_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/buoyant/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2567,42 +2563,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	
-	
-	{
+    {
       "id": "buoy_shape_lateral_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2614,40 +2608,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_lateral_colour_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2659,40 +2653,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_lateral_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2704,40 +2698,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_lateral_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2749,40 +2743,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_lateral_colour_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2794,40 +2788,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_lateral_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_lateral",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2839,41 +2833,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_shape_cardinal_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2885,40 +2878,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_lateral_cardinal_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2930,40 +2923,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_cardinal_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -2975,41 +2968,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_shape_cardinal_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3021,40 +3013,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_cardinal_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3066,40 +3058,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_cardinal_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3111,41 +3103,41 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_cardinal_colour_colour_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_cardinal",
-	  "minzoom": 11,
-	  "filter": [
+      "minzoom": 11,
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!=",
-		  "colour2",
-		  ""
-		],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		]
+        [
+          "!=",
+          "colour2",
+          ""
+        ],
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3157,38 +3149,37 @@
             ]
           ]
         },
-		"icon-allow-overlap": true		
+        "icon-allow-overlap": true
       }
     },
-	
-	{
+    {
       "id": "buoy_shape_isolated_danger_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3200,40 +3191,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_isolated_danger_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3245,40 +3236,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_isolated_danger_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3290,41 +3281,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_shape_isolated_danger_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3336,40 +3326,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_isolated_danger_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3381,40 +3371,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_isolated_danger_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_isolated_danger",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3426,41 +3416,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_shape_safe_water_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3472,40 +3461,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_safe_water_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3517,40 +3506,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_safe_water_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3562,41 +3551,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_shape_safe_water_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3608,40 +3596,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_safe_water_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3653,40 +3641,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_safe_water_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_safe_water",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3698,41 +3686,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "buoy_shape_special_purpose_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3744,40 +3731,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_special_purpose_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "!=",
           "colour2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3789,40 +3776,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "buoy_shape_special_purpose_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "buoy_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3834,41 +3821,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-
-	{
+    {
       "id": "beacon_shape_special_purpose_colour",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
-		  "!=",
-		  "colour2",
-		  ""
-		]
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
+          "!=",
+          "colour2",
+          ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3880,40 +3866,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_special_purpose_pattern",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!=",
           "colour_pattern2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
-		  "!=",
-		  "colour2",
-		  ""
-		]
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
+          "!=",
+          "colour2",
+          ""
+        ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3925,40 +3911,40 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	{
+    {
       "id": "beacon_shape_special_purpose_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "beacon_special_purpose",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "colour2",
-		  ""
+          ""
         ],
-		[
-		  "!in",
-		  "shape",
-		  "buoyant",
-		  "pile",
-		  ""
-		],
-		[
+        [
+          "!in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
           "==",
           "colour_pattern2",
-		  ""
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/{shape}/generic",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -3970,101 +3956,98 @@
             ]
           ]
         },
-		"icon-offset": [
-			1,
-			-6
-		]
+        "icon-offset": [
+          1,
+          -6
+        ]
       }
     },
-	
-	
-
-	{
+    {
       "id": "notice_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "notice",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!has",
           "category"
         ],
-		[
-		  "!has",
-		  "system"
-		]
+        [
+          "!has",
+          "system"
+        ]
       ],
       "layout": {
         "icon-image": "Q/Q126/generic",
-		"icon-size": 0.05
+        "icon-size": 0.05
       }
     },
-	{
+    {
       "id": "notice_category",
       "type": "symbol",
       "source": "osm",
       "source-layer": "notice",
-	  "filter": [
+      "filter": [
         "all",
         [
           "has",
           "category"
         ],
-		[
-		  "!has",
-		  "system"
-		]
+        [
+          "!has",
+          "system"
+        ]
       ],
       "layout": {
         "icon-image": "Q/Q126/generic/{category}",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "notice_system",
       "type": "symbol",
       "source": "osm",
       "source-layer": "notice",
-	  "filter": [
+      "filter": [
         "all",
         [
           "has",
           "category"
         ],
-		[
-		  "has",
-		  "system"
-		]
+        [
+          "has",
+          "system"
+        ]
       ],
       "layout": {
         "icon-image": "Q/Q126/{system}/{category}",
-		"icon-size": 0.25
+        "icon-size": 0.25
       }
     },
-	{
+    {
       "id": "fog_signal",
       "type": "symbol",
       "source": "osm",
       "source-layer": "fog_signal",
       "layout": {
         "icon-image": "R/R1",
-		"icon-size": 0.2,
-		"icon-offset": [
-			-10,
-			6
-		]
+        "icon-size": 0.2,
+        "icon-offset": [
+          -10,
+          6
+        ]
       }
     },
-	{
+    {
       "id": "pilot_boarding",
       "type": "symbol",
       "source": "osm",
       "source-layer": "pilot_boarding",
-	  "minzoom": 11,
+      "minzoom": 11,
       "layout": {
         "icon-image": "T/T1.1",
-		"icon-size": {
+        "icon-size": {
           "stops": [
             [
               11,
@@ -4079,63 +4062,63 @@
       },
       "icon-allow-overlap": true
     },
-	{
+    {
       "id": "signal_station_warning",
       "type": "symbol",
       "source": "osm",
       "source-layer": "signal_station_warning",
       "layout": {
         "icon-image": "T/T20",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "signal_station_traffic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "signal_station_traffic",
       "layout": {
         "icon-image": "T/T20",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "harbour_areas_marina",
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina"
+          "marina"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.1",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_points_marina",
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_points",
-	  "minzoom": 10,
-	  "filter": [
+      "minzoom": 10,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina"
+          "marina"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.1",
-		"icon-allow-overlap": true,
-		"icon-size": {
-		"stops": [
+        "icon-allow-overlap": true,
+        "icon-size": {
+          "stops": [
             [
               10,
               0.1
@@ -4148,337 +4131,337 @@
         }
       }
     },
-	{
+    {
       "id": "harbour_areas_marina_no_facilities",
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_areas",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina_no_facilities"
+          "marina_no_facilities"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.1",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "harbour_points_marina_no_facilities",
       "type": "symbol",
       "source": "osm",
       "source-layer": "harbour_points",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "marina_no_facilities"
+          "marina_no_facilities"
         ]
       ],
       "layout": {
         "icon-image": "U/U1.2",
-		"icon-size": 0.2
+        "icon-size": 0.2
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "nautical_club",
-		  "restaurant",
-		  "slipway"
+          "nautical_club",
+          "restaurant",
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U32",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "nautical_club",
-		  "restaurant",
-		  "slipway"
+          "nautical_club",
+          "restaurant",
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U32",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_generic",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "!in",
           "category",
-		  "nautical_club",
-		  "restaurant",
-		  "slipway",
-		  "showers;toilets"
+          "nautical_club",
+          "restaurant",
+          "slipway",
+          "showers;toilets"
         ]
       ],
       "layout": {
         "icon-image": "U/U32",
-		"icon-size": 1
+        "icon-size": 1
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_nautical_club",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "nautical_club"
+          "nautical_club"
         ]
       ],
       "layout": {
         "icon-image": "U/U4_br",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_nautical_club",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "nautical_club"
+          "nautical_club"
         ]
       ],
       "layout": {
         "icon-image": "U/U4_br",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_nautical_club",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "nautical_club"
+          "nautical_club"
         ]
       ],
       "layout": {
         "icon-image": "U/U4_br",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_restaurant",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "restaurant"
+          "restaurant"
         ]
       ],
       "layout": {
         "icon-image": "U/U11",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_restaurant",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "restaurant"
+          "restaurant"
         ]
       ],
       "layout": {
         "icon-image": "U/U11",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_restaurant",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "restaurant"
+          "restaurant"
         ]
       ],
       "layout": {
         "icon-image": "U/U11",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_areas_slipway",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_areas",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "slipway"
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U5",
-		"icon-size": 0.1
+        "icon-size": 0.1
       }
     },
-	{
+    {
       "id": "small_craft_facility_lines_slipway",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_lines",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "slipway"
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/U5",
-		"icon-size": 1,
-		"icon-rotation-alignment": "auto",
-		"symbol-spacing": 1,
-		"symbol-placement": "line",
-		"icon-allow-overlap": true
+        "icon-size": 1,
+        "icon-rotation-alignment": "auto",
+        "symbol-spacing": 1,
+        "symbol-placement": "line",
+        "icon-allow-overlap": true
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_slipway",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "slipway"
+          "slipway"
         ]
       ],
       "layout": {
         "icon-image": "U/Slipway",
-		"icon-size": 0.5,
-		"icon-allow-overlap": true
+        "icon-size": 0.5,
+        "icon-allow-overlap": true
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_shower",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "showers;toilets"
+          "showers;toilets"
         ]
       ],
       "layout": {
         "icon-image": "U/Shower",
-		"icon-size": 0.4,
-		"icon-offset": [
-			34,
-			0
-		],
-		"icon-allow-overlap": true
+        "icon-size": 0.4,
+        "icon-offset": [
+          34,
+          0
+        ],
+        "icon-allow-overlap": true
       }
     },
-	{
+    {
       "id": "small_craft_facility_points_toilet",
       "type": "symbol",
       "source": "osm",
       "source-layer": "small_craft_facility_points",
-	  "minzoom": 14,
-	  "filter": [
+      "minzoom": 14,
+      "filter": [
         "all",
         [
           "==",
           "category",
-		  "showers;toilets"
+          "showers;toilets"
         ]
       ],
       "layout": {
         "icon-image": "U/Toilet",
-		"icon-size": 0.4,
-		"icon-offset": [
-			-34,
-			0
-		],
-		"icon-allow-overlap": true
+        "icon-size": 0.4,
+        "icon-offset": [
+          -34,
+          0
+        ],
+        "icon-allow-overlap": true
       }
     },
-	{
+    {
       "id": "restricted_area_outline",
       "type": "line",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "minzoom": 10,
-	  "paint": {
+      "minzoom": 10,
+      "paint": {
         "line-color": "rgba(174, 177, 226, 1)",
         "line-dasharray": [
           3,
@@ -4498,36 +4481,36 @@
         }
       }
     },
-	{
+    {
       "id": "restricted_area2",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "!in",
           "restriction",
           "no_entry",
-		  "no_anchoring",
-		  "no_fishing",
-		  "no_anchoring;no_fishing"
+          "no_anchoring",
+          "no_fishing",
+          "no_anchoring;no_fishing"
         ]
       ],
       "layout": {
-		"icon-image": "N/N2.1",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 1,
-		"icon-size": 0.05
-		}
+        "icon-image": "N/N2.1",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "icon-size": 0.05
+      }
     },
-	{
+    {
       "id": "restricted_area_no_entry",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4535,20 +4518,20 @@
           "no_entry"
         ]
       ],
-     "layout": {
-		"icon-image": "N/N2.2",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 1,
-		"icon-size": 0.05
-		}
+      "layout": {
+        "icon-image": "N/N2.2",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 1,
+        "icon-size": 0.05
+      }
     },
-	{
+    {
       "id": "restricted_area_no_anchoring",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4557,19 +4540,19 @@
         ]
       ],
       "layout": {
-		"icon-image": "N/N20",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 3,
-		"icon-size": 0.15
-		}
+        "icon-image": "N/N20",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 3,
+        "icon-size": 0.15
+      }
     },
-	{
+    {
       "id": "restricted_area_no_fishing",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4578,19 +4561,19 @@
         ]
       ],
       "layout": {
-		"icon-image": "N/N21",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 3,
-		"icon-size": 0.15
-		}
+        "icon-image": "N/N21",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 3,
+        "icon-size": 0.15
+      }
     },
-	{
+    {
       "id": "restricted_area_no_anchoring_no_fishing1",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4599,19 +4582,19 @@
         ]
       ],
       "layout": {
-		"icon-image": "N/N20",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 3,
-		"icon-size": 0.15
-		}
+        "icon-image": "N/N20",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 3,
+        "icon-size": 0.15
+      }
     },
-	{
+    {
       "id": "restricted_area_no_anchoring_no_fishing2",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4620,19 +4603,19 @@
         ]
       ],
       "layout": {
-		"icon-image": "N/N21",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 3,
-		"icon-size": 0.15
-		}
+        "icon-image": "N/N21",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 3,
+        "icon-size": 0.15
+      }
     },
-	{
+    {
       "id": "restricted_area_no_anchoring_no_trawling1",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4641,19 +4624,19 @@
         ]
       ],
       "layout": {
-		"icon-image": "N/N20",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 5,
-		"icon-size": 0.4
-		}
+        "icon-image": "N/N20",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 5,
+        "icon-size": 0.4
+      }
     },
-	{
+    {
       "id": "restricted_area_no_anchoring_no_trawling2",
       "type": "symbol",
       "source": "osm",
       "source-layer": "restricted_area",
-	  "filter": [
+      "filter": [
         "all",
         [
           "==",
@@ -4662,15 +4645,14 @@
         ]
       ],
       "layout": {
-		"icon-image": "N/N2.1",
-		"icon-rotation-alignment": "viewport",
-		"symbol-placement": "line",
-		"symbol-spacing": 5,
-		"icon-size": 0.4
-		}
+        "icon-image": "N/N2.1",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": "line",
+        "symbol-spacing": 5,
+        "icon-size": 0.4
+      }
     }
   ],
-  
   "id": "ciwf4zbsv007y2pmt2rspc1dc",
   "owner": ""
 }
