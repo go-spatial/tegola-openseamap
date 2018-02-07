@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Seamark</title>
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js"></script>
+  <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css" />
+</head>
+<body>
+    <div id="map" style="height:100%;width:100%"></div>
+
+<script type="text/javascript">
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpY3RoZWlzZSIsImEiOiJRT2VhSlU4In0.ChBaq2KxoiskL1-2fF309g';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    center: [12.4491840123102, 41.708155941304],
+    zoom: 9,
+    minZoom: 2,
+    maxZoom: 20,
+    style: 'mapbox.json'
+  });
+  map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+  map.addControl(new mapboxgl.ScaleControl({unit: 'nautical'}), 'bottom-left');
+
+  // Manage popups on hover
+  var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+  });
+  map.on('styledata', function (e) {
+    var style = map.getStyle();
+    style.layers.forEach(function (layer) {
+      if (layer['source-layer']) {
+        if (layer['source-layer'].match(/^seamark/)) {
+          map.on('mouseenter', layer.id, function(e) {
+            var htmlString;
+            if (e.features[0].properties.name) {
+              htmlString = 'I am a ' + e.features[0].properties.type + ' named ' + e.features[0].properties.name
+            } else {
+              htmlString = 'I am an unnamed ' + e.features[0].properties.type
+            }
+            map.getCanvas().style.cursor = 'pointer';
+            popup.setLngLat(e.lngLat)
+              .setHTML(htmlString)
+              .addTo(map);
+          });
+          map.on('mouseleave', layer.id, function() {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+          })
+        }
+      }
+    })
+
+  });
+
+  // Track zoom levels in the console. @todo: remove
+  map.on('load', function () {
+    console.log('zoom: ' + map.getZoom().toFixed(2) + ' center: ' + map.getCenter().lng.toFixed(4) + ', ' + map.getCenter().lat.toFixed(4));
+  });
+  map.on('dragend', function () {
+    console.log('zoom: ' + map.getZoom().toFixed(2) + ' center: ' + map.getCenter().lng.toFixed(4) + ', ' + map.getCenter().lat.toFixed(4));
+  });
+  map.on('zoomend', function () {
+    console.log('zoom: ' + map.getZoom().toFixed(2) + ' center: ' + map.getCenter().lng.toFixed(4) + ', ' + map.getCenter().lat.toFixed(4));
+  });
+
+</script>
+
+</body>
+</html>
