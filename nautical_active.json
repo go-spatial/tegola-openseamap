@@ -10,62 +10,1916 @@
     "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
   },
   "center": [
-    12.4491840123102,
-    41.708155941304
+    8.54806714892635,
+    47.37180823552663
   ],
-  "zoom": 6.0,
+  "zoom": 12.241790506353492,
   "bearing": 0,
   "pitch": 0,
   "sources": {
     "osm": {
       "type": "vector",
-      "url": "http://localhost:8080/capabilities/osm.json"
+      "url": "https://osm.tegola.io/capabilities/osm.json"
+    },
+    "seamap": {
+      "type": "vector",
+      "url": "http://ec2-35-167-228-206.us-west-2.compute.amazonaws.com:7070/capabilities/osm.json"
     }
   },
-  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
   "sprite": "https://raw.githubusercontent.com/terranodo/tegola-openseamap/master/spritesheet/vector-seamap",
+  "glyphs": "https://go-spatial.github.io/carto-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
       "type": "background",
-      "source": "osm",
-      "source-layer": "ocean",
+      "minzoom": 0,
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
-        "background-color": "rgba(164, 210, 221, 1)"
+        "background-color": "rgba(144, 204, 203, 1)"
       }
     },
     {
-      "id": "countries",
+      "id": "land",
       "type": "fill",
       "source": "osm",
-      "source-layer": "countries",
+      "source-layer": "land",
+      "minzoom": 0,
+      "maxzoom": 24,
       "paint": {
-        "fill-color": "rgba(235, 235, 235, 1)"
+        "fill-color": "rgba(247, 246, 241, 1)"
       }
     },
     {
-      "id": "boundary_lines_maritime",
-      "type": "line",
+      "id": "pier",
+      "type": "fill",
       "source": "osm",
-      "source-layer": "boundary_lines_maritime",
+      "source-layer": "other_areas",
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "pier"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
-        "line-color": "rgba(101, 189, 215, 1)",
-        "line-width": 1
+        "fill-color": "rgba(247, 246, 241, 1)"
       }
     },
     {
-      "id": "admin_1_lines",
+      "id": "airports",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "transport_areas",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "apron"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(221, 221, 221, 1)"
+      }
+    },
+    {
+      "id": "landuse_areas_z13",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": {
+          "property": "type",
+          "type": "categorical",
+          "default": "transparent",
+          "stops": [
+            [
+              "wetland",
+              "rgba(227, 233, 226, 1)"
+            ],
+            [
+              "military",
+              "rgba(230, 224, 212, 1)"
+            ],
+            [
+              "salt_pond",
+              "rgba(236, 240, 241, 1)"
+            ],
+            [
+              "basin",
+              "rgba(144, 204, 203, 1)"
+            ],
+            [
+              "beach",
+              "rgba(238, 229, 178, 1)"
+            ],
+            [
+              "desert",
+              "rgba(238, 229, 178, 1)"
+            ],
+            [
+              "farmland",
+              "rgba(222, 221, 190, 1)"
+            ],
+            [
+              "farm",
+              "rgba(222, 221, 190, 1)"
+            ],
+            [
+              "orchard",
+              "rgba(222, 221, 190, 1)"
+            ],
+            [
+              "allotments",
+              "rgba(222, 221, 190, 1)"
+            ],
+            [
+              "heath",
+              "rgba(225, 233, 214, 1)"
+            ],
+            [
+              "meadow",
+              "rgba(225, 233, 214, 1)"
+            ],
+            [
+              "residential",
+              "rgba(237, 236, 231, 1)"
+            ],
+            [
+              "retail",
+              "rgba(237, 236, 231, 1)"
+            ],
+            [
+              "industrial",
+              "rgba(215, 200, 203, 1)"
+            ],
+            [
+              "quarry",
+              "rgba(215, 200, 203, 1)"
+            ],
+            [
+              "landfill",
+              "rgba(194, 170, 175, 1)"
+            ],
+            [
+              "college",
+              "rgba(226, 214, 205, 1)"
+            ],
+            [
+              "school",
+              "rgba(226, 214, 205, 1)"
+            ],
+            [
+              "education",
+              "rgba(226, 214, 205, 1)"
+            ],
+            [
+              "university",
+              "rgba(226, 214, 205, 1)"
+            ],
+            [
+              "cemetery",
+              "rgba(214, 222, 210, 1)"
+            ],
+            [
+              "grave_yard",
+              "rgba(214, 222, 210, 1)"
+            ],
+            [
+              "park",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "pitch",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "sports_centre",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "stadium",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "grass",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "grassland",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "garden",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "village_green",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "recreation_ground",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "picnic_site",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "camp_site",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "playground",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "forest",
+              "rgba(178, 194, 157, 1)"
+            ],
+            [
+              "wood",
+              "rgba(178, 194, 157, 1)"
+            ],
+            [
+              "nature_reserve",
+              "rgba(178, 194, 157, 0.2)"
+            ],
+            [
+              "commercial",
+              "rgba(215,200,203,1)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landuse_areas_z10",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 13,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": {
+          "property": "type",
+          "type": "categorical",
+          "default": "transparent",
+          "stops": [
+            [
+              "military",
+              "rgba(230, 224, 212, 1)"
+            ],
+            [
+              "park",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
+              "forest",
+              "rgba(178, 194, 157, 1)"
+            ],
+            [
+              "wood",
+              "rgba(178, 194, 157, 1)"
+            ],
+            [
+              "nature_reserve",
+              "rgba(178, 194, 157, 0.3)"
+            ],
+            [
+              "landfill",
+              "rgba(194, 170, 175, 1)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landuse_areas_z7",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 7,
+      "maxzoom": 10,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "forest",
+          "wood",
+          "nature_reserve"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(178, 194, 157, 1)"
+      }
+    },
+    {
+      "id": "landuse_areas_z5",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 5,
+      "maxzoom": 7,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "forest",
+          "wood"
+        ],
+        [
+          ">",
+          "area",
+          50000000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(178, 194, 157, 1)"
+      }
+    },
+    {
+      "id": "landuse_areas_z3",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 3,
+      "maxzoom": 5,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "forest",
+          "wood"
+        ],
+        [
+          ">",
+          "area",
+          500000000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(178, 194, 157, 1)"
+      }
+    },
+    {
+      "id": "amenity_areas",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "amenity_areas",
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "school",
+          "university"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(226, 214, 205, 1)"
+      }
+    },
+    {
+      "id": "landuse_naturereserveoutline",
       "type": "line",
       "source": "osm",
-      "source-layer": "admin_1_lines",
-      "minzoom": 2,
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "nature_reserve"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
           "stops": [
             [
-              1,
-              0.7
+              10,
+              2
+            ],
+            [
+              20,
+              3
+            ]
+          ]
+        },
+        "line-dasharray": [
+          2.5,
+          1.5
+        ],
+        "line-color": "rgba(195, 203, 179, 1)"
+      }
+    },
+    {
+      "id": "military_landuselow",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 4,
+      "maxzoom": 10,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "military"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(230, 224, 212, 1)"
+      }
+    },
+    {
+      "id": "military",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "other_areas",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "military"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(230, 224, 212, 1)"
+      }
+    },
+    {
+      "id": "water_lines_stream",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "stream"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(144, 204, 203, 1)",
+        "line-width": {
+          "stops": [
+            [
+              13,
+              0.5
+            ],
+            [
+              15,
+              0.8
+            ],
+            [
+              20,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "water_lines_ditch",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 15,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "ditch",
+          "drain"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(144, 204, 203, 1)",
+        "line-width": {
+          "stops": [
+            [
+              15,
+              0.2
+            ],
+            [
+              20,
+              1.5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "water_lines_canal",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 8,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "canal"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(144, 204, 203, 1)",
+        "line-width": {
+          "stops": [
+            [
+              8,
+              0.5
+            ],
+            [
+              13,
+              0.5
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              20,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "water_lines_river",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "minzoom": 8,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "river"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(144, 204, 203, 1)",
+        "line-width": {
+          "stops": [
+            [
+              8,
+              1
+            ],
+            [
+              12,
+              1.5
+            ],
+            [
+              13,
+              2
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              20,
+              12
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "water_areas",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 5,
+      "maxzoom": 24,
+      "paint": {
+        "fill-color": "rgba(144, 204, 203, 1)"
+      }
+    },
+    {
+      "id": "water_areas_z3",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 3,
+      "maxzoom": 5,
+      "filter": [
+        "all",
+        [
+          ">",
+          "area",
+          1000000000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(144, 204, 203, 1)"
+      }
+    },
+    {
+      "id": "aero_taxiway_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "taxiway"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(220, 220, 220, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1.5
+            ],
+            [
+              18,
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "aero_runway_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "runway"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(220, 220, 220, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1.5
+            ],
+            [
+              18,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "city_county_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "admin_lines",
+      "minzoom": 9,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          ">=",
+          "admin_level",
+          6
+        ],
+        [
+          "<=",
+          "admin_level",
+          8
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(210, 210, 210, 1)",
+        "line-dasharray": [
+          2,
+          2
+        ],
+        "line-width": 1.5
+      }
+    },
+    {
+      "id": "state_lines_z10",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "admin_lines",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "admin_level",
+          4
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(178, 171, 171, 1)",
+        "line-dasharray": [
+          6,
+          3
+        ],
+        "line-width": 1.5
+      }
+    },
+    {
+      "id": "state_lines_z2",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "state_lines",
+      "minzoom": 2,
+      "maxzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(178, 171, 171, 1)",
+        "line-dasharray": [
+          6,
+          3
+        ],
+        "line-width": 1.5
+      }
+    },
+    {
+      "id": "roads_trackfillcase",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "track"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(239, 221, 203, 1)",
+        "line-width": {
+          "stops": [
+            [
+              14,
+              3
+            ],
+            [
+              20,
+              8
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_trackfill",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "track"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(251, 247, 245, 1)",
+        "line-width": {
+          "stops": [
+            [
+              14,
+              0.5
+            ],
+            [
+              20,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_track",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "track"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(218, 191, 164, 1)",
+        "line-dasharray": [
+          0.3,
+          1
+        ],
+        "line-width": {
+          "stops": [
+            [
+              14,
+              3
+            ],
+            [
+              20,
+              8
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_footway",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "footway",
+          "cycleway",
+          "path",
+          "pedestrian"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(191, 147, 98, 1)",
+        "line-width": 1,
+        "line-dasharray": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "roads_pier",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "pier"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "roads_railyard",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "any",
+        [
+          "in",
+          "type",
+          "rail",
+          "disused"
+        ],
+        [
+          "in",
+          "service",
+          "yard",
+          "siding"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(153, 153, 153, 1)",
+        "line-width": {
+          "stops": [
+            [
+              15,
+              0.35
+            ],
+            [
+              20,
+              2.25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_steps",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "steps"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(152, 83, 37, 1)",
+        "line-width": {
+          "stops": [
+            [
+              14,
+              3
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        },
+        "line-dasharray": [
+          0.1,
+          0.3
+        ]
+      }
+    },
+    {
+      "id": "roads_other",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "unclassified",
+          "living_street",
+          "raceway"
+        ]
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "rgba(226, 225, 221, 1)",
+        "line-width": {
+          "stops": [
+            [
+              14,
+              4
+            ],
+            [
+              18,
+              16
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_residentialcase_z13",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "residential",
+          "service",
+          "unclassified"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(226, 222, 204, 1)",
+        "line-width": {
+          "stops": [
+            [
+              13,
+              2
+            ],
+            [
+              14,
+              3
+            ],
+            [
+              18,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_residential",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "residential",
+          "service",
+          "unclassified"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(247, 246, 241, 1)",
+        "line-width": {
+          "stops": [
+            [
+              13,
+              0.5
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_rail",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "rail"
+        ],
+        [
+          "!in",
+          "service",
+          "yard",
+          "siding"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(153, 153, 153, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1.25
+            ],
+            [
+              20,
+              2.25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_tertiarytunnel",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "tertiary"
+        ],
+        [
+          "==",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(245, 237, 179, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              13,
+              3.5
+            ],
+            [
+              14,
+              3.5
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              16,
+              6
+            ],
+            [
+              17,
+              8
+            ],
+            [
+              18,
+              12
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_secondarylink",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "secondary_link"
+        ],
+        [
+          "!=",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(233, 203, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              4.5
+            ],
+            [
+              14,
+              6
+            ],
+            [
+              15,
+              7
+            ],
+            [
+              16,
+              9
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              14
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_primarylink",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "primary_link"
+        ],
+        [
+          "!=",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(210, 147, 142, 1)",
+        "line-width": {
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              3.5
+            ],
+            [
+              14,
+              4.5
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              16,
+              10
+            ],
+            [
+              17,
+              11
+            ],
+            [
+              18,
+              13
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_motorwaylink",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "motorway_link",
+          "trunk_link"
+        ],
+        [
+          "!=",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(160, 152, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              5
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              16
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_tertiary",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "tertiary"
+        ],
+        [
+          "!=",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(214, 224, 152, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              2
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              14,
+              3
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              18,
+              11
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_secondarytunnel",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "secondary"
+        ],
+        [
+          "==",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(255, 229, 202, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              4.5
+            ],
+            [
+              14,
+              4.5
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              14
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_secondary",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "secondary"
+        ],
+        [
+          "!=",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(233, 203, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              4.5
+            ],
+            [
+              14,
+              6
+            ],
+            [
+              15,
+              7
+            ],
+            [
+              16,
+              9
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              14
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_primarytunnel",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "primary"
+        ],
+        [
+          "==",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(236, 173, 168, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              4.5
+            ],
+            [
+              14,
+              4.5
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              14
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_primary",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "primary"
+        ],
+        [
+          "!=",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(210, 147, 142, 1)",
+        "line-width": {
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              3.5
+            ],
+            [
+              14,
+              4.5
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              16,
+              10
+            ],
+            [
+              17,
+              11
+            ],
+            [
+              18,
+              13
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_motorwaytunnel",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "motorway",
+          "motorway_link",
+          "trunk",
+          "trunk_link"
+        ],
+        [
+          "==",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(186, 178, 202, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              5
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              16
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_motorway",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "motorway",
+          "trunk"
+        ],
+        [
+          "!=",
+          "tunnel",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(160, 152, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              5
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              16
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_trunk_z7",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 11,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "trunk",
+          "primary"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(160, 152, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              7,
+              0.3
+            ],
+            [
+              8,
+              0.5
             ],
             [
               10,
@@ -76,10 +1930,1427 @@
       }
     },
     {
+      "id": "roads_motorway_z7",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 7,
+      "maxzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "motorway"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(160, 152, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              7,
+              0.6
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              10,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_motorway_z4_minzoom",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 4,
+      "maxzoom": 7,
+      "filter": [
+        "all",
+        [
+          ">",
+          "min_zoom",
+          5
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(224, 221, 224, 1)",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              0.8
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              10,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_motorway_z4",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 4,
+      "maxzoom": 7,
+      "filter": [
+        "all",
+        [
+          "<=",
+          "min_zoom",
+          5
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(160, 152, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              4,
+              0.5
+            ],
+            [
+              7,
+              0.6
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              10,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_tertiarybridge",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "tertiary"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(169, 161, 103, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              13,
+              3.5
+            ],
+            [
+              14,
+              3.5
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              16,
+              6
+            ],
+            [
+              17,
+              8
+            ],
+            [
+              18,
+              12
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_tertiarybridgetop",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "tertiary"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(214, 224, 152, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              2
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              14,
+              3
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              18,
+              11
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_secondarybridge",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "secondary"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(183, 153, 126, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              4.5
+            ],
+            [
+              14,
+              8
+            ],
+            [
+              15,
+              10
+            ],
+            [
+              16,
+              12
+            ],
+            [
+              17,
+              14
+            ],
+            [
+              18,
+              18
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_secondarybridgetop",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "secondary"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(233, 203, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              4.5
+            ],
+            [
+              14,
+              6
+            ],
+            [
+              15,
+              7
+            ],
+            [
+              16,
+              9
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              14
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_primarybridge",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 13,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "primary",
+          "primary_link"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "line-cap": "butt",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(160, 97, 92, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              4.5
+            ],
+            [
+              14,
+              8
+            ],
+            [
+              15,
+              9
+            ],
+            [
+              16,
+              12
+            ],
+            [
+              17,
+              15
+            ],
+            [
+              18,
+              16
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_primarybridgetop",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "primary"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(210, 147, 142, 1)",
+        "line-width": {
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              3.5
+            ],
+            [
+              14,
+              4.5
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              16,
+              10
+            ],
+            [
+              17,
+              11
+            ],
+            [
+              18,
+              13
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_motorwaybridge",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "motorway",
+          "motorway_link",
+          "trunk",
+          "trunk_link"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(110, 102, 126, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              5
+            ],
+            [
+              14,
+              7
+            ],
+            [
+              15,
+              10
+            ],
+            [
+              16,
+              12
+            ],
+            [
+              17,
+              14
+            ],
+            [
+              18,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roads_motorwaybridgetop",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "motorway",
+          "motorway_link",
+          "trunk",
+          "trunk_link"
+        ],
+        [
+          "==",
+          "bridge",
+          1
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "miter"
+      },
+      "paint": {
+        "line-color": "rgba(160, 152, 176, 1)",
+        "line-width": {
+          "stops": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              5
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              15,
+              6
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              16
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "admin_countrylines_z10",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "admin_lines",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "admin_level",
+          2
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(129, 150, 154, 1)",
+        "line-width": {
+          "stops": [
+            [
+              0,
+              0.5
+            ],
+            [
+              7,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "admin_countrylines_z0",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "country_lines",
+      "minzoom": 0,
+      "maxzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(129, 150, 154, 1)",
+        "line-width": {
+          "stops": [
+            [
+              0,
+              0.5
+            ],
+            [
+              7,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "roadlabels_z14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "filter": [
+        "all"
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "symbol-avoid-edges": false,
+        "text-size": {
+          "stops": [
+            [
+              13,
+              10
+            ],
+            [
+              20,
+              18
+            ]
+          ]
+        },
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-font": [
+          "Open Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(82, 82, 82, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
+      }
+    },
+    {
+      "id": "roadlabels_z11",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "motorway",
+          "trunk"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "symbol-avoid-edges": false,
+        "text-size": 10,
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-font": [
+          "Open Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(82, 82, 82, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
+      }
+    },
+    {
+      "id": "water_areaslabels_z15",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 15,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          ">",
+          "area",
+          100000
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Italic"
+        ],
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              15,
+              11
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(68, 136, 136, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(178, 220, 220, 1)"
+      }
+    },
+    {
+      "id": "water_areaslabels_z12",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 12,
+      "maxzoom": 15,
+      "filter": [
+        "all",
+        [
+          ">",
+          "area",
+          1000000
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Italic"
+        ],
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              12,
+              10
+            ],
+            [
+              15,
+              11
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(68, 136, 136, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(178, 220, 220, 1)"
+      }
+    },
+    {
+      "id": "water_areaslabels_z8",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "water_areas",
+      "minzoom": 8,
+      "maxzoom": 12,
+      "filter": [
+        "all",
+        [
+          ">",
+          "area",
+          10000000
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Italic"
+        ],
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-size": {
+          "stops": [
+            [
+              8,
+              8
+            ],
+            [
+              15,
+              11
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(68, 136, 136, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(178, 220, 220, 1)"
+      }
+    },
+    {
+      "id": "water_linesabels",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "water_lines",
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Italic"
+        ],
+        "symbol-placement": "line",
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-size": {
+          "stops": [
+            [
+              11,
+              11
+            ],
+            [
+              13,
+              13
+            ]
+          ]
+        },
+        "text-anchor": "bottom",
+        "text-letter-spacing": 0
+      },
+      "paint": {
+        "text-color": "rgba(68, 136, 136, 1)",
+        "text-halo-color": "rgba(178, 220, 220, 1)",
+        "text-halo-width": 1
+      },
+      "symbol-spacing": 500,
+      "text-anchor": "bottom"
+    },
+    {
+      "id": "buildings_tilt_na",
+      "type": "fill-extrusion",
+      "source": "osm",
+      "source-layer": "buildings",
+      "filter": [
+        "all",
+        [
+          "!has",
+          "height"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-extrusion-color": {
+          "property": "type",
+          "type": "categorical",
+          "default": "rgba(220, 215, 215, 1)",
+          "stops": [
+            [
+              "school",
+              "rgba(249, 233, 222, 1)"
+            ],
+            [
+              "university",
+              "rgba(249, 233, 222, 1)"
+            ],
+            [
+              "college",
+              "rgba(249, 233, 222, 1)"
+            ],
+            [
+              "hospital",
+              "rgba(229, 198, 195, 1)"
+            ]
+          ]
+        },
+        "fill-extrusion-height": 5,
+        "fill-extrusion-base": 0
+      }
+    },
+    {
+      "id": "buildings_tilt",
+      "type": "fill-extrusion",
+      "source": "osm",
+      "source-layer": "buildings",
+      "filter": [
+        "all",
+        [
+          "has",
+          "height"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-extrusion-color": {
+          "property": "type",
+          "type": "categorical",
+          "default": "rgba(220, 215, 215, 1)",
+          "stops": [
+            [
+              "school",
+              "rgba(249, 233, 222, 1)"
+            ],
+            [
+              "university",
+              "rgba(249, 233, 222, 1)"
+            ],
+            [
+              "college",
+              "rgba(249, 233, 222, 1)"
+            ],
+            [
+              "hospital",
+              "rgba(229, 198, 195, 1)"
+            ]
+          ]
+        },
+        "fill-extrusion-height": {
+          "property": "height",
+          "type": "identity"
+        },
+        "fill-extrusion-base": 0
+      }
+    },
+    {
+      "id": "landuse_areaslabels_park",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "park",
+          "sports_centre",
+          "stadium",
+          "grass",
+          "grassland",
+          "garden",
+          "village_green",
+          "recreation_ground",
+          "picnic_site",
+          "camp_site",
+          "playground"
+        ],
+        [
+          ">",
+          "area",
+          12000
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-size": 11
+      },
+      "paint": {
+        "text-color": "rgba(122, 143, 61, 1)",
+        "text-halo-color": "rgba(228, 235, 209, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "landuse_areaslabels_forest",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "forest",
+          "wood",
+          "nature_reserve"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-size": 11
+      },
+      "paint": {
+        "text-color": "rgba(95, 107, 71, 1)",
+        "text-halo-color": "rgba(201, 213, 190, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "landuse_areaslabels_school",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "type",
+          "college",
+          "school",
+          "education",
+          "university",
+          ""
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-size": 11
+      },
+      "paint": {
+        "text-color": "rgba(176, 130, 130, 1)",
+        "text-halo-color": "rgba(245, 239, 239, 1)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "city_labels_z14",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "admin_lines",
+      "minzoom": 14,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "admin_level",
+          8
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10,
+        "text-transform": "uppercase",
+        "text-letter-spacing": 0.5
+      },
+      "paint": {
+        "text-color": "rgba(34, 34, 34, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "city_labels_z12",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "populated_places",
+      "minzoom": 12,
+      "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "featurecla",
+          "Populated place"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10,
+        "text-transform": "uppercase",
+        "text-letter-spacing": 0.5
+      },
+      "paint": {
+        "text-color": "rgba(34, 34, 34, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "city_labels_z6",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "populated_places",
+      "minzoom": 6,
+      "maxzoom": 12,
+      "filter": [
+        "all",
+        [
+          "==",
+          "featurecla",
+          "Populated place"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10
+      },
+      "paint": {
+        "text-color": "rgba(34, 34, 34, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "state_labels",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "state_label_points",
+      "minzoom": 4,
+      "maxzoom": 10,
+      "filter": [
+        "all",
+        [
+          "==",
+          "scalerank",
+          2
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold Italic"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              4,
+              7
+            ],
+            [
+              10,
+              16
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(166, 166, 170, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "statecapital_labels_z10",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "populated_places",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "featurecla",
+          "Admin-1 capital"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 10,
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-color": "rgba(68, 51, 85, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "statecapital_labels_z4",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "populated_places",
+      "minzoom": 4,
+      "maxzoom": 10,
+      "filter": [
+        "all",
+        [
+          "==",
+          "featurecla",
+          "Admin-1 capital"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              4,
+              7
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(68, 51, 85, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "capital_labels_z10",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "populated_places",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "featurecla",
+          "Admin-0 capital"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 11,
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-color": "rgba(68, 51, 85, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "capital_labels_z3",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "populated_places",
+      "minzoom": 3,
+      "maxzoom": 10,
+      "filter": [
+        "all",
+        [
+          "==",
+          "featurecla",
+          "Admin-0 capital"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              3,
+              9
+            ],
+            [
+              10,
+              11
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(68, 51, 85, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+      }
+    },
+    {
+      "id": "country_labels",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "country_label_points",
+      "minzoom": 3,
+      "maxzoom": 7,
+      "filter": [
+        "all",
+        [
+          "==",
+          "scalerank",
+          0
+        ]
+      ],
+      "layout": {
+        "text-field": "{sr_subunit}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              3,
+              11
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(68, 51, 85, 1)",
+        "text-halo-color": "rgba(255, 255, 255, 1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 5
+      }
+    },
+    {
+      "id": "power_lines",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "other_lines",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "power"
+        ],
+        [
+          "==",
+          "type",
+          "line"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(164, 129, 136, 1)"
+      }
+    },
+    {
       "id": "distance_mark",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "distance_mark",
+      "source": "seamap",
+      "source-layer": "seamark_distance_mark",
       "paint": {
         "circle-radius": 5,
         "circle-color": "#0000f7"
@@ -88,8 +3359,8 @@
     {
       "id": "distance_mark_not_installed",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "distance_mark",
+      "source": "seamap",
+      "source-layer": "seamark_distance_mark",
       "filter": [
         "all",
         [
@@ -108,8 +3379,8 @@
     {
       "id": "pylon_areas",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "pylon_areas",
+      "source": "seamap",
+      "source-layer": "seamark_pylon_areas",
       "layout": {
         "icon-image": "D/D26"
       }
@@ -117,8 +3388,8 @@
     {
       "id": "pylon_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "pylon_points",
+      "source": "seamap",
+      "source-layer": "seamark_pylon_points",
       "layout": {
         "icon-image": "D/D26"
       }
@@ -126,8 +3397,8 @@
     {
       "id": "bridge_areas",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "bridge_areas",
+      "source": "seamap",
+      "source-layer": "seamark_bridge_areas",
       "layout": {
         "icon-image": "D/D20",
         "icon-size": 0.5
@@ -136,8 +3407,8 @@
     {
       "id": "bridge_lines",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "bridge_lines",
+      "source": "seamap",
+      "source-layer": "seamark_bridge_lines",
       "layout": {
         "icon-image": "D/D20",
         "icon-size": 0.5
@@ -146,8 +3417,8 @@
     {
       "id": "bridge_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "bridge_points",
+      "source": "seamap",
+      "source-layer": "seamark_bridge_points",
       "layout": {
         "icon-image": "D/D20",
         "icon-size": 0.5
@@ -156,8 +3427,8 @@
     {
       "id": "cable_overhead",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "cable_overhead",
+      "source": "seamap",
+      "source-layer": "seamark_cable_overhead",
       "layout": {
         "icon-image": "D/D20",
         "icon-size": 0.5
@@ -166,8 +3437,8 @@
     {
       "id": "pipeline_overhead",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "pipeline_overhead",
+      "source": "seamap",
+      "source-layer": "seamark_pipeline_overhead",
       "layout": {
         "icon-image": "D/D20",
         "icon-size": 0.5
@@ -176,8 +3447,8 @@
     {
       "id": "landmark_areas",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "landmark_areas",
+      "source": "seamap",
+      "source-layer": "seamark_landmark_areas",
       "layout": {
         "icon-image": "E_{category}_{function}",
         "icon-size": 0.5
@@ -186,28 +3457,112 @@
     {
       "id": "landmark_lines",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "landmark_lines",
+      "source": "seamap",
+      "source-layer": "seamark_landmark_lines",
       "layout": {
         "icon-image": "E_{category}_{function}",
         "icon-size": 0.5
+      }
+    },
+    {
+      "id": "landmark_points_no_category",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_landmark_points",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "category",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "E/E_{function}",
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.7
+            ],
+            [
+              18,
+              1
+            ]
+          ]
+        },
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "text-field": "{name}",
+        "text-anchor": "bottom",
+        "text-offset": [
+          0,
+          5
+        ],
+        "text-optional": true,
+        "text-size": 9
+      },
+      "paint": {
+        "text-color": "rgba(102, 112, 117, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(189, 231, 243, 1)",
+        "text-halo-blur": 0
       }
     },
     {
       "id": "landmark_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "landmark_points",
+      "source": "seamap",
+      "source-layer": "seamark_landmark_points",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          ""
+        ]
+      ],
       "layout": {
-        "icon-image": "E_{category}_{function}",
-        "icon-size": 0.5
+        "icon-image": "E/E_{category}_{function}",
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.7
+            ],
+            [
+              18,
+              1
+            ]
+          ]
+        },
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "text-field": "{name}",
+        "text-anchor": "bottom",
+        "text-offset": [
+          0,
+          5
+        ],
+        "text-optional": true,
+        "text-size": 9
+      },
+      "paint": {
+        "text-color": "rgba(102, 112, 117, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "rgba(189, 231, 243, 1)",
+        "text-halo-blur": 0
       }
     },
     {
       "id": "mooring_areas",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "mooring_areas",
+      "source": "seamap",
+      "source-layer": "seamark_mooring_areas",
       "paint": {
         "circle-radius": 4,
         "circle-color": "#000000"
@@ -216,8 +3571,8 @@
     {
       "id": "mooring_lines",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "mooring_lines",
+      "source": "seamap",
+      "source-layer": "seamark_mooring_lines",
       "paint": {
         "circle-radius": 4,
         "circle-color": "#000000"
@@ -226,8 +3581,8 @@
     {
       "id": "mooring_points",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "mooring_points",
+      "source": "seamap",
+      "source-layer": "seamark_mooring_points",
       "minzoom": 12,
       "paint": {
         "circle-color": "#000000",
@@ -248,8 +3603,8 @@
     {
       "id": "harbour_areas",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_areas",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_areas",
       "filter": [
         "all",
         [
@@ -280,8 +3635,8 @@
     {
       "id": "harbour_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_points",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_points",
       "minzoom": 11,
       "filter": [
         "all",
@@ -313,8 +3668,8 @@
     {
       "id": "harbour_areas_fishing",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_areas",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_areas",
       "filter": [
         "all",
         [
@@ -348,8 +3703,8 @@
     {
       "id": "harbour_points_fishing",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_points",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_points",
       "filter": [
         "all",
         [
@@ -382,8 +3737,8 @@
     {
       "id": "berth_areas",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "berth_areas",
+      "source": "seamap",
+      "source-layer": "seamark_berth_areas",
       "paint": {
         "circle-radius": 5,
         "circle-color": "#f800e9"
@@ -392,8 +3747,8 @@
     {
       "id": "berth_lines",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "berth_lines",
+      "source": "seamap",
+      "source-layer": "seamark_berth_lines",
       "paint": {
         "circle-radius": 5,
         "circle-color": "#f800e9"
@@ -402,8 +3757,8 @@
     {
       "id": "berth_points",
       "type": "circle",
-      "source": "osm",
-      "source-layer": "berth_points",
+      "source": "seamap",
+      "source-layer": "seamark_berth_points",
       "paint": {
         "circle-radius": 5,
         "circle-color": "#f800e9"
@@ -412,8 +3767,8 @@
     {
       "id": "obstruction_areas",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "obstruction_areas",
+      "source": "seamap",
+      "source-layer": "seamark_obstruction_areas",
       "layout": {
         "icon-image": "K/K40",
         "icon-size": 0.2
@@ -422,8 +3777,8 @@
     {
       "id": "obstruction_lines",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "obstruction_lines",
+      "source": "seamap",
+      "source-layer": "seamark_obstruction_lines",
       "layout": {
         "icon-image": "K/K40",
         "icon-size": 0.2
@@ -432,8 +3787,8 @@
     {
       "id": "obstruction_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "obstruction_points",
+      "source": "seamap",
+      "source-layer": "seamark_obstruction_points",
       "layout": {
         "icon-image": "K/K40",
         "icon-size": 0.2
@@ -442,8 +3797,8 @@
     {
       "id": "rock",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "rock",
+      "source": "seamap",
+      "source-layer": "seamark_rock",
       "minzoom": 12,
       "filter": [
         "all",
@@ -464,8 +3819,8 @@
     {
       "id": "rock_dry",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "rock",
+      "source": "seamap",
+      "source-layer": "seamark_rock",
       "minzoom": 12,
       "filter": [
         "all",
@@ -483,8 +3838,8 @@
     {
       "id": "rock_submerged",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "rock",
+      "source": "seamap",
+      "source-layer": "seamark_rock",
       "minzoom": 12,
       "filter": [
         "all",
@@ -502,8 +3857,8 @@
     {
       "id": "rock_awash",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "rock",
+      "source": "seamap",
+      "source-layer": "seamark_rock",
       "minzoom": 12,
       "filter": [
         "all",
@@ -521,8 +3876,8 @@
     {
       "id": "rock_covers",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "rock",
+      "source": "seamap",
+      "source-layer": "seamark_rock",
       "minzoom": 12,
       "filter": [
         "all",
@@ -540,8 +3895,8 @@
     {
       "id": "marine_farm_areas",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "marine_farm_areas",
+      "source": "seamap",
+      "source-layer": "seamark_marine_farm_areas",
       "layout": {
         "icon-image": "K/K48.1_no_red",
         "icon-size": 1
@@ -550,8 +3905,8 @@
     {
       "id": "marine_farm_lines",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "marine_farm_lines",
+      "source": "seamap",
+      "source-layer": "seamark_marine_farm_lines",
       "layout": {
         "icon-image": "K/K48.1_no_red",
         "icon-size": 0.2
@@ -560,8 +3915,8 @@
     {
       "id": "marine_farm_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "marine_farm_points",
+      "source": "seamap",
+      "source-layer": "seamark_marine_farm_points",
       "layout": {
         "icon-image": "K/K48.1_no_red",
         "icon-size": 0.2
@@ -570,8 +3925,8 @@
     {
       "id": "wreck_areas",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "wreck_areas",
+      "source": "seamap",
+      "source-layer": "seamark_wreck_areas",
       "minzoom": 12,
       "filter": [
         "all",
@@ -607,8 +3962,8 @@
     {
       "id": "wreck_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "wreck_points",
+      "source": "seamap",
+      "source-layer": "seamark_wreck_points",
       "minzoom": 12,
       "filter": [
         "all",
@@ -644,8 +3999,8 @@
     {
       "id": "wreck_areas_dangerous",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "wreck_areas",
+      "source": "seamap",
+      "source-layer": "seamark_wreck_areas",
       "minzoom": 12,
       "filter": [
         "all",
@@ -680,8 +4035,8 @@
     {
       "id": "wreck_points_dangerous",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "wreck_points",
+      "source": "seamap",
+      "source-layer": "seamark_wreck_points",
       "minzoom": 12,
       "filter": [
         "all",
@@ -716,8 +4071,8 @@
     {
       "id": "wreck_areas_hull_showing",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "wreck_areas",
+      "source": "seamap",
+      "source-layer": "seamark_wreck_areas",
       "minzoom": 12,
       "filter": [
         "all",
@@ -750,8 +4105,8 @@
     {
       "id": "wreck_points_hull_showing",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "wreck_points",
+      "source": "seamap",
+      "source-layer": "seamark_wreck_points",
       "minzoom": 12,
       "filter": [
         "all",
@@ -769,8 +4124,8 @@
     {
       "id": "restricted_area",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -787,8 +4142,8 @@
     {
       "id": "cable_submarine",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "cable_submarine",
+      "source": "seamap",
+      "source-layer": "seamark_cable_submarine",
       "layout": {
         "icon-image": "L/L31",
         "icon-size": 0.5
@@ -797,8 +4152,8 @@
     {
       "id": "pipeline_submarine",
       "type": "line",
-      "source": "osm",
-      "source-layer": "pipeline_submarine",
+      "source": "seamap",
+      "source-layer": "seamark_pipeline_submarine",
       "minzoom": 13,
       "paint": {
         "line-pattern": "L/Pipeline_horizontal",
@@ -820,8 +4175,8 @@
     {
       "id": "recommended_track",
       "type": "line",
-      "source": "osm",
-      "source-layer": "recommended_track",
+      "source": "seamap",
+      "source-layer": "seamark_recommended_track",
       "paint": {
         "line-width": {
           "stops": [
@@ -841,8 +4196,8 @@
     {
       "id": "navigation_line",
       "type": "line",
-      "source": "osm",
-      "source-layer": "navigation_line",
+      "source": "seamap",
+      "source-layer": "seamark_navigation_line",
       "paint": {
         "line-width": {
           "stops": [
@@ -866,8 +4221,8 @@
     {
       "id": "separation_lane",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "separation_lane",
+      "source": "seamap",
+      "source-layer": "seamark_separation_lane",
       "layout": {
         "icon-image": "M/M10",
         "icon-size": 0.6,
@@ -879,8 +4234,8 @@
     {
       "id": "recommended_traffic_lane",
       "type": "line",
-      "source": "osm",
-      "source-layer": "recommended_traffic_lane",
+      "source": "seamap",
+      "source-layer": "seamark_recommended_traffic_lane",
       "paint": {
         "line-width": 1,
         "line-pattern": "M/M11",
@@ -890,8 +4245,8 @@
     {
       "id": "separation_line",
       "type": "line",
-      "source": "osm",
-      "source-layer": "separation_line",
+      "source": "seamap",
+      "source-layer": "seamark_separation_line",
       "minzoom": 6,
       "paint": {
         "line-width": {
@@ -912,8 +4267,8 @@
     {
       "id": "separation_zone",
       "type": "fill",
-      "source": "osm",
-      "source-layer": "separation_zone",
+      "source": "seamap",
+      "source-layer": "seamark_separation_zone",
       "minzoom": 6,
       "paint": {
         "fill-color": "rgba(181, 167, 234, 1)"
@@ -922,8 +4277,8 @@
     {
       "id": "calling_in_point_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "calling_in_point_points",
+      "source": "seamap",
+      "source-layer": "seamark_calling_in_point_points",
       "filter": [
         "all",
         [
@@ -944,8 +4299,8 @@
     {
       "id": "calling_in_point_points_one_way",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "calling_in_point_points",
+      "source": "seamap",
+      "source-layer": "seamark_calling_in_point_points",
       "filter": [
         "all",
         [
@@ -966,8 +4321,8 @@
     {
       "id": "ferry_route",
       "type": "line",
-      "source": "osm",
-      "source-layer": "ferry_route",
+      "source": "seamap",
+      "source-layer": "seamark_ferry_route",
       "paint": {
         "line-width": {
           "stops": [
@@ -991,8 +4346,8 @@
     {
       "id": "anchorage_areas_outline",
       "type": "line",
-      "source": "osm",
-      "source-layer": "anchorage_areas",
+      "source": "seamap",
+      "source-layer": "seamark_anchorage_areas",
       "minzoom": 10,
       "paint": {
         "line-color": "rgba(174, 177, 226, 1)",
@@ -1017,8 +4372,8 @@
     {
       "id": "anchorage_areas_symbols",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "anchorage_areas",
+      "source": "seamap",
+      "source-layer": "seamark_anchorage_areas",
       "filter": [
         "all",
         [
@@ -1038,8 +4393,8 @@
     {
       "id": "anchorage_points",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "anchorage_points",
+      "source": "seamap",
+      "source-layer": "seamark_anchorage_points",
       "minzoom": 11,
       "layout": {
         "icon-image": "N/N12",
@@ -1062,32 +4417,79 @@
       }
     },
     {
-      "id": "light_major",
+      "id": "lights_light_minor_with_category_labels",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "light_major_points",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_minor"
+        ],
+        [
+          "!=",
+          "category",
+          ""
+        ]
+      ],
       "layout": {
-        "icon-image": "P/P1.major",
-        "icon-size": {
+        "text-field": "{multiple}{character}.{colourabbrev}.{period}s({category})",
+        "text-anchor": "right",
+        "text-offset": [
+          8,
+          0
+        ],
+        "text-size": {
           "stops": [
             [
-              8,
-              0.1
+              12,
+              9
             ],
             [
-              18,
-              0.4
+              12,
+              9
             ]
           ]
-        }
+        },
+        "text-allow-overlap": true,
+        "text-optional": true,
+        "visibility": "visible"
       }
     },
     {
-      "id": "light_minor",
+      "id": "lights_light_minor_with_category",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "light_minor_points",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
       "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_minor"
+        ],
+        [
+          "!=",
+          "category",
+          ""
+        ]
+      ],
       "layout": {
         "icon-image": "P/P1.minor",
         "icon-size": {
@@ -1101,14 +4503,240 @@
               0.35
             ]
           ]
-        }
+        },
+        "icon-offset": [
+          0,
+          0
+        ],
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "lights_light_minor_labels",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_minor"
+        ],
+        [
+          "==",
+          "category",
+          ""
+        ]
+      ],
+      "layout": {
+        "text-field": "{multiple}{character}.{colourabbrev}.{period}s",
+        "text-anchor": "right",
+        "text-offset": [
+          5,
+          0
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              9
+            ],
+            [
+              20,
+              9
+            ]
+          ]
+        },
+        "text-allow-overlap": true,
+        "text-optional": true,
+        "visibility": "visible",
+        "text-ignore-placement": false
+      }
+    },
+    {
+      "id": "lights_light_minor",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_minor"
+        ],
+        [
+          "==",
+          "category",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "P/P1.minor",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.1
+            ],
+            [
+              18,
+              0.35
+            ]
+          ]
+        },
+        "icon-offset": [
+          0,
+          0
+        ],
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "lights_light_major",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "minzoom": 8,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_major"
+        ]
+      ],
+      "layout": {
+        "icon-image": "P/P1.major",
+        "icon-size": {
+          "stops": [
+            [
+              8,
+              0.1
+            ],
+            [
+              18,
+              0.4
+            ]
+          ]
+        },
+        "icon-offset": [
+          0,
+          0
+        ],
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "lights_alternating_generic",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "in",
+          "colour",
+          "white_green",
+          "green_white",
+          "red_white",
+          "white_red",
+          "white_yellow",
+          "yellow_white"
+        ]
+      ],
+      "layout": {
+        "icon-image": "P/P10.4",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.1
+            ],
+            [
+              18,
+              0.35
+            ]
+          ]
+        },
+        "icon-offset": [
+          48,
+          70
+        ],
+        "icon-allow-overlap": true,
+        "text-rotate": 0
+      }
+    },
+    {
+      "id": "lights_generic",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "colour",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "P/P10.4",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.1
+            ],
+            [
+              18,
+              0.35
+            ]
+          ]
+        },
+        "icon-offset": [
+          48,
+          70
+        ],
+        "icon-allow-overlap": true
       }
     },
     {
       "id": "lights",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "light_points",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
       "filter": [
         "all",
         [
@@ -1118,19 +4746,31 @@
         ]
       ],
       "layout": {
-        "icon-image": "P/P10.1_{colour2}",
-        "icon-size": 1,
+        "icon-image": "P/P10.4_{colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.1
+            ],
+            [
+              18,
+              0.35
+            ]
+          ]
+        },
         "icon-offset": [
-          -5,
-          -6
-        ]
+          48,
+          70
+        ],
+        "icon-allow-overlap": true
       }
     },
     {
       "id": "spotlight",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "light_points",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
       "filter": [
         "all",
         [
@@ -1155,8 +4795,8 @@
     {
       "id": "spotlight_no_colour",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "light_points",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
       "filter": [
         "all",
         [
@@ -1179,15 +4819,15 @@
       }
     },
     {
-      "id": "buoy_lateral_colour",
+      "id": "buoy_colour_buoyant",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
       "filter": [
         "all",
         [
           "==",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ],
         [
@@ -1199,12 +4839,58 @@
         ],
         [
           "!=",
-          "colour2",
+          "colour",
           ""
         ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
+        "icon-image": "Q/buoyant/{colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          1,
+          -6
+        ],
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "buoy_colour_pattern_buoyant",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern",
+          ""
+        ],
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
+          "!=",
+          "colour",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
         "icon-size": {
           "stops": [
             [
@@ -1224,15 +4910,61 @@
       }
     },
     {
-      "id": "buoy_lateral_colour_pattern",
+      "id": "buoy_generic_buoyant",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
       "filter": [
         "all",
         [
-          "!=",
-          "colour_pattern2",
+          "==",
+          "colour",
+          ""
+        ],
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
+          "==",
+          "colour_pattern",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/buoyant/generic",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.3
+            ],
+            [
+              18,
+              0.7
+            ]
+          ]
+        },
+        "icon-offset": [
+          1,
+          -6
+        ],
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "beacon_colour_buoyant",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "filter": [
+        "all",
+        [
+          "==",
+          "colour_pattern",
           ""
         ],
         [
@@ -1244,12 +4976,12 @@
         ],
         [
           "!=",
-          "colour2",
+          "colour",
           ""
         ]
       ],
       "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
+        "icon-image": "Q/buoyant/{colour}",
         "icon-size": {
           "stops": [
             [
@@ -1269,15 +5001,60 @@
       }
     },
     {
-      "id": "buoy_lateral_generic",
+      "id": "beacon_colour_pattern_buoyant",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "filter": [
+        "all",
+        [
+          "!=",
+          "colour_pattern",
+          ""
+        ],
+        [
+          "in",
+          "shape",
+          "buoyant",
+          "pile",
+          ""
+        ],
+        [
+          "!=",
+          "colour",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/buoyant/{colour_pattern}/{colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          1,
+          -6
+        ]
+      }
+    },
+    {
+      "id": "beacon_generic_buoyant",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
       "filter": [
         "all",
         [
           "==",
-          "colour2",
+          "colour",
           ""
         ],
         [
@@ -1289,7 +5066,7 @@
         ],
         [
           "==",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ]
       ],
@@ -1314,1271 +5091,15 @@
       }
     },
     {
-      "id": "beacon_lateral_colour",
+      "id": "buoy_colour_shape",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
       "filter": [
         "all",
         [
           "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_lateral_colour_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_lateral",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_lateral_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_lateral",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_cardinal_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_lateral_cardinal_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_cardinal",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_cardinal_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_cardinal_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_bouyant_cardinal_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_cardinal_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_cardinal_colour_colour_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "minzoom": 11,
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ],
-        [
-          "==",
-          "shape",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-allow-overlap": true
-      }
-    },
-    {
-      "id": "buoy_isolated_danger_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_isolated_danger_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_isolated_danger_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_isolated_danger_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_isolated_danger_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_isolated_danger_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_safe_water_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_safe_water_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_safe_water",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_safe_water_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_safe_water_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_safe_water_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_safe_water",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_safe_water_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_special_purpose_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_special_purpose_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_special_purpose",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_special_purpose_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_special_purpose_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_special_purpose_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_special_purpose",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_special_purpose_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/buoyant/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_lateral_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_lateral",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ],
         [
@@ -2590,12 +5111,12 @@
         ],
         [
           "!=",
-          "colour2",
+          "colour",
           ""
         ]
       ],
       "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
+        "icon-image": "Q/{shape}/{colour}",
         "icon-size": {
           "stops": [
             [
@@ -2615,15 +5136,15 @@
       }
     },
     {
-      "id": "buoy_shape_lateral_colour_pattern",
+      "id": "buoy_colour_pattern_shape",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
       "filter": [
         "all",
         [
           "!=",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ],
         [
@@ -2635,12 +5156,12 @@
         ],
         [
           "!=",
-          "colour2",
+          "colour",
           ""
         ]
       ],
       "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+        "icon-image": "Q/{shape}/{colour_pattern}/{colour}",
         "icon-size": {
           "stops": [
             [
@@ -2660,15 +5181,15 @@
       }
     },
     {
-      "id": "buoy_shape_lateral_generic",
+      "id": "buoy_generic_shape",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
       "filter": [
         "all",
         [
           "==",
-          "colour2",
+          "colour",
           ""
         ],
         [
@@ -2680,7 +5201,7 @@
         ],
         [
           "==",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ]
       ],
@@ -2705,15 +5226,15 @@
       }
     },
     {
-      "id": "beacon_shape_lateral_colour",
+      "id": "beacon_colour_shape",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
       "filter": [
         "all",
         [
           "==",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ],
         [
@@ -2725,12 +5246,12 @@
         ],
         [
           "!=",
-          "colour2",
+          "colour",
           ""
         ]
       ],
       "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
+        "icon-image": "Q/{shape}/{colour}",
         "icon-size": {
           "stops": [
             [
@@ -2750,15 +5271,15 @@
       }
     },
     {
-      "id": "beacon_shape_lateral_colour_pattern",
+      "id": "beacon_colour_pattern_shape",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
       "filter": [
         "all",
         [
           "!=",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ],
         [
@@ -2770,12 +5291,12 @@
         ],
         [
           "!=",
-          "colour2",
+          "colour",
           ""
         ]
       ],
       "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
+        "icon-image": "Q/{shape}/{colour_pattern}/{colour}",
         "icon-size": {
           "stops": [
             [
@@ -2795,15 +5316,15 @@
       }
     },
     {
-      "id": "beacon_shape_lateral_generic",
+      "id": "beacon_generic_shape",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_lateral",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
       "filter": [
         "all",
         [
           "==",
-          "colour2",
+          "colour",
           ""
         ],
         [
@@ -2815,1130 +5336,7 @@
         ],
         [
           "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_cardinal_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_lateral_cardinal_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_cardinal",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_cardinal_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_cardinal_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_cardinal_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_cardinal_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_cardinal_colour_colour_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_cardinal",
-      "minzoom": 11,
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-allow-overlap": true
-      }
-    },
-    {
-      "id": "buoy_shape_isolated_danger_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_isolated_danger_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_isolated_danger_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_isolated_danger_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_isolated_danger_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_isolated_danger_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_isolated_danger",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_safe_water_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_safe_water_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_safe_water",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_safe_water_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_safe_water_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_safe_water_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_safe_water",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_safe_water_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_safe_water",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_special_purpose_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_special_purpose_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_special_purpose",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "buoy_shape_special_purpose_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "buoy_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/generic",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_special_purpose_colour",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_special_purpose_pattern",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_special_purpose",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "colour_pattern2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "!=",
-          "colour2",
-          ""
-        ]
-      ],
-      "layout": {
-        "icon-image": "Q/{shape}/{colour_pattern2}/{colour2}",
-        "icon-size": {
-          "stops": [
-            [
-              11,
-              0.2
-            ],
-            [
-              18,
-              0.3
-            ]
-          ]
-        },
-        "icon-offset": [
-          1,
-          -6
-        ]
-      }
-    },
-    {
-      "id": "beacon_shape_special_purpose_generic",
-      "type": "symbol",
-      "source": "osm",
-      "source-layer": "beacon_special_purpose",
-      "filter": [
-        "all",
-        [
-          "==",
-          "colour2",
-          ""
-        ],
-        [
-          "!in",
-          "shape",
-          "buoyant",
-          "pile",
-          ""
-        ],
-        [
-          "==",
-          "colour_pattern2",
+          "colour_pattern",
           ""
         ]
       ],
@@ -3965,8 +5363,8 @@
     {
       "id": "notice_generic",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "notice",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
       "filter": [
         "all",
         [
@@ -3986,8 +5384,8 @@
     {
       "id": "notice_category",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "notice",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
       "filter": [
         "all",
         [
@@ -4007,8 +5405,8 @@
     {
       "id": "notice_system",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "notice",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
       "filter": [
         "all",
         [
@@ -4028,8 +5426,8 @@
     {
       "id": "fog_signal",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "fog_signal",
+      "source": "seamap",
+      "source-layer": "seamark_fog_signal",
       "layout": {
         "icon-image": "R/R1",
         "icon-size": 0.2,
@@ -4042,8 +5440,8 @@
     {
       "id": "pilot_boarding",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "pilot_boarding",
+      "source": "seamap",
+      "source-layer": "seamark_pilot_boarding",
       "minzoom": 11,
       "layout": {
         "icon-image": "T/T1.1",
@@ -4065,8 +5463,8 @@
     {
       "id": "signal_station_warning",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "signal_station_warning",
+      "source": "seamap",
+      "source-layer": "seamark_signal_station_warning",
       "layout": {
         "icon-image": "T/T20",
         "icon-size": 1
@@ -4075,8 +5473,8 @@
     {
       "id": "signal_station_traffic",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "signal_station_traffic",
+      "source": "seamap",
+      "source-layer": "seamark_signal_station_traffic",
       "layout": {
         "icon-image": "T/T20",
         "icon-size": 1
@@ -4085,8 +5483,8 @@
     {
       "id": "harbour_areas_marina",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_areas",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_areas",
       "filter": [
         "all",
         [
@@ -4103,8 +5501,8 @@
     {
       "id": "harbour_points_marina",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_points",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_points",
       "minzoom": 10,
       "filter": [
         "all",
@@ -4134,8 +5532,8 @@
     {
       "id": "harbour_areas_marina_no_facilities",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_areas",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_areas",
       "filter": [
         "all",
         [
@@ -4152,8 +5550,8 @@
     {
       "id": "harbour_points_marina_no_facilities",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "harbour_points",
+      "source": "seamap",
+      "source-layer": "seamark_harbour_points",
       "filter": [
         "all",
         [
@@ -4170,8 +5568,8 @@
     {
       "id": "small_craft_facility_areas_generic",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_areas",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_areas",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4191,8 +5589,8 @@
     {
       "id": "small_craft_facility_lines_generic",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_lines",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_lines",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4212,8 +5610,8 @@
     {
       "id": "small_craft_facility_points_generic",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_points",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_points",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4234,8 +5632,8 @@
     {
       "id": "small_craft_facility_areas_nautical_club",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_areas",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_areas",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4253,8 +5651,8 @@
     {
       "id": "small_craft_facility_lines_nautical_club",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_lines",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_lines",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4272,8 +5670,8 @@
     {
       "id": "small_craft_facility_points_nautical_club",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_points",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_points",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4291,8 +5689,8 @@
     {
       "id": "small_craft_facility_areas_restaurant",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_areas",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_areas",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4310,8 +5708,8 @@
     {
       "id": "small_craft_facility_lines_restaurant",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_lines",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_lines",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4329,8 +5727,8 @@
     {
       "id": "small_craft_facility_points_restaurant",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_points",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_points",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4348,8 +5746,8 @@
     {
       "id": "small_craft_facility_areas_slipway",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_areas",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_areas",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4367,8 +5765,8 @@
     {
       "id": "small_craft_facility_lines_slipway",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_lines",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_lines",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4390,8 +5788,8 @@
     {
       "id": "small_craft_facility_points_slipway",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_points",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_points",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4410,8 +5808,8 @@
     {
       "id": "small_craft_facility_points_shower",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_points",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_points",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4434,8 +5832,8 @@
     {
       "id": "small_craft_facility_points_toilet",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "small_craft_facility_points",
+      "source": "seamap",
+      "source-layer": "seamark_small_craft_facility_points",
       "minzoom": 14,
       "filter": [
         "all",
@@ -4458,8 +5856,8 @@
     {
       "id": "restricted_area_outline",
       "type": "line",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "minzoom": 10,
       "paint": {
         "line-color": "rgba(174, 177, 226, 1)",
@@ -4484,8 +5882,8 @@
     {
       "id": "restricted_area2",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -4508,8 +5906,8 @@
     {
       "id": "restricted_area_no_entry",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -4529,8 +5927,8 @@
     {
       "id": "restricted_area_no_anchoring",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -4550,8 +5948,8 @@
     {
       "id": "restricted_area_no_fishing",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -4571,8 +5969,8 @@
     {
       "id": "restricted_area_no_anchoring_no_fishing1",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -4592,8 +5990,8 @@
     {
       "id": "restricted_area_no_anchoring_no_fishing2",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -4613,8 +6011,8 @@
     {
       "id": "restricted_area_no_anchoring_no_trawling1",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
@@ -4634,8 +6032,8 @@
     {
       "id": "restricted_area_no_anchoring_no_trawling2",
       "type": "symbol",
-      "source": "osm",
-      "source-layer": "restricted_area",
+      "source": "seamap",
+      "source-layer": "seamark_restricted_area",
       "filter": [
         "all",
         [
