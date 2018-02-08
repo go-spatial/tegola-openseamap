@@ -780,11 +780,73 @@ tables:
     - {key: "seamark:light:orientation", name: orientation, type: string}
     - {key: "seamark:light:period", name: period, type: string}
     - {key: "seamark:light:range", name: range, type: string}
-    - {key: "seamark:light:sector_start", name: sector_start, type: string}
-    - {key: "seamark:light:sector_end", name: sector_end, type: string}
     - {key: "seamark:light:sequence", name: sequence, type: string}
     - {key: "seamark:light:visibility", name: visibility, type: string}
-    - {key: "seamark:light:#", name: sector, type: integer}
+    - {key: "seamark:light:1:category", name: sdl1_category, type: string}
+    - {key: "seamark:light:1:character", name: sdl1_character, type: string}
+    - {key: "seamark:light:1:colour", name: sdl1_colour, type: string}
+    - {key: "seamark:light:1:group", name: sdl1_signal_group, type: string}
+    - {key: "seamark:light:1:orientation", name: sdl1_orientation, type: string}
+    - {key: "seamark:light:1:period", name: sdl1_period, type: string}
+    - {key: "seamark:light:1:sector_start", name: sdl1_sector_start, type: string}
+    - {key: "seamark:light:1:sector_end", name: sdl1_sector_end, type: string}
+    - {key: "seamark:light:2:category", name: sdl2_category, type: string}
+    - {key: "seamark:light:2:character", name: sdl2_character, type: string}
+    - {key: "seamark:light:2:colour", name: sdl2_colour, type: string}
+    - {key: "seamark:light:2:group", name: sdl2_signal_group, type: string}
+    - {key: "seamark:light:2:orientation", name: sdl2_orientation, type: string}
+    - {key: "seamark:light:2:period", name: sdl2_period, type: string}
+    - {key: "seamark:light:2:sector_start", name: sdl2_sector_start, type: string}
+    - {key: "seamark:light:2:sector_end", name: sdl2_sector_end, type: string}
+    - {key: "seamark:light:3:category", name: sdl3_category, type: string}
+    - {key: "seamark:light:3:character", name: sdl3_character, type: string}
+    - {key: "seamark:light:3:colour", name: sdl3_colour, type: string}
+    - {key: "seamark:light:3:group", name: sdl3_signal_group, type: string}
+    - {key: "seamark:light:3:orientation", name: sdl3_orientation, type: string}
+    - {key: "seamark:light:3:period", name: sdl3_period, type: string}
+    - {key: "seamark:light:3:sector_start", name: sdl3_sector_start, type: string}
+    - {key: "seamark:light:3:sector_end", name: sdl3_sector_end, type: string}
+    - {key: "seamark:light:4:category", name: sdl4_category, type: string}
+    - {key: "seamark:light:4:character", name: sdl4_character, type: string}
+    - {key: "seamark:light:4:colour", name: sdl4_colour, type: string}
+    - {key: "seamark:light:4:group", name: sdl4_signal_group, type: string}
+    - {key: "seamark:light:4:orientation", name: sdl4_orientation, type: string}
+    - {key: "seamark:light:4:period", name: sdl4_period, type: string}
+    - {key: "seamark:light:4:sector_start", name: sdl4_sector_start, type: string}
+    - {key: "seamark:light:4:sector_end", name: sdl4_sector_end, type: string}
+    - {key: "seamark:light:5:category", name: sdl5_category, type: string}
+    - {key: "seamark:light:5:character", name: sdl5_character, type: string}
+    - {key: "seamark:light:5:colour", name: sdl5_colour, type: string}
+    - {key: "seamark:light:5:group", name: sdl5_signal_group, type: string}
+    - {key: "seamark:light:5:orientation", name: sdl5_orientation, type: string}
+    - {key: "seamark:light:5:period", name: sdl5_period, type: string}
+    - {key: "seamark:light:5:sector_start", name: sdl5_sector_start, type: string}
+    - {key: "seamark:light:5:sector_end", name: sdl5_sector_end, type: string}
+    - {key: "seamark:light:6:category", name: sdl6_category, type: string}
+    - {key: "seamark:light:6:character", name: sdl6_character, type: string}
+    - {key: "seamark:light:6:colour", name: sdl6_colour, type: string}
+    - {key: "seamark:light:6:group", name: sdl6_signal_group, type: string}
+    - {key: "seamark:light:6:orientation", name: sdl6_orientation, type: string}
+    - {key: "seamark:light:6:period", name: sdl6_period, type: string}
+    - {key: "seamark:light:6:sector_start", name: sdl6_sector_start, type: string}
+    - {key: "seamark:light:6:sector_end", name: sdl6_sector_end, type: string}
+    - {key: "seamark:light:7:category", name: sdl7_category, type: string}
+    - {key: "seamark:light:7:character", name: sdl7_character, type: string}
+    - {key: "seamark:light:7:colour", name: sdl7_colour, type: string}
+    - {key: "seamark:light:7:group", name: sdl7_signal_group, type: string}
+    - {key: "seamark:light:7:orientation", name: sdl7_orientation, type: string}
+    - {key: "seamark:light:7:period", name: sdl7_period, type: string}
+    - {key: "seamark:light:7:sector_start", name: sdl7_sector_start, type: string}
+    - {key: "seamark:light:7:sector_end", name: sdl7_sector_end, type: string}
+    - {key: "seamark:light:8:category", name: sdl8_category, type: string}
+    - {key: "seamark:light:8:character", name: sdl8_character, type: string}
+    - {key: "seamark:light:8:colour", name: sdl8_colour, type: string}
+    - {key: "seamark:light:8:group", name: sdl8_signal_group, type: string}
+    - {key: "seamark:light:8:orientation", name: sdl8_orientation, type: string}
+    - {key: "seamark:light:8:period", name: sdl8_period, type: string}
+    - {key: "seamark:light:8:sector_start", name: sdl8_sector_start, type: string}
+    - {key: "seamark:light:8:sector_end", name: sdl8_sector_end, type: string}
+
   light_areas: # LIGHTS: A luminous or lighted aid to navigation.
     type: polygon
     mapping:
