@@ -55,3 +55,13 @@ nf start
 ```
 
 Of course, you may use your preferred way of including environment variables from a file.
+
+## Map reference material
+
+US Chart No 1: https://nauticalcharts.noaa.gov/publications/us-chart-1.html
+
+Quick guide to ENC Symbols (augments Chart 1 I believe): https://www.admiralty.co.uk/news/blogs/the-quick-guide-to-enc-symbols
+
+And: http://www.marinedocs.co.uk/wp-content/uploads/2014/10/Chart-5011-Symbols-and-Abbreviations-used-on-Admiralty-paper-Charts.pdf
+(UK and US versions should be pretty similar just the small matter of left vs right sides of channels using opposite colours - for extra fun in Caribbean some islands use one system and some the other so you might need to leave the red buoys on one side in one place and on the opposite side in another)
+
