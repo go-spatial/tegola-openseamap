@@ -16,6 +16,24 @@ user = "${SM_DB_USER}"
 password = "${SM_DB_PASS}"
 
 	[[providers.layers]]
+	name = "misc_points"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, bunker_station_category, checkpoint_category, control_point_category, exceptional_structure_category, fortified_structure_category, fishing_facility_category, gate_category, harbour_category, hulk_category, rescue_station_category FROM osm_misc_points WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "misc_lines"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, exceptional_structure_category, ferry_route_category, wall_category, fishing_facility_category, gate_category, pipeline_overhead_category FROM osm_misc_lines WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
+	name = "misc_areas"
+	geometry_fieldname = "geometry"
+	id_fieldname = "osm_id"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, bunker_station_category, checkpoint_category, exceptional_structure_category, fortified_structure_category, fishing_facility_category, gate_category, harbour_category, hulk_category, rescue_station_category FROM osm_misc_areas WHERE geometry && !BBOX!"
+
+	[[providers.layers]]
 	name = "anchor_berth_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
@@ -1402,6 +1420,24 @@ center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part 
 	max_zoom = 20
 
 	# Seamark Objects
+	[[maps.layers]]
+	name = "seamark_misc_points"
+	provider_layer = "seamark.misc_points"
+	min_zoom = 7
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_misc_lines"
+	provider_layer = "seamark.misc_lines"
+	min_zoom = 7
+	max_zoom = 20
+
+	[[maps.layers]]
+	name = "seamark_misc_areas"
+	provider_layer = "seamark.misc_areas"
+	min_zoom = 7
+	max_zoom = 20
+
 	[[maps.layers]]
 	name = "seamark_anchorage_points"
 	provider_layer = "seamark.anchorage_points"
