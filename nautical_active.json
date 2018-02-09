@@ -23,7 +23,7 @@
     },
     "seamap": {
       "type": "vector",
-      "url": "http://openseamap-tiles.tegola.io/capabilities/osm.json"
+      "url": "http://ec2-35-167-228-206.us-west-2.compute.amazonaws.com:7070/capabilities/osm.json"
     }
   },
   "sprite": "https://raw.githubusercontent.com/terranodo/tegola-openseamap/master/spritesheet/vector-seamap",
@@ -4663,12 +4663,20 @@
         [
           "in",
           "colour",
+          "green_red",
+          "red_green",
+          "red_white_red",
           "white_green",
           "green_white",
           "red_white",
           "white_red",
           "white_yellow",
-          "yellow_white"
+          "yellow_white",
+          "white_green_white_green",
+          "white_red_green",
+          "white_red_white",
+          "white_red_white_red",
+          "white_white_red"
         ]
       ],
       "layout": {
@@ -4858,10 +4866,11 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
+          0,
+          0
         ],
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
@@ -4904,9 +4913,11 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
-        ]
+          0,
+          0
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
@@ -4940,19 +4951,20 @@
           "stops": [
             [
               11,
-              0.3
+              1
             ],
             [
               18,
-              0.7
+              1
             ]
           ]
         },
         "icon-offset": [
-          1,
-          -6
+          0,
+          0
         ],
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
@@ -4995,8 +5007,8 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
+          0,
+          0
         ]
       }
     },
@@ -5040,9 +5052,10 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
-        ]
+          0,
+          0
+        ],
+        "icon-allow-overlap": true
       }
     },
     {
@@ -5076,18 +5089,20 @@
           "stops": [
             [
               11,
-              0.2
+              1
             ],
             [
               18,
-              0.3
+              1
             ]
           ]
         },
         "icon-offset": [
-          1,
-          -6
-        ]
+          0,
+          0
+        ],
+        "icon-allow-overlap": true,
+        "visibility": "visible"
       }
     },
     {
@@ -5130,9 +5145,11 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
-        ]
+          0,
+          0
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
@@ -5175,9 +5192,11 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
-        ]
+          0,
+          0
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
@@ -5220,9 +5239,11 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
-        ]
+          0,
+          0
+        ],
+        "icon-allow-overlap": true,
+        "visibility": "visible"
       }
     },
     {
@@ -5265,8 +5286,8 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
+          0,
+          0
         ]
       }
     },
@@ -5310,8 +5331,8 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
+          0,
+          0
         ]
       }
     },
@@ -5355,9 +5376,477 @@
           ]
         },
         "icon-offset": [
-          1,
-          -6
+          0,
+          0
         ]
+      }
+    },
+    {
+      "id": "topmark_beacon_slanted_conical",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "shape",
+          "conical"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -70
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_buoy_slanted_conical",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "shape",
+          "conical"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -70
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_beacon_slanted_spar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "spar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_buoy_slanted_spar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "spar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_beacon_slanted_pillar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "pillar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          20,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_beacon_slanted_can-copy",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "can"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -60
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_buoy_slanted_can",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "can"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -60
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_buoy_slanted_pillar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "pillar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          20,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "topmark_beacon_vertical_no_shape",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          1,
+          -85
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "topmark_buoy_vertical_no_shape",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ],
+        [
+          "!in",
+          "colour",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          -1,
+          -85
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "topmark_buoy_vertical_no_shape_colour",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ],
+        [
+          "in",
+          "colour",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          0,
+          -85
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "topmark_beacon_vertical",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "barrel",
+          "buoyant",
+          "cairn",
+          "spherical",
+          "stake",
+          "super-buoy",
+          "tower"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          20,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
