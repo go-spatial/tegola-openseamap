@@ -40,6 +40,11 @@ imposm3 import -connection postgis://user:password@host:port/osm_seamark -mappin
 * [renderer implemented in c](https://github.com/OpenSeaMap/renderer/tree/master/searender)
 * [INT-1 styling](https://github.com/OpenSeaMap/josm/blob/master/INT1_MapCSS.mapcss)
 
+National Charting Information
+* US Chart No 1: https://nauticalcharts.noaa.gov/publications/us-chart-1.html
+* UK Chart No 1: http://www.marinedocs.co.uk/wp-content/uploads/2014/10/Chart-5011-Symbols-and-Abbreviations-used-on-Admiralty-paper-Charts.pdf
+* Quick guide to ENC Symbols (augments Chart 1 I believe): https://www.admiralty.co.uk/news/blogs/the-quick-guide-to-enc-symbols
+
 
 ## Setting database connections with environment variables
 
@@ -56,12 +61,5 @@ nf start
 
 Of course, you may use your preferred way of including environment variables from a file.
 
-## Map reference material
 
-US Chart No 1: https://nauticalcharts.noaa.gov/publications/us-chart-1.html
-
-Quick guide to ENC Symbols (augments Chart 1 I believe): https://www.admiralty.co.uk/news/blogs/the-quick-guide-to-enc-symbols
-
-And: http://www.marinedocs.co.uk/wp-content/uploads/2014/10/Chart-5011-Symbols-and-Abbreviations-used-on-Admiralty-paper-Charts.pdf
-(UK and US versions should be pretty similar just the small matter of left vs right sides of channels using opposite colours - for extra fun in Caribbean some islands use one system and some the other so you might need to leave the red buoys on one side in one place and on the opposite side in another)
 
