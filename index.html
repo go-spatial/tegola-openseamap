@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Seamark</title>
+  <title>OpenSeaMap/Seamarks</title>
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js"></script>
   <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css" />
 </head>
@@ -9,14 +9,13 @@
 
 <script type="text/javascript">
 
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpY3RoZWlzZSIsImEiOiJRT2VhSlU4In0.ChBaq2KxoiskL1-2fF309g';
   var map = new mapboxgl.Map({
     container: 'map',
-    center: [12.4491840123102, 41.708155941304],
-    zoom: 9,
+    center: [13.5579, 45.1734],
+    zoom: 8,
     minZoom: 2,
     maxZoom: 20,
-    style: 'mapbox.json'
+    style: 'nautical_active.json'
   });
   map.addControl(new mapboxgl.NavigationControl(), 'top-right');
   map.addControl(new mapboxgl.ScaleControl({unit: 'nautical'}), 'bottom-left');
@@ -31,7 +30,7 @@
     style.layers.forEach(function (layer) {
       if (layer['source-layer']) {
         if (layer['source-layer'].match(/^seamark/)) {
-          map.on('mouseenter', layer.id, function(e) {
+          map.on('mouseover', layer.id, function(e) {
             var htmlString;
             if (e.features[0].properties.name) {
               htmlString = 'I am a ' + e.features[0].properties.type + ' named ' + e.features[0].properties.name
