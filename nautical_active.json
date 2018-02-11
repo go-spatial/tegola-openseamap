@@ -10,8 +10,7 @@
     "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
   },
   "center": [
-    8.54806714892635,
-    47.37180823552663
+    13.4980, 45.6268
   ],
   "zoom": 12.241790506353492,
   "bearing": 0,
@@ -3438,7 +3437,15 @@
       "id": "pipeline_overhead",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_pipeline_overhead",
+      "source-layer": "seamark_misc_lines",
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "pipeline_overhead"
+        ]
+      ],
       "layout": {
         "icon-image": "D/D20",
         "icon-size": 0.5
@@ -3604,12 +3611,17 @@
       "id": "harbour_areas",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_areas",
+      "source-layer": "seamark_misc_areas",
       "filter": [
         "all",
         [
+          "==",
+          "type",
+          "harbour"
+        ],
+        [
           "!in",
-          "category",
+          "harbour_category",
           "fishing",
           "marina",
           "marina_no_facilities"
@@ -3636,13 +3648,18 @@
       "id": "harbour_points",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_points",
+      "source-layer": "seamark_misc_points",
       "minzoom": 11,
       "filter": [
         "all",
         [
+          "==",
+          "type",
+          "harbour"
+        ],
+        [
           "!in",
-          "category",
+          "harbour_category",
           "fishing",
           "marina",
           "marina_no_facilities"
@@ -3669,12 +3686,17 @@
       "id": "harbour_areas_fishing",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_areas",
+      "source-layer": "seamark_misc_areas",
       "filter": [
         "all",
         [
+          "==",
+          "type",
+          "harbour"
+        ],
+        [
           "in",
-          "category",
+          "harbour_category",
           "fishing",
           ";fishing"
         ]
@@ -3704,12 +3726,17 @@
       "id": "harbour_points_fishing",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_points",
+      "source-layer": "seamark_misc_points",
       "filter": [
         "all",
         [
           "==",
-          "category",
+          "type",
+          "harbour"
+        ],
+        [
+          "==",
+          "harbour_category",
           "fishing"
         ]
       ],
@@ -4322,7 +4349,15 @@
       "id": "ferry_route",
       "type": "line",
       "source": "seamap",
-      "source-layer": "seamark_ferry_route",
+      "source-layer": "seamark_misc_lines",
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "ferry_route"
+        ]
+      ],
       "paint": {
         "line-width": {
           "stops": [
@@ -5973,12 +6008,17 @@
       "id": "harbour_areas_marina",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_areas",
+      "source-layer": "seamark_misc_areas",
       "filter": [
         "all",
         [
           "==",
-          "category",
+          "type",
+          "harbour"
+        ],
+        [
+          "==",
+          "harbour_category",
           "marina"
         ]
       ],
@@ -5991,13 +6031,18 @@
       "id": "harbour_points_marina",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_points",
+      "source-layer": "seamark_misc_points",
       "minzoom": 10,
       "filter": [
         "all",
         [
           "==",
-          "category",
+          "type",
+          "harbour"
+        ],
+        [
+          "==",
+          "harbour_category",
           "marina"
         ]
       ],
@@ -6022,12 +6067,16 @@
       "id": "harbour_areas_marina_no_facilities",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_areas",
+      "source-layer": "seamark_misc_areas",
       "filter": [
-        "all",
+        "all",        [
+          "==",
+          "type",
+          "harbour"
+        ],
         [
           "==",
-          "category",
+          "harbour_category",
           "marina_no_facilities"
         ]
       ],
@@ -6040,12 +6089,12 @@
       "id": "harbour_points_marina_no_facilities",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_harbour_points",
+      "source-layer": "seamark_misc_points",
       "filter": [
         "all",
         [
           "==",
-          "category",
+          "harbour_category",
           "marina_no_facilities"
         ]
       ],
