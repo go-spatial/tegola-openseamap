@@ -269,29 +269,6 @@ tables:
     - {key: "seamark:bridge:vertical_clearance_closed", name: vertical_clearance_closed, type: string}
     - {key: "seamark:bridge:vertical_clearance_open", name: vertical_clearance_open, type: string}
 
-  bunker_station_points: # bunsta: A station, at which a ship is able to bunker fuel, water or ballast
-    type: point
-    mapping:
-      seamark:type:
-      - bunker_station
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:bunker_station:category", name: category, type: string}
-  bunker_station_areas: # bunsta: A station, at which a ship is able to bunker fuel, water or ballast
-    type: polygon
-    mapping:
-      seamark:type:
-      - bunker_station
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:bunker_station:category", name: category, type: string}
-
   building_points: # BUISGL: A relatively permanent structure, roofed and usually walled. It is designed for some particular use which it may be important to indicate.
     type: point
     mapping:
@@ -421,29 +398,6 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: "seamark:causeway:water_level", name: water_level, type: string}
 
-  checkpoint_points: # CHKPNT: An official place to register, declare or check goods and people.
-    type: point
-    mapping:
-      seamark:type:
-      - checkpoint
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:checkpoint:category", name: category, type: string}
-  checkpoint_areas: # CHKPNT: An official place to register, declare or check goods and people.
-    type: polygon
-    mapping:
-      seamark:type:
-      - checkpoint
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:checkpoint:category", name: category, type: string}
-
   coastguard_station_points: # CGUSTA: Watch keeping stations at which a watch is kept either continuously, or at certain times only.
     type: point
     mapping:
@@ -476,18 +430,6 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
 
-  control_point: # CTRPNT: A point on the ground where position (horizontal and vertical) is used as a base for a dependent survey. Also referred to as a control station.
-    type: point
-    mapping:
-      seamark:type:
-      - control_point
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:control_point:category", name: category, type: string}
-
   distance_mark: # DISMAR: A distance mark indicates the distance measured from an origin and consists of either a solid visible structure or a distinct location without special installation.
     type: point
     mapping:
@@ -513,40 +455,6 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
 
-  exceptional_structure_points: # excnst: An exceptional navigational construction like aqueduct, lift-lock, etc.
-    type: point
-    mapping:
-      seamark:type:
-      - exceptional_structure
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:exceptional_structure:category", name: category, type: string}
-  exceptional_structure_lines: # excnst: An exceptional navigational construction like aqueduct, lift-lock, etc.
-    type: linestring
-    mapping:
-      seamark:type:
-      - exceptional_structure
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:exceptional_structure:category", name: category, type: string}
-  exceptional_structure_areas: # excnst: An exceptional navigational construction like aqueduct, lift-lock, etc.
-    type: polygon
-    mapping:
-      seamark:type:
-      - exceptional_structure
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:exceptional_structure:category", name: category, type: string}
-
   fairway: # FAIRWY: That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies.
     type: polygon
     mapping:
@@ -557,30 +465,6 @@ tables:
     - {name: geometry, type: geometry}
     - {type: mapping_value, name: type, key: null}
     - {key: "seamark:fairway:restriction", name: restriction, type: string}
-
-  ferry_route: # FERYRT: A route in a body of water where a ferry crosses from one shoreline to another.
-    type: linestring
-    mapping:
-      seamark:type:
-      - ferry_route
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:ferry_route:category", name: category, type: string}
-
-  wall: # FNCLNE: A natural or man-made barrier used as an enclosure or boundary or for protection.
-    type: linestring
-    mapping:
-      seamark:type:
-      - wall
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:wall:category", name: category, type: string}
 
   fog_signal: # FOGSIG: A warning signal transmitted by a vessel, or aid to navigation, during periods of low visibility.
     type: point
@@ -599,97 +483,6 @@ tables:
     - {key: "seamark:fog_signal:period", name: period, type: string}
     - {key: "seamark:fog_signal:range", name: range, type: string}
     - {key: "seamark:fog_signal:sequence", name: sequence, type: string}
-
-  fortified_structure_points: # FORSTC: A structure for the military defence of a site.
-    type: point
-    mapping:
-      seamark:type:
-      - fortified_structure
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:fortified_structure:category", name: category, type: string}
-  fortified_structure_areas: # FORSTC: A structure for the military defence of a site.
-    type: polygon
-    mapping:
-      seamark:type:
-      - fortified_structure
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:fortified_structure:category", name: category, type: string}
-
-  fishing_facility_points: # FSHFAC: A structure in shallow water for fishing purposes which can be an obstruction to ships in general.
-    type: point
-    mapping:
-      seamark:type:
-      - fishing_facility
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:fishing_facility:category", name: category, type: string}
-  fishing_facility_lines: # FSHFAC: A structure in shallow water for fishing purposes which can be an obstruction to ships in general.
-    type: linestring
-    mapping:
-      seamark:type:
-      - fishing_facility
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:fishing_facility:category", name: category, type: string}
-  fishing_facility_areas: # FSHFAC: A structure in shallow water for fishing purposes which can be an obstruction to ships in general.
-    type: polygon
-    mapping:
-      seamark:type:
-      - fishing_facility
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:fishing_facility:category", name: category, type: string}
-
-  gate_points: # GATCON: A structure that may be swung, drawn, or lowered to block an entrance or passageway.
-    type: point
-    mapping:
-      seamark:type:
-      - gate
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:gate:category", name: category, type: string}
-  gate_lines: # GATCON: A structure that may be swung, drawn, or lowered to block an entrance or passageway.
-    type: linestring
-    mapping:
-      seamark:type:
-      - gate
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:gate:category", name: category, type: string}
-  gate_areas: # GATCON: A structure that may be swung, drawn, or lowered to block an entrance or passageway.
-    type: polygon
-    mapping:
-      seamark:type:
-      - gate
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:gate:category", name: category, type: string}
 
   gridiron_points: # GRIDRN: A structure in the intertidal zone serving as a support for vessels at low stages of the tide to permit work on the exposed portion of the vessel's hull.
     type: point
@@ -722,52 +515,6 @@ tables:
     - {name: geometry, type: geometry}
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
-
-  harbour_points: # HRBFAC: A natural or artificially improved body of water providing protection for vessels, and providing anchoring and docking facilities.
-    type: point
-    mapping:
-      seamark:type:
-      - harbour
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:harbour:category", name: category, type: string}
-  harbour_areas: # HRBFAC: A natural or artificially improved body of water providing protection for vessels, and providing anchoring and docking facilities.
-    type: polygon
-    mapping:
-      seamark:type:
-      - harbour
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:harbour:category", name: category, type: string}
-
-  hulk_points: # HULKES: A permanently moored ship.
-    type: point
-    mapping:
-      seamark:type:
-      - hulk
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:hulk:category", name: category, type: string}
-  hulk_areas: # HULKES: A permanently moored ship.
-    type: polygon
-    mapping:
-      seamark:type:
-      - hulk
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:hulk:category", name: category, type: string}
 
   inshore_traffic_zone_points: # ISTZNE: A routeing measure comprising a designated area between the landward boundary of a traffic separation scheme and the adjacent coast, to be used in accordance with the provisions of the International Regulations for Preventing Collisions at Sea.
     type: point
@@ -1346,18 +1093,6 @@ tables:
     - {key: "seamark:pipeline_area:condition", name: condition, type: string}
     - {key: "seamark:pipeline_area:restriction", name: restriction, type: string}
 
-  pipeline_overhead: # PIPOHD: An overhead pipeline is a pipeline supported by pylons and passing over or nearby navigable waters.
-    type: linestring
-    mapping:
-      seamark:type:
-      - pipeline_overhead
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:pipeline_overhead:category", name: category, type: string}
-
   pipeline_submarine: # PIPSOL: A pipeline lying on or buried under the seabed or the land.
     type: linestring
     mapping:
@@ -1583,29 +1318,6 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: "seamark:      - recommended_traffic_lane
 :orientation", name: orientation, type: string}
-
-  rescue_station_points: # RSCSTA: A place at which life saving equipment is held.
-    type: point
-    mapping:
-      seamark:type:
-      - rescue_station
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:rescue_station:category", name: category, type: string}
-  rescue_station_areas: # RSCSTA: A place at which life saving equipment is held.
-    type: polygon
-    mapping:
-      seamark:type:
-      - rescue_station
-    columns:
-    - {name: osm_id, type: id}
-    - {name: geometry, type: geometry}
-    - {type: mapping_value, name: type, key: null}
-    - {key: name, name: name, type: string}
-    - {key: "seamark:rescue_station:category", name: category, type: string}
 
   restricted_area: # RESARE: A specified area designated by an appropriate authority within which navigation is restricted in accordance with certain specified conditions.
     type: polygon
