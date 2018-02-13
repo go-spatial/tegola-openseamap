@@ -10,7 +10,8 @@
     "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
   },
   "center": [
-    13.4980, 45.6268
+    13.498,
+    45.6268
   ],
   "zoom": 12.241790506353492,
   "bearing": 0,
@@ -52,7 +53,7 @@
       }
     },
     {
-      "id": "pier",
+      "id": "pier_area",
       "type": "fill",
       "source": "osm",
       "source-layer": "other_areas",
@@ -674,6 +675,109 @@
       },
       "paint": {
         "fill-color": "rgba(144, 204, 203, 1)"
+      }
+    },
+    {
+      "id": "pier_line",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "other_lines",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "pier"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              2
+            ],
+            [
+              18,
+              7
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landuse_marinaoutline",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "marina"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              20,
+              10
+            ]
+          ]
+        },
+        "line-color": "rgba(150, 179, 222, 1)",
+        "line-blur": 0
+      }
+    },
+    {
+      "id": "landuse_marinaoutlinetop",
+      "type": "line",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "marina"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-width": {
+          "stops": [
+            [
+              10,
+              2
+            ],
+            [
+              20,
+              3
+            ]
+          ]
+        },
+        "line-color": "rgba(126, 167, 226, 1)",
+        "line-blur": 0
       }
     },
     {
@@ -2984,7 +3088,7 @@
       }
     },
     {
-      "id": "landuse_areaslabels_school",
+      "id": "landuse_areaslabels_school-copy",
       "type": "symbol",
       "source": "osm",
       "source-layer": "landuse_areas",
@@ -3010,6 +3114,40 @@
         "text-color": "rgba(176, 130, 130, 1)",
         "text-halo-color": "rgba(245, 239, 239, 1)",
         "text-halo-width": 1
+      }
+    },
+    {
+      "id": "landuse_areaslabels_marina",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "marina"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name}",
+        "text-size": 11,
+        "text-allow-overlap": true,
+        "text-font": [
+          "Open Sans Regular",
+          "Arial Unicode MS Regular"
+        ],
+        "text-offset": [
+          0,
+          -3
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(14, 14, 14, 1)",
+        "text-halo-color": "rgba(245, 239, 239, 1)",
+        "text-halo-width": 0
       }
     },
     {
@@ -3346,6 +3484,15 @@
       }
     },
     {
+      "id": "fairway",
+      "type": "fill",
+      "source": "seamap",
+      "source-layer": "seamark_fairway",
+      "paint": {
+        "fill-color": "rgba(195, 221, 230, 1)"
+      }
+    },
+    {
       "id": "distance_mark",
       "type": "circle",
       "source": "seamap",
@@ -3410,7 +3557,8 @@
       "source-layer": "seamark_bridge_lines",
       "layout": {
         "icon-image": "D/D20",
-        "icon-size": 0.5
+        "icon-size": 0.5,
+        "visibility": "visible"
       }
     },
     {
@@ -3418,9 +3566,14 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_bridge_points",
+      "minzoom": 14,
       "layout": {
         "icon-image": "D/D20",
-        "icon-size": 0.5
+        "icon-size": 0.4,
+        "visibility": "visible",
+        "text-field": "{clearance}",
+        "text-size": 7,
+        "text-allow-overlap": true
       }
     },
     {
@@ -3766,6 +3919,9 @@
       "type": "circle",
       "source": "seamap",
       "source-layer": "seamark_berth_areas",
+      "layout": {
+        "visibility": "none"
+      },
       "paint": {
         "circle-radius": 5,
         "circle-color": "#f800e9"
@@ -3776,6 +3932,9 @@
       "type": "circle",
       "source": "seamap",
       "source-layer": "seamark_berth_lines",
+      "layout": {
+        "visibility": "none"
+      },
       "paint": {
         "circle-radius": 5,
         "circle-color": "#f800e9"
@@ -4204,11 +4363,14 @@
       "type": "line",
       "source": "seamap",
       "source-layer": "seamark_recommended_track",
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "line-width": {
           "stops": [
             [
-              5,
+              14,
               1
             ],
             [
@@ -4217,7 +4379,11 @@
             ]
           ]
         },
-        "line-color": "rgba(0, 0, 0, 1)"
+        "line-color": "rgba(0, 0, 0, 1)",
+        "line-dasharray": [
+          2,
+          2
+        ]
       }
     },
     {
@@ -4225,22 +4391,26 @@
       "type": "line",
       "source": "seamap",
       "source-layer": "seamark_navigation_line",
+      "minzoom": 12,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "line-width": {
           "stops": [
             [
-              5,
+              12,
               1
             ],
             [
               20,
-              5
+              3
             ]
           ]
         },
         "line-dasharray": [
-          8,
-          6
+          6,
+          4
         ],
         "line-color": "rgba(0, 0, 0, 1)"
       }
@@ -4255,7 +4425,8 @@
         "icon-size": 0.6,
         "icon-rotation-alignment": "auto",
         "symbol-spacing": 1,
-        "symbol-placement": "line"
+        "symbol-placement": "line",
+        "visibility": "visible"
       }
     },
     {
@@ -4866,6 +5037,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -4913,6 +5085,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -4960,6 +5133,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5007,6 +5181,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5044,7 +5219,8 @@
         "icon-offset": [
           0,
           0
-        ]
+        ],
+        "visibility": "visible"
       }
     },
     {
@@ -5052,6 +5228,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5090,7 +5267,8 @@
           0,
           0
         ],
-        "icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "visibility": "visible"
       }
     },
     {
@@ -5098,6 +5276,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5145,6 +5324,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5192,6 +5372,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5239,6 +5420,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5286,6 +5468,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5331,6 +5514,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5376,6 +5560,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
+      "minzoom": 10,
       "filter": [
         "all",
         [
@@ -5721,6 +5906,48 @@
       }
     },
     {
+      "id": "topmark_beacon_vertical_no_shape_tcp",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ],
+        [
+          "!in",
+          "topmark_colour_pattern",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{topmark_shape}/{topmark_colour_pattern}/{topmark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          1,
+          -75
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
       "id": "topmark_beacon_vertical_no_shape",
       "type": "symbol",
       "source": "seamap",
@@ -5732,6 +5959,11 @@
         [
           "in",
           "shape",
+          ""
+        ],
+        [
+          "in",
+          "topmark_colour_pattern",
           ""
         ]
       ],
@@ -5910,20 +6142,36 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_notice",
+      "minzoom": 10,
+      "maxzoom": 24,
       "filter": [
         "all",
         [
-          "has",
-          "category"
+          "!=",
+          "category",
+          ""
         ],
         [
-          "!has",
-          "system"
+          "==",
+          "system",
+          ""
         ]
       ],
       "layout": {
         "icon-image": "Q/Q126/generic/{category}",
-        "icon-size": 0.25
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-allow-overlap": true
       }
     },
     {
@@ -6069,7 +6317,8 @@
       "source": "seamap",
       "source-layer": "seamark_misc_areas",
       "filter": [
-        "all",        [
+        "all",
+        [
           "==",
           "type",
           "harbour"
@@ -6114,9 +6363,23 @@
         [
           "!in",
           "category",
+          "slipway",
+          "visitor_berth",
+          "toilets;showers",
+          "pump-out",
+          "fuel-station",
+          "boat_hoist",
+          "toilets",
           "nautical_club",
+          "chandler",
+          "toilets;showers;laundrette",
+          "showers",
+          "showers;toilets",
+          "visitors_mooring",
           "restaurant",
-          "slipway"
+          "showers;toilets;laundrette",
+          "laundrette",
+          "fuel-station;pump-out"
         ]
       ],
       "layout": {
@@ -6135,9 +6398,23 @@
         [
           "!in",
           "category",
+          "slipway",
+          "visitor_berth",
+          "toilets;showers",
+          "pump-out",
+          "fuel-station",
+          "boat_hoist",
+          "toilets",
           "nautical_club",
+          "chandler",
+          "toilets;showers;laundrette",
+          "showers",
+          "showers;toilets",
+          "visitors_mooring",
           "restaurant",
-          "slipway"
+          "showers;toilets;laundrette",
+          "laundrette",
+          "fuel-station;pump-out"
         ]
       ],
       "layout": {
@@ -6146,7 +6423,7 @@
       }
     },
     {
-      "id": "small_craft_facility_points_generic",
+      "id": "small_craft_facility_points_generic-copy",
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_small_craft_facility_points",
@@ -6156,219 +6433,42 @@
         [
           "!in",
           "category",
-          "nautical_club",
-          "restaurant",
           "slipway",
-          "showers;toilets"
+          "visitor_berth",
+          "toilets;showers",
+          "pump-out",
+          "fuel_station",
+          "boat_hoist",
+          "toilets",
+          "nautical_club",
+          "chandler",
+          "toilets;showers;laundrette",
+          "showers",
+          "showers;toilets",
+          "visitors_mooring",
+          "restaurant",
+          "showers;toilets;laundrette",
+          "laundrette",
+          "fuel-station;pump-out"
         ]
       ],
       "layout": {
         "icon-image": "U/U32",
-        "icon-size": 1
-      }
-    },
-    {
-      "id": "small_craft_facility_areas_nautical_club",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_areas",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "nautical_club"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U4_br",
-        "icon-size": 0.1
-      }
-    },
-    {
-      "id": "small_craft_facility_lines_nautical_club",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_lines",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "nautical_club"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U4_br",
-        "icon-size": 0.1
-      }
-    },
-    {
-      "id": "small_craft_facility_points_nautical_club",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_points",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "nautical_club"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U4_br",
-        "icon-size": 0.1
-      }
-    },
-    {
-      "id": "small_craft_facility_areas_restaurant",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_areas",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "restaurant"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U11",
-        "icon-size": 0.1
-      }
-    },
-    {
-      "id": "small_craft_facility_lines_restaurant",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_lines",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "restaurant"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U11",
-        "icon-size": 0.1
-      }
-    },
-    {
-      "id": "small_craft_facility_points_restaurant",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_points",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "restaurant"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U11",
-        "icon-size": 0.1
-      }
-    },
-    {
-      "id": "small_craft_facility_areas_slipway",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_areas",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "slipway"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U5",
-        "icon-size": 0.1
-      }
-    },
-    {
-      "id": "small_craft_facility_lines_slipway",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_lines",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "slipway"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/U5",
         "icon-size": 1,
-        "icon-rotation-alignment": "auto",
-        "symbol-spacing": 1,
-        "symbol-placement": "line",
-        "icon-allow-overlap": true
-      }
-    },
-    {
-      "id": "small_craft_facility_points_slipway",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_points",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "slipway"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/Slipway",
-        "icon-size": 0.5,
-        "icon-allow-overlap": true
-      }
-    },
-    {
-      "id": "small_craft_facility_points_shower",
-      "type": "symbol",
-      "source": "seamap",
-      "source-layer": "seamark_small_craft_facility_points",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "==",
-          "category",
-          "showers;toilets"
-        ]
-      ],
-      "layout": {
-        "icon-image": "U/Shower",
-        "icon-size": 0.4,
-        "icon-offset": [
-          34,
+        "text-field": "{category}",
+        "text-size": 7,
+        "text-anchor": "top-left",
+        "text-offset": [
+          1,
           0
-        ],
-        "icon-allow-overlap": true
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(167, 0, 117, 1)"
       }
     },
     {
-      "id": "small_craft_facility_points_toilet",
+      "id": "small_craft_facility_points",
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_small_craft_facility_points",
@@ -6376,19 +6476,40 @@
       "filter": [
         "all",
         [
-          "==",
+          "in",
           "category",
-          "showers;toilets"
+          "slipway",
+          "visitor_berth",
+          "toilets;showers",
+          "pump-out",
+          "fuel_station",
+          "boat_hoist",
+          "toilets",
+          "nautical_club",
+          "chandler",
+          "toilets;showers;laundrette",
+          "showers",
+          "showers;toilets",
+          "visitors_mooring",
+          "restaurant",
+          "showers;toilets;laundrette",
+          "laundrette",
+          "fuel-station;pump-out"
         ]
       ],
       "layout": {
-        "icon-image": "U/Toilet",
+        "icon-image": "U/{category}",
         "icon-size": 0.4,
-        "icon-offset": [
-          -34,
+        "text-field": "",
+        "text-size": 7,
+        "text-anchor": "top-left",
+        "text-offset": [
+          1,
           0
-        ],
-        "icon-allow-overlap": true
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(167, 0, 117, 1)"
       }
     },
     {
@@ -6586,6 +6707,52 @@
         "symbol-placement": "line",
         "symbol-spacing": 5,
         "icon-size": 0.4
+      }
+    },
+    {
+      "id": "shoal",
+      "type": "line",
+      "source": "seamap",
+      "source-layer": "seamark_sea_area_areas",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "category",
+          "shoal"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(193, 129, 250, 1)",
+        "line-dasharray": [
+          8,
+          8
+        ]
+      }
+    },
+    {
+      "id": "shoal_label-copy",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_sea_area_areas",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "category",
+          "shoal"
+        ]
+      ],
+      "layout": {
+        "text-field": "shoal!",
+        "text-size": 9
+      },
+      "paint": {
+        "text-color": "rgba(116, 81, 146, 1)"
       }
     }
   ],
