@@ -216,16 +216,10 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
     - {key: "seamark:bridge:category", name: category, type: string}
-    - {key: "seamark:bridge:colour", name: colour, type: string}
-    - {key: "seamark:bridge:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:bridge:condition", name: condition, type: string}
-    - {key: "seamark:bridge:clearance", name: clearance, type: string}
-    - {key: "seamark:bridge:construction", name: construction, type: string}
-    - {key: "seamark:bridge:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:bridge:visibility", name: visibility, type: string}
-    - {key: "seamark:bridge:vertical_clearance", name: vertical_clearance, type: string}
-    - {key: "seamark:bridge:vertical_clearance_closed", name: vertical_clearance_closed, type: string}
-    - {key: "seamark:bridge:vertical_clearance_open", name: vertical_clearance_open, type: string}
+    - {key: "seamark:bridge:clearance_width", name: clearance_width, type: string}
+    - {key: "seamark:bridge:clearance_height", name: clearance_height, type: string}
+    - {key: "seamark:bridge:clearance_height_closed", name: clearance_height_closed, type: string}
+    - {key: "seamark:bridge:clearance_height_open", name: clearance_height_open, type: string}
   bridge_lines: # BRIDGE: A structure erected over a body of water, railroad, etc. to provide a roadway for vehicles, pedestrians or to carry utility services.
     type: linestring
     mapping:
@@ -237,16 +231,10 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
     - {key: "seamark:bridge:category", name: category, type: string}
-    - {key: "seamark:bridge:colour", name: colour, type: string}
-    - {key: "seamark:bridge:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:bridge:condition", name: condition, type: string}
-    - {key: "seamark:bridge:clearance", name: clearance, type: string}
-    - {key: "seamark:bridge:construction", name: construction, type: string}
-    - {key: "seamark:bridge:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:bridge:visibility", name: visibility, type: string}
-    - {key: "seamark:bridge:vertical_clearance", name: vertical_clearance, type: string}
-    - {key: "seamark:bridge:vertical_clearance_closed", name: vertical_clearance_closed, type: string}
-    - {key: "seamark:bridge:vertical_clearance_open", name: vertical_clearance_open, type: string}
+    - {key: "seamark:bridge:clearance_width", name: clearance_width, type: string}
+    - {key: "seamark:bridge:clearance_height", name: clearance_height, type: string}
+    - {key: "seamark:bridge:clearance_height_closed", name: clearance_height_closed, type: string}
+    - {key: "seamark:bridge:clearance_height_open", name: clearance_height_open, type: string}
   bridge_areas: # BRIDGE: A structure erected over a body of water, railroad, etc. to provide a roadway for vehicles, pedestrians or to carry utility services.
     type: polygon
     mapping:
@@ -258,16 +246,10 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
     - {key: "seamark:bridge:category", name: category, type: string}
-    - {key: "seamark:bridge:colour", name: colour, type: string}
-    - {key: "seamark:bridge:colour_pattern", name: colour_pattern, type: string}
-    - {key: "seamark:bridge:condition", name: condition, type: string}
-    - {key: "seamark:bridge:clearance", name: clearance, type: string}
-    - {key: "seamark:bridge:construction", name: construction, type: string}
-    - {key: "seamark:bridge:reflectivity", name: reflectivity, type: string}
-    - {key: "seamark:bridge:visibility", name: visibility, type: string}
-    - {key: "seamark:bridge:vertical_clearance", name: vertical_clearance, type: string}
-    - {key: "seamark:bridge:vertical_clearance_closed", name: vertical_clearance_closed, type: string}
-    - {key: "seamark:bridge:vertical_clearance_open", name: vertical_clearance_open, type: string}
+    - {key: "seamark:bridge:clearance_width", name: clearance_width, type: string}
+    - {key: "seamark:bridge:clearance_height", name: clearance_height, type: string}
+    - {key: "seamark:bridge:clearance_height_closed", name: clearance_height_closed, type: string}
+    - {key: "seamark:bridge:clearance_height_open", name: clearance_height_open, type: string}
 
   building_points: # BUISGL: A relatively permanent structure, roofed and usually walled. It is designed for some particular use which it may be important to indicate.
     type: point
