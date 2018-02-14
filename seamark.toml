@@ -247,13 +247,13 @@ password = "${SM_DB_PASS}"
 	name = "light_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(colour, 'amber', 'Am'), 'blue', 'B'), 'green', 'G'), 'orange', 'Or'), 'red', 'R'), 'violet', 'Vi'), 'white', 'W'), 'yellow', 'Y'), ';', '') AS colourabbrev, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(colour, 'amber', 'Am'), 'blue', 'B'), 'green', 'G'), 'orange', 'Or'), 'red', 'R'), 'violet', 'Vi'), 'white', 'W'), 'yellow', 'Y'), ';', '') AS colourabbrev, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_float"
