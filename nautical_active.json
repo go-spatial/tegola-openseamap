@@ -159,6 +159,10 @@
               "rgba(225, 233, 214, 1)"
             ],
             [
+              "park",
+              "rgba(208, 220, 174, 1)"
+            ],
+            [
               "residential",
               "rgba(237, 236, 231, 1)"
             ],
@@ -201,10 +205,6 @@
             [
               "grave_yard",
               "rgba(214, 222, 210, 1)"
-            ],
-            [
-              "park",
-              "rgba(208, 220, 174, 1)"
             ],
             [
               "pitch",
@@ -309,6 +309,30 @@
             [
               "landfill",
               "rgba(194, 170, 175, 1)"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landuse_areas_park_overlay",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": {
+          "property": "type",
+          "type": "categorical",
+          "default": "transparent",
+          "stops": [
+            [
+              "park",
+              "rgba(208, 220, 174, 1)"
             ]
           ]
         }
@@ -651,6 +675,9 @@
       "source-layer": "water_areas",
       "minzoom": 5,
       "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "fill-color": "rgba(144, 204, 203, 1)"
       }
@@ -3020,7 +3047,7 @@
         "fill-extrusion-base": 0
       }
     },
-	 {
+    {
       "id": "icon_monument",
       "type": "symbol",
       "source": "osm",
@@ -3044,9 +3071,11 @@
         "text-size": 11,
         "text-offset": [
           0,
-          2
+          3
         ],
-		"icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "icon-size": 1,
+        "text-allow-overlap": true
       },
       "paint": {
         "icon-halo-color": "rgba(255, 255, 255, 1)",
@@ -3531,9 +3560,21 @@
       "type": "circle",
       "source": "seamap",
       "source-layer": "seamark_distance_mark",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "not_installed"
+        ]
+      ],
       "paint": {
         "circle-radius": 5,
-        "circle-color": "#0000f7"
+        "circle-color": "rgba(255, 255, 255, 1)",
+        "circle-stroke-color": "#0000f7",
+        "circle-stroke-width": 1
       }
     },
     {
@@ -3541,6 +3582,8 @@
       "type": "circle",
       "source": "seamap",
       "source-layer": "seamark_distance_mark",
+      "minzoom": 14,
+      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -3549,12 +3592,128 @@
           "not_installed"
         ]
       ],
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "circle-radius": 5,
         "circle-color": "#0000f7",
         "circle-stroke-width": 1,
-        "circle-stroke-color": "#8b008b"
+        "circle-stroke-color": "#8b008b",
+        "circle-opacity": 0
       }
+    },
+    {
+      "id": "distance_mark_label_NM",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_distance_mark",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "units",
+          "nautical_miles"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "NM {distance}",
+        "text-size": 7,
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ]
+      },
+      "paint": {}
+    },
+    {
+      "id": "distance_mark_label_m",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_distance_mark",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "units",
+          "metres",
+          "meters"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "m {distance}",
+        "text-size": 7,
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ]
+      },
+      "paint": {}
+    },
+    {
+      "id": "distance_mark_label_hm",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_distance_mark",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "units",
+          "hectometres",
+          "hectometer"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "hm {distance}",
+        "text-size": 7,
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ]
+      },
+      "paint": {}
+    },
+    {
+      "id": "distance_mark_label_km",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_distance_mark",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "units",
+          "kilometres",
+          "kilometer",
+          "km"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "text-field": "km {distance}",
+        "text-size": 7,
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ]
+      },
+      "paint": {}
     },
     {
       "id": "pylon_areas",
@@ -3600,13 +3759,14 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_bridge_points",
-      "minzoom": 14,
+      "minzoom": 16,
+      "maxzoom": 24,
       "layout": {
         "icon-image": "D/D20",
         "icon-size": 0.4,
         "visibility": "visible",
-        "text-field": "{clearance}",
-        "text-size": 7,
+        "text-field": "{clearance_height}",
+        "text-size": 8,
         "text-allow-overlap": true
       }
     },
@@ -4748,7 +4908,63 @@
           0,
           0
         ],
-        "icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "lights_light_minor_labelsno_s",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_minor"
+        ],
+        [
+          "==",
+          "category",
+          ""
+        ],
+        [
+          "==",
+          "period",
+          ""
+        ]
+      ],
+      "layout": {
+        "text-field": "{multiple}{character}.{colourabbrev}",
+        "text-anchor": "right",
+        "text-offset": [
+          5,
+          0
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              9
+            ],
+            [
+              20,
+              9
+            ]
+          ]
+        },
+        "text-allow-overlap": true,
+        "text-optional": true,
+        "visibility": "visible",
+        "text-ignore-placement": false
       }
     },
     {
@@ -4773,6 +4989,11 @@
         [
           "==",
           "category",
+          ""
+        ],
+        [
+          "!=",
+          "period",
           ""
         ]
       ],
@@ -4889,6 +5110,126 @@
       }
     },
     {
+      "id": "lights_light_major_labels",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_major"
+        ],
+        [
+          "==",
+          "category",
+          ""
+        ],
+        [
+          "!=",
+          "period",
+          ""
+        ],
+        [
+          "==",
+          "height",
+          ""
+        ]
+      ],
+      "layout": {
+        "text-field": "{multiple}{character}.{colourabbrev}.{period}s",
+        "text-anchor": "right",
+        "text-offset": [
+          5,
+          0
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              9
+            ],
+            [
+              20,
+              9
+            ]
+          ]
+        },
+        "text-allow-overlap": true,
+        "text-optional": true,
+        "visibility": "visible",
+        "text-ignore-placement": false
+      }
+    },
+    {
+      "id": "lights_light_major_labels_height",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_light_points",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          "spotlight"
+        ],
+        [
+          "==",
+          "type",
+          "light_major"
+        ],
+        [
+          "==",
+          "category",
+          ""
+        ],
+        [
+          "!=",
+          "period",
+          ""
+        ],
+        [
+          "!=",
+          "height",
+          ""
+        ]
+      ],
+      "layout": {
+        "text-field": "{multiple}{character}.{colourabbrev}.{period}s{height}m",
+        "text-anchor": "right",
+        "text-offset": [
+          7,
+          0
+        ],
+        "text-size": {
+          "stops": [
+            [
+              14,
+              9
+            ],
+            [
+              20,
+              9
+            ]
+          ]
+        },
+        "text-allow-overlap": true,
+        "text-optional": true,
+        "visibility": "visible",
+        "text-ignore-placement": false
+      }
+    },
+    {
       "id": "lights_alternating_generic",
       "type": "symbol",
       "source": "seamap",
@@ -4977,7 +5318,8 @@
           48,
           70
         ],
-        "icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "visibility": "visible"
       }
     },
     {
@@ -5011,7 +5353,8 @@
           48,
           70
         ],
-        "icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "visibility": "visible"
       }
     },
     {
@@ -6151,6 +6494,108 @@
       }
     },
     {
+      "id": "topmark_buoy_label",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "name",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "A",
+          "B",
+          "C"
+        ]
+      ],
+      "layout": {
+        "icon-allow-overlap": true,
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 10,
+        "text-offset": [
+          1,
+          -1
+        ],
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "topmark_beacon_label",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "name",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "A",
+          "B",
+          "C"
+        ]
+      ],
+      "layout": {
+        "icon-allow-overlap": true,
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 10,
+        "text-offset": [
+          1,
+          -1
+        ],
+        "visibility": "visible"
+      }
+    },
+    {
       "id": "notice_generic",
       "type": "symbol",
       "source": "seamap",
@@ -6236,11 +6681,12 @@
       "source-layer": "seamark_fog_signal",
       "layout": {
         "icon-image": "R/R1",
-        "icon-size": 0.2,
+        "icon-size": 10,
         "icon-offset": [
           -10,
           6
-        ]
+        ],
+        "icon-allow-overlap": true
       }
     },
     {
