@@ -4794,6 +4794,20 @@
       ],
       "layout": {
         "icon-image": "P/P1.minor",
+        "icon-color": [
+          "match",
+          ["get", "colourabbrev"],
+          "", "yellow",
+          "Am", "orange",
+          "Bu", "blue",
+          "G", "lime",
+          "Or", "orange",
+          "R", "red",
+          "Vi", "violet",
+          "W", "yellow",
+          "Y", "yellow",
+          "magenta"
+        ],
         "icon-size": {
           "stops": [
             [
@@ -4835,6 +4849,20 @@
       ],
       "layout": {
         "icon-image": "P/P1.major",
+        "icon-color": [
+          "match",
+          ["get", "colourabbrev"],
+          "", "yellow",
+          "Am", "orange",
+          "Bu", "blue",
+          "G", "lime",
+          "Or", "orange",
+          "R", "red",
+          "Vi", "violet",
+          "W", "yellow",
+          "Y", "yellow",
+          "magenta"
+        ],
         "icon-size": {
           "stops": [
             [
