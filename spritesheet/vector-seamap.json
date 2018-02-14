@@ -148,8 +148,8 @@
     "height":34,
     "pixelRatio":1,
     "width":20,
-    "x":983,
-    "y":6755
+    "x":981,
+    "y":1665
   }, 
 
   "E/E_mast_radar": {
@@ -157,7 +157,7 @@
     "pixelRatio":1,
     "width":20,
     "x":983,
-    "y":6791
+    "y":6755
   }, 
 
   "E/E_mast_radio": {
@@ -165,7 +165,7 @@
     "pixelRatio":1,
     "width":20,
     "x":983,
-    "y":6827
+    "y":6791
   }, 
 
   "E/E_mast_television": {
@@ -173,7 +173,7 @@
     "pixelRatio":1,
     "width":20,
     "x":983,
-    "y":6863
+    "y":6827
   }, 
 
   "E/E_minaret_": {
@@ -185,11 +185,11 @@
   }, 
 
   "E/E_monument_": {
-    "height":3,
+    "height":39,
     "pixelRatio":1,
-    "width":3,
-    "x":926,
-    "y":2047
+    "width":18,
+    "x":961,
+    "y":1665
   }, 
 
   "E/E_mosque": {
@@ -644,8 +644,8 @@
     "height":14,
     "pixelRatio":1,
     "width":46,
-    "x":961,
-    "y":1665
+    "x":807,
+    "y":3560
   }, 
 
   "M/M11": {
@@ -796,16 +796,16 @@
     "height":20,
     "pixelRatio":1,
     "width":40,
-    "x":961,
-    "y":1681
+    "x":909,
+    "y":7189
   }, 
 
   "N/N22_MR_magenta": {
     "height":20,
     "pixelRatio":1,
     "width":40,
-    "x":909,
-    "y":7189
+    "x":664,
+    "y":7531
   }, 
 
   "N/N22_PSSA_green": {

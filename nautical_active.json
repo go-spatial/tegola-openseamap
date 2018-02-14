@@ -3020,6 +3020,39 @@
         "fill-extrusion-base": 0
       }
     },
+	 {
+      "id": "icon_monument",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "other_points",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "monument"
+        ]
+      ],
+      "layout": {
+        "icon-image": "E/E_monument_",
+        "visibility": "visible",
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 11,
+        "text-offset": [
+          0,
+          2
+        ],
+		"icon-allow-overlap": true
+      },
+      "paint": {
+        "icon-halo-color": "rgba(255, 255, 255, 1)",
+        "icon-halo-width": 0.5
+      }
+    },
     {
       "id": "landuse_areaslabels_park",
       "type": "symbol",
@@ -3489,7 +3522,8 @@
       "source": "seamap",
       "source-layer": "seamark_fairway",
       "paint": {
-        "fill-color": "rgba(195, 221, 230, 1)"
+        "fill-color": "rgba(195, 221, 230, 1)",
+        "fill-opacity": 0.5
       }
     },
     {
@@ -4794,20 +4828,6 @@
       ],
       "layout": {
         "icon-image": "P/P1.minor",
-        "icon-color": [
-          "match",
-          ["get", "colourabbrev"],
-          "", "yellow",
-          "Am", "orange",
-          "Bu", "blue",
-          "G", "lime",
-          "Or", "orange",
-          "R", "red",
-          "Vi", "violet",
-          "W", "yellow",
-          "Y", "yellow",
-          "magenta"
-        ],
         "icon-size": {
           "stops": [
             [
@@ -4849,20 +4869,6 @@
       ],
       "layout": {
         "icon-image": "P/P1.major",
-        "icon-color": [
-          "match",
-          ["get", "colourabbrev"],
-          "", "yellow",
-          "Am", "orange",
-          "Bu", "blue",
-          "G", "lime",
-          "Or", "orange",
-          "R", "red",
-          "Vi", "violet",
-          "W", "yellow",
-          "Y", "yellow",
-          "magenta"
-        ],
         "icon-size": {
           "stops": [
             [
