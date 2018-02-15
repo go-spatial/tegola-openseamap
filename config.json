@@ -5,49 +5,17 @@
     "lng": -117.15,
     "bear": 0,
     "pitch": 0,
-    "style": "hot-osm",
+    "style": "nautical_active",
     "src": "ec2",
     "lib": "mapbox"
   },
   "styles": [
     {
-      "key": "hot-osm",
-      "label": "HOT OSM",
+      "key": "nautical_active",
+      "label": "Nautical",
       "tileSrc": "images/hot-osm.png",
-      "mapboxStyle": "styles/hot-osm3d.json",
+      "mapboxStyle": "nautical_active.json",
       "olStyle": "styles/hot-osm.json",
-      "host": "http://demo.tegola.io"
-    },
-    {
-      "key": "camo",
-      "label": "Camo",
-      "tileSrc": "images/camo.png",
-      "mapboxStyle": "styles/camo3d.json",
-      "olStyle": "styles/camo.json",
-      "host": "http://demo.tegola.io"
-    },
-    {
-      "key": "night-vision",
-      "label": "Night",
-      "tileSrc": "images/night-vision.png",
-      "mapboxStyle": "styles/night-vision3d.json",
-      "olStyle": "styles/night-vision.json",
-      "host": "http://demo.tegola.io"
-    },
-    {
-      "key": "mobility",
-      "label": "Mobility",
-      "tileSrc": "images/mobility.png",
-      "mapboxStyle": "styles/mobility3d.json",
-      "olStyle": "styles/mobility.json",
-      "host": "http://demo.tegola.io"
-    },
-    {
-      "key": "osgeo",
-      "label": "OSGeo",
-      "tileSrc": "images/osgeo.png",
-      "mapboxStyle": "styles/osgeo3d.json",
-      "olStyle": "styles/osgeo.json",
       "host": "http://demo.tegola.io"
     }
   ],

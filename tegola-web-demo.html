@@ -38,7 +38,7 @@
 			.tool:last-child{border-top-right-radius:4px;border-bottom-right-radius:4px;}
 			.tool:hover{background-color:#D9EAFB;border-color:#E1E9F1;}
 			.tool.active{background-color:#548DC3;border-color:#6899D5;color:#fff;}
-			
+
 			.tool .tile{width:38px;height:38px;line-height:36px;border-radius:2px;
 				position:relative;margin:3px;display:inline-block;
 				border:1px solid rgba(255,255,255,0.3);opacity:0.85;}
@@ -50,7 +50,7 @@
 			#optionsbar .tool .label{position:relative;top:-2px;}
 			#optionsbar .label span{margin-left:3px;}
 			#optionsbar .tool .label{margin:2px 14px 2px 14px;}
-			
+
 			.drop-up{position:absolute;bottom:48px;right:-1px;
 				list-style-type:none;margin:0;padding:0;}
 			.drop-up li{display:block;position:relative;margin:0;padding:0;border-top:1px solid #E9EDEF;
@@ -76,9 +76,9 @@
 		</style>
 
 		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
-		<link rel="stylesheet" type="text/css" href="libs/openlayers/4.5.0/ol.css">
-		<link rel="stylesheet" type="text/css" href="libs/mapbox-gl-js/v0.41.0/mapbox-gl.css"/>
-		<link rel="stylesheet" type="text/css" href="libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.4/ol.css">
+		<link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<div id="mapContainer">
@@ -89,7 +89,7 @@
 			</div>
 			<div id="liboption" class="tool display-none" onclick="clickDropToggle('libbar');">
 				<div class="label">
-					<i class="fa fa-fw fa-fw fa-cubes" aria-hidden="true"></i> 
+					<i class="fa fa-fw fa-fw fa-cubes" aria-hidden="true"></i>
 					<span id="libLabel"></span>
 				</div>
 				<ul id="libbar" class="drop-up display-none">
@@ -97,7 +97,7 @@
 			</div>
 			<div id="srcoption" class="tool display-none" onclick="clickDropToggle('srcbar');">
 				<div class="label">
-					<i class="fa fa-fw fa-server" aria-hidden="true"></i> 
+					<i class="fa fa-fw fa-server" aria-hidden="true"></i>
 					<span id="srcLabel"></span>
 				</div>
 				<ul id="srcbar" class="drop-up display-none">
@@ -112,9 +112,9 @@
 			</div>
 		</div>
 	</body>
-    <script src="libs/openlayers/4.5.0/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.4/ol.js"></script>
 	<script src="libs/ol-mapbox-style/olms.js"></script>
-	<script src="libs/mapbox-gl-js/v0.41.0/mapbox-gl.js"></script>
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js"></script>
 	<script type="text/javascript">
 		'use strict';
 
@@ -154,7 +154,7 @@
 				buildLocs();
 				buildSrcs();
 				buildLibs();
-				
+
 				setStyle(currentState.style);
 				setSrc(currentState.src);
 				setLib(currentState.lib);
@@ -493,7 +493,7 @@
 						this.el.setZoom(this.z);
 						this.el.setBearing(this.bear);
 						this.el.setPitch(this.pitch);
-					});	
+					});
 				},
 				clear:function(){
 					document.getElementById('mapboxMap').style.display = 'none';
@@ -523,7 +523,7 @@
 					});
 				},
 				setStyleSrc:function(done){
-					if (this.style != currentState.style || 
+					if (this.style != currentState.style ||
 						this.src != currentState.src){
 
 						var style = styles[currentState.style];
@@ -537,7 +537,7 @@
 							layers.forEach((layer)=>{
 								this.el.removeLayer(layer);
 							});
-   
+
 							olms.apply(this.el,styleJson);
 
 							this.setRasterLayers(styleJson);
@@ -548,7 +548,7 @@
 					done();
 				},
 				setRasterLayers:function(styleJson){
-					if (this.style == currentState.style && 
+					if (this.style == currentState.style &&
 						this.src == currentState.src) return;
 					var src = srcs[currentState.src];
 
@@ -573,7 +573,7 @@
 					}
 				},
 				setCenter:function(){
-					if (currentState.lng !== this.lng || 
+					if (currentState.lng !== this.lng ||
 						currentState.lat !== this.lat){
 						var center = ol.proj.fromLonLat([currentState.lng,currentState.lat]);
 						this.view.setCenter(center);
@@ -662,6 +662,6 @@
 		})();
 
 	</script>
-	
+
 </html>
 
