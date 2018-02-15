@@ -85,19 +85,19 @@ password = "${SM_DB_PASS}"
 	name = "bridge_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, clearance_width, clearance_height, clearance_height_closed, clearance_height_open FROM osm_bridge_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "bridge_lines"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_lines WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, clearance_width, clearance_height, clearance_height_closed, clearance_height_open FROM osm_bridge_lines WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "bridge_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, condition, clearance, construction, reflectivity, visibility, vertical_clearance, vertical_clearance_closed, vertical_clearance_open FROM osm_bridge_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, clearance_width, clearance_height, clearance_height_closed, clearance_height_open FROM osm_bridge_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "building_points"
@@ -247,13 +247,13 @@ password = "${SM_DB_PASS}"
 	name = "light_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(colour, 'amber', 'Am'), 'blue', 'Bu'), 'green', 'G'), 'orange', 'Or'), 'red', 'R'), 'violet', 'Vi'), 'white', 'W'), 'yellow', 'Y'), ';', '') AS colourabbrev, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, character, (REPLACE(colour,';','_')) AS colour, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(colour, 'amber', 'Am'), 'blue', 'Bu'), 'green', 'G'), 'orange', 'Or'), 'red', 'R'), 'violet', 'Vi'), 'white', 'W'), 'yellow', 'Y'), ';', '') AS colourabbrev, exhibition, signal_group, height, multiple, orientation, period, range, sequence, visibility FROM osm_light_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_float"
