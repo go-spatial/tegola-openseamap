@@ -44,12 +44,21 @@ map.on('styledata', function (e) {
     if (layer['source-layer']) {
       if (layer['source-layer'].match(/^seamark/)) {
         map.on('mouseover', layer.id, function(e) {
-          var htmlString;
-          if (e.features[0].properties.name) {
-            htmlString = 'I am a ' + e.features[0].properties.type + ' named ' + e.features[0].properties.name
-          } else {
-            htmlString = 'I am an unnamed ' + e.features[0].properties.type
+          console.log(e);
+          var
+            htmlString = '<table class="popup-inspector">',
+            everPresent = ['name', 'type']
+          ;
+          htmlString += '<tr><td  class="key">osm_id:</td><td>' + e.features[0].id + '</td></tr>';
+          everPresent.forEach(function (p) {
+            htmlString += '<tr><td class="key">' + p + ':</td><td>' + e.features[0].properties[p] + '</td></tr>';
+          });
+          for (const [k, v] of Object.entries(e.features[0].properties).sort()) {
+            if (everPresent.indexOf(k) < 0) {
+              htmlString += '<tr><td  class="key">' + k + ':</td><td>' + v + '</td></tr>';
+            }
           }
+          htmlString += '</table>';
           map.getCanvas().style.cursor = 'pointer';
           popup.setLngLat(e.lngLat)
             .setHTML(htmlString)
@@ -65,16 +74,12 @@ map.on('styledata', function (e) {
 
 });
 
-// Track state in the console log. @todo: remove
 map.on('load', function () {
   queryStringFromState();
-  console.log(q);
 });
 map.on('drag', function () {
   queryStringFromState();
-  console.log(q);
 });
 map.on('zoom', function () {
   queryStringFromState();
-  console.log(q);
 });

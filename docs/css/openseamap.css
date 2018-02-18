@@ -11,3 +11,11 @@
     position: relative;
     z-index: 1;
 }
+
+.popup-inspector {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+.popup-inspector .key {
+    text-align: right;
+}
