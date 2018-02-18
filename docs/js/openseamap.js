@@ -44,7 +44,6 @@ map.on('styledata', function (e) {
     if (layer['source-layer']) {
       if (layer['source-layer'].match(/^seamark/)) {
         map.on('mouseover', layer.id, function(e) {
-          console.log(e);
           var
             htmlString = '<table class="popup-inspector">',
             everPresent = ['name', 'type']
@@ -55,7 +54,9 @@ map.on('styledata', function (e) {
           });
           for (const [k, v] of Object.entries(e.features[0].properties).sort()) {
             if (everPresent.indexOf(k) < 0) {
-              htmlString += '<tr><td  class="key">' + k + ':</td><td>' + v + '</td></tr>';
+              if (!(/_category$/).test(k) || (v !== '')) {
+                htmlString += '<tr><td class="key">' + k + ':</td><td>' + v + '</td></tr>';
+              }
             }
           }
           htmlString += '</table>';
