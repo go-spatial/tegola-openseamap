@@ -115,10 +115,6 @@
               "rgba(227, 233, 226, 1)"
             ],
             [
-              "military",
-              "rgba(230, 224, 212, 1)"
-            ],
-            [
               "salt_pond",
               "rgba(236, 240, 241, 1)"
             ],
@@ -286,10 +282,6 @@
           "type": "categorical",
           "default": "transparent",
           "stops": [
-            [
-              "military",
-              "rgba(230, 224, 212, 1)"
-            ],
             [
               "park",
               "rgba(208, 220, 174, 1)"
@@ -500,6 +492,30 @@
       }
     },
     {
+      "id": "military_landuse_areas",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "landuse_areas",
+      "minzoom": 10,
+      "maxzoom": 20,
+      "filter": [
+        "all",
+        [
+          "==",
+          "type",
+          "military"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(133, 105, 48, 1)",
+        "fill-pattern": "military",
+        "fill-opacity": 0.3
+      }
+    },
+    {
       "id": "military",
       "type": "fill",
       "source": "osm",
@@ -516,7 +532,8 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(230, 224, 212, 1)"
+        "fill-color": "rgba(230, 224, 212, 1)",
+        "fill-pattern": ""
       }
     },
     {
@@ -3720,8 +3737,13 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_pylon_areas",
+      "minzoom": 14,
+      "maxzoom": 24,
       "layout": {
-        "icon-image": "D/D26"
+        "icon-image": "D/D26",
+        "icon-size": 1,
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
@@ -3729,8 +3751,12 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_pylon_points",
+      "minzoom": 14,
       "layout": {
-        "icon-image": "D/D26"
+        "icon-image": "D/D26",
+        "icon-size": 1,
+        "visibility": "visible",
+        "icon-allow-overlap": true
       }
     },
     {
@@ -3738,9 +3764,15 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_bridge_areas",
+      "minzoom": 16,
+      "maxzoom": 24,
       "layout": {
         "icon-image": "D/D20",
-        "icon-size": 0.5
+        "icon-size": 0.4,
+        "visibility": "visible",
+        "text-field": "{clearance_height}",
+        "text-size": 8,
+        "text-allow-overlap": true
       }
     },
     {
@@ -3748,10 +3780,14 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_bridge_lines",
+      "minzoom": 16,
       "layout": {
         "icon-image": "D/D20",
-        "icon-size": 0.5,
-        "visibility": "visible"
+        "icon-size": 0.4,
+        "visibility": "visible",
+        "text-field": "{clearance_height}",
+        "text-size": 8,
+        "text-allow-overlap": true
       }
     },
     {
@@ -3775,9 +3811,14 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_cable_overhead",
+      "minzoom": 16,
       "layout": {
         "icon-image": "D/D20",
-        "icon-size": 0.5
+        "icon-size": 0.4,
+        "visibility": "visible",
+        "text-field": "{vertical_clearance}",
+        "text-allow-overlap": true,
+        "text-size": 8
       }
     },
     {
@@ -3785,6 +3826,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_misc_lines",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -3795,7 +3837,30 @@
       ],
       "layout": {
         "icon-image": "D/D20",
-        "icon-size": 0.5
+        "icon-size": 0.4,
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "pile",
+      "type": "circle",
+      "source": "seamap",
+      "source-layer": "seamark_pile",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "paint": {
+        "circle-radius": {
+          "stops": [
+            [
+              14,
+              2
+            ],
+            [
+              20,
+              6
+            ]
+          ]
+        }
       }
     },
     {
@@ -3913,20 +3978,15 @@
       }
     },
     {
-      "id": "mooring_areas",
-      "type": "circle",
-      "source": "seamap",
-      "source-layer": "seamark_mooring_areas",
-      "paint": {
-        "circle-radius": 4,
-        "circle-color": "#000000"
-      }
-    },
-    {
       "id": "mooring_lines",
       "type": "circle",
       "source": "seamap",
       "source-layer": "seamark_mooring_lines",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "circle-radius": 4,
         "circle-color": "#000000"
@@ -3938,6 +3998,9 @@
       "source": "seamap",
       "source-layer": "seamark_mooring_points",
       "minzoom": 12,
+      "layout": {
+        "visibility": "none"
+      },
       "paint": {
         "circle-color": "#000000",
         "circle-radius": {
@@ -4139,6 +4202,9 @@
       "type": "circle",
       "source": "seamap",
       "source-layer": "seamark_berth_points",
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "circle-radius": 5,
         "circle-color": "#f800e9"
@@ -5414,7 +5480,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 10,
+      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -5510,7 +5576,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 10,
+      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -5653,7 +5719,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 10,
+      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -5797,7 +5863,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 10,
+      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -5937,7 +6003,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 10,
+      "minzoom": 13,
       "filter": [
         "all",
         [
@@ -5983,7 +6049,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6021,7 +6087,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6059,7 +6125,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6097,7 +6163,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6135,7 +6201,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6173,7 +6239,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6211,7 +6277,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6249,7 +6315,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6287,7 +6353,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6329,7 +6395,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6371,7 +6437,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6413,7 +6479,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_buoy",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6455,7 +6521,7 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_beacon",
-      "minzoom": 11,
+      "minzoom": 13,
       "maxzoom": 24,
       "filter": [
         "all",
@@ -6505,7 +6571,156 @@
         [
           "in",
           "name",
-          "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","A","B","C","D","E","F","G","H","No.1","no_1","No._1","No.2","no_2","No_2","No._2","No_3","no_3","No._3","No_4","No.4","no_4","No._4","No_5","no_5","No.5","No._5","No_6","no_6","No.6","No._6","No_7","no_7","No.7","No_8","no_8","No.8","No._8","No_9","no_9","No.9","No_10","no_10","No_11","no_11","No_12","no_12","No_13","no_13","No_14","no_14","No_15","No_16","No_17","no_18","no_19","no_20","no_21","no_22","no_23","no_24","no_25","no_26","no_27","no_28","R","SG","PCO","W"		 
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "No.1",
+          "no_1",
+          "No._1",
+          "No.2",
+          "no_2",
+          "No_2",
+          "No._2",
+          "No_3",
+          "no_3",
+          "No._3",
+          "No_4",
+          "No.4",
+          "no_4",
+          "No._4",
+          "No_5",
+          "no_5",
+          "No.5",
+          "No._5",
+          "No_6",
+          "no_6",
+          "No.6",
+          "No._6",
+          "No_7",
+          "no_7",
+          "No.7",
+          "No_8",
+          "no_8",
+          "No.8",
+          "No._8",
+          "No_9",
+          "no_9",
+          "No.9",
+          "No_10",
+          "no_10",
+          "No_11",
+          "no_11",
+          "No_12",
+          "no_12",
+          "No_13",
+          "no_13",
+          "No_14",
+          "no_14",
+          "No_15",
+          "No_16",
+          "No_17",
+          "no_18",
+          "no_19",
+          "no_20",
+          "no_21",
+          "no_22",
+          "no_23",
+          "no_24",
+          "no_25",
+          "no_26",
+          "no_27",
+          "no_28",
+          "R",
+          "SG",
+          "PCO",
+          "W"
         ]
       ],
       "layout": {
@@ -6534,7 +6749,156 @@
         [
           "in",
           "name",
-         "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","A","B","C","D","E","F","G","H","No.1","no_1","No._1","No.2","no_2","No_2","No._2","No_3","no_3","No._3","No_4","No.4","no_4","No._4","No_5","no_5","No.5","No._5","No_6","no_6","No.6","No._6","No_7","no_7","No.7","No_8","no_8","No.8","No._8","No_9","no_9","No.9","No_10","no_10","No_11","no_11","No_12","no_12","No_13","no_13","No_14","no_14","No_15","No_16","No_17","no_18","no_19","no_20","no_21","no_22","no_23","no_24","no_25","no_26","no_27","no_28","R","SG","PCO","W"	
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "No.1",
+          "no_1",
+          "No._1",
+          "No.2",
+          "no_2",
+          "No_2",
+          "No._2",
+          "No_3",
+          "no_3",
+          "No._3",
+          "No_4",
+          "No.4",
+          "no_4",
+          "No._4",
+          "No_5",
+          "no_5",
+          "No.5",
+          "No._5",
+          "No_6",
+          "no_6",
+          "No.6",
+          "No._6",
+          "No_7",
+          "no_7",
+          "No.7",
+          "No_8",
+          "no_8",
+          "No.8",
+          "No._8",
+          "No_9",
+          "no_9",
+          "No.9",
+          "No_10",
+          "no_10",
+          "No_11",
+          "no_11",
+          "No_12",
+          "no_12",
+          "No_13",
+          "no_13",
+          "No_14",
+          "no_14",
+          "No_15",
+          "No_16",
+          "No_17",
+          "no_18",
+          "no_19",
+          "no_20",
+          "no_21",
+          "no_22",
+          "no_23",
+          "no_24",
+          "no_25",
+          "no_26",
+          "no_27",
+          "no_28",
+          "R",
+          "SG",
+          "PCO",
+          "W"
         ]
       ],
       "layout": {
@@ -6598,11 +6962,11 @@
           "stops": [
             [
               10,
-              0.2
+              0.5
             ],
             [
               18,
-              0.3
+              0.6
             ]
           ]
         },
@@ -6627,7 +6991,19 @@
       ],
       "layout": {
         "icon-image": "Q/Q126/{system}/{category}",
-        "icon-size": 0.25
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              0.6
+            ]
+          ]
+        },
+        "visibility": "visible"
       }
     },
     {
@@ -7169,7 +7545,7 @@
       }
     },
     {
-      "id": "shoal_label-copy",
+      "id": "shoal_label",
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_sea_area_areas",
