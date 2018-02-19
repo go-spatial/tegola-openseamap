@@ -4,7 +4,7 @@
     "height":270,
     "pixelRatio":1,
     "width":532,
-    "x":725,
+    "x":2966,
     "y":1
   }, 
 
@@ -12,391 +12,391 @@
     "height":52,
     "pixelRatio":1,
     "width":54,
-    "x":11485,
-    "y":959
+    "x":1749,
+    "y":969
   }, 
 
   "D/D20": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":4478,
-    "y":903
+    "x":10002,
+    "y":901
   }, 
 
   "D/D21": {
     "height":160,
     "pixelRatio":1,
     "width":160,
-    "x":14672,
-    "y":111
+    "x":3664,
+    "y":857
   }, 
 
   "D/D26": {
     "height":20,
     "pixelRatio":1,
     "width":24,
-    "x":13160,
-    "y":89
+    "x":645,
+    "y":691
   }, 
 
   "D/Db_uk": {
     "height":30,
     "pixelRatio":1,
     "width":30,
-    "x":651,
-    "y":985
+    "x":2143,
+    "y":969
   }, 
 
   "E/E_buddhist_temple": {
     "height":70,
     "pixelRatio":1,
     "width":64,
-    "x":12211,
-    "y":943
+    "x":9702,
+    "y":277
   }, 
 
   "E/E_chapel": {
     "height":64,
     "pixelRatio":1,
     "width":64,
-    "x":11367,
-    "y":959
+    "x":3322,
+    "y":857
   }, 
 
   "E/E_chimney": {
     "height":70,
     "pixelRatio":1,
     "width":32,
-    "x":3751,
-    "y":419
+    "x":3352,
+    "y":923
   }, 
 
   "E/E_chimney_": {
     "height":70,
     "pixelRatio":1,
     "width":32,
-    "x":8015,
-    "y":837
+    "x":9834,
+    "y":277
   }, 
 
   "E/E_church": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":8123,
-    "y":787
+    "x":14646,
+    "y":211
   }, 
 
   "E/E_column_light_support": {
     "height":3,
     "pixelRatio":1,
     "width":3,
-    "x":7179,
-    "y":283
+    "x":1,
+    "y":1013
   }, 
 
   "E/E_dish_aerial_": {
     "height":58,
     "pixelRatio":1,
     "width":32,
-    "x":9037,
-    "y":233
+    "x":15098,
+    "y":745
   }, 
 
   "E/E_dome_": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9157,
-    "y":665
+    "x":14687,
+    "y":125
   }, 
 
   "E/E_flagstaff_": {
     "height":60,
     "pixelRatio":1,
     "width":46,
-    "x":15056,
-    "y":661
+    "x":15086,
+    "y":1
   }, 
 
   "E/E_flare_stack_": {
     "height":52,
     "pixelRatio":1,
     "width":16,
-    "x":10395,
-    "y":417
+    "x":1805,
+    "y":969
   }, 
 
   "E/E_marabout": {
     "height":38,
     "pixelRatio":1,
     "width":22,
-    "x":12929,
-    "y":693
+    "x":1579,
+    "y":981
   }, 
 
   "E/E_mast_": {
     "height":62,
     "pixelRatio":1,
     "width":32,
-    "x":7143,
-    "y":515
+    "x":12114,
+    "y":957
   }, 
 
   "E/E_mast_communication": {
     "height":68,
     "pixelRatio":1,
     "width":40,
-    "x":10475,
-    "y":721
+    "x":9868,
+    "y":277
   }, 
 
   "E/E_mast_microwave": {
     "height":68,
     "pixelRatio":1,
     "width":40,
-    "x":10349,
-    "y":691
+    "x":9910,
+    "y":277
   }, 
 
   "E/E_mast_radar": {
     "height":68,
     "pixelRatio":1,
     "width":40,
-    "x":4706,
-    "y":297
+    "x":9952,
+    "y":277
   }, 
 
   "E/E_mast_radio": {
     "height":68,
     "pixelRatio":1,
     "width":40,
-    "x":8259,
-    "y":859
+    "x":9994,
+    "y":277
   }, 
 
   "E/E_mast_television": {
     "height":68,
     "pixelRatio":1,
     "width":40,
-    "x":8301,
-    "y":859
+    "x":10036,
+    "y":277
   }, 
 
   "E/E_minaret_": {
     "height":38,
     "pixelRatio":1,
     "width":22,
-    "x":627,
-    "y":985
+    "x":1603,
+    "y":981
   }, 
 
   "E/E_monument_": {
     "height":78,
     "pixelRatio":1,
     "width":36,
-    "x":14485,
-    "y":905
+    "x":12624,
+    "y":939
   }, 
 
   "E/E_mosque": {
     "height":38,
     "pixelRatio":1,
     "width":22,
-    "x":14485,
-    "y":985
+    "x":1627,
+    "y":981
   }, 
 
   "E/E_pagoda": {
     "height":70,
     "pixelRatio":1,
     "width":64,
-    "x":13145,
-    "y":951
+    "x":9768,
+    "y":277
   }, 
 
   "E/E_shinto_shrine": {
     "height":24,
     "pixelRatio":1,
     "width":32,
-    "x":3751,
-    "y":491
+    "x":2429,
+    "y":965
   }, 
 
   "E/E_spire_": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10287,
-    "y":677
+    "x":14694,
+    "y":63
   }, 
 
   "E/E_temple": {
     "height":28,
     "pixelRatio":1,
     "width":32,
-    "x":1337,
-    "y":535
+    "x":2395,
+    "y":965
   }, 
 
   "E/E_tower_": {
     "height":96,
     "pixelRatio":1,
     "width":50,
-    "x":683,
-    "y":921
+    "x":2966,
+    "y":923
   }, 
 
   "E/E_tower_church": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":8511,
-    "y":797
+    "x":14714,
+    "y":1
   }, 
 
   "E/E_tower_communication": {
     "height":102,
     "pixelRatio":1,
     "width":60,
-    "x":12765,
-    "y":631
+    "x":1493,
+    "y":293
   }, 
 
   "E/E_tower_microwave": {
     "height":102,
     "pixelRatio":1,
     "width":60,
-    "x":7511,
-    "y":921
+    "x":1555,
+    "y":293
   }, 
 
   "E/E_tower_radar": {
     "height":102,
     "pixelRatio":1,
     "width":60,
-    "x":7573,
-    "y":921
+    "x":1617,
+    "y":293
   }, 
 
   "E/E_tower_radio": {
     "height":102,
     "pixelRatio":1,
     "width":60,
-    "x":7635,
-    "y":921
+    "x":1679,
+    "y":293
   }, 
 
   "E/E_tower_television": {
     "height":102,
     "pixelRatio":1,
     "width":60,
-    "x":7697,
-    "y":921
+    "x":1741,
+    "y":293
   }, 
 
   "E/E_water_tower_": {
     "height":96,
     "pixelRatio":1,
     "width":50,
-    "x":8859,
-    "y":655
+    "x":3018,
+    "y":923
   }, 
 
   "E/E_windmill_": {
     "height":66,
     "pixelRatio":1,
     "width":64,
-    "x":8193,
-    "y":844
+    "x":12476,
+    "y":953
   }, 
 
   "E/E_windmotor_": {
     "height":64,
     "pixelRatio":1,
     "width":50,
-    "x":11433,
-    "y":959
+    "x":11852,
+    "y":957
   }, 
 
   "F/F": {
     "height":286,
     "pixelRatio":1,
     "width":286,
-    "x":6332,
-    "y":1
+    "x":1525,
+    "y":397
   }, 
 
   "F/F10": {
     "height":230,
     "pixelRatio":1,
     "width":230,
-    "x":8622,
-    "y":1
+    "x":3268,
+    "y":393
   }, 
 
   "F/F20": {
     "height":100,
     "pixelRatio":1,
     "width":100,
-    "x":1577,
-    "y":759
+    "x":13894,
+    "y":329
   }, 
 
   "F/F21": {
     "height":162,
     "pixelRatio":1,
     "width":130,
-    "x":1357,
-    "y":861
+    "x":3388,
+    "y":857
   }, 
 
   "F/F22": {
     "height":100,
     "pixelRatio":1,
     "width":100,
-    "x":14536,
-    "y":645
+    "x":13996,
+    "y":329
   }, 
 
   "F/F60": {
     "height":186,
     "pixelRatio":1,
     "width":132,
-    "x":5005,
-    "y":317
+    "x":7058,
+    "y":835
   }, 
 
   "F/F61": {
     "height":148,
     "pixelRatio":1,
     "width":148,
-    "x":12974,
-    "y":553
+    "x":4662,
+    "y":851
   }, 
 
   "F/F62.1": {
     "height":148,
     "pixelRatio":1,
     "width":148,
-    "x":14644,
-    "y":447
+    "x":4741,
+    "y":233
   }, 
 
   "F/F63": {
     "height":22,
     "pixelRatio":1,
     "width":30,
-    "x":467,
-    "y":845
+    "x":1133,
+    "y":689
   }, 
 
   "F/Fa_no": {
     "height":282,
     "pixelRatio":1,
     "width":407,
-    "x":2257,
+    "x":2275,
     "y":1
   }, 
 
@@ -404,151 +404,151 @@
     "height":282,
     "pixelRatio":1,
     "width":528,
-    "x":1,
-    "y":277
+    "x":1745,
+    "y":1
   }, 
 
   "K/K3": {
     "height":191,
     "pixelRatio":1,
     "width":178,
-    "x":3963,
-    "y":629
+    "x":7192,
+    "y":825
   }, 
 
   "K/K10": {
     "height":50,
     "pixelRatio":1,
     "width":52,
-    "x":683,
-    "y":869
+    "x":1823,
+    "y":969
   }, 
 
   "K/K11": {
     "height":142,
     "pixelRatio":1,
     "width":162,
-    "x":1025,
-    "y":789
+    "x":5007,
+    "y":233
   }, 
 
   "K/K12": {
     "height":106,
     "pixelRatio":1,
     "width":106,
-    "x":10413,
-    "y":293
+    "x":13882,
+    "y":1
   }, 
 
   "K/K13": {
     "height":106,
     "pixelRatio":1,
     "width":106,
-    "x":10413,
-    "y":401
+    "x":13990,
+    "y":1
   }, 
 
   "K/K13_": {
     "height":176,
     "pixelRatio":1,
     "width":176,
-    "x":3785,
-    "y":651
+    "x":5470,
+    "y":841
   }, 
 
   "K/K16": {
     "height":212,
     "pixelRatio":1,
     "width":336,
-    "x":7184,
-    "y":1
+    "x":7666,
+    "y":585
   }, 
 
   "K/K17": {
     "height":58,
     "pixelRatio":1,
     "width":108,
-    "x":10845,
-    "y":715
+    "x":11500,
+    "y":963
   }, 
 
   "K/K24": {
     "height":152,
     "pixelRatio":1,
     "width":214,
-    "x":251,
-    "y":845
+    "x":3683,
+    "y":233
   }, 
 
   "K/K28": {
     "height":176,
     "pixelRatio":1,
     "width":248,
-    "x":1,
-    "y":845
+    "x":5220,
+    "y":841
   }, 
 
   "K/K29": {
     "height":106,
     "pixelRatio":1,
     "width":216,
-    "x":14824,
-    "y":1
+    "x":13348,
+    "y":915
   }, 
 
   "K/K31": {
     "height":228,
     "pixelRatio":1,
     "width":240,
-    "x":8380,
-    "y":1
+    "x":7108,
+    "y":371
   }, 
 
   "K/K40": {
     "height":176,
     "pixelRatio":1,
     "width":176,
-    "x":14834,
-    "y":109
+    "x":5648,
+    "y":841
   }, 
 
   "K/K43.1": {
     "height":176,
     "pixelRatio":1,
     "width":176,
-    "x":10744,
-    "y":215
+    "x":5826,
+    "y":841
   }, 
 
   "K/K43.1_": {
     "height":176,
     "pixelRatio":1,
     "width":176,
-    "x":12802,
-    "y":205
+    "x":6004,
+    "y":841
   }, 
 
   "K/K48.1": {
     "height":314,
     "pixelRatio":1,
     "width":320,
-    "x":5084,
-    "y":1
+    "x":1,
+    "y":397
   }, 
 
   "K/K48.1_magenta": {
     "height":314,
     "pixelRatio":1,
     "width":320,
-    "x":5406,
-    "y":1
+    "x":323,
+    "y":397
   }, 
 
   "K/K48.1_no": {
     "height":280,
     "pixelRatio":1,
     "width":280,
-    "x":6620,
+    "x":2684,
     "y":1
   }, 
 
@@ -556,151 +556,151 @@
     "height":280,
     "pixelRatio":1,
     "width":280,
-    "x":6902,
-    "y":1
+    "x":2600,
+    "y":679
   }, 
 
   "L/L5.1": {
     "height":216,
     "pixelRatio":1,
     "width":166,
-    "x":12634,
-    "y":205
+    "x":7498,
+    "y":593
   }, 
 
   "L/L5.2": {
     "height":298,
     "pixelRatio":1,
     "width":300,
-    "x":5728,
-    "y":1
+    "x":1,
+    "y":713
   }, 
 
   "L/L6": {
     "height":298,
     "pixelRatio":1,
     "width":300,
-    "x":6030,
-    "y":1
+    "x":303,
+    "y":713
   }, 
 
   "L/L10": {
     "height":141,
     "pixelRatio":1,
     "width":141,
-    "x":2473,
-    "y":877
+    "x":6687,
+    "y":233
   }, 
 
   "L/L16": {
     "height":108,
     "pixelRatio":1,
     "width":286,
-    "x":10910,
-    "y":1
+    "x":2307,
+    "y":285
   }, 
 
   "L/L17": {
     "height":66,
     "pixelRatio":1,
     "width":122,
-    "x":3627,
-    "y":437
+    "x":12352,
+    "y":955
   }, 
 
   "L/L31": {
     "height":56,
     "pixelRatio":1,
     "width":124,
-    "x":10395,
-    "y":509
+    "x":2269,
+    "y":965
   }, 
 
   "L/L40": {
     "height":40,
     "pixelRatio":1,
     "width":124,
-    "x":8439,
-    "y":653
+    "x":1249,
+    "y":981
   }, 
 
   "L/L41": {
     "height":42,
     "pixelRatio":1,
     "width":124,
-    "x":7409,
-    "y":447
+    "x":1919,
+    "y":969
   }, 
 
   "L/Pipeline": {
     "height":120,
     "pixelRatio":1,
     "width":42,
-    "x":14594,
-    "y":227
+    "x":12400,
+    "y":583
   }, 
 
   "L/Pipeline_horizontal": {
     "height":40,
     "pixelRatio":1,
     "width":42,
-    "x":4478,
-    "y":861
+    "x":1375,
+    "y":981
   }, 
 
   "M/M10": {
     "height":28,
     "pixelRatio":1,
     "width":92,
-    "x":1243,
-    "y":535
+    "x":2175,
+    "y":969
   }, 
 
   "M/M11": {
     "height":66,
     "pixelRatio":1,
     "width":259,
-    "x":3484,
-    "y":215
+    "x":10942,
+    "y":275
   }, 
 
   "M/M40.1": {
     "height":282,
     "pixelRatio":1,
     "width":407,
-    "x":2666,
-    "y":1
+    "x":2191,
+    "y":681
   }, 
 
   "M/M40.1_no": {
     "height":282,
     "pixelRatio":1,
     "width":407,
-    "x":3075,
-    "y":1
+    "x":2343,
+    "y":395
   }, 
 
   "M/M40.2": {
     "height":282,
     "pixelRatio":1,
     "width":528,
-    "x":1,
-    "y":561
+    "x":1661,
+    "y":685
   }, 
 
   "M/M40.2_no": {
     "height":282,
     "pixelRatio":1,
     "width":528,
-    "x":1259,
-    "y":1
+    "x":1813,
+    "y":397
   }, 
 
   "military": {
     "height":394,
     "pixelRatio":1,
     "width":394,
-    "x":3958,
+    "x":1,
     "y":1
   }, 
 
@@ -708,39 +708,39 @@
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9289,
-    "y":851
+    "x":14560,
+    "y":455
   }, 
 
   "N/N2.2": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":14901,
-    "y":909
+    "x":14894,
+    "y":187
   }, 
 
   "N/N10": {
     "height":222,
     "pixelRatio":1,
     "width":174,
-    "x":1029,
-    "y":565
+    "x":7154,
+    "y":601
   }, 
 
   "N/N11.1": {
     "height":298,
     "pixelRatio":1,
     "width":230,
-    "x":531,
-    "y":277
+    "x":605,
+    "y":713
   }, 
 
   "N/N12.7": {
     "height":292,
     "pixelRatio":1,
     "width":348,
-    "x":4734,
+    "x":777,
     "y":1
   }, 
 
@@ -748,223 +748,223 @@
     "height":292,
     "pixelRatio":1,
     "width":466,
-    "x":1789,
-    "y":1
+    "x":645,
+    "y":397
   }, 
 
   "N/N12": {
     "height":142,
     "pixelRatio":1,
     "width":128,
-    "x":4951,
-    "y":759
+    "x":6557,
+    "y":233
   }, 
 
   "N/N13": {
     "height":248,
     "pixelRatio":1,
     "width":248,
-    "x":1243,
-    "y":285
+    "x":2882,
+    "y":673
   }, 
 
   "N/N20": {
     "height":238,
     "pixelRatio":1,
     "width":188,
-    "x":10528,
-    "y":1
+    "x":3132,
+    "y":635
   }, 
 
   "N/N21": {
     "height":190,
     "pixelRatio":1,
     "width":280,
-    "x":8098,
-    "y":1
+    "x":7372,
+    "y":823
   }, 
 
   "N/N22": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9351,
-    "y":851
+    "x":14560,
+    "y":517
   }, 
 
   "N/N22_duck_green": {
     "height":60,
     "pixelRatio":1,
     "width":72,
-    "x":7931,
-    "y":565
+    "x":14420,
+    "y":823
   }, 
 
   "N/N22_duck_magenta": {
     "height":60,
     "pixelRatio":1,
     "width":72,
-    "x":8049,
-    "y":787
+    "x":14420,
+    "y":473
   }, 
 
   "N/N22_MR_green": {
     "height":38,
     "pixelRatio":1,
     "width":78,
-    "x":467,
-    "y":985
+    "x":1419,
+    "y":981
   }, 
 
   "N/N22_MR_magenta": {
     "height":38,
     "pixelRatio":1,
     "width":78,
-    "x":547,
-    "y":985
+    "x":1499,
+    "y":981
   }, 
 
   "N/N22_PSSA_green": {
     "height":30,
     "pixelRatio":1,
     "width":96,
-    "x":4022,
-    "y":969
+    "x":1651,
+    "y":981
   }, 
 
   "N/N22_PSSA_magenta": {
     "height":30,
     "pixelRatio":1,
     "width":96,
-    "x":11541,
-    "y":977
+    "x":2045,
+    "y":969
   }, 
 
   "N/N27": {
     "height":240,
     "pixelRatio":1,
     "width":240,
-    "x":1493,
-    "y":285
+    "x":3026,
+    "y":393
   }, 
 
   "N/N40": {
     "height":136,
     "pixelRatio":1,
     "width":722,
-    "x":1,
-    "y":1
+    "x":6830,
+    "y":233
   }, 
 
   "N/N41": {
     "height":136,
     "pixelRatio":1,
     "width":722,
-    "x":1,
-    "y":139
+    "x":7554,
+    "y":233
   }, 
 
   "N/N45": {
     "height":94,
     "pixelRatio":1,
     "width":280,
-    "x":4354,
-    "y":297
+    "x":3070,
+    "y":923
   }, 
 
   "N/N45_no": {
     "height":94,
     "pixelRatio":1,
     "width":280,
-    "x":10910,
-    "y":111
+    "x":13031,
+    "y":237
   }, 
 
   "N/Nb_no": {
     "height":86,
     "pixelRatio":1,
     "width":122,
-    "x":14412,
-    "y":647
+    "x":12744,
+    "y":933
   }, 
 
   "P/P1.major.disused": {
     "height":128,
     "pixelRatio":1,
     "width":134,
-    "x":7349,
-    "y":491
+    "x":8518,
+    "y":893
   }, 
 
   "P/P1.major": {
     "height":128,
     "pixelRatio":1,
     "width":134,
-    "x":8009,
-    "y":441
+    "x":10712,
+    "y":892
   }, 
 
   "P/P1.minor.disused": {
     "height":128,
     "pixelRatio":1,
     "width":134,
-    "x":8303,
-    "y":425
+    "x":10848,
+    "y":890
   }, 
 
   "P/P1.minor": {
     "height":128,
     "pixelRatio":1,
     "width":134,
-    "x":8303,
-    "y":555
+    "x":10928,
+    "y":346
   }, 
 
   "P/P6": {
     "height":86,
     "pixelRatio":1,
     "width":286,
-    "x":11198,
-    "y":1
+    "x":8230,
+    "y":933
   }, 
 
   "P/P10.4": {
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":1037,
-    "y":273
+    "x":1127,
+    "y":1
   }, 
 
   "P/P10.4_amber": {
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":531,
-    "y":577
+    "x":837,
+    "y":713
   }, 
 
   "P/P10.4_blue": {
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":9086,
-    "y":1
+    "x":1043,
+    "y":713
   }, 
 
   "P/P10.4_green": {
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":9292,
-    "y":1
+    "x":1113,
+    "y":397
   }, 
 
   "P/P10.4_orange": {
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":9498,
+    "x":1333,
     "y":1
   }, 
 
@@ -972,23 +972,23 @@
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":9704,
-    "y":1
+    "x":1249,
+    "y":689
   }, 
 
   "P/P10.4_violet": {
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":9910,
-    "y":1
+    "x":1319,
+    "y":397
   }, 
 
   "P/P10.4_white": {
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":10116,
+    "x":1539,
     "y":1
   }, 
 
@@ -996,879 +996,879 @@
     "height":290,
     "pixelRatio":1,
     "width":204,
-    "x":10322,
-    "y":1
+    "x":1455,
+    "y":689
   }, 
 
   "P/P11_amber": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":11175,
-    "y":811
+    "x":671,
+    "y":691
   }, 
 
   "P/P11_blue": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":13126,
-    "y":205
+    "x":693,
+    "y":691
   }, 
 
   "P/P11_green": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":5005,
-    "y":295
+    "x":715,
+    "y":691
   }, 
 
   "P/P11_magenta": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":5019,
-    "y":737
+    "x":737,
+    "y":691
   }, 
 
   "P/P11_orange": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":3792,
-    "y":1003
+    "x":759,
+    "y":691
   }, 
 
   "P/P11_red": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":7069,
-    "y":1003
+    "x":781,
+    "y":691
   }, 
 
   "P/P11_violet": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":14308,
-    "y":591
+    "x":803,
+    "y":691
   }, 
 
   "P/P11_white": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":13186,
-    "y":89
+    "x":825,
+    "y":691
   }, 
 
   "P/P11_yellow": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":10453,
-    "y":741
+    "x":847,
+    "y":691
   }, 
 
   "P/P31": {
     "height":20,
     "pixelRatio":1,
     "width":16,
-    "x":5063,
-    "y":737
+    "x":1209,
+    "y":689
   }, 
 
   "P/P63": {
     "height":100,
     "pixelRatio":1,
     "width":200,
-    "x":3745,
-    "y":215
+    "x":13814,
+    "y":547
   }, 
 
   "P/P63_colour": {
     "height":100,
     "pixelRatio":1,
     "width":200,
-    "x":3743,
-    "y":317
+    "x":13864,
+    "y":439
   }, 
 
   "P/P64": {
     "height":100,
     "pixelRatio":1,
     "width":220,
-    "x":7184,
-    "y":215
+    "x":841,
+    "y":295
   }, 
 
   "P/P64_green": {
     "height":100,
     "pixelRatio":1,
     "width":220,
-    "x":11198,
-    "y":89
+    "x":1063,
+    "y":295
   }, 
 
   "P/P64_red": {
     "height":100,
     "pixelRatio":1,
     "width":220,
-    "x":11420,
-    "y":89
+    "x":13126,
+    "y":921
   }, 
 
   "P/P64_yellow": {
     "height":100,
     "pixelRatio":1,
     "width":220,
-    "x":11642,
-    "y":89
+    "x":13873,
+    "y":227
   }, 
 
   "Q/barrel/black": {
     "height":108,
     "pixelRatio":1,
     "width":228,
-    "x":13214,
-    "y":1
+    "x":2595,
+    "y":285
   }, 
 
   "Q/barrel/general": {
     "height":108,
     "pixelRatio":1,
     "width":228,
-    "x":13444,
-    "y":1
+    "x":2825,
+    "y":283
   }, 
 
   "Q/barrel/generic": {
     "height":108,
     "pixelRatio":1,
     "width":228,
-    "x":13674,
-    "y":1
+    "x":13492,
+    "y":681
   }, 
 
   "Q/barrel/green": {
     "height":108,
     "pixelRatio":1,
     "width":228,
-    "x":13904,
-    "y":1
+    "x":13528,
+    "y":565
   }, 
 
   "Q/barrel/red": {
     "height":108,
     "pixelRatio":1,
     "width":228,
-    "x":14134,
-    "y":1
+    "x":13578,
+    "y":447
   }, 
 
   "Q/barrel/white": {
     "height":108,
     "pixelRatio":1,
     "width":228,
-    "x":14364,
-    "y":1
+    "x":13664,
+    "y":329
   }, 
 
   "Q/barrel/yellow": {
     "height":108,
     "pixelRatio":1,
     "width":228,
-    "x":14594,
-    "y":1
+    "x":13840,
+    "y":117
   }, 
 
   "Q/buoyant/black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":7325,
-    "y":317
+    "x":8814,
+    "y":697
   }, 
 
   "Q/buoyant/blue": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":8515,
-    "y":231
+    "x":8768,
+    "y":349
   }, 
 
   "Q/buoyant/brown": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14330,
-    "y":343
+    "x":8852,
+    "y":349
   }, 
 
   "Q/buoyant/general": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14560,
-    "y":351
+    "x":8880,
+    "y":523
   }, 
 
   "Q/buoyant/generic": {
     "height":60,
     "pixelRatio":1,
     "width":28,
-    "x":14743,
-    "y":916
+    "x":15102,
+    "y":929
   }, 
 
   "Q/buoyant/green": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":3938,
-    "y":829
+    "x":8862,
+    "y":175
   }, 
 
   "Q/buoyant/grey": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":5723,
-    "y":549
+    "x":8936,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/black_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":5733,
-    "y":723
+    "x":8946,
+    "y":175
   }, 
 
   "Q/buoyant/horizontal/black_red_black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":6683,
-    "y":521
+    "x":8962,
+    "y":1
   }, 
 
   "Q/buoyant/horizontal/black_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":7059,
-    "y":515
+    "x":8898,
+    "y":697
   }, 
 
   "Q/buoyant/horizontal/black_white_black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12345,
-    "y":547
+    "x":8964,
+    "y":523
   }, 
 
   "Q/buoyant/horizontal/black_white_black_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12429,
-    "y":547
+    "x":9020,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/black_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12513,
-    "y":547
+    "x":9030,
+    "y":175
   }, 
 
   "Q/buoyant/horizontal/black_yellow_black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12597,
-    "y":561
+    "x":9046,
+    "y":1
   }, 
 
   "Q/buoyant/horizontal/black_yellow_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12681,
-    "y":561
+    "x":8982,
+    "y":697
   }, 
 
   "Q/buoyant/horizontal/green_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12313,
-    "y":721
+    "x":9048,
+    "y":523
   }, 
 
   "Q/buoyant/horizontal/green_red_green": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12397,
-    "y":721
+    "x":9104,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/green_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12481,
-    "y":721
+    "x":9114,
+    "y":175
   }, 
 
   "Q/buoyant/horizontal/green_white_green": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12565,
-    "y":735
+    "x":9130,
+    "y":1
   }, 
 
   "Q/buoyant/horizontal/green_white_green_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12649,
-    "y":735
+    "x":9066,
+    "y":697
   }, 
 
   "Q/buoyant/horizontal/orange_black_orange_black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12733,
-    "y":735
+    "x":9132,
+    "y":523
   }, 
 
   "Q/buoyant/horizontal/red_black_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12817,
-    "y":735
+    "x":9188,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/red_green": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12901,
-    "y":733
+    "x":9198,
+    "y":175
   }, 
 
   "Q/buoyant/horizontal/red_green_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":12985,
-    "y":703
+    "x":9214,
+    "y":1
   }, 
 
   "Q/buoyant/horizontal/red_green_red_green": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13111,
-    "y":715
+    "x":9150,
+    "y":697
   }, 
 
   "Q/buoyant/horizontal/red_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13195,
-    "y":715
+    "x":9216,
+    "y":523
   }, 
 
   "Q/buoyant/horizontal/red_white_orange_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13279,
-    "y":715
+    "x":9272,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/red_white_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13363,
-    "y":715
+    "x":9282,
+    "y":175
   }, 
 
   "Q/buoyant/horizontal/red_white_red_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13447,
-    "y":729
+    "x":9298,
+    "y":1
   }, 
 
   "Q/buoyant/horizontal/red_yellow_black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13531,
-    "y":729
+    "x":9234,
+    "y":697
   }, 
 
   "Q/buoyant/horizontal/red_yellow_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13615,
-    "y":729
+    "x":9300,
+    "y":523
   }, 
 
   "Q/buoyant/horizontal/white_black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13699,
-    "y":729
+    "x":9356,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/white_green": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13783,
-    "y":729
+    "x":9366,
+    "y":175
   }, 
 
   "Q/buoyant/horizontal/white_green_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13867,
-    "y":729
+    "x":9382,
+    "y":1
   }, 
 
   "Q/buoyant/horizontal/white_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":13951,
-    "y":729
+    "x":9318,
+    "y":697
   }, 
 
   "Q/buoyant/horizontal/white_red_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14035,
-    "y":729
+    "x":9384,
+    "y":523
   }, 
 
   "Q/buoyant/horizontal/white_red_white_orange": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14119,
-    "y":729
+    "x":9440,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/yellow_black": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14203,
-    "y":729
+    "x":9450,
+    "y":175
   }, 
 
   "Q/buoyant/horizontal/yellow_black_red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14287,
-    "y":733
+    "x":9466,
+    "y":1
   }, 
 
   "Q/buoyant/horizontal/yellow_black_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14371,
-    "y":735
+    "x":9402,
+    "y":697
   }, 
 
   "Q/buoyant/horizontal/yellow_brown_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14525,
-    "y":747
+    "x":9468,
+    "y":523
   }, 
 
   "Q/buoyant/horizontal/yellow_red_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14609,
-    "y":747
+    "x":9524,
+    "y":349
   }, 
 
   "Q/buoyant/horizontal/yellow_white_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14693,
-    "y":742
+    "x":9534,
+    "y":175
   }, 
 
   "Q/buoyant/pink": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14777,
-    "y":721
+    "x":9550,
+    "y":1
   }, 
 
   "Q/buoyant/red": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14861,
-    "y":735
+    "x":9486,
+    "y":697
   }, 
 
   "Q/buoyant/vertical/red_white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":14945,
-    "y":723
+    "x":9552,
+    "y":523
   }, 
 
   "Q/buoyant/white": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":10391,
-    "y":567
+    "x":9608,
+    "y":349
   }, 
 
   "Q/buoyant/yellow": {
     "height":172,
     "pixelRatio":1,
     "width":82,
-    "x":10517,
-    "y":599
+    "x":9618,
+    "y":175
   }, 
 
   "Q/cairn/amber": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":14940,
-    "y":425
+    "x":12506,
+    "y":337
   }, 
 
   "Q/cairn/black": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":14940,
-    "y":543
+    "x":12504,
+    "y":703
   }, 
 
   "Q/cairn/blue": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":1679,
-    "y":759
+    "x":12540,
+    "y":579
   }, 
 
   "Q/cairn/brown": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":1849,
-    "y":759
+    "x":12590,
+    "y":455
   }, 
 
   "Q/cairn/general": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":2019,
-    "y":759
+    "x":12676,
+    "y":337
   }, 
 
   "Q/cairn/generic": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":2189,
-    "y":759
+    "x":12852,
+    "y":123
   }, 
 
   "Q/cairn/green": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":2359,
-    "y":759
+    "x":12894,
+    "y":1
   }, 
 
   "Q/cairn/grey": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":10521,
-    "y":481
+    "x":13022,
+    "y":119
   }, 
 
   "Q/cairn/magenta": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":10691,
-    "y":517
+    "x":13064,
+    "y":1
   }, 
 
   "Q/cairn/orange": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":2529,
-    "y":759
+    "x":12534,
+    "y":821
   }, 
 
   "Q/cairn/pink": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":4138,
-    "y":861
+    "x":12674,
+    "y":697
   }, 
 
   "Q/cairn/red": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":4308,
-    "y":861
+    "x":12710,
+    "y":573
   }, 
 
   "Q/cairn/violet": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":7179,
-    "y":491
+    "x":12760,
+    "y":455
   }, 
 
   "Q/cairn/white": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":7143,
-    "y":609
+    "x":12846,
+    "y":333
   }, 
 
   "Q/cairn/yellow": {
     "height":116,
     "pixelRatio":1,
     "width":168,
-    "x":4768,
-    "y":883
+    "x":12704,
+    "y":815
   }, 
 
   "Q/can/black": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":14422,
-    "y":227
+    "x":10368,
+    "y":899
   }, 
 
   "Q/can/general": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":4779,
-    "y":759
+    "x":10540,
+    "y":896
   }, 
 
   "Q/can/generic": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":9037,
-    "y":293
+    "x":10904,
+    "y":754
   }, 
 
   "Q/can/green": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":9209,
-    "y":293
+    "x":10922,
+    "y":618
   }, 
 
   "Q/can/horizontal/black_red": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":9381,
-    "y":293
+    "x":10994,
+    "y":137
   }, 
 
   "Q/can/horizontal/black_red_black": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":9553,
-    "y":293
+    "x":11036,
+    "y":1
   }, 
 
   "Q/can/horizontal/black_yellow": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":9725,
-    "y":293
+    "x":10930,
+    "y":476
   }, 
 
   "Q/can/horizontal/black_yellow_black": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":9897,
-    "y":293
+    "x":11064,
+    "y":343
   }, 
 
   "Q/can/horizontal/green_red_green": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":10069,
-    "y":293
+    "x":10984,
+    "y":878
   }, 
 
   "Q/can/horizontal/green_white": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":10241,
-    "y":293
+    "x":11076,
+    "y":742
   }, 
 
   "Q/can/horizontal/green_white_green": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":737,
-    "y":809
+    "x":11094,
+    "y":600
   }, 
 
   "Q/can/horizontal/green_white_green_white": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":12802,
-    "y":383
+    "x":11102,
+    "y":467
   }, 
 
   "Q/can/horizontal/orange_white": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":12802,
-    "y":507
+    "x":11166,
+    "y":125
   }, 
 
   "Q/can/horizontal/red_green_red": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":10521,
-    "y":357
+    "x":11208,
+    "y":1
   }, 
 
   "Q/can/horizontal/red_green_red_green": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":10693,
-    "y":393
+    "x":11236,
+    "y":343
   }, 
 
   "Q/can/horizontal/red_white": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13126,
-    "y":343
+    "x":11338,
+    "y":125
   }, 
 
   "Q/can/horizontal/red_white_red": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13298,
-    "y":343
+    "x":11380,
+    "y":1
   }, 
 
   "Q/can/horizontal/red_white_red_white": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13470,
-    "y":343
+    "x":11510,
+    "y":125
   }, 
 
   "Q/can/horizontal/white_green": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13642,
-    "y":343
+    "x":11552,
+    "y":1
   }, 
 
   "Q/can/horizontal/white_orange": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13814,
-    "y":343
+    "x":11156,
+    "y":866
   }, 
 
   "Q/can/horizontal/white_red": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13986,
-    "y":343
+    "x":11248,
+    "y":724
   }, 
 
   "Q/can/horizontal/yellow_black": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":14158,
-    "y":343
+    "x":11266,
+    "y":591
   }, 
 
   "Q/can/horizontal/yellow_black_yellow": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13126,
+    "x":11274,
     "y":467
   }, 
 
@@ -1876,4807 +1876,4807 @@
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13298,
-    "y":467
+    "x":11408,
+    "y":337
   }, 
 
   "Q/can/horizontal/yellow_red_yellow": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13470,
-    "y":467
+    "x":11328,
+    "y":848
   }, 
 
   "Q/can/red": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13642,
-    "y":467
+    "x":11420,
+    "y":715
   }, 
 
   "Q/can/vertical/red_white": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13814,
-    "y":467
+    "x":11438,
+    "y":591
   }, 
 
   "Q/can/vertical/white_orange": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13986,
-    "y":467
+    "x":11446,
+    "y":461
   }, 
 
   "Q/can/vertical/yellow_blue": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":14158,
-    "y":467
+    "x":11580,
+    "y":337
   }, 
 
   "Q/can/white": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13124,
-    "y":591
+    "x":11682,
+    "y":125
   }, 
 
   "Q/can/yellow": {
     "height":122,
     "pixelRatio":1,
     "width":170,
-    "x":13296,
-    "y":591
+    "x":11724,
+    "y":1
   }, 
 
   "Q/conical/black": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":1189,
-    "y":797
+    "x":8654,
+    "y":871
   }, 
 
   "Q/conical/blue": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":12634,
-    "y":423
+    "x":8822,
+    "y":871
   }, 
 
   "Q/conical/brown": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":13468,
-    "y":591
+    "x":8990,
+    "y":871
   }, 
 
   "Q/conical/general": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":13636,
-    "y":591
+    "x":9158,
+    "y":871
   }, 
 
   "Q/conical/generic": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":13804,
-    "y":591
+    "x":9326,
+    "y":871
   }, 
 
   "Q/conical/green": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":13972,
-    "y":591
+    "x":9494,
+    "y":871
   }, 
 
   "Q/conical/grey": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":14140,
-    "y":591
+    "x":9634,
+    "y":1
   }, 
 
   "Q/conical/horizontal/black_red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":14790,
-    "y":287
+    "x":9570,
+    "y":697
   }, 
 
   "Q/conical/horizontal/black_red_black": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":1633,
-    "y":877
+    "x":9636,
+    "y":523
   }, 
 
   "Q/conical/horizontal/black_yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":1801,
-    "y":877
+    "x":9692,
+    "y":349
   }, 
 
   "Q/conical/horizontal/black_yellow_black": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":1969,
-    "y":877
+    "x":9662,
+    "y":835
   }, 
 
   "Q/conical/horizontal/green_red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":2137,
-    "y":877
+    "x":9738,
+    "y":661
   }, 
 
   "Q/conical/horizontal/green_red_green": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":2305,
-    "y":877
+    "x":9804,
+    "y":487
   }, 
 
   "Q/conical/horizontal/green_white": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":2699,
-    "y":749
+    "x":9702,
+    "y":139
   }, 
 
   "Q/conical/horizontal/green_white_green": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":2616,
-    "y":887
+    "x":9802,
+    "y":1
   }, 
 
   "Q/conical/horizontal/green_white_green_white": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":2784,
-    "y":887
+    "x":9860,
+    "y":349
   }, 
 
   "Q/conical/horizontal/orange_white": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":2867,
-    "y":749
+    "x":9870,
+    "y":139
   }, 
 
   "Q/conical/horizontal/red_black": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":2952,
-    "y":887
+    "x":9970,
+    "y":1
   }, 
 
   "Q/conical/horizontal/red_green": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3035,
-    "y":749
+    "x":9830,
+    "y":799
   }, 
 
   "Q/conical/horizontal/red_green_red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3120,
-    "y":887
+    "x":9906,
+    "y":625
   }, 
 
   "Q/conical/horizontal/red_green_red_green": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3203,
-    "y":749
+    "x":9972,
+    "y":487
   }, 
 
   "Q/conical/horizontal/red_white": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3288,
-    "y":887
+    "x":10028,
+    "y":347
   }, 
 
   "Q/conical/horizontal/red_white_red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3371,
-    "y":749
+    "x":10038,
+    "y":139
   }, 
 
   "Q/conical/horizontal/red_white_red_white": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3456,
-    "y":887
+    "x":10138,
+    "y":1
   }, 
 
   "Q/conical/horizontal/red_white_red_yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3539,
-    "y":749
+    "x":10206,
+    "y":139
   }, 
 
   "Q/conical/horizontal/red_yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":3624,
-    "y":887
+    "x":10306,
+    "y":1
   }, 
 
   "Q/conical/horizontal/white_green": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":6433,
-    "y":869
+    "x":9998,
+    "y":763
   }, 
 
   "Q/conical/horizontal/white_green_white_green": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":7113,
-    "y":727
+    "x":10074,
+    "y":625
   }, 
 
   "Q/conical/horizontal/white_orange": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":7069,
-    "y":865
+    "x":10166,
+    "y":763
   }, 
 
   "Q/conical/horizontal/white_red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":4600,
-    "y":857
+    "x":10140,
+    "y":485
   }, 
 
   "Q/conical/horizontal/white_red_white_red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":10865,
-    "y":439
+    "x":10196,
+    "y":346
   }, 
 
   "Q/conical/horizontal/white_yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11033,
-    "y":439
+    "x":10242,
+    "y":623
   }, 
 
   "Q/conical/horizontal/yellow_black": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":10861,
-    "y":577
+    "x":10308,
+    "y":484
   }, 
 
   "Q/conical/horizontal/yellow_black_yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11029,
-    "y":577
+    "x":10364,
+    "y":346
   }, 
 
   "Q/conical/horizontal/yellow_brown_yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11355,
-    "y":423
+    "x":10374,
+    "y":139
   }, 
 
   "Q/conical/horizontal/yellow_red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11523,
-    "y":423
+    "x":10474,
+    "y":1
   }, 
 
   "Q/conical/horizontal/yellow_red_yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11197,
-    "y":583
+    "x":10542,
+    "y":139
   }, 
 
   "Q/conical/orange": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11365,
-    "y":561
+    "x":10642,
+    "y":1
   }, 
 
   "Q/conical/red": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11533,
-    "y":561
+    "x":10334,
+    "y":761
   }, 
 
   "Q/conical/vertical/red_white": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11767,
-    "y":437
+    "x":10410,
+    "y":622
   }, 
 
   "Q/conical/vertical/white_orange": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11935,
-    "y":437
+    "x":10476,
+    "y":484
   }, 
 
   "Q/conical/vertical/yellow_blue": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":12103,
-    "y":437
+    "x":10532,
+    "y":346
   }, 
 
   "Q/conical/white": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11701,
-    "y":575
+    "x":10710,
+    "y":139
   }, 
 
   "Q/conical/yellow": {
     "height":136,
     "pixelRatio":1,
     "width":166,
-    "x":11869,
-    "y":575
+    "x":10810,
+    "y":1
   }, 
 
   "Q/pillar/black": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":1735,
-    "y":295
+    "x":3322,
+    "y":625
   }, 
 
   "Q/pillar/blue": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":1907,
-    "y":295
+    "x":3494,
+    "y":625
   }, 
 
   "Q/pillar/brown": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2079,
-    "y":295
+    "x":3500,
+    "y":393
   }, 
 
   "Q/pillar/general": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":737,
-    "y":577
+    "x":3666,
+    "y":625
   }, 
 
   "Q/pillar/generic": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":1205,
-    "y":565
+    "x":3672,
+    "y":392
   }, 
 
   "Q/pillar/gray": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":1377,
-    "y":535
+    "x":3838,
+    "y":624
   }, 
 
   "Q/pillar/green": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":1549,
-    "y":527
+    "x":3732,
+    "y":1
   }, 
 
   "Q/pillar/grey": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":1721,
-    "y":527
+    "x":3844,
+    "y":387
   }, 
 
   "Q/pillar/horizontal/black_red": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":1893,
-    "y":527
+    "x":3904,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/black_red_black": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2065,
-    "y":527
+    "x":4010,
+    "y":619
   }, 
 
   "Q/pillar/horizontal/black_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2237,
-    "y":527
+    "x":4016,
+    "y":387
   }, 
 
   "Q/pillar/horizontal/black_yellow_black": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2251,
-    "y":295
+    "x":4076,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/green_red_green": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2423,
-    "y":285
+    "x":4182,
+    "y":619
   }, 
 
   "Q/pillar/horizontal/green_white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2595,
-    "y":285
+    "x":4188,
+    "y":387
   }, 
 
   "Q/pillar/horizontal/green_white_green": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2767,
-    "y":285
+    "x":4248,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/green_white_green_white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2939,
-    "y":285
+    "x":4354,
+    "y":619
   }, 
 
   "Q/pillar/horizontal/orange_white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3111,
-    "y":285
+    "x":4360,
+    "y":387
   }, 
 
   "Q/pillar/horizontal/red_black": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3283,
-    "y":285
+    "x":4420,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/red_green_red": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3455,
-    "y":285
+    "x":4526,
+    "y":619
   }, 
 
   "Q/pillar/horizontal/red_green_red_green": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2409,
-    "y":527
+    "x":4532,
+    "y":387
   }, 
 
   "Q/pillar/horizontal/red_white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2581,
-    "y":517
+    "x":4592,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/red_white_red": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2753,
-    "y":517
+    "x":4698,
+    "y":619
   }, 
 
   "Q/pillar/horizontal/red_white_red_white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":2925,
-    "y":517
+    "x":4704,
+    "y":385
   }, 
 
   "Q/pillar/horizontal/red_white_red_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3097,
-    "y":517
+    "x":4764,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/red_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3269,
-    "y":517
+    "x":4870,
+    "y":617
   }, 
 
   "Q/pillar/horizontal/white_green": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3441,
-    "y":517
+    "x":4876,
+    "y":383
   }, 
 
   "Q/pillar/horizontal/white_orange": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3613,
-    "y":517
+    "x":5042,
+    "y":615
   }, 
 
   "Q/pillar/horizontal/white_red": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3785,
-    "y":419
+    "x":4936,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/white_red_white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":3957,
-    "y":397
+    "x":5108,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/white_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":4129,
-    "y":397
+    "x":5048,
+    "y":377
   }, 
 
   "Q/pillar/horizontal/yellow_black": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":4301,
-    "y":397
+    "x":5280,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/yellow_black_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":4473,
-    "y":393
+    "x":5214,
+    "y":609
   }, 
 
   "Q/pillar/horizontal/yellow_brown_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":4143,
-    "y":629
+    "x":5220,
+    "y":377
   }, 
 
   "Q/pillar/horizontal/yellow_red": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":4315,
-    "y":629
+    "x":5452,
+    "y":1
   }, 
 
   "Q/pillar/horizontal/yellow_red_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":4487,
-    "y":625
+    "x":5386,
+    "y":609
   }, 
 
   "Q/pillar/orange": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":10922,
-    "y":207
+    "x":5392,
+    "y":377
   }, 
 
   "Q/pillar/red": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":11094,
-    "y":207
+    "x":5624,
+    "y":1
   }, 
 
   "Q/pillar/vertical/red_white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":11266,
-    "y":191
+    "x":5558,
+    "y":609
   }, 
 
   "Q/pillar/vertical/white_orange": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":11438,
-    "y":191
+    "x":5564,
+    "y":377
   }, 
 
   "Q/pillar/vertical/yellow_blue": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":11610,
-    "y":191
+    "x":5730,
+    "y":609
   }, 
 
   "Q/pillar/vertical/yellow_red": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":11782,
-    "y":205
+    "x":5736,
+    "y":377
   }, 
 
   "Q/pillar/white": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":11954,
-    "y":205
+    "x":5796,
+    "y":1
   }, 
 
   "Q/pillar/yellow": {
     "height":230,
     "pixelRatio":1,
     "width":170,
-    "x":12126,
-    "y":205
+    "x":5902,
+    "y":609
   }, 
 
   "Q/Q3/amber": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":10579,
-    "y":773
+    "x":869,
+    "y":691
   }, 
 
   "Q/Q3/black": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":5027,
-    "y":295
+    "x":891,
+    "y":691
   }, 
 
   "Q/Q3/blue": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":5041,
-    "y":737
+    "x":913,
+    "y":691
   }, 
 
   "Q/Q3/brown": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":3814,
-    "y":1003
+    "x":935,
+    "y":691
   }, 
 
   "Q/Q3/green": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":7091,
-    "y":1003
+    "x":957,
+    "y":691
   }, 
 
   "Q/Q3/grey": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":10453,
-    "y":763
+    "x":979,
+    "y":691
   }, 
 
   "Q/Q3/magenta": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":10579,
-    "y":795
+    "x":1001,
+    "y":691
   }, 
 
   "Q/Q3/orange": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":5049,
-    "y":295
+    "x":1023,
+    "y":691
   }, 
 
   "Q/Q3/pink": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":3836,
-    "y":1003
+    "x":1045,
+    "y":691
   }, 
 
   "Q/Q3/red": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":7113,
-    "y":1003
+    "x":1067,
+    "y":691
   }, 
 
   "Q/Q3/violet": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":3858,
-    "y":1003
+    "x":1089,
+    "y":691
   }, 
 
   "Q/Q3/white": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":7135,
-    "y":1003
+    "x":1111,
+    "y":691
   }, 
 
   "Q/Q3/yellow": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":3880,
-    "y":1003
+    "x":1165,
+    "y":689
   }, 
 
   "Q/Q9/2_cones_base_together/black": {
     "height":162,
     "pixelRatio":1,
     "width":70,
-    "x":1489,
-    "y":861
+    "x":3520,
+    "y":857
   }, 
 
   "Q/Q9/2_cones_base_together/generic": {
     "height":162,
     "pixelRatio":1,
     "width":70,
-    "x":1561,
-    "y":861
+    "x":3592,
+    "y":857
   }, 
 
   "Q/Q9/2_cones_down/black": {
     "height":166,
     "pixelRatio":1,
     "width":66,
-    "x":15042,
-    "y":1
+    "x":4242,
+    "y":851
   }, 
 
   "Q/Q9/2_cones_down/generic": {
     "height":166,
     "pixelRatio":1,
     "width":66,
-    "x":5081,
-    "y":737
+    "x":4310,
+    "y":851
   }, 
 
   "Q/Q9/2_cones_point_together/black": {
     "height":160,
     "pixelRatio":1,
     "width":78,
-    "x":6909,
-    "y":863
+    "x":3826,
+    "y":857
   }, 
 
   "Q/Q9/2_cones_point_together/generic": {
     "height":160,
     "pixelRatio":1,
     "width":78,
-    "x":6989,
-    "y":863
+    "x":3906,
+    "y":856
   }, 
 
   "Q/Q9/2_cones_point_together/horizontal/red_green": {
     "height":157,
     "pixelRatio":1,
     "width":72,
-    "x":7237,
-    "y":865
+    "x":3535,
+    "y":233
   }, 
 
   "Q/Q9/2_cones_point_together/red_green": {
     "height":157,
     "pixelRatio":1,
     "width":72,
-    "x":7311,
-    "y":865
+    "x":3609,
+    "y":233
   }, 
 
   "Q/Q9/2_cones_up/black": {
     "height":168,
     "pixelRatio":1,
     "width":68,
-    "x":14455,
-    "y":735
+    "x":4102,
+    "y":851
   }, 
 
   "Q/Q9/2_cones_up/generic": {
     "height":168,
     "pixelRatio":1,
     "width":68,
-    "x":15029,
-    "y":723
+    "x":4172,
+    "y":851
   }, 
 
   "Q/Q9/2_spheres/black": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":14958,
-    "y":287
+    "x":10878,
+    "y":139
   }, 
 
   "Q/Q9/2_spheres/black_plus_red": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":14876,
-    "y":599
+    "x":10936,
+    "y":139
   }, 
 
   "Q/Q9/2_spheres/black_plus_white": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":12271,
-    "y":437
+    "x":10978,
+    "y":1
   }, 
 
   "Q/Q9/2_spheres/generic": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":10291,
-    "y":541
+    "x":10730,
+    "y":754
   }, 
 
   "Q/Q9/2_spheres/green": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":11251,
-    "y":833
+    "x":10788,
+    "y":754
   }, 
 
   "Q/Q9/2_spheres/red": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":11309,
-    "y":833
+    "x":10806,
+    "y":618
   }, 
 
   "Q/Q9/2_spheres/red_plus_white": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":11367,
-    "y":823
+    "x":10846,
+    "y":754
   }, 
 
   "Q/Q9/2_spheres/white": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":11425,
-    "y":823
+    "x":10864,
+    "y":618
   }, 
 
   "Q/Q9/2_spheres/yellow": {
     "height":134,
     "pixelRatio":1,
     "width":56,
-    "x":11483,
-    "y":823
+    "x":10872,
+    "y":482
   }, 
 
   "Q/Q9/besom_point_down/generic": {
     "height":145,
     "pixelRatio":1,
     "width":114,
-    "x":4022,
-    "y":822
+    "x":4812,
+    "y":851
   }, 
 
   "Q/Q9/besom_point_up/generic": {
     "height":143,
     "pixelRatio":1,
     "width":114,
-    "x":14638,
-    "y":597
+    "x":4891,
+    "y":233
   }, 
 
   "Q/Q9/board/amber": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9091,
-    "y":727
+    "x":14548,
+    "y":331
   }, 
 
   "Q/Q9/board/black": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9157,
-    "y":727
+    "x":14580,
+    "y":235
   }, 
 
   "Q/Q9/board/blue": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9223,
-    "y":727
+    "x":14621,
+    "y":149
   }, 
 
   "Q/Q9/board/brown": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9289,
-    "y":727
+    "x":14628,
+    "y":63
   }, 
 
   "Q/Q9/board/generic": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9355,
-    "y":727
+    "x":14648,
+    "y":1
   }, 
 
   "Q/Q9/board/green": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9025,
-    "y":789
+    "x":14494,
+    "y":495
   }, 
 
   "Q/Q9/board/grey": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9091,
-    "y":789
+    "x":14494,
+    "y":557
   }, 
 
   "Q/Q9/board/magenta": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9157,
-    "y":789
+    "x":14520,
+    "y":619
   }, 
 
   "Q/Q9/board/magenta_backup": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9223,
-    "y":789
+    "x":14520,
+    "y":681
   }, 
 
   "Q/Q9/board/orange": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9289,
-    "y":789
+    "x":14554,
+    "y":743
   }, 
 
   "Q/Q9/board/pink": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9355,
-    "y":789
+    "x":14560,
+    "y":805
   }, 
 
   "Q/Q9/board/red": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9025,
-    "y":851
+    "x":14610,
+    "y":867
   }, 
 
   "Q/Q9/board/violet": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9091,
-    "y":851
+    "x":14610,
+    "y":929
   }, 
 
   "Q/Q9/board/white": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9157,
-    "y":851
+    "x":14560,
+    "y":393
   }, 
 
   "Q/Q9/board/yellow": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9223,
-    "y":851
+    "x":14614,
+    "y":297
   }, 
 
   "Q/Q9/cone_point_down/black": {
     "height":100,
     "pixelRatio":1,
     "width":66,
-    "x":13787,
-    "y":903
+    "x":14126,
+    "y":109
   }, 
 
   "Q/Q9/cone_point_down/generic": {
     "height":100,
     "pixelRatio":1,
     "width":66,
-    "x":13855,
-    "y":903
+    "x":14154,
+    "y":1
   }, 
 
   "Q/Q9/cone_point_down/green": {
     "height":100,
     "pixelRatio":1,
     "width":66,
-    "x":13923,
-    "y":903
+    "x":14194,
+    "y":103
   }, 
 
   "Q/Q9/cone_point_down/red": {
     "height":100,
     "pixelRatio":1,
     "width":66,
-    "x":13991,
-    "y":903
+    "x":14222,
+    "y":1
   }, 
 
   "Q/Q9/cone_point_down/white": {
     "height":100,
     "pixelRatio":1,
     "width":66,
-    "x":14059,
-    "y":903
+    "x":13790,
+    "y":891
   }, 
 
   "Q/Q9/cone_point_down/yellow": {
     "height":100,
     "pixelRatio":1,
     "width":66,
-    "x":14127,
-    "y":903
+    "x":13802,
+    "y":773
   }, 
 
   "Q/Q9/cone_point_up/black": {
     "height":98,
     "pixelRatio":1,
     "width":72,
-    "x":12129,
-    "y":843
+    "x":397,
+    "y":297
   }, 
 
   "Q/Q9/cone_point_up/generic": {
     "height":98,
     "pixelRatio":1,
     "width":72,
-    "x":12203,
-    "y":843
+    "x":471,
+    "y":297
   }, 
 
   "Q/Q9/cone_point_up/green": {
     "height":98,
     "pixelRatio":1,
     "width":72,
-    "x":12277,
-    "y":895
+    "x":545,
+    "y":297
   }, 
 
   "Q/Q9/cone_point_up/red": {
     "height":98,
     "pixelRatio":1,
     "width":72,
-    "x":12351,
-    "y":895
+    "x":619,
+    "y":297
   }, 
 
   "Q/Q9/cone_point_up/white": {
     "height":98,
     "pixelRatio":1,
     "width":72,
-    "x":12425,
-    "y":895
+    "x":693,
+    "y":297
   }, 
 
   "Q/Q9/cone_point_up/yellow": {
     "height":98,
     "pixelRatio":1,
     "width":72,
-    "x":12909,
-    "y":907
+    "x":767,
+    "y":297
   }, 
 
   "Q/Q9/cross/black": {
     "height":118,
     "pixelRatio":1,
     "width":94,
-    "x":5060,
-    "y":905
+    "x":3055,
+    "y":273
   }, 
 
   "Q/Q9/cross/blue": {
     "height":118,
     "pixelRatio":1,
     "width":94,
-    "x":7281,
-    "y":745
+    "x":3151,
+    "y":273
   }, 
 
   "Q/Q9/cross/generic": {
     "height":118,
     "pixelRatio":1,
     "width":94,
-    "x":7377,
-    "y":745
+    "x":3247,
+    "y":273
   }, 
 
   "Q/Q9/cross/green": {
     "height":118,
     "pixelRatio":1,
     "width":94,
-    "x":10299,
-    "y":417
+    "x":3343,
+    "y":273
   }, 
 
   "Q/Q9/cross/red": {
     "height":118,
     "pixelRatio":1,
     "width":94,
-    "x":14536,
-    "y":525
+    "x":3439,
+    "y":273
   }, 
 
   "Q/Q9/cross/white": {
     "height":118,
     "pixelRatio":1,
     "width":94,
-    "x":12329,
-    "y":427
+    "x":12444,
+    "y":583
   }, 
 
   "Q/Q9/cross/yellow": {
     "height":118,
     "pixelRatio":1,
     "width":94,
-    "x":12425,
-    "y":427
+    "x":12494,
+    "y":459
   }, 
 
   "Q/Q9/cylinder/black": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":13385,
-    "y":889
+    "x":13858,
+    "y":875
   }, 
 
   "Q/Q9/cylinder/blue": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":14195,
-    "y":903
+    "x":13870,
+    "y":751
   }, 
 
   "Q/Q9/cylinder/generic": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":14253,
-    "y":907
+    "x":13900,
+    "y":649
   }, 
 
   "Q/Q9/cylinder/green": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":14311,
-    "y":907
+    "x":13916,
+    "y":853
   }, 
 
   "Q/Q9/cylinder/grey": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":14369,
-    "y":909
+    "x":13928,
+    "y":751
   }, 
 
   "Q/Q9/cylinder/horizontal/black_orange": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":14427,
-    "y":909
+    "x":13958,
+    "y":649
   }, 
 
   "Q/Q9/cylinder/horizontal/black_white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7527,
-    "y":627
+    "x":13974,
+    "y":853
   }, 
 
   "Q/Q9/cylinder/horizontal/black_white_black": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7585,
-    "y":735
+    "x":13986,
+    "y":751
   }, 
 
   "Q/Q9/cylinder/horizontal/black_yellow": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7643,
-    "y":735
+    "x":14032,
+    "y":853
   }, 
 
   "Q/Q9/cylinder/horizontal/black_yellow_black": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7701,
-    "y":735
+    "x":14016,
+    "y":541
   }, 
 
   "Q/Q9/cylinder/horizontal/green_red": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7759,
-    "y":735
+    "x":14016,
+    "y":643
   }, 
 
   "Q/Q9/cylinder/horizontal/green_red_green": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7817,
-    "y":735
+    "x":14044,
+    "y":745
   }, 
 
   "Q/Q9/cylinder/horizontal/green_white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7875,
-    "y":735
+    "x":14090,
+    "y":847
   }, 
 
   "Q/Q9/cylinder/horizontal/green_white_green": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7933,
-    "y":735
+    "x":14066,
+    "y":431
   }, 
 
   "Q/Q9/cylinder/horizontal/orange_white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":7991,
-    "y":735
+    "x":14098,
+    "y":319
   }, 
 
   "Q/Q9/cylinder/horizontal/red_green": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8161,
-    "y":673
+    "x":14074,
+    "y":533
   }, 
 
   "Q/Q9/cylinder/horizontal/red_green_red": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8219,
-    "y":673
+    "x":14074,
+    "y":635
   }, 
 
   "Q/Q9/cylinder/horizontal/red_white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8277,
-    "y":685
+    "x":14102,
+    "y":737
   }, 
 
   "Q/Q9/cylinder/horizontal/red_white_red": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8335,
-    "y":685
+    "x":14124,
+    "y":421
   }, 
 
   "Q/Q9/cylinder/horizontal/white_black": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8511,
-    "y":695
+    "x":14156,
+    "y":319
   }, 
 
   "Q/Q9/cylinder/horizontal/white_black_white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8569,
-    "y":655
+    "x":14197,
+    "y":205
   }, 
 
   "Q/Q9/cylinder/horizontal/white_green": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8627,
-    "y":655
+    "x":14148,
+    "y":839
   }, 
 
   "Q/Q9/cylinder/horizontal/white_green_white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8685,
-    "y":655
+    "x":14132,
+    "y":523
   }, 
 
   "Q/Q9/cylinder/horizontal/white_red": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8743,
-    "y":655
+    "x":14182,
+    "y":421
   }, 
 
   "Q/Q9/cylinder/horizontal/white_red_white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8801,
-    "y":655
+    "x":14132,
+    "y":625
   }, 
 
   "Q/Q9/cylinder/horizontal/yellow_black": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8573,
-    "y":757
+    "x":14160,
+    "y":727
   }, 
 
   "Q/Q9/cylinder/horizontal/yellow_red_yellow": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8631,
-    "y":757
+    "x":14206,
+    "y":829
   }, 
 
   "Q/Q9/cylinder/orange": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8689,
-    "y":757
+    "x":14214,
+    "y":307
   }, 
 
   "Q/Q9/cylinder/red": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8747,
-    "y":757
+    "x":14255,
+    "y":205
   }, 
 
   "Q/Q9/cylinder/vertical/yellow_red": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8805,
-    "y":757
+    "x":14262,
+    "y":103
   }, 
 
   "Q/Q9/cylinder/vertical/yellow_red_yellow": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8863,
-    "y":753
+    "x":14290,
+    "y":1
   }, 
 
   "Q/Q9/cylinder/white": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8921,
-    "y":713
+    "x":14190,
+    "y":523
   }, 
 
   "Q/Q9/cylinder/yellow": {
     "height":100,
     "pixelRatio":1,
     "width":56,
-    "x":8921,
-    "y":815
+    "x":14190,
+    "y":625
   }, 
 
   "Q/Q9/flag/amber": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7471,
-    "y":621
+    "x":14070,
+    "y":109
   }, 
 
   "Q/Q9/flag/black": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7473,
-    "y":729
+    "x":14098,
+    "y":1
   }, 
 
   "Q/Q9/flag/blue": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7529,
-    "y":729
+    "x":13522,
+    "y":791
   }, 
 
   "Q/Q9/flag/brown": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7585,
-    "y":627
+    "x":13566,
+    "y":899
   }, 
 
   "Q/Q9/flag/generic": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7641,
-    "y":627
+    "x":13578,
+    "y":791
   }, 
 
   "Q/Q9/flag/green": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7697,
-    "y":627
+    "x":13622,
+    "y":899
   }, 
 
   "Q/Q9/flag/grey": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7753,
-    "y":627
+    "x":13634,
+    "y":791
   }, 
 
   "Q/Q9/flag/horizontal/red_blue_white": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7809,
-    "y":627
+    "x":13678,
+    "y":899
   }, 
 
   "Q/Q9/flag/magenta": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7865,
-    "y":627
+    "x":13690,
+    "y":791
   }, 
 
   "Q/Q9/flag/orange": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7921,
-    "y":627
+    "x":13722,
+    "y":675
   }, 
 
   "Q/Q9/flag/pink": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":7977,
-    "y":627
+    "x":13758,
+    "y":557
   }, 
 
   "Q/Q9/flag/red": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":8033,
-    "y":571
+    "x":13808,
+    "y":439
   }, 
 
   "Q/Q9/flag/violet": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":8089,
-    "y":571
+    "x":13734,
+    "y":899
   }, 
 
   "Q/Q9/flag/white": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":8049,
-    "y":679
+    "x":13746,
+    "y":783
   }, 
 
   "Q/Q9/flag/yellow": {
     "height":106,
     "pixelRatio":1,
     "width":54,
-    "x":8105,
-    "y":679
+    "x":13778,
+    "y":665
   }, 
 
   "Q/Q9/mooring/generic": {
     "height":48,
     "pixelRatio":1,
     "width":40,
-    "x":13211,
-    "y":975
+    "x":1877,
+    "y":969
   }, 
 
   "Q/Q9/rectangle_vertical/horizontal/red_white_red": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10163,
-    "y":725
+    "x":15024,
+    "y":1
   }, 
 
   "Q/Q9/rhombus/border/green_white": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":10955,
-    "y":715
+    "x":9830,
+    "y":937
   }, 
 
   "Q/Q9/rhombus/border/red_white": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":11041,
-    "y":715
+    "x":9916,
+    "y":937
   }, 
 
   "Q/Q9/rhombus/generic": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":12565,
-    "y":909
+    "x":12868,
+    "y":933
   }, 
 
   "Q/Q9/rhombus/green_white_green": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":12651,
-    "y":909
+    "x":14236,
+    "y":931
   }, 
 
   "Q/Q9/rhombus/horizontal/green_red": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":12737,
-    "y":909
+    "x":14248,
+    "y":505
   }, 
 
   "Q/Q9/rhombus/horizontal/green_white": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":12823,
-    "y":909
+    "x":14310,
+    "y":403
   }, 
 
   "Q/Q9/rhombus/horizontal/red_green": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":735,
-    "y":933
+    "x":14342,
+    "y":301
   }, 
 
   "Q/Q9/rhombus/horizontal/red_white": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":821,
-    "y":933
+    "x":14383,
+    "y":199
   }, 
 
   "Q/Q9/rhombus/horizontal/white_green": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":907,
-    "y":935
+    "x":14390,
+    "y":97
   }, 
 
   "Q/Q9/rhombus/horizontal/white_red": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":993,
-    "y":935
+    "x":14410,
+    "y":1
   }, 
 
   "Q/Q9/rhombus/red_white_red": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":1079,
-    "y":933
+    "x":14248,
+    "y":591
   }, 
 
   "Q/Q9/rhombus/saltire/white_red": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":1165,
-    "y":935
+    "x":14288,
+    "y":677
   }, 
 
   "Q/Q9/rhombus/vertical/green_red": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":1251,
-    "y":935
+    "x":14334,
+    "y":823
   }, 
 
   "Q/Q9/rhombus/vertical/green_white": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":12985,
-    "y":877
+    "x":14392,
+    "y":909
   }, 
 
   "Q/Q9/rhombus/vertical/red_green": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":13213,
-    "y":889
+    "x":14334,
+    "y":489
   }, 
 
   "Q/Q9/rhombus/vertical/red_white": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":13299,
-    "y":889
+    "x":14396,
+    "y":387
   }, 
 
   "Q/Q9/rhombus/vertical/white_green": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":13443,
-    "y":903
+    "x":14428,
+    "y":285
   }, 
 
   "Q/Q9/rhombus/vertical/white_red": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":13529,
-    "y":903
+    "x":14469,
+    "y":183
   }, 
 
   "Q/Q9/rhombus/vertical/yellow_black_yellow": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":13615,
-    "y":903
+    "x":14476,
+    "y":87
   }, 
 
   "Q/Q9/rhombus/yellow": {
     "height":84,
     "pixelRatio":1,
     "width":84,
-    "x":13701,
-    "y":903
+    "x":14496,
+    "y":1
   }, 
 
   "Q/Q9/sphere/black": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":4636,
-    "y":297
+    "x":13056,
+    "y":923
   }, 
 
   "Q/Q9/sphere/generic": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":11127,
-    "y":715
+    "x":13313,
+    "y":235
   }, 
 
   "Q/Q9/sphere/green": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":7759,
-    "y":929
+    "x":13383,
+    "y":235
   }, 
 
   "Q/Q9/sphere/horizontal/black_yellow": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":7829,
-    "y":929
+    "x":13453,
+    "y":233
   }, 
 
   "Q/Q9/sphere/horizontal/green_white": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":7899,
-    "y":929
+    "x":13523,
+    "y":233
   }, 
 
   "Q/Q9/sphere/horizontal/green_white_green": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":7969,
-    "y":929
+    "x":13593,
+    "y":233
   }, 
 
   "Q/Q9/sphere/horizontal/red_green": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8039,
-    "y":929
+    "x":13663,
+    "y":233
   }, 
 
   "Q/Q9/sphere/horizontal/red_green_red": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8109,
-    "y":929
+    "x":13733,
+    "y":233
   }, 
 
   "Q/Q9/sphere/horizontal/red_white": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8179,
-    "y":929
+    "x":13803,
+    "y":233
   }, 
 
   "Q/Q9/sphere/horizontal/red_white_red": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8249,
-    "y":929
+    "x":14218,
+    "y":727
   }, 
 
   "Q/Q9/sphere/horizontal/white_green": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8319,
-    "y":929
+    "x":14264,
+    "y":823
   }, 
 
   "Q/Q9/sphere/horizontal/white_red": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8389,
-    "y":929
+    "x":14322,
+    "y":919
   }, 
 
   "Q/Q9/sphere/horizontal/yellow_black": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8459,
-    "y":929
+    "x":14240,
+    "y":409
   }, 
 
   "Q/Q9/sphere/red": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8529,
-    "y":929
+    "x":14272,
+    "y":307
   }, 
 
   "Q/Q9/sphere/white": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8599,
-    "y":929
+    "x":14313,
+    "y":205
   }, 
 
   "Q/Q9/sphere/yellow": {
     "height":94,
     "pixelRatio":1,
     "width":68,
-    "x":8669,
-    "y":929
+    "x":14320,
+    "y":103
   }, 
 
   "Q/Q9/square/border/green_white": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10225,
-    "y":725
+    "x":14942,
+    "y":63
   }, 
 
   "Q/Q9/square/border/red_white": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10287,
-    "y":739
+    "x":15004,
+    "y":63
   }, 
 
   "Q/Q9/square/border/red_white_red_white": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10101,
-    "y":787
+    "x":15066,
+    "y":63
   }, 
 
   "Q/Q9/square/border/white_black": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10163,
-    "y":787
+    "x":14676,
+    "y":827
   }, 
 
   "Q/Q9/square/generic": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10225,
-    "y":787
+    "x":14688,
+    "y":765
   }, 
 
   "Q/Q9/square/green": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10287,
-    "y":801
+    "x":14744,
+    "y":669
   }, 
 
   "Q/Q9/square/horizontal/red_white_red": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9533,
-    "y":849
+    "x":14676,
+    "y":889
   }, 
 
   "Q/Q9/square/horizontal/white_red_white": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9595,
-    "y":849
+    "x":14676,
+    "y":951
   }, 
 
   "Q/Q9/square/red": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9657,
-    "y":849
+    "x":14772,
+    "y":521
   }, 
 
   "Q/Q9/square/vertical/red_white": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9719,
-    "y":849
+    "x":14772,
+    "y":583
   }, 
 
   "Q/Q9/square/vertical/white_red_white": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9781,
-    "y":849
+    "x":14808,
+    "y":373
   }, 
 
   "Q/Q9/square/vertical/yellow_black_yellow": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9843,
-    "y":849
+    "x":14812,
+    "y":311
   }, 
 
   "Q/Q9/square/white": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9905,
-    "y":849
+    "x":14866,
+    "y":249
   }, 
 
   "Q/Q9/triangle_point_down/border/green_white": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":7511,
-    "y":837
+    "x":10078,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_down/border/red_white": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":7583,
-    "y":837
+    "x":10150,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_down/generic": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":7655,
-    "y":837
+    "x":10222,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_down/green": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":7727,
-    "y":837
+    "x":10294,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_down/red": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":7799,
-    "y":837
+    "x":10366,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_down/white": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":7871,
-    "y":837
+    "x":10438,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_up/border/green_white": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":7943,
-    "y":837
+    "x":10510,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_up/border/red_white": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":8439,
-    "y":695
+    "x":10582,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_up/generic": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":8049,
-    "y":849
+    "x":10654,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_up/green": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":8439,
-    "y":764
+    "x":10726,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_up/red": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":8121,
-    "y":849
+    "x":10798,
+    "y":277
   }, 
 
   "Q/Q9/triangle_point_up/white": {
     "height":67,
     "pixelRatio":1,
     "width":70,
-    "x":8185,
-    "y":775
+    "x":10870,
+    "y":277
   }, 
 
   "Q/Q9/triangles_point2point/border/green_red_white": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":3707,
-    "y":749
+    "x":10502,
+    "y":760
   }, 
 
   "Q/Q9/triangles_point2point/border/green_white": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":11691,
-    "y":423
+    "x":10578,
+    "y":622
   }, 
 
   "Q/Q9/triangles_point2point/border/red_green_white": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":15016,
-    "y":281
+    "x":10644,
+    "y":484
   }, 
 
   "Q/Q9/triangles_point2point/border/red_white": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":10601,
-    "y":599
+    "x":10700,
+    "y":346
   }, 
 
   "Q/Q9/triangles_point2point/generic": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":10601,
-    "y":735
+    "x":10578,
+    "y":758
   }, 
 
   "Q/Q9/triangles_point2point/green": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":10677,
-    "y":747
+    "x":10654,
+    "y":620
   }, 
 
   "Q/Q9/triangles_point2point/red": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":10753,
-    "y":747
+    "x":10720,
+    "y":482
   }, 
 
   "Q/Q9/triangles_point2point/vertical/black_yellow": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":10829,
-    "y":775
+    "x":10776,
+    "y":346
   }, 
 
   "Q/Q9/triangles_point2point/vertical/green_red": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":10947,
-    "y":801
+    "x":10654,
+    "y":756
   }, 
 
   "Q/Q9/triangles_point2point/vertical/red_green": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":11023,
-    "y":801
+    "x":10730,
+    "y":618
   }, 
 
   "Q/Q9/triangles_point2point/vertical/yellow_black": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":11099,
-    "y":811
+    "x":10796,
+    "y":482
   }, 
 
   "Q/Q9/triangles_point2point/white": {
     "height":134,
     "pixelRatio":1,
     "width":74,
-    "x":11175,
-    "y":833
+    "x":10852,
+    "y":346
   }, 
 
   "Q/Q9/x-shape/black": {
     "height":110,
     "pixelRatio":1,
     "width":82,
-    "x":14330,
-    "y":517
+    "x":1803,
+    "y":285
   }, 
 
   "Q/Q9/x-shape/generic": {
     "height":110,
     "pixelRatio":1,
     "width":82,
-    "x":15012,
-    "y":169
+    "x":1887,
+    "y":285
   }, 
 
   "Q/Q9/x-shape/green": {
     "height":110,
     "pixelRatio":1,
     "width":82,
-    "x":10677,
-    "y":635
+    "x":1971,
+    "y":285
   }, 
 
   "Q/Q9/x-shape/orange": {
     "height":110,
     "pixelRatio":1,
     "width":82,
-    "x":10761,
-    "y":635
+    "x":2055,
+    "y":285
   }, 
 
   "Q/Q9/x-shape/red": {
     "height":110,
     "pixelRatio":1,
     "width":82,
-    "x":11197,
-    "y":721
+    "x":2139,
+    "y":285
   }, 
 
   "Q/Q9/x-shape/yellow": {
     "height":110,
     "pixelRatio":1,
     "width":82,
-    "x":11281,
-    "y":721
+    "x":2223,
+    "y":285
   }, 
 
   "Q/Q31/black": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":467,
-    "y":869
+    "x":12844,
+    "y":691
   }, 
 
   "Q/Q31/general": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":11864,
-    "y":89
+    "x":12880,
+    "y":573
   }, 
 
   "Q/Q31/generic": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":12080,
-    "y":89
+    "x":12930,
+    "y":451
   }, 
 
   "Q/Q31/green": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":12296,
-    "y":89
+    "x":13016,
+    "y":333
   }, 
 
   "Q/Q31/horizontal/black_red": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":12512,
-    "y":89
+    "x":13192,
+    "y":119
   }, 
 
   "Q/Q31/horizontal/black_red_black": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":12728,
-    "y":89
+    "x":13234,
+    "y":1
   }, 
 
   "Q/Q31/horizontal/black_yellow": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":12944,
-    "y":89
+    "x":12874,
+    "y":807
   }, 
 
   "Q/Q31/horizontal/black_yellow_black": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13160,
-    "y":111
+    "x":13060,
+    "y":689
   }, 
 
   "Q/Q31/horizontal/green_red_green": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13376,
-    "y":111
+    "x":13090,
+    "y":805
   }, 
 
   "Q/Q31/horizontal/green_white_green_white": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13592,
-    "y":111
+    "x":13096,
+    "y":567
   }, 
 
   "Q/Q31/horizontal/red_green_red": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13808,
-    "y":111
+    "x":13146,
+    "y":449
   }, 
 
   "Q/Q31/horizontal/red_green_red_green": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":14024,
-    "y":111
+    "x":13232,
+    "y":333
   }, 
 
   "Q/Q31/horizontal/red_white_red_white": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":14240,
-    "y":111
+    "x":13408,
+    "y":117
   }, 
 
   "Q/Q31/horizontal/yellow_black": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":14456,
-    "y":111
+    "x":13450,
+    "y":1
   }, 
 
   "Q/Q31/horizontal/yellow_black_yellow": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":10528,
-    "y":241
+    "x":13276,
+    "y":683
   }, 
 
   "Q/Q31/horizontal/yellow_brown_yellow": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13126,
-    "y":227
+    "x":13312,
+    "y":565
   }, 
 
   "Q/Q31/horizontal/yellow_red_yellow": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13342,
-    "y":227
+    "x":13362,
+    "y":449
   }, 
 
   "Q/Q31/red": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13558,
-    "y":227
+    "x":13448,
+    "y":331
   }, 
 
   "Q/Q31/vertical/red_white": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13774,
-    "y":227
+    "x":13624,
+    "y":117
   }, 
 
   "Q/Q31/vertical/yellow_blue": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":13990,
-    "y":227
+    "x":13666,
+    "y":1
   }, 
 
   "Q/Q31/yellow": {
     "height":114,
     "pixelRatio":1,
     "width":214,
-    "x":14206,
-    "y":227
+    "x":13306,
+    "y":799
   }, 
 
   "Q/Q40/black": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":5817,
-    "y":881
+    "x":5171,
+    "y":233
   }, 
 
   "Q/Q40/generic": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":5971,
-    "y":881
+    "x":5325,
+    "y":233
   }, 
 
   "Q/Q40/horizontal/black_red_black": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":6125,
-    "y":881
+    "x":5479,
+    "y":233
   }, 
 
   "Q/Q40/horizontal/black_white": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":6279,
-    "y":881
+    "x":5633,
+    "y":233
   }, 
 
   "Q/Q40/horizontal/yellow_black": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":6601,
-    "y":869
+    "x":5787,
+    "y":233
   }, 
 
   "Q/Q40/orange": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":6755,
-    "y":869
+    "x":5941,
+    "y":233
   }, 
 
   "Q/Q40/red": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":11201,
-    "y":439
+    "x":6095,
+    "y":233
   }, 
 
   "Q/Q40/white": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":12037,
-    "y":575
+    "x":6249,
+    "y":233
   }, 
 
   "Q/Q40/yellow": {
     "height":142,
     "pixelRatio":1,
     "width":152,
-    "x":12191,
-    "y":575
+    "x":6403,
+    "y":233
   }, 
 
   "Q/Q91/port": {
     "height":152,
     "pixelRatio":1,
     "width":114,
-    "x":3627,
-    "y":283
+    "x":3986,
+    "y":856
   }, 
 
   "Q/Q91/starboard": {
     "height":150,
     "pixelRatio":1,
     "width":114,
-    "x":909,
-    "y":783
+    "x":4546,
+    "y":851
   }, 
 
   "Q/Q92/port": {
     "height":152,
     "pixelRatio":1,
     "width":126,
-    "x":6693,
-    "y":715
+    "x":3899,
+    "y":233
   }, 
 
   "Q/Q92/starboard": {
     "height":150,
     "pixelRatio":1,
     "width":124,
-    "x":7385,
-    "y":865
+    "x":4615,
+    "y":233
   }, 
 
   "Q/Q101/amber": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9429,
-    "y":663
+    "x":14482,
+    "y":371
   }, 
 
   "Q/Q101/black": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9495,
-    "y":663
+    "x":14514,
+    "y":269
   }, 
 
   "Q/Q101/blue": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9561,
-    "y":663
+    "x":14555,
+    "y":173
   }, 
 
   "Q/Q101/brown": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9627,
-    "y":663
+    "x":14562,
+    "y":87
   }, 
 
   "Q/Q101/generic": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9693,
-    "y":663
+    "x":14582,
+    "y":1
   }, 
 
   "Q/Q101/green": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9759,
-    "y":663
+    "x":14454,
+    "y":637
   }, 
 
   "Q/Q101/grey": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9825,
-    "y":663
+    "x":14454,
+    "y":699
   }, 
 
   "Q/Q101/magenta": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9891,
-    "y":663
+    "x":14488,
+    "y":761
   }, 
 
   "Q/Q101/orange": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9957,
-    "y":663
+    "x":14478,
+    "y":885
   }, 
 
   "Q/Q101/pink": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":10023,
-    "y":663
+    "x":14494,
+    "y":823
   }, 
 
   "Q/Q101/red": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":10089,
-    "y":663
+    "x":14478,
+    "y":947
   }, 
 
   "Q/Q101/violet": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":10155,
-    "y":663
+    "x":14544,
+    "y":885
   }, 
 
   "Q/Q101/white": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":10221,
-    "y":663
+    "x":14544,
+    "y":947
   }, 
 
   "Q/Q101/yellow": {
     "height":60,
     "pixelRatio":1,
     "width":64,
-    "x":9025,
-    "y":727
+    "x":14494,
+    "y":433
   }, 
 
   "Q/Q110/generic": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":12980,
-    "y":205
+    "x":4928,
+    "y":849
   }, 
 
   "Q/Q111/generic": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5139,
-    "y":549
+    "x":5074,
+    "y":847
   }, 
 
   "Q/Q126/addition/bottom_board": {
-    "height":37,
+    "height":94,
     "pixelRatio":1,
     "width":60,
-    "x":13253,
-    "y":975
+    "x":14348,
+    "y":1
   }, 
 
   "Q/Q126/addition/left_triangle": {
     "height":60,
     "pixelRatio":1,
-    "width":43,
-    "x":12929,
-    "y":631
+    "width":100,
+    "x":12148,
+    "y":957
   }, 
 
   "Q/Q126/addition/left_triangle;bottom_board": {
     "height":92,
     "pixelRatio":1,
     "width":98,
-    "x":1377,
-    "y":767
+    "x":11203,
+    "y":249
   }, 
 
   "Q/Q126/addition/right_triangle": {
     "height":60,
     "pixelRatio":1,
-    "width":43,
-    "x":9397,
-    "y":913
+    "width":100,
+    "x":12250,
+    "y":957
   }, 
 
   "Q/Q126/addition/right_triangle;bottom_board": {
-    "height":92,
+    "height":94,
     "pixelRatio":1,
-    "width":98,
-    "x":1477,
-    "y":767
+    "width":100,
+    "x":12954,
+    "y":923
   }, 
 
   "Q/Q126/generic": {
     "height":100,
     "pixelRatio":1,
     "width":64,
-    "x":12499,
-    "y":895
+    "x":13834,
+    "y":649
   }, 
 
   "Q/Q126/generic/alignment": {
     "height":58,
     "pixelRatio":1,
     "width":58,
-    "x":10349,
-    "y":803
+    "x":11672,
+    "y":963
   }, 
 
   "Q/Q126/generic/anchoring_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":14777,
-    "y":895
+    "x":14586,
+    "y":579
   }, 
 
   "Q/Q126/generic/berthing_lateral_limit": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":14839,
-    "y":909
+    "x":14586,
+    "y":641
   }, 
 
   "Q/Q126/generic/berthing_lateral_limits": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":13065,
-    "y":963
+    "x":13916,
+    "y":955
   }, 
 
   "Q/Q126/generic/berthing_marked_1": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9413,
-    "y":851
+    "x":14935,
+    "y":125
   }, 
 
   "Q/Q126/generic/berthing_marked_2": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9442,
-    "y":913
+    "x":14808,
+    "y":435
   }, 
 
   "Q/Q126/generic/berthing_marked_3": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":14683,
-    "y":921
+    "x":14995,
+    "y":125
   }, 
 
   "Q/Q126/generic/berthing_marked_non_pushing_1": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9421,
-    "y":727
+    "x":15055,
+    "y":125
   }, 
 
   "Q/Q126/generic/berthing_marked_non_pushing_2": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9421,
-    "y":789
+    "x":14954,
+    "y":187
   }, 
 
   "Q/Q126/generic/berthing_marked_non_pushing_3": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9473,
-    "y":851
+    "x":15014,
+    "y":187
   }, 
 
   "Q/Q126/generic/berthing_marked_pushing_1": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":14961,
-    "y":897
+    "x":14620,
+    "y":703
   }, 
 
   "Q/Q126/generic/berthing_marked_pushing_2": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10391,
-    "y":741
+    "x":14626,
+    "y":765
   }, 
 
   "Q/Q126/generic/berthing_marked_pushing_3": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10517,
-    "y":773
+    "x":14622,
+    "y":455
   }, 
 
   "Q/Q126/generic/berthing_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":48,
-    "x":7485,
-    "y":491
+    "x":15038,
+    "y":805
   }, 
 
   "Q/Q126/generic/berthing_rafting_limit": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9025,
-    "y":913
+    "x":14622,
+    "y":517
   }, 
 
   "Q/Q126/generic/berthing_unmarked": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9967,
-    "y":849
+    "x":15074,
+    "y":187
   }, 
 
   "Q/Q126/generic/berthing_unmarked_non_pushing": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10027,
-    "y":849
+    "x":14738,
+    "y":827
   }, 
 
   "Q/Q126/generic/berthing_unmarked_pushing": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9087,
-    "y":913
+    "x":14626,
+    "y":359
   }, 
 
   "Q/Q126/generic/bifucation": {
     "height":62,
     "pixelRatio":1,
     "width":68,
-    "x":9219,
-    "y":663
+    "x":11904,
+    "y":957
   }, 
 
   "Q/Q126/generic/bridge": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10087,
-    "y":849
+    "x":14750,
+    "y":731
   }, 
 
   "Q/Q126/generic/center_channel": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10147,
-    "y":849
+    "x":14806,
+    "y":645
   }, 
 
   "Q/Q126/generic/change_bank": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9149,
-    "y":913
+    "x":14680,
+    "y":273
   }, 
 
   "Q/Q126/generic/channel_distance_left": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":13133,
-    "y":889
+    "x":13996,
+    "y":955
   }, 
 
   "Q/Q126/generic/channel_distance_right": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":14523,
-    "y":921
+    "x":14076,
+    "y":955
   }, 
 
   "Q/Q126/generic/channel_one_way": {
     "height":60,
     "pixelRatio":1,
     "width":120,
-    "x":14934,
-    "y":661
+    "x":2600,
+    "y":961
   }, 
 
   "Q/Q126/generic/channel_two_way": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":4938,
-    "y":903
+    "x":10124,
+    "y":901
   }, 
 
   "Q/Q126/generic/check_point": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9211,
-    "y":913
+    "x":14708,
+    "y":187
   }, 
 
   "Q/Q126/generic/closed_area": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9273,
-    "y":913
+    "x":14749,
+    "y":125
   }, 
 
   "Q/Q126/generic/cross_river_to_port": {
     "height":58,
     "pixelRatio":1,
     "width":58,
-    "x":10409,
-    "y":803
+    "x":11732,
+    "y":963
   }, 
 
   "Q/Q126/generic/cross_river_to_starboard": {
     "height":58,
     "pixelRatio":1,
     "width":58,
-    "x":10515,
-    "y":835
+    "x":11792,
+    "y":963
   }, 
 
   "Q/Q126/generic/cross_to_port": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":7485,
-    "y":553
+    "x":15088,
+    "y":805
   }, 
 
   "Q/Q126/generic/cross_to_starboard": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":8393,
-    "y":685
+    "x":14918,
+    "y":807
   }, 
 
   "Q/Q126/generic/crossing": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9335,
-    "y":913
+    "x":14756,
+    "y":63
   }, 
 
   "Q/Q126/generic/drinking_water": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":14961,
-    "y":959
+    "x":14776,
+    "y":1
   }, 
 
   "Q/Q126/generic/entry_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":80,
-    "x":12983,
-    "y":963
+    "x":12662,
+    "y":939
   }, 
 
   "Q/Q126/generic/ferry_independent": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":14603,
-    "y":921
+    "x":14156,
+    "y":941
   }, 
 
   "Q/Q126/generic/ferry_non_independent": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":7531,
-    "y":565
+    "x":14334,
+    "y":575
   }, 
 
   "Q/Q126/generic/give_way_crossing": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10207,
-    "y":849
+    "x":14738,
+    "y":889
   }, 
 
   "Q/Q126/generic/give_way_junction": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9502,
-    "y":913
+    "x":14738,
+    "y":951
   }, 
 
   "Q/Q126/generic/high_speeds_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":14773,
-    "y":957
+    "x":14648,
+    "y":579
   }, 
 
   "Q/Q126/generic/isolated_danger": {
     "height":60,
     "pixelRatio":1,
     "width":30,
-    "x":12765,
-    "y":561
+    "x":15102,
+    "y":867
   }, 
 
   "Q/Q126/generic/keep_lookout": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9562,
-    "y":911
+    "x":14834,
+    "y":497
   }, 
 
   "Q/Q126/generic/keep_to_margin": {
     "height":62,
     "pixelRatio":1,
     "width":68,
-    "x":9289,
-    "y":663
+    "x":11974,
+    "y":957
   }, 
 
   "Q/Q126/generic/keep_to_mid-river": {
     "height":58,
     "pixelRatio":1,
     "width":58,
-    "x":10515,
-    "y":895
+    "x":14288,
+    "y":763
   }, 
 
   "Q/Q126/generic/keep_to_port": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":8393,
-    "y":747
+    "x":14964,
+    "y":807
   }, 
 
   "Q/Q126/generic/keep_to_port_margin": {
     "height":58,
     "pixelRatio":1,
     "width":58,
-    "x":10575,
-    "y":933
+    "x":14348,
+    "y":763
   }, 
 
   "Q/Q126/generic/keep_to_starboard": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":8979,
-    "y":713
+    "x":15010,
+    "y":867
   }, 
 
   "Q/Q126/generic/keep_to_starboard_margin": {
     "height":58,
     "pixelRatio":1,
     "width":58,
-    "x":10635,
-    "y":945
+    "x":15038,
+    "y":745
   }, 
 
   "Q/Q126/generic/launching_beaching_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9622,
-    "y":911
+    "x":14868,
+    "y":435
   }, 
 
   "Q/Q126/generic/limited_depth": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9682,
-    "y":911
+    "x":14870,
+    "y":373
   }, 
 
   "Q/Q126/generic/limited_headroom": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9742,
-    "y":911
+    "x":14874,
+    "y":311
   }, 
 
   "Q/Q126/generic/limited_width": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9802,
-    "y":911
+    "x":14928,
+    "y":249
   }, 
 
   "Q/Q126/generic/main_waterway_ahead_left": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9862,
-    "y":911
+    "x":14834,
+    "y":559
   }, 
 
   "Q/Q126/generic/main_waterway_ahead_left_secondary_right": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9922,
-    "y":911
+    "x":14988,
+    "y":249
   }, 
 
   "Q/Q126/generic/main_waterway_ahead_right": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":9982,
-    "y":911
+    "x":15048,
+    "y":249
   }, 
 
   "Q/Q126/generic/main_waterway_ahead_right_secondary_left": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10042,
-    "y":911
+    "x":14934,
+    "y":311
   }, 
 
   "Q/Q126/generic/main_waterway_crossing": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9481,
-    "y":725
+    "x":14648,
+    "y":641
   }, 
 
   "Q/Q126/generic/main_waterway_junction": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9543,
-    "y":725
+    "x":14682,
+    "y":703
   }, 
 
   "Q/Q126/generic/main_waterway_left_secondary_ahead": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10102,
-    "y":911
+    "x":14994,
+    "y":311
   }, 
 
   "Q/Q126/generic/main_waterway_left_secondary_ahead_right": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10162,
-    "y":911
+    "x":15054,
+    "y":311
   }, 
 
   "Q/Q126/generic/main_waterway_left_secondary_right": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9481,
-    "y":787
+    "x":14684,
+    "y":421
   }, 
 
   "Q/Q126/generic/main_waterway_right_secondary_ahead": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10222,
-    "y":911
+    "x":14930,
+    "y":373
   }, 
 
   "Q/Q126/generic/main_waterway_right_secondary_ahead_left": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10575,
-    "y":871
+    "x":14990,
+    "y":373
   }, 
 
   "Q/Q126/generic/main_waterway_right_secondary_left": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9605,
-    "y":725
+    "x":14688,
+    "y":335
   }, 
 
   "Q/Q126/generic/make_radio_contact": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10635,
-    "y":883
+    "x":15050,
+    "y":373
   }, 
 
   "Q/Q126/generic/mooring_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10695,
-    "y":883
+    "x":14928,
+    "y":435
   }, 
 
   "Q/Q126/generic/motor_craft_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10755,
-    "y":883
+    "x":14988,
+    "y":435
   }, 
 
   "Q/Q126/generic/move_to_left": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":7611,
-    "y":565
+    "x":14374,
+    "y":637
   }, 
 
   "Q/Q126/generic/move_to_port": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":8979,
-    "y":775
+    "x":15056,
+    "y":867
   }, 
 
   "Q/Q126/generic/move_to_right": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":7691,
-    "y":565
+    "x":14414,
+    "y":575
   }, 
 
   "Q/Q126/generic/move_to_starboard": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":8979,
-    "y":837
+    "x":14918,
+    "y":929
   }, 
 
   "Q/Q126/generic/navigate_mid_river": {
     "height":62,
     "pixelRatio":1,
     "width":68,
-    "x":9359,
-    "y":663
+    "x":12044,
+    "y":957
   }, 
 
   "Q/Q126/generic/navigation_restrictions": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10695,
-    "y":945
+    "x":15048,
+    "y":435
   }, 
 
   "Q/Q126/generic/no_anchoring": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10755,
-    "y":945
+    "x":14798,
+    "y":793
   }, 
 
   "Q/Q126/generic/no_berthing": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9543,
-    "y":787
+    "x":14742,
+    "y":249
   }, 
 
   "Q/Q126/generic/no_berthing_lateral_limit": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10815,
-    "y":911
+    "x":14810,
+    "y":707
   }, 
 
   "Q/Q126/generic/no_convoy_overtaking": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":8979,
-    "y":899
+    "x":14964,
+    "y":869
   }, 
 
   "Q/Q126/generic/no_convoy_passing": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":10469,
-    "y":791
+    "x":14964,
+    "y":931
   }, 
 
   "Q/Q126/generic/no_convoy_passing_overtaking": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9667,
-    "y":725
+    "x":14770,
+    "y":187
   }, 
 
   "Q/Q126/generic/no_entry": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":7771,
-    "y":565
+    "x":14374,
+    "y":699
   }, 
 
   "Q/Q126/generic/no_high_speeds": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10875,
-    "y":929
+    "x":14866,
+    "y":621
   }, 
 
   "Q/Q126/generic/no_launching_beaching": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9605,
-    "y":787
+    "x":14811,
+    "y":125
   }, 
 
   "Q/Q126/generic/no_mooring - Copy": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9729,
-    "y":725
+    "x":14818,
+    "y":63
   }, 
 
   "Q/Q126/generic/no_mooring": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9667,
-    "y":787
+    "x":14838,
+    "y":1
   }, 
 
   "Q/Q126/generic/no_motor_craft": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9791,
-    "y":725
+    "x":14684,
+    "y":483
   }, 
 
   "Q/Q126/generic/no_overtaking": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":10469,
-    "y":853
+    "x":15010,
+    "y":929
   }, 
 
   "Q/Q126/generic/no_passage_left": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9729,
-    "y":787
+    "x":14710,
+    "y":545
   }, 
 
   "Q/Q126/generic/no_passage_right": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9853,
-    "y":725
+    "x":14710,
+    "y":607
   }, 
 
   "Q/Q126/generic/no_passing": {
     "height":60,
     "pixelRatio":1,
     "width":44,
-    "x":10462,
-    "y":915
+    "x":15056,
+    "y":929
   }, 
 
   "Q/Q126/generic/no_passing_overtaking": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9791,
-    "y":787
+    "x":14746,
+    "y":397
   }, 
 
   "Q/Q126/generic/no_sailboards": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10935,
-    "y":937
+    "x":14894,
+    "y":497
   }, 
 
   "Q/Q126/generic/no_sailing_craft": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9915,
-    "y":725
+    "x":14750,
+    "y":311
   }, 
 
   "Q/Q126/generic/no_small_craft": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9853,
-    "y":787
+    "x":14804,
+    "y":249
   }, 
 
   "Q/Q126/generic/no_sport_craft": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9977,
-    "y":725
+    "x":14832,
+    "y":187
   }, 
 
   "Q/Q126/generic/no_turning": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10995,
-    "y":937
+    "x":14894,
+    "y":559
   }, 
 
   "Q/Q126/generic/no_unpowered_craft": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10282,
-    "y":863
+    "x":14798,
+    "y":855
   }, 
 
   "Q/Q126/generic/no_wash": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10342,
-    "y":863
+    "x":14798,
+    "y":917
   }, 
 
   "Q/Q126/generic/no_waterbikes": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10402,
-    "y":863
+    "x":14954,
+    "y":497
   }, 
 
   "Q/Q126/generic/no_waterskiing": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10282,
-    "y":925
+    "x":15014,
+    "y":497
   }, 
 
   "Q/Q126/generic/opening_to_left": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10342,
-    "y":925
+    "x":15074,
+    "y":497
   }, 
 
   "Q/Q126/generic/opening_to_right": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10402,
-    "y":925
+    "x":14954,
+    "y":559
   }, 
 
   "Q/Q126/generic/overhead_cable": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":10508,
-    "y":955
+    "x":15014,
+    "y":559
   }, 
 
   "Q/Q126/generic/proceed_to_left": {
     "height":60,
     "pixelRatio":1,
     "width":120,
-    "x":8913,
-    "y":651
+    "x":2722,
+    "y":961
   }, 
 
   "Q/Q126/generic/proceed_to_right": {
     "height":60,
     "pixelRatio":1,
     "width":120,
-    "x":9035,
-    "y":665
+    "x":2844,
+    "y":961
   }, 
 
   "Q/Q126/generic/prohibition_ends": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9915,
-    "y":787
+    "x":14873,
+    "y":125
   }, 
 
   "Q/Q126/generic/radio_information": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":15023,
-    "y":897
+    "x":15074,
+    "y":559
   }, 
 
   "Q/Q126/generic/reduce_speed": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10039,
-    "y":725
+    "x":14880,
+    "y":63
   }, 
 
   "Q/Q126/generic/sailboards_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":15023,
-    "y":959
+    "x":14926,
+    "y":621
   }, 
 
   "Q/Q126/generic/sailing_craft_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":11055,
-    "y":947
+    "x":14986,
+    "y":621
   }, 
 
   "Q/Q126/generic/secondary_waterway_crossing": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":11115,
-    "y":947
+    "x":15046,
+    "y":621
   }, 
 
   "Q/Q126/generic/secondary_waterway_left": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8343,
-    "y":859
+    "x":14858,
+    "y":769
   }, 
 
   "Q/Q126/generic/secondary_waterway_right": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8739,
-    "y":961
+    "x":14870,
+    "y":683
   }, 
 
   "Q/Q126/generic/sound_horn": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8403,
-    "y":859
+    "x":14858,
+    "y":831
   }, 
 
   "Q/Q126/generic/speed_limit": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8463,
-    "y":859
+    "x":14858,
+    "y":893
   }, 
 
   "Q/Q126/generic/sport_craft_permitted": {
     "height":80,
     "pixelRatio":1,
     "width":80,
-    "x":12129,
-    "y":943
+    "x":12542,
+    "y":939
   }, 
 
   "Q/Q126/generic/stop": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8523,
-    "y":859
+    "x":14858,
+    "y":955
   }, 
 
   "Q/Q126/generic/telephone": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":9977,
-    "y":787
+    "x":14900,
+    "y":1
   }, 
 
   "Q/Q126/generic/traffic_between_margins": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8583,
-    "y":859
+    "x":14930,
+    "y":683
   }, 
 
   "Q/Q126/generic/turning_area": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8643,
-    "y":859
+    "x":14990,
+    "y":683
   }, 
 
   "Q/Q126/generic/unpowered_craft_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8703,
-    "y":859
+    "x":15050,
+    "y":683
   }, 
 
   "Q/Q126/generic/vehicle_loading_berth": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10101,
-    "y":725
+    "x":14746,
+    "y":459
   }, 
 
   "Q/Q126/generic/waterbikes_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8763,
-    "y":859
+    "x":14918,
+    "y":745
   }, 
 
   "Q/Q126/generic/waterskiing_permitted": {
     "height":60,
     "pixelRatio":1,
     "width":60,
-    "x":10039,
-    "y":787
+    "x":14962,
+    "y":1
   }, 
 
   "Q/Q126/generic/weir": {
     "height":60,
     "pixelRatio":1,
     "width":78,
-    "x":7851,
-    "y":565
+    "x":14408,
+    "y":761
   }, 
 
   "Q/spar/black": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":909,
-    "y":551
+    "x":5908,
+    "y":377
   }, 
 
   "Q/spar/general": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":4645,
-    "y":393
+    "x":6028,
+    "y":377
   }, 
 
   "Q/spar/generic": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":4659,
-    "y":625
+    "x":5968,
+    "y":1
   }, 
 
   "Q/spar/green": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":4765,
-    "y":295
+    "x":6088,
+    "y":1
   }, 
 
   "Q/spar/horizontal/black_red": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":4885,
-    "y":295
+    "x":6208,
+    "y":1
   }, 
 
   "Q/spar/horizontal/black_red_black": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":4779,
-    "y":527
+    "x":6074,
+    "y":609
   }, 
 
   "Q/spar/horizontal/black_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":4899,
-    "y":527
+    "x":6148,
+    "y":377
   }, 
 
   "Q/spar/horizontal/black_yellow_black": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5019,
-    "y":505
+    "x":6328,
+    "y":1
   }, 
 
   "Q/spar/horizontal/green_red": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5139,
-    "y":317
+    "x":6194,
+    "y":609
   }, 
 
   "Q/spar/horizontal/green_red_green": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5259,
-    "y":317
+    "x":6268,
+    "y":377
   }, 
 
   "Q/spar/horizontal/green_white": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5379,
-    "y":317
+    "x":6314,
+    "y":609
   }, 
 
   "Q/spar/horizontal/green_white_green": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5499,
-    "y":317
+    "x":6388,
+    "y":377
   }, 
 
   "Q/spar/horizontal/green_white_green_white": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5619,
-    "y":317
+    "x":6448,
+    "y":1
   }, 
 
   "Q/spar/horizontal/orange_white": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5739,
-    "y":301
+    "x":6434,
+    "y":609
   }, 
 
   "Q/spar/horizontal/red_green": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5859,
-    "y":301
+    "x":6508,
+    "y":377
   }, 
 
   "Q/spar/horizontal/red_green_red": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":5979,
-    "y":301
+    "x":6568,
+    "y":1
   }, 
 
   "Q/spar/horizontal/red_green_red_green": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6099,
-    "y":301
+    "x":6554,
+    "y":609
   }, 
 
   "Q/spar/horizontal/red_white": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6219,
-    "y":301
+    "x":6628,
+    "y":377
   }, 
 
   "Q/spar/horizontal/red_white_red": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6339,
-    "y":289
+    "x":6688,
+    "y":1
   }, 
 
   "Q/spar/horizontal/red_white_red_white": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6459,
-    "y":289
+    "x":6808,
+    "y":1
   }, 
 
   "Q/spar/horizontal/white_green": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6579,
-    "y":289
+    "x":6674,
+    "y":609
   }, 
 
   "Q/spar/horizontal/white_orange": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6699,
-    "y":283
+    "x":6748,
+    "y":376
   }, 
 
   "Q/spar/horizontal/white_red": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6819,
-    "y":283
+    "x":6928,
+    "y":1
   }, 
 
   "Q/spar/horizontal/yellow_black": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":6939,
-    "y":283
+    "x":7048,
+    "y":1
   }, 
 
   "Q/spar/horizontal/yellow_black_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":7059,
-    "y":283
+    "x":7168,
+    "y":1
   }, 
 
   "Q/spar/horizontal/yellow_brown_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":7409,
-    "y":215
+    "x":7288,
+    "y":1
   }, 
 
   "Q/spar/horizontal/yellow_red_yellow": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":7529,
-    "y":209
+    "x":7408,
+    "y":1
   }, 
 
   "Q/spar/red": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":7649,
-    "y":209
+    "x":7528,
+    "y":1
   }, 
 
   "Q/spar/vertical/red_white": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":7769,
-    "y":209
+    "x":6794,
+    "y":608
   }, 
 
   "Q/spar/vertical/white_orange": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":7889,
-    "y":209
+    "x":6868,
+    "y":371
   }, 
 
   "Q/spar/vertical/yellow_blue": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":8009,
-    "y":209
+    "x":6914,
+    "y":603
   }, 
 
   "Q/spar/white": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":8129,
-    "y":193
+    "x":6988,
+    "y":371
   }, 
 
   "Q/spar/yellow": {
     "height":230,
     "pixelRatio":1,
     "width":118,
-    "x":8249,
-    "y":193
+    "x":7034,
+    "y":603
   }, 
 
   "Q/spherical/black": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":5156,
-    "y":897
+    "x":11854,
+    "y":125
   }, 
 
   "Q/spherical/general": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":5314,
-    "y":897
+    "x":11896,
+    "y":1
   }, 
 
   "Q/spherical/generic": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":5472,
-    "y":897
+    "x":11500,
+    "y":839
   }, 
 
   "Q/spherical/green": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":5630,
-    "y":897
+    "x":11592,
+    "y":715
   }, 
 
   "Q/spherical/horizontal/black_red": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":11365,
-    "y":699
+    "x":11658,
+    "y":839
   }, 
 
   "Q/spherical/horizontal/black_red_black": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":11523,
-    "y":699
+    "x":11610,
+    "y":585
   }, 
 
   "Q/spherical/horizontal/black_yellow": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":11681,
-    "y":713
+    "x":11618,
+    "y":461
   }, 
 
   "Q/spherical/horizontal/black_yellow_black": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":11839,
-    "y":713
+    "x":11752,
+    "y":337
   }, 
 
   "Q/spherical/horizontal/green_red_green": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":11997,
-    "y":719
+    "x":12012,
+    "y":125
   }, 
 
   "Q/spherical/horizontal/green_white": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":12155,
-    "y":719
+    "x":12054,
+    "y":1
   }, 
 
   "Q/spherical/horizontal/green_white_green": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":7313,
-    "y":621
+    "x":11750,
+    "y":709
   }, 
 
   "Q/spherical/horizontal/green_white_green_white": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":7535,
-    "y":441
+    "x":11768,
+    "y":585
   }, 
 
   "Q/spherical/horizontal/orange_white": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":7693,
-    "y":441
+    "x":11776,
+    "y":461
   }, 
 
   "Q/spherical/horizontal/red_green_red": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":7851,
-    "y":441
+    "x":11910,
+    "y":337
   }, 
 
   "Q/spherical/horizontal/red_green_red_green": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8145,
-    "y":425
+    "x":11816,
+    "y":833
   }, 
 
   "Q/spherical/horizontal/red_white": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8439,
-    "y":405
+    "x":11908,
+    "y":709
   }, 
 
   "Q/spherical/horizontal/red_white_red": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8597,
-    "y":407
+    "x":11926,
+    "y":585
   }, 
 
   "Q/spherical/horizontal/red_white_red_white": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8755,
-    "y":407
+    "x":11934,
+    "y":461
   }, 
 
   "Q/spherical/horizontal/white_green": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9035,
-    "y":417
+    "x":12068,
+    "y":337
   }, 
 
   "Q/spherical/horizontal/white_orange": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9193,
-    "y":417
+    "x":12170,
+    "y":125
   }, 
 
   "Q/spherical/horizontal/white_red": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9351,
-    "y":417
+    "x":12212,
+    "y":1
   }, 
 
   "Q/spherical/horizontal/yellow_black": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9509,
-    "y":417
+    "x":12328,
+    "y":125
   }, 
 
   "Q/spherical/horizontal/yellow_black_yellow": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9667,
-    "y":417
+    "x":12370,
+    "y":1
   }, 
 
   "Q/spherical/horizontal/yellow_brown_yellow": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9825,
-    "y":417
+    "x":11974,
+    "y":833
   }, 
 
   "Q/spherical/horizontal/yellow_red_yellow": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9983,
-    "y":417
+    "x":12066,
+    "y":709
   }, 
 
   "Q/spherical/red": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":10141,
-    "y":417
+    "x":12084,
+    "y":585
   }, 
 
   "Q/spherical/vertical/red_white": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8145,
-    "y":549
+    "x":12092,
+    "y":461
   }, 
 
   "Q/spherical/vertical/white_orange": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8439,
-    "y":529
+    "x":12226,
+    "y":337
   }, 
 
   "Q/spherical/vertical/yellow_blue": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8597,
-    "y":531
+    "x":12132,
+    "y":833
   }, 
 
   "Q/spherical/white": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":8755,
-    "y":531
+    "x":12224,
+    "y":709
   }, 
 
   "Q/spherical/yellow": {
     "height":122,
     "pixelRatio":1,
     "width":156,
-    "x":9035,
-    "y":541
+    "x":12242,
+    "y":585
   }, 
 
   "Q/stake/black": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":13069,
-    "y":703
+    "x":4027,
+    "y":233
   }, 
 
   "Q/stake/green": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":10349,
-    "y":537
+    "x":4069,
+    "y":233
   }, 
 
   "Q/stake/green_red": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":10475,
-    "y":567
+    "x":4111,
+    "y":233
   }, 
 
   "Q/stake/green_red_green": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":10905,
-    "y":775
+    "x":4153,
+    "y":233
   }, 
 
   "Q/stake/horizontal/green_red": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11541,
-    "y":823
+    "x":4195,
+    "y":233
   }, 
 
   "Q/stake/horizontal/green_red_green": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11583,
-    "y":823
+    "x":4237,
+    "y":233
   }, 
 
   "Q/stake/horizontal/red_green": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11625,
-    "y":823
+    "x":4279,
+    "y":233
   }, 
 
   "Q/stake/horizontal/red_green_red": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11667,
-    "y":837
+    "x":4321,
+    "y":233
   }, 
 
   "Q/stake/horizontal/red_yellow": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11709,
-    "y":837
+    "x":4363,
+    "y":233
   }, 
 
   "Q/stake/horizontal/yellow_red": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11751,
-    "y":837
+    "x":4405,
+    "y":233
   }, 
 
   "Q/stake/horizontal/yellow_red_yellow": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11793,
-    "y":837
+    "x":4447,
+    "y":233
   }, 
 
   "Q/stake/red": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11835,
-    "y":837
+    "x":4489,
+    "y":233
   }, 
 
   "Q/stake/red_green": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11877,
-    "y":837
+    "x":4531,
+    "y":233
   }, 
 
   "Q/stake/red_green_red": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11919,
-    "y":837
+    "x":4378,
+    "y":851
   }, 
 
   "Q/stake/red_yellow": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":11961,
-    "y":843
+    "x":4420,
+    "y":851
   }, 
 
   "Q/stake/yellow": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":12003,
-    "y":843
+    "x":4462,
+    "y":851
   }, 
 
   "Q/stake/yellow_red": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":12045,
-    "y":843
+    "x":4504,
+    "y":851
   }, 
 
   "Q/stake/yellow_red_yellow": {
     "height":152,
     "pixelRatio":1,
     "width":40,
-    "x":12087,
-    "y":843
+    "x":4573,
+    "y":233
   }, 
 
   "Q/super-buoy/black": {
     "height":86,
     "pixelRatio":1,
     "width":286,
-    "x":11486,
-    "y":1
+    "x":11303,
+    "y":249
   }, 
 
   "Q/super-buoy/general": {
     "height":86,
     "pixelRatio":1,
     "width":286,
-    "x":11774,
-    "y":1
+    "x":11591,
+    "y":249
   }, 
 
   "Q/super-buoy/generic": {
     "height":86,
     "pixelRatio":1,
     "width":286,
-    "x":12062,
-    "y":1
+    "x":11879,
+    "y":249
   }, 
 
   "Q/super-buoy/green": {
     "height":86,
     "pixelRatio":1,
     "width":286,
-    "x":12350,
-    "y":1
+    "x":12167,
+    "y":249
   }, 
 
   "Q/super-buoy/red": {
     "height":86,
     "pixelRatio":1,
     "width":286,
-    "x":12638,
-    "y":1
+    "x":12455,
+    "y":249
   }, 
 
   "Q/super-buoy/yellow": {
     "height":86,
     "pixelRatio":1,
     "width":286,
-    "x":12926,
-    "y":1
+    "x":12743,
+    "y":245
   }, 
 
   "Q/tower/black": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5285,
-    "y":549
+    "x":6182,
+    "y":841
   }, 
 
   "Q/tower/blue": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5431,
-    "y":549
+    "x":6328,
+    "y":841
   }, 
 
   "Q/tower/general": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5577,
-    "y":549
+    "x":6474,
+    "y":841
   }, 
 
   "Q/tower/generic": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":7179,
-    "y":317
+    "x":6620,
+    "y":841
   }, 
 
   "Q/tower/gray": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":8369,
-    "y":231
+    "x":6766,
+    "y":841
   }, 
 
   "Q/tower/green": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":8599,
-    "y":233
+    "x":6912,
+    "y":840
   }, 
 
   "Q/tower/grey": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":8745,
-    "y":233
+    "x":8004,
+    "y":585
   }, 
 
   "Q/tower/horizontal/black_red": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":8891,
-    "y":233
+    "x":8150,
+    "y":585
   }, 
 
   "Q/tower/horizontal/black_red_black": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":12980,
-    "y":379
+    "x":8184,
+    "y":371
   }, 
 
   "Q/tower/horizontal/black_white": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":14414,
-    "y":351
+    "x":7648,
+    "y":1
   }, 
 
   "Q/tower/horizontal/black_white_black": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":14644,
-    "y":273
+    "x":7794,
+    "y":1
   }, 
 
   "Q/tower/horizontal/black_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":14794,
-    "y":425
+    "x":7940,
+    "y":1
   }, 
 
   "Q/tower/horizontal/black_yellow_black": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":3792,
-    "y":829
+    "x":8086,
+    "y":1
   }, 
 
   "Q/tower/horizontal/green_red_green": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5149,
-    "y":723
+    "x":8232,
+    "y":1
   }, 
 
   "Q/tower/horizontal/green_white": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5295,
-    "y":723
+    "x":8278,
+    "y":175
   }, 
 
   "Q/tower/horizontal/green_white_green": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5441,
-    "y":723
+    "x":8378,
+    "y":1
   }, 
 
   "Q/tower/horizontal/green_white_green_white": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5587,
-    "y":723
+    "x":8230,
+    "y":759
   }, 
 
   "Q/tower/horizontal/red_green_red": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5807,
-    "y":533
+    "x":8296,
+    "y":545
   }, 
 
   "Q/tower/horizontal/red_green_red_green": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5953,
-    "y":533
+    "x":8330,
+    "y":349
   }, 
 
   "Q/tower/horizontal/red_white": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6099,
-    "y":533
+    "x":8424,
+    "y":175
   }, 
 
   "Q/tower/horizontal/red_white_red": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6245,
-    "y":533
+    "x":8524,
+    "y":1
   }, 
 
   "Q/tower/horizontal/red_white_red_white": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6391,
-    "y":521
+    "x":8376,
+    "y":719
   }, 
 
   "Q/tower/horizontal/white_black": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6537,
-    "y":521
+    "x":8442,
+    "y":523
   }, 
 
   "Q/tower/horizontal/white_green": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5817,
-    "y":707
+    "x":8476,
+    "y":349
   }, 
 
   "Q/tower/horizontal/white_red": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":5963,
-    "y":707
+    "x":8570,
+    "y":175
   }, 
 
   "Q/tower/horizontal/yellow_black": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6109,
-    "y":707
+    "x":8670,
+    "y":1
   }, 
 
   "Q/tower/horizontal/yellow_black_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6255,
-    "y":707
+    "x":8522,
+    "y":697
   }, 
 
   "Q/tower/horizontal/yellow_brown_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6401,
-    "y":695
+    "x":8588,
+    "y":523
   }, 
 
   "Q/tower/horizontal/yellow_red_yellow": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6547,
-    "y":695
+    "x":8622,
+    "y":349
   }, 
 
   "Q/tower/pink": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6767,
-    "y":515
+    "x":8716,
+    "y":175
   }, 
 
   "Q/tower/red": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6913,
-    "y":515
+    "x":8816,
+    "y":1
   }, 
 
   "Q/tower/white": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6821,
-    "y":689
+    "x":8668,
+    "y":697
   }, 
 
   "Q/tower/yellow": {
     "height":172,
     "pixelRatio":1,
     "width":144,
-    "x":6967,
-    "y":689
+    "x":8734,
+    "y":523
   }, 
 
   "R/R1": {
     "height":206,
     "pixelRatio":1,
     "width":286,
-    "x":7522,
-    "y":1
+    "x":7654,
+    "y":811
   }, 
 
   "R/R1_": {
     "height":206,
     "pixelRatio":1,
     "width":286,
-    "x":7810,
-    "y":1
+    "x":7942,
+    "y":799
   }, 
 
   "T/T1.1": {
     "height":276,
     "pixelRatio":1,
     "width":272,
-    "x":763,
-    "y":273
+    "x":2752,
+    "y":395
   }, 
 
   "T/T14": {
     "height":212,
     "pixelRatio":1,
     "width":472,
-    "x":3484,
-    "y":1
+    "x":7518,
+    "y":371
   }, 
 
   "T/T20": {
     "height":24,
     "pixelRatio":1,
     "width":36,
-    "x":763,
-    "y":551
+    "x":2395,
+    "y":995
   }, 
 
   "T/T32.1": {
     "height":220,
     "pixelRatio":1,
     "width":166,
-    "x":12298,
-    "y":205
+    "x":7330,
+    "y":601
   }, 
 
   "T/Ta_ca": {
     "height":100,
     "pixelRatio":1,
     "width":100,
-    "x":12827,
-    "y":631
+    "x":14095,
+    "y":217
   }, 
 
   "T/Tb_br": {
     "height":294,
     "pixelRatio":1,
     "width":378,
-    "x":4354,
+    "x":397,
     "y":1
   }, 
 
@@ -6684,135 +6684,135 @@
     "height":220,
     "pixelRatio":1,
     "width":166,
-    "x":12466,
-    "y":205
+    "x":7350,
+    "y":371
   }, 
 
   "U/boat_hoist": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":8913,
-    "y":407
+    "x":10246,
+    "y":901
   }, 
 
   "U/boatyard": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":8913,
-    "y":529
+    "x":12250,
+    "y":461
   }, 
 
   "U/chandler": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":9193,
-    "y":541
+    "x":12372,
+    "y":461
   }, 
 
   "U/fuel_station": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":9315,
-    "y":541
+    "x":12384,
+    "y":337
   }, 
 
   "U/fuel_station;pump-out": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":9437,
-    "y":541
+    "x":12486,
+    "y":125
   }, 
 
   "U/laundrette": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":9559,
-    "y":541
+    "x":12528,
+    "y":1
   }, 
 
   "U/nautical_club": {
     "height":60,
     "pixelRatio":1,
     "width":58,
-    "x":8823,
-    "y":859
+    "x":14978,
+    "y":745
   }, 
 
   "U/pump-out": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":9681,
-    "y":541
+    "x":12608,
+    "y":123
   }, 
 
   "U/restaurant": {
     "height":58,
     "pixelRatio":1,
     "width":60,
-    "x":13071,
-    "y":903
+    "x":11610,
+    "y":963
   }, 
 
   "U/showers": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":9803,
-    "y":541
+    "x":12650,
+    "y":1
   }, 
 
   "U/showers;toilets": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":9925,
-    "y":541
+    "x":12730,
+    "y":123
   }, 
 
   "U/slipway": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":10047,
-    "y":541
+    "x":12772,
+    "y":1
   }, 
 
   "U/toilets": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":10169,
-    "y":541
+    "x":12290,
+    "y":833
   }, 
 
   "U/toilets;showers": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":14414,
-    "y":525
+    "x":12382,
+    "y":709
   }, 
 
   "U/toilets;showers;laundrette": {
     "height":120,
     "pixelRatio":1,
     "width":120,
-    "x":14754,
-    "y":599
+    "x":12412,
+    "y":831
   }, 
 
   "U/U1.1": {
     "height":230,
     "pixelRatio":1,
     "width":230,
-    "x":8854,
+    "x":3500,
     "y":1
   }, 
 
@@ -6820,32 +6820,32 @@
     "height":212,
     "pixelRatio":1,
     "width":190,
-    "x":10718,
-    "y":1
+    "x":7992,
+    "y":371
   }, 
 
   "U/U32": {
     "height":20,
     "pixelRatio":1,
     "width":20,
-    "x":7157,
-    "y":1003
+    "x":1187,
+    "y":689
   }, 
 
   "U/visitor_berth": {
     "height":102,
     "pixelRatio":1,
     "width":102,
-    "x":14308,
-    "y":629
+    "x":1285,
+    "y":293
   }, 
 
   "U/visitors_mooring": {
     "height":102,
     "pixelRatio":1,
     "width":102,
-    "x":12521,
-    "y":427
+    "x":1389,
+    "y":293
   }
 
 }
