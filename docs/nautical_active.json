@@ -4186,15 +4186,15 @@
     },
     {
       "id": "berth_lines",
-      "type": "circle",
+      "type": "line",
       "source": "seamap",
       "source-layer": "seamark_berth_lines",
       "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
-        "circle-radius": 5,
-        "circle-color": "#f800e9"
+        "line-color": "#f800e9",
+        "line-width": 1
       }
     },
     {
@@ -6934,6 +6934,877 @@
       }
     },
     {
+      "id": "daymark_beacon_slanted_conical",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "shape",
+          "conical"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -70
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_buoy_slanted_conical",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "shape",
+          "conical"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -70
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_beacon_slanted_spar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "spar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_buoy_slanted_spar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "spar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_beacon_slanted_pillar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "pillar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          20,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_beacon_slanted_can-copy",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "can"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -60
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_buoy_slanted_can",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "can"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          10,
+          -60
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_buoy_slanted_pillar",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "pillar"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          20,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true,
+        "icon-rotate": 15
+      }
+    },
+    {
+      "id": "daymark_beacon_vertical_no_shape_tcp",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ],
+        [
+          "!in",
+          "daymark_colour_pattern",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour_pattern}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          1,
+          -75
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "daymark_beacon_vertical_no_shape",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ],
+        [
+          "in",
+          "daymark_colour_pattern",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          1,
+          -85
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "daymark_buoy_vertical_no_shape",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ],
+        [
+          "!in",
+          "colour",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          -1,
+          -85
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "daymark_buoy_vertical_no_shape_colour",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          ""
+        ],
+        [
+          "in",
+          "colour",
+          ""
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          0,
+          -85
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "daymark_beacon_vertical",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "shape",
+          "barrel",
+          "buoyant",
+          "cairn",
+          "spherical",
+          "stake",
+          "super-buoy",
+          "tower"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q9/{daymark_shape}/{daymark_colour}",
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.2
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
+        "icon-offset": [
+          20,
+          -100
+        ],
+        "visibility": "visible",
+        "icon-allow-overlap": true
+      }
+    },
+    {
+      "id": "daymark_buoy_label",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_buoy",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "name",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "No.1",
+          "no_1",
+          "No._1",
+          "No.2",
+          "no_2",
+          "No_2",
+          "No._2",
+          "No_3",
+          "no_3",
+          "No._3",
+          "No_4",
+          "No.4",
+          "no_4",
+          "No._4",
+          "No_5",
+          "no_5",
+          "No.5",
+          "No._5",
+          "No_6",
+          "no_6",
+          "No.6",
+          "No._6",
+          "No_7",
+          "no_7",
+          "No.7",
+          "No_8",
+          "no_8",
+          "No.8",
+          "No._8",
+          "No_9",
+          "no_9",
+          "No.9",
+          "No_10",
+          "no_10",
+          "No_11",
+          "no_11",
+          "No_12",
+          "no_12",
+          "No_13",
+          "no_13",
+          "No_14",
+          "no_14",
+          "No_15",
+          "No_16",
+          "No_17",
+          "no_18",
+          "no_19",
+          "no_20",
+          "no_21",
+          "no_22",
+          "no_23",
+          "no_24",
+          "no_25",
+          "no_26",
+          "no_27",
+          "no_28",
+          "R",
+          "SG",
+          "PCO",
+          "W"
+        ]
+      ],
+      "layout": {
+        "icon-allow-overlap": true,
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 10,
+        "text-offset": [
+          1,
+          -1
+        ],
+        "visibility": "visible"
+      }
+    },
+    {
+      "id": "daymark_beacon_label",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_beacon",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "in",
+          "name",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "No.1",
+          "no_1",
+          "No._1",
+          "No.2",
+          "no_2",
+          "No_2",
+          "No._2",
+          "No_3",
+          "no_3",
+          "No._3",
+          "No_4",
+          "No.4",
+          "no_4",
+          "No._4",
+          "No_5",
+          "no_5",
+          "No.5",
+          "No._5",
+          "No_6",
+          "no_6",
+          "No.6",
+          "No._6",
+          "No_7",
+          "no_7",
+          "No.7",
+          "No_8",
+          "no_8",
+          "No.8",
+          "No._8",
+          "No_9",
+          "no_9",
+          "No.9",
+          "No_10",
+          "no_10",
+          "No_11",
+          "no_11",
+          "No_12",
+          "no_12",
+          "No_13",
+          "no_13",
+          "No_14",
+          "no_14",
+          "No_15",
+          "No_16",
+          "No_17",
+          "no_18",
+          "no_19",
+          "no_20",
+          "no_21",
+          "no_22",
+          "no_23",
+          "no_24",
+          "no_25",
+          "no_26",
+          "no_27",
+          "no_28",
+          "R",
+          "SG",
+          "PCO",
+          "W"
+        ]
+      ],
+      "layout": {
+        "icon-allow-overlap": true,
+        "text-field": "{name}",
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 10,
+        "text-offset": [
+          1,
+          -1
+        ],
+        "visibility": "visible"
+      }
+    },
+    {
       "id": "notice_generic",
       "type": "symbol",
       "source": "seamap",
@@ -6952,6 +7823,266 @@
       "layout": {
         "icon-image": "Q/Q126/generic",
         "icon-size": 0.05
+      }
+    },
+    {
+      "id": "notice_category_addition_5",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          ""
+        ],
+        [
+          "==",
+          "system",
+          ""
+        ],
+        [
+          "==",
+          "addition",
+          "left_triangle"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q126/addition/{addition}",
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              0.6
+            ]
+          ]
+        },
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-allow-overlap": false,
+        "icon-offset": [
+          -11,
+          0
+        ],
+        "text-offset": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "notice_category_addition_4",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          ""
+        ],
+        [
+          "==",
+          "system",
+          ""
+        ],
+        [
+          "==",
+          "addition",
+          "right_triangle"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q126/addition/{addition}",
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              0.6
+            ]
+          ]
+        },
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-allow-overlap": false,
+        "icon-offset": [
+          11,
+          0
+        ],
+        "text-offset": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "notice_category_addition_3",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          ""
+        ],
+        [
+          "==",
+          "system",
+          ""
+        ],
+        [
+          "==",
+          "addition",
+          "bottom_board"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q126/addition/{addition}",
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              0.6
+            ]
+          ]
+        },
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-allow-overlap": false,
+        "icon-offset": [
+          0,
+          10
+        ],
+        "text-offset": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "notice_category_addition_2",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          ""
+        ],
+        [
+          "==",
+          "system",
+          ""
+        ],
+        [
+          "==",
+          "addition",
+          "left_triangle;bottom_board"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q126/addition/{addition}",
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              0.6
+            ]
+          ]
+        },
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-allow-overlap": false,
+        "icon-offset": [
+          -11,
+          10
+        ],
+        "text-offset": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "notice_category_addition_1",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_notice",
+      "minzoom": 10,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "category",
+          ""
+        ],
+        [
+          "==",
+          "system",
+          ""
+        ],
+        [
+          "==",
+          "addition",
+          "right_triangle;bottom_board"
+        ]
+      ],
+      "layout": {
+        "icon-image": "Q/Q126/addition/{addition}",
+        "icon-size": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              0.6
+            ]
+          ]
+        },
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "text-allow-overlap": false,
+        "icon-offset": [
+          11,
+          10
+        ],
+        "text-offset": [
+          0,
+          0
+        ]
       }
     },
     {
@@ -6988,7 +8119,8 @@
             ]
           ]
         },
-        "icon-allow-overlap": true
+        "icon-allow-overlap": true,
+        "visibility": "visible"
       }
     },
     {
@@ -7079,7 +8211,26 @@
       "source-layer": "seamark_signal_station_traffic",
       "layout": {
         "icon-image": "T/T20",
-        "icon-size": 1
+        "icon-size": 1,
+        "text-field": "SS ({category})",
+        "text-size": {
+          "stops": [
+            [
+              14,
+              6
+            ],
+            [
+              20,
+              8
+            ]
+          ]
+        },
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          1
+        ],
+        "text-allow-overlap": true
       }
     },
     {
