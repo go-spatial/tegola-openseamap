@@ -3999,7 +3999,7 @@
       "source-layer": "seamark_mooring_points",
       "minzoom": 12,
       "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "circle-color": "#000000",
@@ -4586,13 +4586,31 @@
       }
     },
     {
-      "id": "cable_submarine",
+      "id": "cable_submarine_label",
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_cable_submarine",
       "layout": {
-        "icon-image": "L/L31",
-        "icon-size": 0.5
+        "text-field": "Cable area",
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "text-size": 8
+      },
+      "paint": {
+        "text-color": "rgba(129, 60, 126, 1)"
+      }
+    },
+    {
+      "id": "cable_submarine",
+      "type": "line",
+      "source": "seamap",
+      "source-layer": "seamark_cable_submarine",
+      "layout": {},
+      "paint": {
+        "line-pattern": "L/L31",
+        "line-translate-anchor": "map",
+        "line-width": 1,
+        "line-gap-width": 0
       }
     },
     {
@@ -7392,7 +7410,7 @@
         "icon-rotation-alignment": "viewport",
         "symbol-placement": "line",
         "symbol-spacing": 1,
-        "icon-size": 0.05
+        "icon-size": 1
       }
     },
     {
@@ -7565,6 +7583,27 @@
       },
       "paint": {
         "text-color": "rgba(116, 81, 146, 1)"
+      }
+    },
+    {
+      "id": "slipway_lines",
+      "type": "symbol",
+      "source": "osm",
+      "source-layer": "transport_lines",
+      "minzoom": 14,
+      "maxzoom": 24,
+      "filter": [
+        "all",
+        [
+          "==",
+          "service",
+          "slipway"
+        ]
+      ],
+      "layout": {
+        "icon-image": "U/slipway",
+        "icon-allow-overlap": true,
+        "icon-size": 0.4
       }
     }
   ],
