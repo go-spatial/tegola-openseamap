@@ -8548,6 +8548,8 @@
       "type": "symbol",
       "source": "seamap",
       "source-layer": "seamark_restricted_area",
+      "minzoom": 12,
+      "maxzoom": 24,
       "filter": [
         "all",
         [
@@ -8560,8 +8562,8 @@
         "icon-image": "N/N2.2",
         "icon-rotation-alignment": "viewport",
         "symbol-placement": "line",
-        "symbol-spacing": 1,
-        "icon-size": 1
+        "symbol-spacing": 10,
+        "icon-size": 0.5
       }
     },
     {
