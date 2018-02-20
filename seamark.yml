@@ -917,14 +917,15 @@ tables:
     - {type: mapping_value, name: type, key: null}
     - {key: name, name: name, type: string}
     - {key: "seamark:notice:addition", name: addition, type: string}
+    - {key: "seamark:notice:bank", name: bank, type: string}
     - {key: "seamark:notice:category", name: category, type: string}
-    - {key: "seamark:notice:condition", name: condition, type: string}
-    - {key: "seamark:notice:distance_min", name: distance_min, type: string}
-    - {key: "seamark:notice:distance_max", name: distance_max, type: string}
-    - {key: "seamark:notice:distance_up", name: distance_up, type: string}
+    - {key: "seamark:notice:direction", name: direction, type: string}
     - {key: "seamark:notice:distance_down", name: distance_down, type: string}
+    - {key: "seamark:notice:distance_end", name: distance_end, type: string}
+    - {key: "seamark:notice:distance_start", name: distance_start, type: string}
+    - {key: "seamark:notice:distance_up", name: distance_up, type: string}
     - {key: "seamark:notice:function", name: function, type: string}
-    - {key: "seamark:notice:impact", name: impact, type: string}
+    - {key: "seamark:notice:orientation", name: orientation, type: string}
     - {key: "seamark:notice:system", name: system, type: string}
 
   obstruction_points: # OBSTRN: In marine navigation, anything that hinders or prevents movement, particularly anything that endangers or prevents passage of a vessel.

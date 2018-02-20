@@ -343,7 +343,7 @@ password = "${SM_DB_PASS}"
 	name = "notice"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, addition, category, condition, distance_min, distance_max, distance_up, distance_down, function, impact, system FROM osm_notice WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, addition, bank, category, direction, distance_down, distance_end, distance_start, distance_up, function, orientation, system FROM osm_notice WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "obstruction_points"
