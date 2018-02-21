@@ -3807,10 +3807,25 @@
       }
     },
     {
-      "id": "cable_overhead",
+      "id": "cable_overhead_lines",
       "type": "symbol",
       "source": "seamap",
-      "source-layer": "seamark_cable_overhead",
+      "source-layer": "seamark_cable_overhead_lines",
+      "minzoom": 16,
+      "layout": {
+        "icon-image": "D/D20",
+        "icon-size": 0.4,
+        "visibility": "visible",
+        "text-field": "{vertical_clearance}",
+        "text-allow-overlap": true,
+        "text-size": 8
+      }
+    },
+    {
+      "id": "cable_overhead_points",
+      "type": "symbol",
+      "source": "seamap",
+      "source-layer": "seamark_cable_overhead_points",
       "minzoom": 16,
       "layout": {
         "icon-image": "D/D20",
