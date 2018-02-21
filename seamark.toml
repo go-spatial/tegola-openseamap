@@ -115,7 +115,7 @@ password = "${SM_DB_PASS}"
 	name = "buoy"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, daymark_category, (REPLACE(daymark_colour,';','_')) AS daymark_colour, daymark_colour_pattern, regexp_replace(daymark_shape,',? ','_','g') AS daymark_shape, topmark_category, (REPLACE(topmark_colour,';','_')) AS topmark_colour, topmark_colour_pattern, regexp_replace(topmark_shape,',? ','_','g') AS topmark_shape FROM osm_buoy WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, regexp_replace(shape,',? ','_','g') AS shape, daymark_category, (REPLACE(daymark_colour,';','_')) AS daymark_colour, daymark_colour_pattern, regexp_replace(daymark_shape,',? ','_','g') AS daymark_shape, topmark_category, (REPLACE(topmark_colour,';','_')) AS topmark_colour, topmark_colour_pattern, regexp_replace(topmark_shape,',? ','_','g') AS topmark_shape FROM osm_buoy WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "cable_area"
