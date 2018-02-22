@@ -8178,7 +8178,18 @@
       "source-layer": "seamark_fog_signal",
       "layout": {
         "icon-image": "R/R1",
-        "icon-size": 10,
+        "icon-size": {
+          "stops": [
+            [
+              11,
+              0.15
+            ],
+            [
+              18,
+              0.3
+            ]
+          ]
+        },
         "icon-offset": [
           -10,
           6
