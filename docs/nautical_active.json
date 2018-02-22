@@ -23,7 +23,7 @@
     },
     "seamap": {
       "type": "vector",
-      "url": "http://ec2-35-167-228-206.us-west-2.compute.amazonaws.com:7070/capabilities/osm.json"
+      "url": "http://openseamap-tiles.tegola.io/capabilities/osm.json"
     }
   },
   "sprite": "https://raw.githubusercontent.com/terranodo/tegola-openseamap/master/spritesheet/vector-seamap",
