@@ -3884,7 +3884,7 @@
       "source": "seamap",
       "source-layer": "seamark_landmark_areas",
       "layout": {
-        "icon-image": "E_{category}_{function}",
+        "icon-image": "E_{category}_{functn}",
         "icon-size": 0.5
       }
     },
@@ -3894,7 +3894,7 @@
       "source": "seamap",
       "source-layer": "seamark_landmark_lines",
       "layout": {
-        "icon-image": "E_{category}_{function}",
+        "icon-image": "E_{category}_{functn}",
         "icon-size": 0.5
       }
     },
@@ -3914,7 +3914,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "E/E_{function}",
+        "icon-image": "E/E_{functn}",
         "icon-size": {
           "stops": [
             [
@@ -3961,7 +3961,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "E/E_{category}_{function}",
+        "icon-image": "E/E_{category}_{functn}",
         "icon-size": {
           "stops": [
             [
