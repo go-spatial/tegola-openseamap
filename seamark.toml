@@ -103,13 +103,13 @@ password = "${SM_DB_PASS}"
 	name = "building_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility FROM osm_building_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, fnctnm, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility FROM osm_building_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "building_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility FROM osm_building_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, fnctnm, height, reflectivity, regexp_replace(shape,',? ','_','g') AS shape, visibility FROM osm_building_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "buoy"
@@ -235,19 +235,19 @@ password = "${SM_DB_PASS}"
 	name = "landmark_points"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_points WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, fnctnm, height, reflectivity, visibility FROM osm_landmark_points WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "landmark_lines"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_lines WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, fnctnm, height, reflectivity, visibility FROM osm_landmark_lines WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "landmark_areas"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, function, height, reflectivity, visibility FROM osm_landmark_areas WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, category, (REPLACE(colour,';','_')) AS colour, colour_pattern, construction, elevation, fnctnm, height, reflectivity, visibility FROM osm_landmark_areas WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "light_points"
@@ -349,7 +349,7 @@ password = "${SM_DB_PASS}"
 	name = "notice"
 	geometry_fieldname = "geometry"
 	id_fieldname = "osm_id"
-	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, addition, bank, category, direction, distance_down, distance_end, distance_start, distance_up, function, orientation, system FROM osm_notice WHERE geometry && !BBOX!"
+	sql = "SELECT ST_AsBinary(geometry) AS geometry, osm_id, type, name, addition, bank, category, direction, distance_down, distance_end, distance_start, distance_up, fnctnm, orientation, system FROM osm_notice WHERE geometry && !BBOX!"
 
 	[[providers.layers]]
 	name = "obstruction_points"

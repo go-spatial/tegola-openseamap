@@ -373,7 +373,7 @@ tables:
     - {key: "seamark:building:colour_pattern", name: colour_pattern, type: string}
     - {key: "seamark:building:construction", name: construction, type: string}
     - {key: "seamark:building:elevation", name: elevation, type: string}
-    - {key: "seamark:building:function", name: function, type: string}
+    - {key: "seamark:building:function", name: fnctnm, type: string}
     - {key: "seamark:building:height", name: height, type: string}
     - {key: "seamark:building:reflectivity", name: reflectivity, type: string}
     - {key: "seamark:building:shape", name: shape, type: string}
@@ -392,7 +392,7 @@ tables:
     - {key: "seamark:building:colour_pattern", name: colour_pattern, type: string}
     - {key: "seamark:building:construction", name: construction, type: string}
     - {key: "seamark:building:elevation", name: elevation, type: string}
-    - {key: "seamark:building:function", name: function, type: string}
+    - {key: "seamark:building:function", name: fnctnm, type: string}
     - {key: "seamark:building:height", name: height, type: string}
     - {key: "seamark:building:reflectivity", name: reflectivity, type: string}
     - {key: "seamark:building:shape", name: shape, type: string}
@@ -776,7 +776,7 @@ tables:
     - {key: "seamark:landmark:colour_pattern", name: colour_pattern, type: string}
     - {key: "seamark:landmark:construction", name: construction, type: string}
     - {key: "seamark:landmark:elevation", name: elevation, type: string}
-    - {key: "seamark:landmark:function", name: function, type: string}
+    - {key: "seamark:landmark:function", name: fnctnm, type: string}
     - {key: "seamark:landmark:height", name: height, type: string}
     - {key: "seamark:landmark:reflectivity", name: reflectivity, type: string}
     - {key: "seamark:landmark:visibility", name: visibility, type: string}
@@ -795,7 +795,7 @@ tables:
     - {key: "seamark:landmark:colour_pattern", name: colour_pattern, type: string}
     - {key: "seamark:landmark:construction", name: construction, type: string}
     - {key: "seamark:landmark:elevation", name: elevation, type: string}
-    - {key: "seamark:landmark:function", name: function, type: string}
+    - {key: "seamark:landmark:function", name: fnctnm, type: string}
     - {key: "seamark:landmark:height", name: height, type: string}
     - {key: "seamark:landmark:reflectivity", name: reflectivity, type: string}
     - {key: "seamark:landmark:visibility", name: visibility, type: string}
@@ -814,7 +814,7 @@ tables:
     - {key: "seamark:landmark:colour_pattern", name: colour_pattern, type: string}
     - {key: "seamark:landmark:construction", name: construction, type: string}
     - {key: "seamark:landmark:elevation", name: elevation, type: string}
-    - {key: "seamark:landmark:function", name: function, type: string}
+    - {key: "seamark:landmark:function", name: fnctnm, type: string}
     - {key: "seamark:landmark:height", name: height, type: string}
     - {key: "seamark:landmark:reflectivity", name: reflectivity, type: string}
     - {key: "seamark:landmark:visibility", name: visibility, type: string}
@@ -1156,7 +1156,7 @@ tables:
     - {key: "seamark:notice:distance_end", name: distance_end, type: string}
     - {key: "seamark:notice:distance_start", name: distance_start, type: string}
     - {key: "seamark:notice:distance_up", name: distance_up, type: string}
-    - {key: "seamark:notice:function", name: function, type: string}
+    - {key: "seamark:notice:function", name: fnctnm, type: string}
     - {key: "seamark:notice:orientation", name: orientation, type: string}
     - {key: "seamark:notice:system", name: system, type: string}
 
