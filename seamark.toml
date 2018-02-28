@@ -799,6 +799,7 @@ password = "${LP_DB_PASS}"
 	name = "land_0-9"
 	geometry_fieldname = "geometry"
 	id_fieldname = "fid"
+	dont_simplify = true
 	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid FROM simplified_land_polygons WHERE wkb_geometry && !BBOX!"
 
 	[[providers.layers]]
