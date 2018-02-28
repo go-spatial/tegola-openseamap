@@ -23,7 +23,7 @@
     },
     "seamap": {
       "type": "vector",
-      "url": "http://openseamap-tiles.tegola.io/capabilities/osm.json"
+      "url": "https://openseamap-tiles.tegola.io/capabilities/osm.json"
     }
   },
   "sprite": "https://raw.githubusercontent.com/terranodo/tegola-openseamap/master/spritesheet/vector-seamap",
