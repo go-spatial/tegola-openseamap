@@ -26,7 +26,7 @@ var map = new mapboxgl.Map({
   zoom: q.z,
   bearing: q.bearing,
   pitch: q.pitch,
-  minZoom: 2,
+  minZoom: 0,
   maxZoom: 20,
   style: 'nautical_active.json'
 });
