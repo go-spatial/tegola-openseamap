@@ -5,24 +5,8 @@ port = ":${TEGOLA_PORT}"
 type="file"
 basepath="${CACHE_BASEPATH}"
 
-[[providers]]
-#   Bathymetric data
-name = "by"
-type = "postgis"
-host = "${BY_DB_HOST}"
-port = $BY_DB_PORT
-database = "${BY_DB_NAME}"
-user = "${BY_DB_USER}"
-password = "${BY_DB_PASS}"
-
-	[[providers.layers]]
-	name = "contours"
-	geometry_fieldname = "geom"
-	id_fieldname = "id"
-	sql = "SELECT ST_AsBinary(geom) AS geom, gid, id, elevation FROM contours WHERE geom && !BBOX!"
-
-[[providers]]
 #	OSM seamark objects
+[[providers]]
 name = "seamark"
 type = "postgis"
 host = "${SM_DB_HOST}"
@@ -1056,19 +1040,10 @@ password = "${NE_DB_PASS}"
 	sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, scalerank, name, adm0_sr, datarank FROM ne_10m_admin_1_label_points WHERE wkb_geometry && !BBOX!"
 
 [[maps]]
-name = "by"
-attribution = "GEBCO"
-	# Contours
-	[[maps.layers]]
-	name = "contours"
-	provider_layer = "by.contours"
-	min_zoom = 0
-	max_zoom = 18
-
-[[maps]]
 name = "osm"
-attribution = "OpenStreetMap"
+attribution = "Open Street Map" # map attribution
 center = [12.4491840123102, 41.708155941304, 6.0] # optional center value. part of the TileJSON spec
+
 	# Country Lines
 	[[maps.layers]]
 	name = "admin_boundaries_0-2"
