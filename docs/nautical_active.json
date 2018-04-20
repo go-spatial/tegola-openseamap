@@ -25,9 +25,9 @@
       "type": "vector",
       "url": "https://openseamap-tiles.tegola.io/capabilities/osm.json"
     },
-    "by": {
+    "bathy": {
       "type": "vector",
-      "url": "http://localhost:7070/capabilities/by.json"
+      "url": "https://bathymetry.tegola.io/capabilities/bathymetry.json"
     }
   },
   "sprite": "https://raw.githubusercontent.com/terranodo/tegola-openseamap/master/spritesheet/vector-seamap",
@@ -45,6 +45,396 @@
         "background-color": "rgba(144, 204, 203, 1)"
       }
     },
+
+    {
+      "id": "contours-10000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -10000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [20, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-9000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -9000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [14, 4, 4, 4, -0.5, 4, -0.5, 4, -0.5, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-8000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -8000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [14, 4, 4, 4, -0.5, 4, -0.5, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-7000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -7000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [14, 4, 4, 4, -0.5, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-6000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -6000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [14, 4, 4, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-5000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -5000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [14, 4, 4, 4]
+      }
+    },
+    {
+      "id": "contours-4000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -4000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [11, 4, -0.5, 4, -0.5, 4, -0.5, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-3000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -3000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [14, 4, -0.5, 4, -0.5, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-2000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -2000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [17, 4, -0.5, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-1000",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 4,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -1000]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [4, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [20, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-500",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -500]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [6, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [12, 4, 6, 4]
+      }
+    },
+    {
+      "id": "contours-200",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -200]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [6, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [14, 4, -0.5, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-100",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -100]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": {
+          "stops": [
+            [6, 1],
+            [9, 2]
+          ]
+        },
+        "line-dasharray": [16, 4, -0.5, 4]
+      }
+    },
+    {
+      "id": "contours-40",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -40]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": 2,
+        "line-dasharray": [6, 3, -0.5, 2, -0.5, 3, -0.5, 2, -0.5, 3]
+      }
+    },
+    {
+      "id": "contours-20",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -20]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": 2,
+        "line-dasharray": [6, 3, -0.5, 2, -0.5, 3]
+      }
+    },
+    {
+      "id": "contours-10",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -10]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": 2,
+        "line-dasharray": [-0.5, 2]
+      }
+    },
+    {
+      "id": "contours-6",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 12,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -6]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": 2,
+        "line-dasharray": [3, 1, 2]
+      }
+    },
+    {
+      "id": "contours-4",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 12,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -4]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": 2,
+        "line-dasharray": [1, 1, 1, 1, 1, 1, 1, 2]
+      }
+    },
+    {
+      "id": "contours-2",
+      "type": "line",
+      "source": "bathy",
+      "source-layer": "contours",
+      "minzoom": 12,
+      "maxzoom": 18,
+      "filter": ["all", ["==", "elevation", -2]],
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "rgba(82, 82, 82, 1)",
+        "line-width": 2,
+        "line-dasharray": [1, 1, 1, 3]
+      }
+    },
+
     {
       "id": "land",
       "type": "fill",
@@ -8787,424 +9177,6 @@
         "icon-image": "U/slipway",
         "icon-allow-overlap": true,
         "icon-size": 0.4
-      }
-    },
-    {
-      "id": "contours-1000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -1000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [20, 3, 1, 3]
-      }
-    },
-    {
-      "id": "contours-2000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -2000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [17, 3, 1, 3, 1, 3]
-      }
-    },
-    {
-      "id": "contours-3000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -3000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [14, 3, 1, 3, 1, 3, 1, 3]
-      }
-    },
-    {
-      "id": "contours-4000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -4000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [11, 3, 1, 3, 1, 3, 1, 3, 1, 3]
-      }
-    },
-    {
-      "id": "contours-5000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -5000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [14, 1, 4, 1]
-      }
-    },
-    {
-      "id": "contours-6000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -6000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [14, 1, 4, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-7000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -7000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [14, 1, 4, 1, 1, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-8000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -8000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [14, 1, 4, 1, 1, 1, 1, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-9000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -9000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [14, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-10000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -10000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [20, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-11000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -11000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [20, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-12000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -12000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [20, 1, 1, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-13000",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 0,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -13000]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [20, 1, 1, 1, 1, 1, 1, 1]
-      }
-    },
-    {
-      "id": "contours-100",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -100]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [15, 3, 1, 3]
-      }
-    },
-    {
-      "id": "contours-200",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -200]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [15, 3, 1, 3, 1, 3]
-      }
-    },
-    {
-      "id": "contours-500",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -500]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [12, 2, 6, 2]
-      }
-    },
-    {
-      "id": "contours-10",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -10]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [0.6, 1]
-      }
-    },
-    {
-      "id": "contours-20",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -20]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [0.6, 1, 0.6, 1, 4, 1]
-      }
-    },
-    {
-      "id": "contours-40",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -40]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [5, 1, 0.6, 1, 0.6, 1, 0.6, 1, 0.6, 1]
-      }
-    },
-    {
-      "id": "contours-2",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -2]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [1, 1, 1, 3]
-      }
-    },
-    {
-      "id": "contours-4",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -4]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [1, 1, 1, 1, 1, 1, 1, 2]
-      }
-    },
-    {
-      "id": "contours-6",
-      "type": "line",
-      "source": "by",
-      "source-layer": "contours",
-      "minzoom": 6,
-      "maxzoom": 18,
-      "filter": ["all", ["==", "elevation", -6]],
-      "paint": {
-        "line-color": "rgba(82, 82, 82, 1)",
-        "line-width": {
-          "stops": [
-            [6, 1],
-            [9, 2]
-          ]
-        },
-        "line-dasharray": [3, 1, 2]
       }
     }
   ],
